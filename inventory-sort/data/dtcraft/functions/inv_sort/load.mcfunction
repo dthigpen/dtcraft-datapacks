@@ -1,4 +1,4 @@
-say load inventory-sort
+#say load inventory-sort
 
 scoreboard objectives add dt.enum dummy
 scoreboard players set #equal dt.enum 0
