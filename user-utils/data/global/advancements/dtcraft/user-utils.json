@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "user-utils",
+        "description": "Does nothing on it's own!",
+        "icon": {
+            "item": "minecraft:command_block"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:dtcraft",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}
