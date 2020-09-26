@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "Inventory Sort",
+        "description": "Automatically sort your inventory!",
+        "icon": {
+            "item": "minecraft:chest"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:dtcraft",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}
