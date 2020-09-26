@@ -4,7 +4,7 @@ A collection of utility and vanilla enhancement datapacks.
 
 ## Installation
 
-1. Visit the [Releases](https://github.com/dthigpen/dtcraft-datapacks/releases) page and download the desired modpack zip file.
+1. Visit the [Releases](https://github.com/dthigpen/dtcraft-datapacks/releases) page and download the desired modpack zip file. If the file ends in bundle.zip follow step 2, otherwise continue to step 3
 2. Unzip the downloaded zip file. Open the resulting folder. You should see several zip files inside.
 3. Copy all of these files into your world's datapacks folder at `%APPDATA%\.minecraft\saves\<world>\datapacks`
 4. Launch the world and type `/reload`
@@ -14,6 +14,16 @@ Datapacks that do not drastically change vanilla gameplay
 
 ### refill
 Automatically refill an empty stack of a hotbar item with available stacks from your inventory.
+
+#### Usage
+Toggle automatic refilling on and off with the command `/trigger dt.refill.toggle`.
+Use items in your hotbar as normal, after the last item is used, the first available stack from your inventory will replace the empty spot.
+
+### inventory-sort
+A quality of life datapack that will sort your inventory (excluding hotbar) into a defined group ordering.
+
+#### Usage
+Sort your inventory with the command `/trigger dt.sort`
 
 ## Utility Datapacks
 The following datapacks are libraries of functions that are intended to be used by other datapacks, and **are not standalone**.
