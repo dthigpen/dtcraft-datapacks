@@ -36,13 +36,15 @@ This datapack offers a number of commonly repeated functions for manipulating pl
 
 This datapack provides basic functions for user specific storage based on player UUID. It provides basic CRUD (Create, Read, Update, Delete) operations. Note, it does not store user data for the calling datapack, it simply modifies and returns the data for the caller to store.
 
+### call-stack
+This datapack provides some bare bones support for a call stack like data structure, providing scope to your function files variables. Very convenient for avoiding side effects from other function files overwriting variable values.
 
 ## Conventions
 Each datapack more or less follows a standardized way of calling functions, allowing for the use of basic arguments and return values. There are still limitations as the mcfunction implementation does not have a concept of a call stack or scope. Typically library functions will be called in the following way:
 ```
 # Set function arguments, call function, get returned result
-data modify storage dtcraft:tmp arg1 set value "foo"
+data modify storage dtcraft:call_stack call.arg0 set value "foo"
 function dtcraft:lib/function
-data modify storage your-namepace:storage from storage dtcraft:tmp result
+data modify storage your-namepace:storage from storage dtcraft:call_stack this.calls[0].value
 ```
 

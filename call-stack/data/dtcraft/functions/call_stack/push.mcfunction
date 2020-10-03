@@ -1,6 +1,5 @@
 # say push
 
-# data modify storage dtcraft:user_utils users set from storage dtcraft:call_stack arg1
 data modify storage dtcraft:call_stack frames prepend from storage dtcraft:call_stack this
 data modify storage dtcraft:call_stack this set value {result:{},calls:[],call:{}}
 data modify storage dtcraft:call_stack this.arg0 set from storage dtcraft:call_stack call.arg0

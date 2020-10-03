@@ -8,5 +8,3 @@ scoreboard players set #not_found dt.enum 1
 
 
 scoreboard objectives add dt.user_utils dummy
-
-data merge storage dtcraft:user_utils {}

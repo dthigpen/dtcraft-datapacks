@@ -1,10 +1,12 @@
 #say replace_slot
-data modify storage dtcraft:inventory_utils item set from storage dtcraft:tmp arg1
+function dtcraft:call_stack/push
 
-execute store result score int1 dt.tmp run data get storage dtcraft:inventory_utils item.Slot
-data modify storage dtcraft:inventory_utils item.Slot set value 0
+data modify storage dtcraft:call_stack this.item set from storage dtcraft:call_stack this.arg0
+
+execute store result score int1 dt.tmp run data get storage dtcraft:call_stack this.item.Slot
+data modify storage dtcraft:call_stack this.item.Slot set value 0
 data modify block 2999999 255 2999999 Items set value []
-data modify block 2999999 255 2999999 Items append from storage dtcraft:inventory_utils item
+data modify block 2999999 255 2999999 Items append from storage dtcraft:call_stack this.item
 
 #region replace in hotbar
 execute if score int1 dt.tmp matches 0 run loot replace entity @s hotbar.0 1 mine 2999999 255 2999999 stick{drop_contents:true}
@@ -46,3 +48,6 @@ execute if score int1 dt.tmp matches 33 run loot replace entity @s inventory.24 
 execute if score int1 dt.tmp matches 34 run loot replace entity @s inventory.25 1 mine 2999999 255 2999999 stick{drop_contents:true}
 execute if score int1 dt.tmp matches 35 run loot replace entity @s inventory.26 1 mine 2999999 255 2999999 stick{drop_contents:true}
 #endregion
+data modify storage dtcraft:call_stack this.result.value set value true
+
+function dtcraft:call_stack/pop

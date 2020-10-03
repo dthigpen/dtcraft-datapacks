@@ -1,4 +1,7 @@
-#say get
-# implicitly pass arg1
-data modify storage dtcraft:tmp arg2 set from entity @s UUID
+function dtcraft:call_stack/push
+
+data modify storage dtcraft:call_stack this.arg0 set from entity @s UUID
 function dtcraft:user_utils/get_by_uuid
+data modify storage dtcraft:call_stack this.result.value set from storage dtcraft:call_stack this.calls[0].value
+
+function dtcraft:call_stack/pop
