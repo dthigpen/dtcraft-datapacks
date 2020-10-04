@@ -48,6 +48,6 @@ execute if score int1 dt.tmp matches 33 run loot replace entity @s inventory.24 
 execute if score int1 dt.tmp matches 34 run loot replace entity @s inventory.25 1 mine 2999999 255 2999999 stick{drop_contents:true}
 execute if score int1 dt.tmp matches 35 run loot replace entity @s inventory.26 1 mine 2999999 255 2999999 stick{drop_contents:true}
 #endregion
-data modify storage dtcraft:call_stack this.result.value set value true
+data modify storage dtcraft:call_stack this.result set value true
 
 function dtcraft:call_stack/pop

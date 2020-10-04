@@ -15,12 +15,12 @@ execute if data storage dtcraft:call_stack {this:{not_equal:0}} run data modify 
 data remove storage dtcraft:call_stack this.items[0]
 
 # base case
-execute unless data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result.value set from storage dtcraft:call_stack this.all_with_id
+execute unless data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.all_with_id
 # loop
 execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.items
 execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.id
 execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack call.arg2 set from storage dtcraft:call_stack this.all_with_id
 execute if data storage dtcraft:call_stack this.items[0] run function dtcraft:inventory_utils/arrays/get_all_by_id_loop
-execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result.value set from storage dtcraft:call_stack this.calls[0].value
+execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.call.result
 
 function dtcraft:call_stack/pop

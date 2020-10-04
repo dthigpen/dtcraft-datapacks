@@ -2,12 +2,12 @@
 
 #region get user inventory
 function dtcraft:inventory_utils/get_inventory
-data modify storage dtcraft:inv_sort remaining_items set from storage dtcraft:call_stack this.calls[0].value
+data modify storage dtcraft:inv_sort remaining_items set from storage dtcraft:call_stack this.call.result
 #endregion
 
 #region get user hotbar
 function dtcraft:inventory_utils/get_hotbar
-data modify storage dtcraft:inv_sort hotbar_items set from storage dtcraft:call_stack this.calls[0].value
+data modify storage dtcraft:inv_sort hotbar_items set from storage dtcraft:call_stack this.call.result
 #endregion
 
 data modify storage dtcraft:inv_sort sorted_items set value []
