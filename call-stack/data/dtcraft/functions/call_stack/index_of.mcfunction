@@ -1,4 +1,4 @@
-say index_of
+# say index_of
 function dtcraft:call_stack/push
 data modify storage dtcraft:call_stack this.items set from storage dtcraft:call_stack this.arg0
 data modify storage dtcraft:call_stack this.key set from storage dtcraft:call_stack this.arg1

@@ -13,9 +13,6 @@ data modify storage dtcraft:call_stack this.equal set from storage dtcraft:call_
 execute if data storage dtcraft:call_stack {this:{equal:true}} run data modify storage dtcraft:call_stack this.result.value set from storage dtcraft:call_stack this.users[0]
 execute if data storage dtcraft:call_stack {this:{equal:true}} run data remove storage dtcraft:call_stack this.users[0]
 
-# TODO Decide whether or not to move other_users functionality out 
-# data modify storage dtcraft:call_stack this.other_users append from storage dtcraft:call_stack this.users[0]
-
 #region not_equal
 execute if data storage dtcraft:call_stack {this:{equal:false}} run data remove storage dtcraft:call_stack this.users[0]
 execute if data storage dtcraft:call_stack {this:{equal:false}} if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.users
