@@ -1,6 +1,11 @@
 #say sort
 function dtcraft:call_stack/push
 
+
+scoreboard players reset @s dt.sort
+scoreboard players enable @s dt.sort
+
+
 #region get user inventory
 function dtcraft:inventory_utils/get_inventory
 data modify storage dtcraft:call_stack this.remaining_items set from storage dtcraft:call_stack call.result
@@ -16,22 +21,21 @@ data modify storage dtcraft:call_stack this.temp_order set from storage dtcraft:
 
 #region pull items for each group
 execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.temp_order
+execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.remaining_items
+execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack call.arg2 set from storage dtcraft:call_stack this.sorted_items
 execute if data storage dtcraft:call_stack this.temp_order[0] run function dtcraft:inv_sort/sort_order_loop
 execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack this.remaining_items set from storage dtcraft:call_stack call.result.remaining_items
 execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack this.sorted_items set from storage dtcraft:call_stack call.result.sorted_items
 #endregion
 
-
-#region create sorted items list items
 execute if data storage dtcraft:call_stack this.remaining_items[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.sorted_items
 execute if data storage dtcraft:call_stack this.remaining_items[0] run data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.remaining_items
 execute if data storage dtcraft:call_stack this.remaining_items[0] run function dtcraft:inv_sort/sort_add_unsorted_loop
 execute if data storage dtcraft:call_stack this.remaining_items[0] run data modify storage dtcraft:call_stack this.sorted_items set from storage dtcraft:call_stack call.result
-#endregion
 
 #region fill shulker with sorted items
 data modify block 2999999 255 2999999 Items set value []
-loot replace entity @s inventory.0 27 mine 2999999 255 2999999 minecraft:stick{drop_contents:true}
+execute if data storage dtcraft:call_stack this.sorted_items[0] run loot replace entity @s inventory.0 27 mine 2999999 255 2999999 minecraft:stick{drop_contents:true}
 execute if data storage dtcraft:call_stack this.sorted_items[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.sorted_items
 execute if data storage dtcraft:call_stack this.sorted_items[0] run function dtcraft:inv_sort/sort_to_shulker_loop
 #endregion

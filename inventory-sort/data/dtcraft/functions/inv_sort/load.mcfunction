@@ -14,3 +14,5 @@ data merge storage dtcraft:inv_sort {}
 
 function dtcraft:inv_sort/load_storage
 function dtcraft:inventory_utils/load_shulker
+
+gamerule maxCommandChainLength 500000
