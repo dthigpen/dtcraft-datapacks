@@ -12,13 +12,13 @@ data modify storage dtcraft:inv_sort groups append value {group:"invsort:wood_pr
 #endregion
 
 #region group ordering
-data modify storage dtcraft:inv_sort Order set value []
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:mining"}]
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:mining_products"}]
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:woods"}]
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:wood_products"}]
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:plantables"}]
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:consumables"}]
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:tools"}]
-data modify storage dtcraft:inv_sort Order append from storage dtcraft:inv_sort groups[{group:"invsort:weapons"}]
+data modify storage dtcraft:inv_sort group_order set value []
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:mining"}]
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:mining_products"}]
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:woods"}]
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:wood_products"}]
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:plantables"}]
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:consumables"}]
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:tools"}]
+data modify storage dtcraft:inv_sort group_order append from storage dtcraft:inv_sort groups[{group:"invsort:weapons"}]
 #endregion

@@ -1,10 +1,11 @@
 #say sort order loop
+function dtcraft:call_stack/push
+data modify storage dtcraft:call_stack this.temp_order set from storage dtcraft:call_stack this.arg0
+execute if data storage dtcraft:call_stack this.temp_order[0] run function dtcraft:inv_sort/sort_group_loop
 
-execute store result score size2 dt.tmp run data get storage dtcraft:inv_sort temp_order[0].values
-execute if score size2 dt.tmp matches 1.. run function dtcraft:inv_sort/sort_group_loop
+data remove storage dtcraft:call_stack this.temp_order[0]
 
+execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.temp_order
+execute if data storage dtcraft:call_stack this.temp_order[0] run function dtcraft:inv_sort/sort_order_loop
 
-
-data remove storage dtcraft:inv_sort temp_order[0]
-execute store result score size1 dt.tmp run data get storage dtcraft:inv_sort temp_order
-execute if score size1 dt.tmp matches 1.. run function dtcraft:inv_sort/sort_order_loop
+function dtcraft:call_stack/pop
