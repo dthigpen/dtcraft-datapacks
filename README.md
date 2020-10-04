@@ -40,11 +40,23 @@ This datapack provides basic functions for user specific storage based on player
 This datapack provides some bare bones support for a call stack like data structure, providing scope to your function files variables. Very convenient for avoiding side effects from other function files overwriting variable values.
 
 ## Conventions
-Each datapack more or less follows a standardized way of calling functions, allowing for the use of basic arguments and return values. There are still limitations as the mcfunction implementation does not have a concept of a call stack or scope. Typically library functions will be called in the following way:
+All of these datapacks utilize the dtcraft call-stack utility when calling functions. Funtions that implement this utility have function level variables, arguments, and return values without chance of side effects from other functions.
+### Example
+example.mcfunction
 ```
-# Set function arguments, call function, get returned result
 data modify storage dtcraft:call_stack call.arg0 set value "foo"
-function dtcraft:lib/function
+function dtcraft:some/function
 data modify storage your-namepace:storage from storage dtcraft:call_stack call.result
+```
+lib/foo_bar.mcfunction
+```
+# push a new frame to the stack
+function dtcraft:call_stack/push
+
+data modify storage dtcraft:call_stack this.foo set from storage dtcraft:call_stack this.arg0
+data modify storage dtcraft:call_stack call.result value "bar"
+
+# pop the frame and replace with parent frame
+function dtcraft:call_stack/pop
 ```
 
