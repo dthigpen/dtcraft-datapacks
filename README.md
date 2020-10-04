@@ -45,6 +45,6 @@ Each datapack more or less follows a standardized way of calling functions, allo
 # Set function arguments, call function, get returned result
 data modify storage dtcraft:call_stack call.arg0 set value "foo"
 function dtcraft:lib/function
-data modify storage your-namepace:storage from storage dtcraft:call_stack this.call.result
+data modify storage your-namepace:storage from storage dtcraft:call_stack call.result
 ```
 

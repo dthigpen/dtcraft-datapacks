@@ -22,6 +22,6 @@ execute if data storage dtcraft:call_stack this.temp_remaining_items[0] run data
 execute if data storage dtcraft:call_stack this.temp_remaining_items[0] run data modify storage dtcraft:call_stack call.arg2 set from storage dtcraft:call_stack this.new_remaining_items
 execute if data storage dtcraft:call_stack this.temp_remaining_items[0] run data modify storage dtcraft:call_stack call.arg3 set from storage dtcraft:call_stack this.sorted_items
 execute if data storage dtcraft:call_stack this.temp_remaining_items[0] run function dtcraft:inv_sort/sort_remaining_loop
-execute if data storage dtcraft:call_stack this.temp_remaining_items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.call.result
+execute if data storage dtcraft:call_stack this.temp_remaining_items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack call.result
 
 function dtcraft:call_stack/pop

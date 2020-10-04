@@ -9,6 +9,6 @@ execute if data storage dtcraft:call_stack this.users[0] run data modify storage
 execute if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.uuid
 execute if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack call.arg2 set value []
 execute if data storage dtcraft:call_stack this.users[0] run function dtcraft:user_utils/get_not_loop
-execute if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.call.result
+execute if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack call.result
 
 function dtcraft:call_stack/pop

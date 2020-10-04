@@ -3,12 +3,12 @@ function dtcraft:call_stack/push
 
 #region get user inventory
 function dtcraft:inventory_utils/get_inventory
-data modify storage dtcraft:call_stack this.remaining_items set from storage dtcraft:call_stack this.call.result
+data modify storage dtcraft:call_stack this.remaining_items set from storage dtcraft:call_stack call.result
 #endregion
 
 #region get user hotbar
 function dtcraft:inventory_utils/get_hotbar
-data modify storage dtcraft:call_stack this.hotbar_items set from storage dtcraft:call_stack this.call.result
+data modify storage dtcraft:call_stack this.hotbar_items set from storage dtcraft:call_stack call.result
 #endregion
 
 data modify storage dtcraft:call_stack this.sorted_items set value []
@@ -17,8 +17,8 @@ data modify storage dtcraft:call_stack this.temp_order set from storage dtcraft:
 #region pull items for each group
 execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.temp_order
 execute if data storage dtcraft:call_stack this.temp_order[0] run function dtcraft:inv_sort/sort_order_loop
-execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack this.remaining_items set from storage dtcraft:call_stack this.call.result.remaining_items
-execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack this.sorted_items set from storage dtcraft:call_stack this.call.result.sorted_items
+execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack this.remaining_items set from storage dtcraft:call_stack call.result.remaining_items
+execute if data storage dtcraft:call_stack this.temp_order[0] run data modify storage dtcraft:call_stack this.sorted_items set from storage dtcraft:call_stack call.result.sorted_items
 #endregion
 
 
@@ -26,7 +26,7 @@ execute if data storage dtcraft:call_stack this.temp_order[0] run data modify st
 execute if data storage dtcraft:call_stack this.remaining_items[0] run data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.sorted_items
 execute if data storage dtcraft:call_stack this.remaining_items[0] run data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.remaining_items
 execute if data storage dtcraft:call_stack this.remaining_items[0] run function dtcraft:inv_sort/sort_add_unsorted_loop
-execute if data storage dtcraft:call_stack this.remaining_items[0] run data modify storage dtcraft:call_stack this.sorted_items set from storage dtcraft:call_stack this.call.result
+execute if data storage dtcraft:call_stack this.remaining_items[0] run data modify storage dtcraft:call_stack this.sorted_items set from storage dtcraft:call_stack call.result
 #endregion
 
 #region fill shulker with sorted items

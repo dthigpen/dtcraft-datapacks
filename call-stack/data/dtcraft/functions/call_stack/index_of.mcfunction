@@ -12,5 +12,5 @@ data modify storage dtcraft:call_stack call.arg2 set from storage dtcraft:call_s
 data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.index
 
 execute if data storage dtcraft:call_stack this.items[0] run function dtcraft:call_stack/index_of_loop
-execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.call.result
+execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack call.result
 function dtcraft:call_stack/pop

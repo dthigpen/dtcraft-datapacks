@@ -8,7 +8,7 @@ data modify storage dtcraft:call_stack this.resulting_users set from storage dtc
 data modify storage dtcraft:call_stack call.arg0 set from storage dtcraft:call_stack this.users[0].UUID
 data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.uuid
 function dtcraft:user_utils/equal/equal_value
-data modify storage dtcraft:call_stack this.equal set from storage dtcraft:call_stack this.call.result
+data modify storage dtcraft:call_stack this.equal set from storage dtcraft:call_stack call.result
 data remove storage dtcraft:call_stack this.users[0]
 
 # base case
@@ -20,6 +20,6 @@ execute if data storage dtcraft:call_stack {this:{equal:false}} if data storage 
 execute if data storage dtcraft:call_stack {this:{equal:false}} if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.uuid
 execute if data storage dtcraft:call_stack {this:{equal:false}} if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack call.arg2 set from storage dtcraft:call_stack this.resulting_users
 execute if data storage dtcraft:call_stack {this:{equal:false}} if data storage dtcraft:call_stack this.users[0] run function dtcraft:user_utils/get_not_loop
-execute if data storage dtcraft:call_stack {this:{equal:false}} if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.call.result
+execute if data storage dtcraft:call_stack {this:{equal:false}} if data storage dtcraft:call_stack this.users[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack call.result
 #endregion
 function dtcraft:call_stack/pop

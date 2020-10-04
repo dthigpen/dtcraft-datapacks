@@ -21,6 +21,6 @@ execute if data storage dtcraft:call_stack this.items[0] run data modify storage
 execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack call.arg1 set from storage dtcraft:call_stack this.id
 execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack call.arg2 set from storage dtcraft:call_stack this.all_with_id
 execute if data storage dtcraft:call_stack this.items[0] run function dtcraft:inventory_utils/arrays/get_all_by_id_loop
-execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack this.call.result
+execute if data storage dtcraft:call_stack this.items[0] run data modify storage dtcraft:call_stack this.result set from storage dtcraft:call_stack call.result
 
 function dtcraft:call_stack/pop
