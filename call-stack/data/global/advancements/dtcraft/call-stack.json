@@ -1,7 +1,7 @@
 {
     "display": {
-        "title": "Pack name",
-        "description": "Pack description",
+        "title": "call-stack",
+        "description": "Does nothing on it's own!",
         "icon": {
             "item": "minecraft:command_block"
         },
