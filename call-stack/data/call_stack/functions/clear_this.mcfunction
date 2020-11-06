@@ -1,0 +1,1 @@
+data modify storage call_stack: this set value {result:{},call:{}}

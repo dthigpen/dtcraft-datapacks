@@ -44,19 +44,19 @@ All of these datapacks utilize the dtcraft call-stack utility when calling funct
 ### Example
 example.mcfunction
 ```
-data modify storage dtcraft:call_stack call.arg0 set value "foo"
+data modify storage call_stack: call.arg0 set value "foo"
 function dtcraft:some/function
-data modify storage your-namepace:storage from storage dtcraft:call_stack call.result
+data modify storage your-namepace:storage from storage call_stack: call.result
 ```
 lib/foo_bar.mcfunction
 ```
 # push a new frame to the stack
-function dtcraft:call_stack/push
+function call_stack:push
 
-data modify storage dtcraft:call_stack this.foo set from storage dtcraft:call_stack this.arg0
-data modify storage dtcraft:call_stack call.result value "bar"
+data modify storage call_stack: this.foo set from storage call_stack: this.arg0
+data modify storage call_stack: call.result value "bar"
 
 # pop the frame and replace with parent frame
-function dtcraft:call_stack/pop
+function call_stack:pop
 ```
 

@@ -1,1 +1,0 @@
-data modify storage dtcraft:call_stack this set value {result:{},call:{}}
