@@ -20,7 +20,7 @@ scoreboard players set #not_found dt.enum 1
 scoreboard objectives add dt.tmp dummy
 scoreboard objectives add dt.sort trigger
 
-data merge storage dtcraft:inv_sort {}
+data merge storage dt.inv_sort: {}
 
 function inv_sort:load_storage
 function dt.inv_util:load_shulker

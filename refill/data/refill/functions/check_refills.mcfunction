@@ -1,10 +1,10 @@
 # say check_refills
 function call_stack:push
 
-# tellraw @p ["users before: ",{"nbt":"users","storage":"dtcraft:refill"}]
+# tellraw @p ["users before: ",{"nbt":"users","storage":"dt.refill:"}]
 
 #region get or create this_user
-data modify storage call_stack: call.arg0 set from storage dtcraft:refill users
+data modify storage call_stack: call.arg0 set from storage dt.refill: users
 function dt.user_util:get_or_create
 data modify storage call_stack: this.this_user set from storage call_stack: call.result
 #endregion
@@ -17,11 +17,11 @@ execute unless data entity @s SelectedItem if data storage call_stack: this.this
 execute unless data entity @s SelectedItem if data storage call_stack: this.this_user.data.selected run function refill:refill_if_same_slot
 execute unless data entity @s SelectedItem if data storage call_stack: this.this_user.data.selected run data modify storage call_stack: this.this_user set from storage call_stack: call.result
 #region update user
-data modify storage call_stack: call.arg0 set from storage dtcraft:refill users
+data modify storage call_stack: call.arg0 set from storage dt.refill: users
 data modify storage call_stack: call.arg1 set from storage call_stack: this.this_user
 function dt.user_util:update
-data modify storage dtcraft:refill users set from storage call_stack: call.result
+data modify storage dt.refill: users set from storage call_stack: call.result
 
 #endregion
-# tellraw @p ["users after: ",{"nbt":"users","storage":"dtcraft:refill"}]
+# tellraw @p ["users after: ",{"nbt":"users","storage":"dt.refill:"}]
 function call_stack:pop

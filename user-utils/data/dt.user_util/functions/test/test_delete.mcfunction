@@ -11,7 +11,7 @@ data modify storage call_stack: this.users_after_delete set from storage call_st
 scoreboard players set result dt.tmp 1
 execute if data storage call_stack: {this:{users_after_delete:[{}]}} run scoreboard players set result dt.tmp 0
 execute if data storage call_stack: {this:{users_after_delete:[]}} run scoreboard players set result dt.tmp 1
-execute if score result dt.tmp matches 0 run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"dtcraft:call_stack"}]
-execute if score result dt.tmp matches 1 run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"dtcraft:call_stack"}]
+execute if score result dt.tmp matches 0 run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
+execute if score result dt.tmp matches 1 run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 
 function call_stack:pop

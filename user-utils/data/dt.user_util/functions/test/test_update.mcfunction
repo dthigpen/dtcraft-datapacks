@@ -13,8 +13,8 @@ function dt.user_util:update
 data modify storage call_stack: this.updated_users set from storage call_stack: call.result
 scoreboard players set result dt.tmp 0
 execute store success score result dt.tmp run data get storage call_stack: this.updated_users[{data:{fizz:"buzz"}}]
-execute if score result dt.tmp matches 0 run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"dtcraft:call_stack"}]
-execute if score result dt.tmp matches 1 run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"dtcraft:call_stack"}]
+execute if score result dt.tmp matches 0 run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
+execute if score result dt.tmp matches 1 run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 
 
 function call_stack:pop

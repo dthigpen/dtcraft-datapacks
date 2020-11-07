@@ -17,7 +17,7 @@ data modify storage call_stack: this.hotbar_items set from storage call_stack: c
 #endregion
 
 data modify storage call_stack: this.sorted_items set value []
-data modify storage call_stack: this.temp_order set from storage dtcraft:inv_sort group_order
+data modify storage call_stack: this.temp_order set from storage dt.inv_sort: group_order
 
 #region pull items for each group
 execute if data storage call_stack: this.temp_order[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_order

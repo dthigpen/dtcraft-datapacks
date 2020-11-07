@@ -4,7 +4,7 @@ function call_stack:push
 data modify storage call_stack: this.temp_order set from storage call_stack: this.arg0
 data modify storage call_stack: this.remaining_items set from storage call_stack: this.arg1
 data modify storage call_stack: this.sorted_items set from storage call_stack: this.arg2
-# tellraw @p ["group: ",{"nbt":"this.temp_order[0].group","storage":"dtcraft:call_stack"}]
+# tellraw @p ["group: ",{"nbt":"this.temp_order[0].group","storage":"call_stack:"}]
 
 execute if data storage call_stack: this.temp_order[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_order[0].values
 execute if data storage call_stack: this.temp_order[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.remaining_items
