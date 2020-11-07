@@ -7,12 +7,12 @@ scoreboard players enable @s dt.sort
 
 
 #region get user inventory
-function inv_utils:get_inventory
+function dt.inv_util:get_inventory
 data modify storage call_stack: this.remaining_items set from storage call_stack: call.result
 #endregion
 
 #region get user hotbar
-function inv_utils:get_hotbar
+function dt.inv_util:get_hotbar
 data modify storage call_stack: this.hotbar_items set from storage call_stack: call.result
 #endregion
 

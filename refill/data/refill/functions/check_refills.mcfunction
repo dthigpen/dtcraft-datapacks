@@ -5,7 +5,7 @@ function call_stack:push
 
 #region get or create this_user
 data modify storage call_stack: call.arg0 set from storage dtcraft:refill users
-function user_utils:get_or_create
+function dt.user_util:get_or_create
 data modify storage call_stack: this.this_user set from storage call_stack: call.result
 #endregion
 
@@ -19,7 +19,7 @@ execute unless data entity @s SelectedItem if data storage call_stack: this.this
 #region update user
 data modify storage call_stack: call.arg0 set from storage dtcraft:refill users
 data modify storage call_stack: call.arg1 set from storage call_stack: this.this_user
-function user_utils:update
+function dt.user_util:update
 data modify storage dtcraft:refill users set from storage call_stack: call.result
 
 #endregion

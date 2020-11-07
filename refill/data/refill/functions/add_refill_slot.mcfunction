@@ -4,7 +4,7 @@
 # data modify storage 
 data modify storage call_stack: call.arg0 set from storage dtcraft:refill users
 data modify storage call_stack: call.arg1 set from entity @s UUID
-function user_utils:get_by_uuid
+function dt.user_util:get_by_uuid
 
 execute if score result dt.tmp = #found dt.enum run say User found
 execute if score result dt.tmp = #not_found dt.enum run say User not found
