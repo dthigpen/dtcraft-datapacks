@@ -6,7 +6,7 @@ scoreboard players set $invsort.patch load 0
 
 schedule clear inv_sort:tick
 scoreboard players set $invsort load 0
-execute if score $callstack.major load matches 0 if score $callstack.minor load matches 1 if score $invutil.major load matches 0 if score $invutil.minor load matches 1 run scoreboard players set $invsort load 1
+execute if score $callstack.major load matches 0 if score $callstack.minor load matches 0.. if score $invutil.major load matches 0 if score $invutil.minor load matches 0.. run scoreboard players set $invsort load 1
 execute unless score $invsort load matches 1 run say Datapack Inventory-sort cannot be loaded
 execute if score $invsort load matches 1 run schedule function inv_sort:tick 1t replace
 

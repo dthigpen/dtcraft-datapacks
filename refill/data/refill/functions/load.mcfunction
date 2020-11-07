@@ -6,7 +6,7 @@ scoreboard players set $refill.patch load 0
 
 schedule clear refill:tick
 scoreboard players set $refill load 0
-execute if score $callstack.major load matches 0 if score $callstack.minor load matches 1 if score $userutil.major load matches 0 if score $userutil.minor load matches 1 if score $invutil.major load matches 0 if score $invutil.minor load matches 1 run scoreboard players set $refill load 1
+execute if score $callstack.major load matches 0 if score $callstack.minor load matches 0.. if score $userutil.major load matches 0 if score $userutil.minor load matches 0.. if score $invutil.major load matches 0 if score $invutil.minor load matches 0.. run scoreboard players set $refill load 1
 execute unless score $refill load matches 1 run say Datapack Refill cannot be loaded
 execute if score $refill load matches 1 run schedule function refill:tick 1t replace
 
