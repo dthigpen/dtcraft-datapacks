@@ -1,8 +1,8 @@
 #say load inventory_utils
 
-scoreboard players set $invutil.major load 0
-scoreboard players set $invutil.minor load 1
-scoreboard players set $invutil.patch load 0
+scoreboard players set $dt.inv_util.version.major load 0
+scoreboard players set $dt.inv_util.version.minor load 1
+scoreboard players set $dt.inv_util.version.patch load 0
 
 scoreboard objectives add dt.enum dummy
 scoreboard players set #equal dt.enum 0

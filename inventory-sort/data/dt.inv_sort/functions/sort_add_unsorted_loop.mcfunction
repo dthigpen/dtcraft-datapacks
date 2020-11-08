@@ -14,6 +14,6 @@ execute unless data storage call_stack: this.remaining_items[0] run data modify 
 # loop
 execute if data storage call_stack: this.remaining_items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.sorted_items
 execute if data storage call_stack: this.remaining_items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.remaining_items
-execute if data storage call_stack: this.remaining_items[0] run function inv_sort:sort_add_unsorted_loop
+execute if data storage call_stack: this.remaining_items[0] run function dt.inv_sort:sort_add_unsorted_loop
 execute if data storage call_stack: this.remaining_items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 function call_stack:pop

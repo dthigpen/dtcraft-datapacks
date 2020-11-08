@@ -23,7 +23,7 @@ execute if data storage call_stack: this.temp_remaining_items[0] run data modify
 execute if data storage call_stack: this.temp_remaining_items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.temp_remaining_items
 execute if data storage call_stack: this.temp_remaining_items[0] run data modify storage call_stack: call.arg2 set from storage call_stack: this.new_remaining_items
 execute if data storage call_stack: this.temp_remaining_items[0] run data modify storage call_stack: call.arg3 set from storage call_stack: this.sorted_items
-execute if data storage call_stack: this.temp_remaining_items[0] run function inv_sort:sort_remaining_loop
+execute if data storage call_stack: this.temp_remaining_items[0] run function dt.inv_sort:sort_remaining_loop
 execute if data storage call_stack: this.temp_remaining_items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 
 function call_stack:pop

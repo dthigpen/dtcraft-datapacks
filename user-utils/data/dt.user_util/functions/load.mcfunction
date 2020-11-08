@@ -1,8 +1,8 @@
 #say load user-storage
 
-scoreboard players set $userutil.major load 0
-scoreboard players set $userutil.minor load 1
-scoreboard players set $userutil.patch load 0
+scoreboard players set $dt.user_util.version.major load 0
+scoreboard players set $dt.user_util.version.minor load 1
+scoreboard players set $dt.user_util.version.patch load 0
 
 scoreboard objectives add dt.enum dummy
 scoreboard players set #equal dt.enum 0
