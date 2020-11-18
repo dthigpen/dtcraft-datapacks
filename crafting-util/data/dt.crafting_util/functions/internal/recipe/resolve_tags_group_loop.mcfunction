@@ -5,13 +5,16 @@ data modify storage call_stack: this.tag set from storage call_stack: this.arg1
 
 execute unless data storage call_stack: this.items_in_group[0].slots run tellraw @p [{"text":"NO SLOTS: "},{"nbt":"this.items_in_group.id","storage":"call_stack:"}]
 
-data modify storage call_stack: call.arg0 set from storage call_stack: this.tag.slots
-data modify storage call_stack: call.arg1 set from storage call_stack: this.items_in_group[0].slots
-data modify storage call_stack: call.arg2 set value []
-function dt.crafting_util:internal/recipe/resolve_tags_slots_loop
-data modify storage call_stack: this.tag.slots set from storage call_stack: call.result
+execute store success storage call_stack: this.has_slots byte 1 run data get storage call_stack: this.tag.slots
 
-#tellraw @p [{"text":"item: "},{"nbt":"this.items_in_group[0].id","storage":"call_stack:"}]
+execute if data storage call_stack: {this:{has_slots:true}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.tag.slots
+execute if data storage call_stack: {this:{has_slots:true}} run data modify storage call_stack: call.arg1 set from storage call_stack: this.items_in_group[0].slots
+execute if data storage call_stack: {this:{has_slots:true}} run data modify storage call_stack: call.arg2 set value []
+execute if data storage call_stack: {this:{has_slots:true}} run function dt.crafting_util:internal/recipe/resolve_tags_slots_loop
+execute if data storage call_stack: {this:{has_slots:true}} run data modify storage call_stack: this.tag.slots set from storage call_stack: call.result
+
+execute if data storage call_stack: {this:{has_slots:false}} run data modify storage call_stack: this.tag.slots set value [[]]
+
 # check if any slots are reduced to 0
 data modify storage call_stack: call.arg0 set from storage call_stack: this.tag.slots
 data modify storage call_stack: call.arg1 set value []

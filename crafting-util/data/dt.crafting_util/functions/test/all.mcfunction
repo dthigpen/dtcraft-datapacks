@@ -12,6 +12,7 @@ function dt.crafting_util:test/internal/crafter/distribute_stack
 function dt.crafting_util:test/internal/get_free_slots
 function dt.crafting_util:test/internal/array/split_by_key
 function dt.crafting_util:test/internal/array/difference
+function dt.crafting_util:test/internal/array/concat
 function dt.crafting_util:test/internal/ingredient/items_to_slots
 function dt.crafting_util:test/internal/ingredient/get_info_obj
 function dt.crafting_util:test/internal/group/filter_items_in_group

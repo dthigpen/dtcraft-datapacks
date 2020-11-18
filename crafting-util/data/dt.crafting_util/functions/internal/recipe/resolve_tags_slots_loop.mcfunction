@@ -25,6 +25,7 @@ execute if data storage call_stack: this.tag_slots[0] run data modify storage ca
 execute if data storage call_stack: this.tag_slots[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.actual_slots
 execute if data storage call_stack: this.tag_slots[0] run data modify storage call_stack: call.arg2 set from storage call_stack: this.new_slots
 execute if data storage call_stack: this.tag_slots[0] run function dt.crafting_util:internal/recipe/resolve_tags_slots_loop
+execute if data storage call_stack: this.tag_slots[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 
 
 function call_stack:pop

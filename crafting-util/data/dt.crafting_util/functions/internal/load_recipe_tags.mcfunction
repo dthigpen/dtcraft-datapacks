@@ -1,6 +1,7 @@
 # TODO autogenerate this list at load
 data modify storage dt.crafting_util: recipe_tags set value []
 data modify storage dt.crafting_util: recipe_tags append value {"group": "minecraft:stone_crafting_materials", "values": ["minecraft:cobblestone", "minecraft:blackstone"]}
+data modify storage dt.crafting_util: recipe_tags append value {"group": "minecraft:coals", "values": ["minecraft:coal", "minecraft:charcoal"]}
 data modify storage dt.crafting_util: recipe_tags append value {"group": "minecraft:acacia_logs", "values": ["minecraft:acacia_log", "minecraft:acacia_wood", "minecraft:stripped_acacia_log", "minecraft:stripped_acacia_wood"]}
 data modify storage dt.crafting_util: recipe_tags append value {"group": "minecraft:birch_logs", "values": ["minecraft:birch_log", "minecraft:birch_wood", "minecraft:stripped_birch_log", "minecraft:stripped_birch_wood"]}
 data modify storage dt.crafting_util: recipe_tags append value {"group": "minecraft:dark_oak_logs", "values": ["minecraft:dark_oak_log", "minecraft:dark_oak_wood", "minecraft:stripped_dark_oak_log", "minecraft:stripped_dark_oak_wood"]}

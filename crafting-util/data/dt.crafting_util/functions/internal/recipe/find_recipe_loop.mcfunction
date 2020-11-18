@@ -20,6 +20,7 @@ data modify storage call_stack: call.arg3 set from storage call_stack: this.has_
 function dt.crafting_util:internal/recipe/find_ingredient_loop
 data modify storage call_stack: this.is_match set from storage call_stack: call.result.is_match
 data modify storage call_stack: this.remaining_item_counts set from storage call_stack: call.result.remaining
+
 #tellraw @p [{"text":"is_match: "}, {"nbt":"this.is_match","storage":"call_stack:"}]
 #tellraw @p [{"text":"has_tags: "}, {"nbt":"this.has_tags","storage":"call_stack:"}]
 #tellraw @p [{"text":"remaining: "}, {"nbt":"this.remaining_item_counts","storage":"call_stack:"}]
