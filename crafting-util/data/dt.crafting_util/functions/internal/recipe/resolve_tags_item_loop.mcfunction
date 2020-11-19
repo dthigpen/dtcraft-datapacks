@@ -7,7 +7,7 @@ data modify storage call_stack: this.group_name set from storage call_stack: thi
 #tellraw @p [{"text":"group_name: "},{"nbt":"this.group_name","storage":"call_stack:"}]
 
 # get the group
-data modify storage call_stack: call.arg0 set from storage dt.crafting_util: recipe_tags
+data modify storage call_stack: call.arg0 set from storage dt.crafting_util: groups
 data modify storage call_stack: call.arg1 set value {group:""}
 data modify storage call_stack: call.arg1.group set from storage call_stack: this.group_name
 function dt.crafting_util:internal/array/split_by_key
