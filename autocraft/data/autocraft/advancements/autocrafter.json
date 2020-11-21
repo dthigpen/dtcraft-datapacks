@@ -3,11 +3,11 @@
         "stone":{
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "autocraft:stone_crafter"
+                "recipe": "autocraft:autocrafter"
             }
         }
     },
     "rewards": {
-        "function": "autocraft:internal/blocks/autocrafter/give2"
+        "function": "autocraft:internal/blocks/autocrafter/crafted_autocrafter"
     }
 }

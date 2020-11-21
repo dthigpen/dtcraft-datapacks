@@ -2,15 +2,13 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "minecraft:stone"
+        "item": "minecraft:crafting_table"
       },
       {
         "item": "minecraft:dropper"
       }
     ],
     "result": {
-      "item": "minecraft:knowledge_book",
-      "tag":"{Recipes:[\"autocraft:stone_crafter\"]}",
-      "count":512
+      "item": "minecraft:knowledge_book"
     }
   }
