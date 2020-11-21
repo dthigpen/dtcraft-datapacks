@@ -1,4 +1,4 @@
-# say api/crafter/distribute_slots
+# say internal/crafter/distribute_slots
 function call_stack:push
 
 # tellraw @p {"nbt":"this.free_slots","storage":"call_stack:"}
@@ -36,7 +36,7 @@ execute unless data storage call_stack: this.temp_items[0] run data modify stora
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.distributed_items
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg2 set from storage call_stack: this.new_free_slots
-execute if data storage call_stack: this.temp_items[0] run function dt.crafting_util:api/crafter/distribute_slots
+execute if data storage call_stack: this.temp_items[0] run function dt.crafting_util:internal/crafter/distribute_slots
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 
 function call_stack:pop

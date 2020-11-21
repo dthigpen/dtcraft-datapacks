@@ -1,4 +1,4 @@
-# say crafter/distribute_stack
+# distribute_stack
 function call_stack:push
 
 # save args
@@ -79,7 +79,7 @@ execute if score flag dt.tmp matches 1 run scoreboard players remove size1 dt.tm
 execute if score flag dt.tmp matches 1 run scoreboard players set flag dt.tmp 0
 
 
-execute store result storage call_stack: this.item.Count byte 1 run scoreboard players get int1 dt.tmp
-data modify storage call_stack: this.result.new_items prepend from storage call_stack: this.item
+execute if score int1 dt.tmp matches 1.. store result storage call_stack: this.item.Count byte 1 run scoreboard players get int1 dt.tmp
+execute if score int1 dt.tmp matches 1.. run data modify storage call_stack: this.result.new_items prepend from storage call_stack: this.item
 
 function call_stack:pop

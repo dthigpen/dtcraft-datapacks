@@ -8,7 +8,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.tags
 data modify storage call_stack: call.arg1 set from storage call_stack: this.item_counts
 function dt.crafting_util:internal/recipe/resolve_tags
 data modify storage call_stack: this.actual set from storage call_stack: call.result
-tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
+#tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
