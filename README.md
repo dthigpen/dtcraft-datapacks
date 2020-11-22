@@ -12,6 +12,9 @@ A collection of utility and vanilla enhancement datapacks.
 ## Vanilla Enhancement Datapacks
 Datapacks that do not drastically change vanilla gameplay
 
+### Autocraft
+Automate the crafting process with a redstone enabled crafting table. More information [here](https://github.com/dthigpen/dtcraft-datapacks/blob/master/autocraft/README.md)
+
 ### Refill
 Automatically refill an empty stack of a hotbar item with available stacks from your inventory.
 
