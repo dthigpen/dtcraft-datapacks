@@ -6,4 +6,6 @@ execute if block ~ ~ ~ dropper[facing=east] run summon armor_stand ~ ~ ~ {Rotati
 execute if block ~ ~ ~ dropper[facing=west] run summon armor_stand ~ ~ ~ {Rotation:[90f,0f], Fire:10s, Small:1b, Marker:1b, Invisible:1b, Tags:["dt.ac"], ArmorItems:[{},{},{},{id:"minecraft:dropper", Count:1b, tag:{CustomModelData:777777}}]}
 execute if block ~ ~ ~ dropper[facing=up] run summon armor_stand ~ ~ ~ {Rotation:[0f,90f], Fire:10s, Small:1b, Marker:1b, Invisible:1b, Tags:["dt.ac"], ArmorItems:[{},{},{},{id:"minecraft:dropper", Count:1b, tag:{CustomModelData:777778}}]}
 execute if block ~ ~ ~ dropper[facing=down] run summon armor_stand ~ ~ ~ {Rotation:[0f,0f], Fire:10s, Small:1b, Marker:1b, Invisible:1b, Tags:["dt.ac"], ArmorItems:[{},{},{},{id:"minecraft:dropper", Count:1b, tag:{CustomModelData:777779}}]}
+
+function autocraft:internal/blocks/autocrafter/set_recipe
 data modify block ~ ~ ~ Lock set value ""
