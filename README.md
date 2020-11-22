@@ -4,10 +4,10 @@ A collection of utility and vanilla enhancement datapacks.
 
 ## Installation
 
-1. Visit the [Releases](https://github.com/dthigpen/dtcraft-datapacks/releases) page and download the desired modpack zip file. If the file ends in bundle.zip follow step 2, otherwise continue to step 3
-2. Unzip the downloaded zip file. Open the resulting folder. You should see several zip files inside.
-3. Copy all of these files into your world's datapacks folder at `%APPDATA%\.minecraft\saves\<world>\datapacks`
-4. Launch the world and type `/reload`
+1. Visit the [Releases](https://github.com/dthigpen/dtcraft-datapacks/releases) page and download the desired datapack zip file.
+2. Copy the downloaded zip files into your world's datapacks folder at `%APPDATA%\.minecraft\saves\<world>\datapacks`
+3. Launch the world and type `/reload`
+4. Check that the datapack is installed under the "Installed Datapacks" Advancement tab with `Ctrl + L`
 
 ## Vanilla Enhancement Datapacks
 Datapacks that do not drastically change vanilla gameplay
