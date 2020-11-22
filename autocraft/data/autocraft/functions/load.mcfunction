@@ -14,7 +14,7 @@ scoreboard objectives add dt.ac.offblock dummy
 
 scoreboard objectives add dt.ac.cooldown dummy
 scoreboard players set #max dt.ac.cooldown 20
-scoreboard players set #rate dt.ac.cooldown 1
+scoreboard players set #rate dt.ac.cooldown 5
 
 scoreboard objectives add dt.ac.state dummy
 scoreboard players set #ready dt.ac.state 1

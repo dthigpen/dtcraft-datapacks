@@ -8,6 +8,6 @@ execute if score @s dt.ac.state = #craft dt.ac.state run scoreboard players oper
 
 
 # ready -> craft
-execute if score @s dt.ac.state = #ready dt.ac.state if block ~ ~ ~ minecraft:dropper[triggered=true] run scoreboard players operation @s dt.ac.state = #craft dt.ac.state
+execute if score @s dt.ac.state = #ready dt.ac.state if block ~ ~-1 ~ minecraft:hopper[enabled=true] run scoreboard players operation @s dt.ac.state = #craft dt.ac.state
 
 

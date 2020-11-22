@@ -7,19 +7,23 @@ data modify storage call_stack: this.recipe_result set value {}
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: this.cached_recipes[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.cached_recipes
 execute if data storage call_stack: this.cached_recipes[0] run function dt.crafting_util:api/recipe/find_from_recipes
-execute if data storage call_stack: this.cached_recipes[0] run data modify storage call_stack: this.recipe_result set from storage call_stack: call.result
-data modify storage call_stack: this.in_cache set value false
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.in_cache set value true
+execute unless data storage call_stack: this.cached_recipes[0] run function dt.crafting_util:api/recipe/find
+execute run data modify storage call_stack: this.recipe_result set from storage call_stack: call.result
+#data modify storage call_stack: this.in_cache set value false
+#execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.in_cache set value true
 
 # If the search was from the cache and the resulting recipe is {} then try an exhaustive search
-execute if data storage call_stack: {this:{in_cache:false}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
-execute if data storage call_stack: {this:{in_cache:false}} run function dt.crafting_util:api/recipe/find
-execute if data storage call_stack: {this:{in_cache:false}} run data modify storage call_stack: this.recipe_result set from storage call_stack: call.result
+#execute if data storage call_stack: {this:{in_cache:false}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
+#execute if data storage call_stack: {this:{in_cache:false}} run function dt.crafting_util:api/recipe/find
+#execute if data storage call_stack: {this:{in_cache:false}} run data modify storage call_stack: this.recipe_result set from storage call_stack: call.result
+
+data modify storage call_stack: this.empty_cache set value true
+execute if data storage call_stack: this.cached_recipes[0] run data modify storage call_stack: this.in_cache set value false
 
 # if it was not in the cache but was found exhaustively, prepend it to the cache and save it
-execute if data storage call_stack: {this:{in_cache:false}} if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.cached_recipes prepend from storage call_stack: this.recipe_result 
-execute if data storage call_stack: {this:{in_cache:false}} if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.cached_recipes
-execute if data storage call_stack: {this:{in_cache:false}} if data storage call_stack: this.recipe_result.result.id run function autocraft:internal/blocks/autocrafter/sava_data
+execute if data storage call_stack: {this:{empty_cache:true}} if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.cached_recipes prepend from storage call_stack: this.recipe_result 
+execute if data storage call_stack: {this:{empty_cache:true}} if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.cached_recipes
+execute if data storage call_stack: {this:{empty_cache:true}} if data storage call_stack: this.recipe_result.result.id run function autocraft:internal/blocks/autocrafter/sava_data
 #tellraw @p [{"text":"CACHE: "},{"nbt":"this.cached_recipes","storage":"call_stack:"}]
 #tellraw @p [{"text":"in_cache: "},{"nbt":"this.in_cache","storage":"call_stack:"}]
 #tellraw @p [{"text":"result: "},{"nbt":"this.recipe_result.result.id","storage":"call_stack:"}]
