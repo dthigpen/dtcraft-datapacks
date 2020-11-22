@@ -1,12 +1,3389 @@
 {
     "criteria": {
-        "stone":{
+        "autocrafter":{
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
                 "recipe": "autocraft:autocrafter"
             }
+        },
+        "acacia_boat_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_boat_crafter"
+            }
+        },
+        "acacia_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_button_crafter"
+            }
+        },
+        "acacia_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_door_crafter"
+            }
+        },
+        "acacia_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_fence_crafter"
+            }
+        },
+        "acacia_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_fence_gate_crafter"
+            }
+        },
+        "acacia_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_planks_crafter"
+            }
+        },
+        "acacia_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_pressure_plate_crafter"
+            }
+        },
+        "acacia_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_sign_crafter"
+            }
+        },
+        "acacia_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_slab_crafter"
+            }
+        },
+        "acacia_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_stairs_crafter"
+            }
+        },
+        "acacia_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_trapdoor_crafter"
+            }
+        },
+        "acacia_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:acacia_wood_crafter"
+            }
+        },
+        "activator_rail_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:activator_rail_crafter"
+            }
+        },
+        "andesite_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:andesite_crafter"
+            }
+        },
+        "andesite_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:andesite_slab_crafter"
+            }
+        },
+        "andesite_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:andesite_stairs_crafter"
+            }
+        },
+        "andesite_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:andesite_wall_crafter"
+            }
+        },
+        "anvil_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:anvil_crafter"
+            }
+        },
+        "armor_stand_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:armor_stand_crafter"
+            }
+        },
+        "arrow_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:arrow_crafter"
+            }
+        },
+        "barrel_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:barrel_crafter"
+            }
+        },
+        "beacon_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:beacon_crafter"
+            }
+        },
+        "beehive_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:beehive_crafter"
+            }
+        },
+        "beetroot_soup_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:beetroot_soup_crafter"
+            }
+        },
+        "birch_boat_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_boat_crafter"
+            }
+        },
+        "birch_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_button_crafter"
+            }
+        },
+        "birch_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_door_crafter"
+            }
+        },
+        "birch_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_fence_crafter"
+            }
+        },
+        "birch_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_fence_gate_crafter"
+            }
+        },
+        "birch_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_planks_crafter"
+            }
+        },
+        "birch_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_pressure_plate_crafter"
+            }
+        },
+        "birch_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_sign_crafter"
+            }
+        },
+        "birch_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_slab_crafter"
+            }
+        },
+        "birch_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_stairs_crafter"
+            }
+        },
+        "birch_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_trapdoor_crafter"
+            }
+        },
+        "birch_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:birch_wood_crafter"
+            }
+        },
+        "blackstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blackstone_slab_crafter"
+            }
+        },
+        "blackstone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blackstone_stairs_crafter"
+            }
+        },
+        "blackstone_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blackstone_wall_crafter"
+            }
+        },
+        "black_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_banner_crafter"
+            }
+        },
+        "black_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_bed_crafter"
+            }
+        },
+        "black_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_carpet_crafter"
+            }
+        },
+        "black_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_concrete_powder_crafter"
+            }
+        },
+        "black_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_dye_crafter"
+            }
+        },
+        "black_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_stained_glass_crafter"
+            }
+        },
+        "black_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_stained_glass_pane_crafter"
+            }
+        },
+        "black_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_terracotta_crafter"
+            }
+        },
+        "black_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:black_wool_crafter"
+            }
+        },
+        "blast_furnace_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blast_furnace_crafter"
+            }
+        },
+        "blaze_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blaze_powder_crafter"
+            }
+        },
+        "blue_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_banner_crafter"
+            }
+        },
+        "blue_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_bed_crafter"
+            }
+        },
+        "blue_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_carpet_crafter"
+            }
+        },
+        "blue_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_concrete_powder_crafter"
+            }
+        },
+        "blue_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_dye_crafter"
+            }
+        },
+        "blue_ice_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_ice_crafter"
+            }
+        },
+        "blue_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_stained_glass_crafter"
+            }
+        },
+        "blue_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_stained_glass_pane_crafter"
+            }
+        },
+        "blue_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_terracotta_crafter"
+            }
+        },
+        "blue_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:blue_wool_crafter"
+            }
+        },
+        "bone_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bone_block_crafter"
+            }
+        },
+        "bone_meal_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bone_meal_crafter"
+            }
+        },
+        "book_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:book_crafter"
+            }
+        },
+        "bookshelf_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bookshelf_crafter"
+            }
+        },
+        "bow_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bow_crafter"
+            }
+        },
+        "bowl_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bowl_crafter"
+            }
+        },
+        "bread_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bread_crafter"
+            }
+        },
+        "brewing_stand_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brewing_stand_crafter"
+            }
+        },
+        "bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bricks_crafter"
+            }
+        },
+        "brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brick_slab_crafter"
+            }
+        },
+        "brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brick_stairs_crafter"
+            }
+        },
+        "brick_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brick_wall_crafter"
+            }
+        },
+        "brown_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_banner_crafter"
+            }
+        },
+        "brown_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_bed_crafter"
+            }
+        },
+        "brown_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_carpet_crafter"
+            }
+        },
+        "brown_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_concrete_powder_crafter"
+            }
+        },
+        "brown_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_dye_crafter"
+            }
+        },
+        "brown_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_stained_glass_crafter"
+            }
+        },
+        "brown_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_stained_glass_pane_crafter"
+            }
+        },
+        "brown_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_terracotta_crafter"
+            }
+        },
+        "brown_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:brown_wool_crafter"
+            }
+        },
+        "bucket_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:bucket_crafter"
+            }
+        },
+        "cake_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cake_crafter"
+            }
+        },
+        "campfire_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:campfire_crafter"
+            }
+        },
+        "carrot_on_a_stick_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:carrot_on_a_stick_crafter"
+            }
+        },
+        "cartography_table_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cartography_table_crafter"
+            }
+        },
+        "cauldron_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cauldron_crafter"
+            }
+        },
+        "chain_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chain_crafter"
+            }
+        },
+        "chest_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chest_crafter"
+            }
+        },
+        "chest_minecart_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chest_minecart_crafter"
+            }
+        },
+        "chiseled_nether_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chiseled_nether_bricks_crafter"
+            }
+        },
+        "chiseled_polished_blackstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chiseled_polished_blackstone_crafter"
+            }
+        },
+        "chiseled_quartz_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chiseled_quartz_block_crafter"
+            }
+        },
+        "chiseled_red_sandstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chiseled_red_sandstone_crafter"
+            }
+        },
+        "chiseled_sandstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chiseled_sandstone_crafter"
+            }
+        },
+        "chiseled_stone_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:chiseled_stone_bricks_crafter"
+            }
+        },
+        "clay_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:clay_crafter"
+            }
+        },
+        "clock_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:clock_crafter"
+            }
+        },
+        "coal_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:coal_crafter"
+            }
+        },
+        "coal_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:coal_block_crafter"
+            }
+        },
+        "coarse_dirt_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:coarse_dirt_crafter"
+            }
+        },
+        "cobblestone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cobblestone_slab_crafter"
+            }
+        },
+        "cobblestone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cobblestone_stairs_crafter"
+            }
+        },
+        "cobblestone_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cobblestone_wall_crafter"
+            }
+        },
+        "comparator_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:comparator_crafter"
+            }
+        },
+        "compass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:compass_crafter"
+            }
+        },
+        "composter_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:composter_crafter"
+            }
+        },
+        "conduit_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:conduit_crafter"
+            }
+        },
+        "cookie_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cookie_crafter"
+            }
+        },
+        "crafting_table_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crafting_table_crafter"
+            }
+        },
+        "creeper_banner_pattern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:creeper_banner_pattern_crafter"
+            }
+        },
+        "crimson_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_button_crafter"
+            }
+        },
+        "crimson_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_door_crafter"
+            }
+        },
+        "crimson_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_fence_crafter"
+            }
+        },
+        "crimson_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_fence_gate_crafter"
+            }
+        },
+        "crimson_hyphae_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_hyphae_crafter"
+            }
+        },
+        "crimson_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_planks_crafter"
+            }
+        },
+        "crimson_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_pressure_plate_crafter"
+            }
+        },
+        "crimson_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_sign_crafter"
+            }
+        },
+        "crimson_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_slab_crafter"
+            }
+        },
+        "crimson_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_stairs_crafter"
+            }
+        },
+        "crimson_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crimson_trapdoor_crafter"
+            }
+        },
+        "crossbow_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:crossbow_crafter"
+            }
+        },
+        "cut_red_sandstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cut_red_sandstone_crafter"
+            }
+        },
+        "cut_red_sandstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cut_red_sandstone_slab_crafter"
+            }
+        },
+        "cut_sandstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cut_sandstone_crafter"
+            }
+        },
+        "cut_sandstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cut_sandstone_slab_crafter"
+            }
+        },
+        "cyan_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_banner_crafter"
+            }
+        },
+        "cyan_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_bed_crafter"
+            }
+        },
+        "cyan_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_carpet_crafter"
+            }
+        },
+        "cyan_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_concrete_powder_crafter"
+            }
+        },
+        "cyan_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_dye_crafter"
+            }
+        },
+        "cyan_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_stained_glass_crafter"
+            }
+        },
+        "cyan_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_stained_glass_pane_crafter"
+            }
+        },
+        "cyan_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_terracotta_crafter"
+            }
+        },
+        "cyan_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:cyan_wool_crafter"
+            }
+        },
+        "dark_oak_boat_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_boat_crafter"
+            }
+        },
+        "dark_oak_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_button_crafter"
+            }
+        },
+        "dark_oak_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_door_crafter"
+            }
+        },
+        "dark_oak_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_fence_crafter"
+            }
+        },
+        "dark_oak_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_fence_gate_crafter"
+            }
+        },
+        "dark_oak_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_planks_crafter"
+            }
+        },
+        "dark_oak_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_pressure_plate_crafter"
+            }
+        },
+        "dark_oak_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_sign_crafter"
+            }
+        },
+        "dark_oak_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_slab_crafter"
+            }
+        },
+        "dark_oak_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_stairs_crafter"
+            }
+        },
+        "dark_oak_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_trapdoor_crafter"
+            }
+        },
+        "dark_oak_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_oak_wood_crafter"
+            }
+        },
+        "dark_prismarine_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_prismarine_crafter"
+            }
+        },
+        "dark_prismarine_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_prismarine_slab_crafter"
+            }
+        },
+        "dark_prismarine_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dark_prismarine_stairs_crafter"
+            }
+        },
+        "daylight_detector_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:daylight_detector_crafter"
+            }
+        },
+        "detector_rail_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:detector_rail_crafter"
+            }
+        },
+        "diamond_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_crafter"
+            }
+        },
+        "diamond_axe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_axe_crafter"
+            }
+        },
+        "diamond_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_block_crafter"
+            }
+        },
+        "diamond_boots_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_boots_crafter"
+            }
+        },
+        "diamond_chestplate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_chestplate_crafter"
+            }
+        },
+        "diamond_helmet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_helmet_crafter"
+            }
+        },
+        "diamond_hoe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_hoe_crafter"
+            }
+        },
+        "diamond_leggings_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_leggings_crafter"
+            }
+        },
+        "diamond_pickaxe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_pickaxe_crafter"
+            }
+        },
+        "diamond_shovel_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_shovel_crafter"
+            }
+        },
+        "diamond_sword_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diamond_sword_crafter"
+            }
+        },
+        "diorite_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diorite_crafter"
+            }
+        },
+        "diorite_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diorite_slab_crafter"
+            }
+        },
+        "diorite_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diorite_stairs_crafter"
+            }
+        },
+        "diorite_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:diorite_wall_crafter"
+            }
+        },
+        "dispenser_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dispenser_crafter"
+            }
+        },
+        "dried_kelp_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dried_kelp_crafter"
+            }
+        },
+        "dried_kelp_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dried_kelp_block_crafter"
+            }
+        },
+        "dropper_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:dropper_crafter"
+            }
+        },
+        "emerald_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:emerald_crafter"
+            }
+        },
+        "emerald_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:emerald_block_crafter"
+            }
+        },
+        "enchanting_table_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:enchanting_table_crafter"
+            }
+        },
+        "ender_chest_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:ender_chest_crafter"
+            }
+        },
+        "ender_eye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:ender_eye_crafter"
+            }
+        },
+        "end_crystal_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:end_crystal_crafter"
+            }
+        },
+        "end_rod_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:end_rod_crafter"
+            }
+        },
+        "end_stone_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:end_stone_bricks_crafter"
+            }
+        },
+        "end_stone_brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:end_stone_brick_slab_crafter"
+            }
+        },
+        "end_stone_brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:end_stone_brick_stairs_crafter"
+            }
+        },
+        "end_stone_brick_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:end_stone_brick_wall_crafter"
+            }
+        },
+        "fermented_spider_eye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:fermented_spider_eye_crafter"
+            }
+        },
+        "fire_charge_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:fire_charge_crafter"
+            }
+        },
+        "fishing_rod_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:fishing_rod_crafter"
+            }
+        },
+        "fletching_table_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:fletching_table_crafter"
+            }
+        },
+        "flint_and_steel_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:flint_and_steel_crafter"
+            }
+        },
+        "flower_banner_pattern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:flower_banner_pattern_crafter"
+            }
+        },
+        "flower_pot_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:flower_pot_crafter"
+            }
+        },
+        "furnace_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:furnace_crafter"
+            }
+        },
+        "furnace_minecart_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:furnace_minecart_crafter"
+            }
+        },
+        "glass_bottle_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:glass_bottle_crafter"
+            }
+        },
+        "glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:glass_pane_crafter"
+            }
+        },
+        "glistering_melon_slice_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:glistering_melon_slice_crafter"
+            }
+        },
+        "glowstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:glowstone_crafter"
+            }
+        },
+        "golden_apple_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_apple_crafter"
+            }
+        },
+        "golden_axe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_axe_crafter"
+            }
+        },
+        "golden_boots_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_boots_crafter"
+            }
+        },
+        "golden_carrot_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_carrot_crafter"
+            }
+        },
+        "golden_chestplate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_chestplate_crafter"
+            }
+        },
+        "golden_helmet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_helmet_crafter"
+            }
+        },
+        "golden_hoe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_hoe_crafter"
+            }
+        },
+        "golden_leggings_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_leggings_crafter"
+            }
+        },
+        "golden_pickaxe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_pickaxe_crafter"
+            }
+        },
+        "golden_shovel_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_shovel_crafter"
+            }
+        },
+        "golden_sword_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:golden_sword_crafter"
+            }
+        },
+        "gold_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gold_block_crafter"
+            }
+        },
+        "gold_ingot_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gold_ingot_crafter"
+            }
+        },
+        "gold_nugget_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gold_nugget_crafter"
+            }
+        },
+        "granite_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:granite_crafter"
+            }
+        },
+        "granite_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:granite_slab_crafter"
+            }
+        },
+        "granite_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:granite_stairs_crafter"
+            }
+        },
+        "granite_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:granite_wall_crafter"
+            }
+        },
+        "gray_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_banner_crafter"
+            }
+        },
+        "gray_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_bed_crafter"
+            }
+        },
+        "gray_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_carpet_crafter"
+            }
+        },
+        "gray_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_concrete_powder_crafter"
+            }
+        },
+        "gray_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_dye_crafter"
+            }
+        },
+        "gray_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_stained_glass_crafter"
+            }
+        },
+        "gray_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_stained_glass_pane_crafter"
+            }
+        },
+        "gray_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_terracotta_crafter"
+            }
+        },
+        "gray_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:gray_wool_crafter"
+            }
+        },
+        "green_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_banner_crafter"
+            }
+        },
+        "green_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_bed_crafter"
+            }
+        },
+        "green_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_carpet_crafter"
+            }
+        },
+        "green_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_concrete_powder_crafter"
+            }
+        },
+        "green_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_stained_glass_crafter"
+            }
+        },
+        "green_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_stained_glass_pane_crafter"
+            }
+        },
+        "green_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_terracotta_crafter"
+            }
+        },
+        "green_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:green_wool_crafter"
+            }
+        },
+        "grindstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:grindstone_crafter"
+            }
+        },
+        "hay_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:hay_block_crafter"
+            }
+        },
+        "heavy_weighted_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:heavy_weighted_pressure_plate_crafter"
+            }
+        },
+        "honeycomb_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:honeycomb_block_crafter"
+            }
+        },
+        "honey_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:honey_block_crafter"
+            }
+        },
+        "honey_bottle_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:honey_bottle_crafter"
+            }
+        },
+        "hopper_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:hopper_crafter"
+            }
+        },
+        "hopper_minecart_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:hopper_minecart_crafter"
+            }
+        },
+        "iron_axe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_axe_crafter"
+            }
+        },
+        "iron_bars_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_bars_crafter"
+            }
+        },
+        "iron_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_block_crafter"
+            }
+        },
+        "iron_boots_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_boots_crafter"
+            }
+        },
+        "iron_chestplate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_chestplate_crafter"
+            }
+        },
+        "iron_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_door_crafter"
+            }
+        },
+        "iron_helmet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_helmet_crafter"
+            }
+        },
+        "iron_hoe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_hoe_crafter"
+            }
+        },
+        "iron_ingot_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_ingot_crafter"
+            }
+        },
+        "iron_leggings_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_leggings_crafter"
+            }
+        },
+        "iron_nugget_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_nugget_crafter"
+            }
+        },
+        "iron_pickaxe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_pickaxe_crafter"
+            }
+        },
+        "iron_shovel_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_shovel_crafter"
+            }
+        },
+        "iron_sword_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_sword_crafter"
+            }
+        },
+        "iron_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:iron_trapdoor_crafter"
+            }
+        },
+        "item_frame_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:item_frame_crafter"
+            }
+        },
+        "jack_o_lantern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jack_o_lantern_crafter"
+            }
+        },
+        "jukebox_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jukebox_crafter"
+            }
+        },
+        "jungle_boat_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_boat_crafter"
+            }
+        },
+        "jungle_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_button_crafter"
+            }
+        },
+        "jungle_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_door_crafter"
+            }
+        },
+        "jungle_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_fence_crafter"
+            }
+        },
+        "jungle_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_fence_gate_crafter"
+            }
+        },
+        "jungle_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_planks_crafter"
+            }
+        },
+        "jungle_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_pressure_plate_crafter"
+            }
+        },
+        "jungle_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_sign_crafter"
+            }
+        },
+        "jungle_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_slab_crafter"
+            }
+        },
+        "jungle_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_stairs_crafter"
+            }
+        },
+        "jungle_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_trapdoor_crafter"
+            }
+        },
+        "jungle_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:jungle_wood_crafter"
+            }
+        },
+        "ladder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:ladder_crafter"
+            }
+        },
+        "lantern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lantern_crafter"
+            }
+        },
+        "lapis_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lapis_block_crafter"
+            }
+        },
+        "lapis_lazuli_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lapis_lazuli_crafter"
+            }
+        },
+        "lead_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lead_crafter"
+            }
+        },
+        "leather_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:leather_crafter"
+            }
+        },
+        "leather_boots_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:leather_boots_crafter"
+            }
+        },
+        "leather_chestplate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:leather_chestplate_crafter"
+            }
+        },
+        "leather_helmet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:leather_helmet_crafter"
+            }
+        },
+        "leather_horse_armor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:leather_horse_armor_crafter"
+            }
+        },
+        "leather_leggings_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:leather_leggings_crafter"
+            }
+        },
+        "lectern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lectern_crafter"
+            }
+        },
+        "lever_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lever_crafter"
+            }
+        },
+        "light_blue_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_banner_crafter"
+            }
+        },
+        "light_blue_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_bed_crafter"
+            }
+        },
+        "light_blue_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_carpet_crafter"
+            }
+        },
+        "light_blue_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_concrete_powder_crafter"
+            }
+        },
+        "light_blue_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_dye_crafter"
+            }
+        },
+        "light_blue_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_stained_glass_crafter"
+            }
+        },
+        "light_blue_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_stained_glass_pane_crafter"
+            }
+        },
+        "light_blue_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_terracotta_crafter"
+            }
+        },
+        "light_blue_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_blue_wool_crafter"
+            }
+        },
+        "light_gray_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_banner_crafter"
+            }
+        },
+        "light_gray_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_bed_crafter"
+            }
+        },
+        "light_gray_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_carpet_crafter"
+            }
+        },
+        "light_gray_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_concrete_powder_crafter"
+            }
+        },
+        "light_gray_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_dye_crafter"
+            }
+        },
+        "light_gray_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_stained_glass_crafter"
+            }
+        },
+        "light_gray_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_stained_glass_pane_crafter"
+            }
+        },
+        "light_gray_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_terracotta_crafter"
+            }
+        },
+        "light_gray_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_gray_wool_crafter"
+            }
+        },
+        "light_weighted_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:light_weighted_pressure_plate_crafter"
+            }
+        },
+        "lime_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_banner_crafter"
+            }
+        },
+        "lime_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_bed_crafter"
+            }
+        },
+        "lime_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_carpet_crafter"
+            }
+        },
+        "lime_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_concrete_powder_crafter"
+            }
+        },
+        "lime_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_dye_crafter"
+            }
+        },
+        "lime_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_stained_glass_crafter"
+            }
+        },
+        "lime_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_stained_glass_pane_crafter"
+            }
+        },
+        "lime_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_terracotta_crafter"
+            }
+        },
+        "lime_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lime_wool_crafter"
+            }
+        },
+        "lodestone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:lodestone_crafter"
+            }
+        },
+        "loom_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:loom_crafter"
+            }
+        },
+        "magenta_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_banner_crafter"
+            }
+        },
+        "magenta_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_bed_crafter"
+            }
+        },
+        "magenta_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_carpet_crafter"
+            }
+        },
+        "magenta_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_concrete_powder_crafter"
+            }
+        },
+        "magenta_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_dye_crafter"
+            }
+        },
+        "magenta_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_stained_glass_crafter"
+            }
+        },
+        "magenta_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_stained_glass_pane_crafter"
+            }
+        },
+        "magenta_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_terracotta_crafter"
+            }
+        },
+        "magenta_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magenta_wool_crafter"
+            }
+        },
+        "magma_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magma_block_crafter"
+            }
+        },
+        "magma_cream_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:magma_cream_crafter"
+            }
+        },
+        "map_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:map_crafter"
+            }
+        },
+        "melon_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:melon_crafter"
+            }
+        },
+        "melon_seeds_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:melon_seeds_crafter"
+            }
+        },
+        "minecart_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:minecart_crafter"
+            }
+        },
+        "mojang_banner_pattern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mojang_banner_pattern_crafter"
+            }
+        },
+        "mossy_cobblestone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_cobblestone_crafter"
+            }
+        },
+        "mossy_cobblestone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_cobblestone_slab_crafter"
+            }
+        },
+        "mossy_cobblestone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_cobblestone_stairs_crafter"
+            }
+        },
+        "mossy_cobblestone_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_cobblestone_wall_crafter"
+            }
+        },
+        "mossy_stone_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_stone_bricks_crafter"
+            }
+        },
+        "mossy_stone_brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_stone_brick_slab_crafter"
+            }
+        },
+        "mossy_stone_brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_stone_brick_stairs_crafter"
+            }
+        },
+        "mossy_stone_brick_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mossy_stone_brick_wall_crafter"
+            }
+        },
+        "mushroom_stew_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:mushroom_stew_crafter"
+            }
+        },
+        "netherite_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:netherite_block_crafter"
+            }
+        },
+        "netherite_ingot_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:netherite_ingot_crafter"
+            }
+        },
+        "nether_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:nether_bricks_crafter"
+            }
+        },
+        "nether_brick_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:nether_brick_fence_crafter"
+            }
+        },
+        "nether_brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:nether_brick_slab_crafter"
+            }
+        },
+        "nether_brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:nether_brick_stairs_crafter"
+            }
+        },
+        "nether_brick_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:nether_brick_wall_crafter"
+            }
+        },
+        "nether_wart_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:nether_wart_block_crafter"
+            }
+        },
+        "note_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:note_block_crafter"
+            }
+        },
+        "oak_boat_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_boat_crafter"
+            }
+        },
+        "oak_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_button_crafter"
+            }
+        },
+        "oak_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_door_crafter"
+            }
+        },
+        "oak_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_fence_crafter"
+            }
+        },
+        "oak_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_fence_gate_crafter"
+            }
+        },
+        "oak_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_planks_crafter"
+            }
+        },
+        "oak_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_pressure_plate_crafter"
+            }
+        },
+        "oak_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_sign_crafter"
+            }
+        },
+        "oak_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_slab_crafter"
+            }
+        },
+        "oak_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_stairs_crafter"
+            }
+        },
+        "oak_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_trapdoor_crafter"
+            }
+        },
+        "oak_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:oak_wood_crafter"
+            }
+        },
+        "observer_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:observer_crafter"
+            }
+        },
+        "orange_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_banner_crafter"
+            }
+        },
+        "orange_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_bed_crafter"
+            }
+        },
+        "orange_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_carpet_crafter"
+            }
+        },
+        "orange_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_concrete_powder_crafter"
+            }
+        },
+        "orange_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_dye_crafter"
+            }
+        },
+        "orange_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_stained_glass_crafter"
+            }
+        },
+        "orange_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_stained_glass_pane_crafter"
+            }
+        },
+        "orange_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_terracotta_crafter"
+            }
+        },
+        "orange_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:orange_wool_crafter"
+            }
+        },
+        "packed_ice_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:packed_ice_crafter"
+            }
+        },
+        "painting_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:painting_crafter"
+            }
+        },
+        "paper_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:paper_crafter"
+            }
+        },
+        "pink_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_banner_crafter"
+            }
+        },
+        "pink_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_bed_crafter"
+            }
+        },
+        "pink_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_carpet_crafter"
+            }
+        },
+        "pink_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_concrete_powder_crafter"
+            }
+        },
+        "pink_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_dye_crafter"
+            }
+        },
+        "pink_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_stained_glass_crafter"
+            }
+        },
+        "pink_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_stained_glass_pane_crafter"
+            }
+        },
+        "pink_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_terracotta_crafter"
+            }
+        },
+        "pink_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pink_wool_crafter"
+            }
+        },
+        "piston_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:piston_crafter"
+            }
+        },
+        "polished_andesite_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_andesite_crafter"
+            }
+        },
+        "polished_andesite_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_andesite_slab_crafter"
+            }
+        },
+        "polished_andesite_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_andesite_stairs_crafter"
+            }
+        },
+        "polished_basalt_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_basalt_crafter"
+            }
+        },
+        "polished_blackstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_crafter"
+            }
+        },
+        "polished_blackstone_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_bricks_crafter"
+            }
+        },
+        "polished_blackstone_brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_brick_slab_crafter"
+            }
+        },
+        "polished_blackstone_brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_brick_stairs_crafter"
+            }
+        },
+        "polished_blackstone_brick_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_brick_wall_crafter"
+            }
+        },
+        "polished_blackstone_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_button_crafter"
+            }
+        },
+        "polished_blackstone_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_pressure_plate_crafter"
+            }
+        },
+        "polished_blackstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_slab_crafter"
+            }
+        },
+        "polished_blackstone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_stairs_crafter"
+            }
+        },
+        "polished_blackstone_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_blackstone_wall_crafter"
+            }
+        },
+        "polished_diorite_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_diorite_crafter"
+            }
+        },
+        "polished_diorite_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_diorite_slab_crafter"
+            }
+        },
+        "polished_diorite_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_diorite_stairs_crafter"
+            }
+        },
+        "polished_granite_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_granite_crafter"
+            }
+        },
+        "polished_granite_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_granite_slab_crafter"
+            }
+        },
+        "polished_granite_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:polished_granite_stairs_crafter"
+            }
+        },
+        "powered_rail_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:powered_rail_crafter"
+            }
+        },
+        "prismarine_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:prismarine_crafter"
+            }
+        },
+        "prismarine_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:prismarine_bricks_crafter"
+            }
+        },
+        "prismarine_brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:prismarine_brick_slab_crafter"
+            }
+        },
+        "prismarine_brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:prismarine_brick_stairs_crafter"
+            }
+        },
+        "prismarine_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:prismarine_slab_crafter"
+            }
+        },
+        "prismarine_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:prismarine_stairs_crafter"
+            }
+        },
+        "prismarine_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:prismarine_wall_crafter"
+            }
+        },
+        "pumpkin_pie_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pumpkin_pie_crafter"
+            }
+        },
+        "pumpkin_seeds_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:pumpkin_seeds_crafter"
+            }
+        },
+        "purple_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_banner_crafter"
+            }
+        },
+        "purple_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_bed_crafter"
+            }
+        },
+        "purple_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_carpet_crafter"
+            }
+        },
+        "purple_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_concrete_powder_crafter"
+            }
+        },
+        "purple_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_dye_crafter"
+            }
+        },
+        "purple_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_stained_glass_crafter"
+            }
+        },
+        "purple_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_stained_glass_pane_crafter"
+            }
+        },
+        "purple_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_terracotta_crafter"
+            }
+        },
+        "purple_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purple_wool_crafter"
+            }
+        },
+        "purpur_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purpur_block_crafter"
+            }
+        },
+        "purpur_pillar_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purpur_pillar_crafter"
+            }
+        },
+        "purpur_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purpur_slab_crafter"
+            }
+        },
+        "purpur_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:purpur_stairs_crafter"
+            }
+        },
+        "quartz_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:quartz_block_crafter"
+            }
+        },
+        "quartz_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:quartz_bricks_crafter"
+            }
+        },
+        "quartz_pillar_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:quartz_pillar_crafter"
+            }
+        },
+        "quartz_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:quartz_slab_crafter"
+            }
+        },
+        "quartz_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:quartz_stairs_crafter"
+            }
+        },
+        "rabbit_stew_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:rabbit_stew_crafter"
+            }
+        },
+        "rail_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:rail_crafter"
+            }
+        },
+        "redstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:redstone_crafter"
+            }
+        },
+        "redstone_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:redstone_block_crafter"
+            }
+        },
+        "redstone_lamp_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:redstone_lamp_crafter"
+            }
+        },
+        "redstone_torch_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:redstone_torch_crafter"
+            }
+        },
+        "red_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_banner_crafter"
+            }
+        },
+        "red_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_bed_crafter"
+            }
+        },
+        "red_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_carpet_crafter"
+            }
+        },
+        "red_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_concrete_powder_crafter"
+            }
+        },
+        "red_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_dye_crafter"
+            }
+        },
+        "red_nether_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_nether_bricks_crafter"
+            }
+        },
+        "red_nether_brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_nether_brick_slab_crafter"
+            }
+        },
+        "red_nether_brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_nether_brick_stairs_crafter"
+            }
+        },
+        "red_nether_brick_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_nether_brick_wall_crafter"
+            }
+        },
+        "red_sandstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_sandstone_crafter"
+            }
+        },
+        "red_sandstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_sandstone_slab_crafter"
+            }
+        },
+        "red_sandstone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_sandstone_stairs_crafter"
+            }
+        },
+        "red_sandstone_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_sandstone_wall_crafter"
+            }
+        },
+        "red_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_stained_glass_crafter"
+            }
+        },
+        "red_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_stained_glass_pane_crafter"
+            }
+        },
+        "red_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_terracotta_crafter"
+            }
+        },
+        "red_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:red_wool_crafter"
+            }
+        },
+        "repeater_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:repeater_crafter"
+            }
+        },
+        "respawn_anchor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:respawn_anchor_crafter"
+            }
+        },
+        "sandstone_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:sandstone_crafter"
+            }
+        },
+        "sandstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:sandstone_slab_crafter"
+            }
+        },
+        "sandstone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:sandstone_stairs_crafter"
+            }
+        },
+        "sandstone_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:sandstone_wall_crafter"
+            }
+        },
+        "scaffolding_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:scaffolding_crafter"
+            }
+        },
+        "sea_lantern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:sea_lantern_crafter"
+            }
+        },
+        "shears_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:shears_crafter"
+            }
+        },
+        "shield_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:shield_crafter"
+            }
+        },
+        "shulker_box_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:shulker_box_crafter"
+            }
+        },
+        "skull_banner_pattern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:skull_banner_pattern_crafter"
+            }
+        },
+        "slime_ball_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:slime_ball_crafter"
+            }
+        },
+        "slime_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:slime_block_crafter"
+            }
+        },
+        "smithing_table_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smithing_table_crafter"
+            }
+        },
+        "smoker_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smoker_crafter"
+            }
+        },
+        "smooth_quartz_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smooth_quartz_slab_crafter"
+            }
+        },
+        "smooth_quartz_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smooth_quartz_stairs_crafter"
+            }
+        },
+        "smooth_red_sandstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smooth_red_sandstone_slab_crafter"
+            }
+        },
+        "smooth_red_sandstone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smooth_red_sandstone_stairs_crafter"
+            }
+        },
+        "smooth_sandstone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smooth_sandstone_slab_crafter"
+            }
+        },
+        "smooth_sandstone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smooth_sandstone_stairs_crafter"
+            }
+        },
+        "smooth_stone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:smooth_stone_slab_crafter"
+            }
+        },
+        "snow_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:snow_crafter"
+            }
+        },
+        "snow_block_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:snow_block_crafter"
+            }
+        },
+        "soul_campfire_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:soul_campfire_crafter"
+            }
+        },
+        "soul_lantern_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:soul_lantern_crafter"
+            }
+        },
+        "soul_torch_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:soul_torch_crafter"
+            }
+        },
+        "spectral_arrow_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spectral_arrow_crafter"
+            }
+        },
+        "spruce_boat_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_boat_crafter"
+            }
+        },
+        "spruce_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_button_crafter"
+            }
+        },
+        "spruce_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_door_crafter"
+            }
+        },
+        "spruce_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_fence_crafter"
+            }
+        },
+        "spruce_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_fence_gate_crafter"
+            }
+        },
+        "spruce_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_planks_crafter"
+            }
+        },
+        "spruce_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_pressure_plate_crafter"
+            }
+        },
+        "spruce_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_sign_crafter"
+            }
+        },
+        "spruce_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_slab_crafter"
+            }
+        },
+        "spruce_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_stairs_crafter"
+            }
+        },
+        "spruce_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_trapdoor_crafter"
+            }
+        },
+        "spruce_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:spruce_wood_crafter"
+            }
+        },
+        "stick_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stick_crafter"
+            }
+        },
+        "sticky_piston_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:sticky_piston_crafter"
+            }
+        },
+        "stonecutter_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stonecutter_crafter"
+            }
+        },
+        "stone_axe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_axe_crafter"
+            }
+        },
+        "stone_bricks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_bricks_crafter"
+            }
+        },
+        "stone_brick_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_brick_slab_crafter"
+            }
+        },
+        "stone_brick_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_brick_stairs_crafter"
+            }
+        },
+        "stone_brick_wall_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_brick_wall_crafter"
+            }
+        },
+        "stone_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_button_crafter"
+            }
+        },
+        "stone_hoe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_hoe_crafter"
+            }
+        },
+        "stone_pickaxe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_pickaxe_crafter"
+            }
+        },
+        "stone_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_pressure_plate_crafter"
+            }
+        },
+        "stone_shovel_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_shovel_crafter"
+            }
+        },
+        "stone_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_slab_crafter"
+            }
+        },
+        "stone_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_stairs_crafter"
+            }
+        },
+        "stone_sword_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stone_sword_crafter"
+            }
+        },
+        "stripped_acacia_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_acacia_wood_crafter"
+            }
+        },
+        "stripped_birch_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_birch_wood_crafter"
+            }
+        },
+        "stripped_crimson_hyphae_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_crimson_hyphae_crafter"
+            }
+        },
+        "stripped_dark_oak_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_dark_oak_wood_crafter"
+            }
+        },
+        "stripped_jungle_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_jungle_wood_crafter"
+            }
+        },
+        "stripped_oak_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_oak_wood_crafter"
+            }
+        },
+        "stripped_spruce_wood_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_spruce_wood_crafter"
+            }
+        },
+        "stripped_warped_hyphae_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:stripped_warped_hyphae_crafter"
+            }
+        },
+        "sugar_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:sugar_crafter"
+            }
+        },
+        "target_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:target_crafter"
+            }
+        },
+        "tnt_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:tnt_crafter"
+            }
+        },
+        "tnt_minecart_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:tnt_minecart_crafter"
+            }
+        },
+        "torch_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:torch_crafter"
+            }
+        },
+        "trapped_chest_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:trapped_chest_crafter"
+            }
+        },
+        "tripwire_hook_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:tripwire_hook_crafter"
+            }
+        },
+        "turtle_helmet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:turtle_helmet_crafter"
+            }
+        },
+        "warped_button_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_button_crafter"
+            }
+        },
+        "warped_door_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_door_crafter"
+            }
+        },
+        "warped_fence_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_fence_crafter"
+            }
+        },
+        "warped_fence_gate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_fence_gate_crafter"
+            }
+        },
+        "warped_fungus_on_a_stick_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_fungus_on_a_stick_crafter"
+            }
+        },
+        "warped_hyphae_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_hyphae_crafter"
+            }
+        },
+        "warped_planks_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_planks_crafter"
+            }
+        },
+        "warped_pressure_plate_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_pressure_plate_crafter"
+            }
+        },
+        "warped_sign_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_sign_crafter"
+            }
+        },
+        "warped_slab_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_slab_crafter"
+            }
+        },
+        "warped_stairs_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_stairs_crafter"
+            }
+        },
+        "warped_trapdoor_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:warped_trapdoor_crafter"
+            }
+        },
+        "wheat_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:wheat_crafter"
+            }
+        },
+        "white_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_banner_crafter"
+            }
+        },
+        "white_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_bed_crafter"
+            }
+        },
+        "white_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_carpet_crafter"
+            }
+        },
+        "white_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_concrete_powder_crafter"
+            }
+        },
+        "white_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_dye_crafter"
+            }
+        },
+        "white_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_stained_glass_crafter"
+            }
+        },
+        "white_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_stained_glass_pane_crafter"
+            }
+        },
+        "white_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_terracotta_crafter"
+            }
+        },
+        "white_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:white_wool_crafter"
+            }
+        },
+        "wooden_axe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:wooden_axe_crafter"
+            }
+        },
+        "wooden_hoe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:wooden_hoe_crafter"
+            }
+        },
+        "wooden_pickaxe_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:wooden_pickaxe_crafter"
+            }
+        },
+        "wooden_shovel_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:wooden_shovel_crafter"
+            }
+        },
+        "wooden_sword_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:wooden_sword_crafter"
+            }
+        },
+        "writable_book_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:writable_book_crafter"
+            }
+        },
+        "yellow_banner_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_banner_crafter"
+            }
+        },
+        "yellow_bed_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_bed_crafter"
+            }
+        },
+        "yellow_carpet_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_carpet_crafter"
+            }
+        },
+        "yellow_concrete_powder_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_concrete_powder_crafter"
+            }
+        },
+        "yellow_dye_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_dye_crafter"
+            }
+        },
+        "yellow_stained_glass_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_stained_glass_crafter"
+            }
+        },
+        "yellow_stained_glass_pane_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_stained_glass_pane_crafter"
+            }
+        },
+        "yellow_terracotta_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_terracotta_crafter"
+            }
+        },
+        "yellow_wool_crafter":{
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "autocraft:yellow_wool_crafter"
+            }
         }
     },
+    "requirements": [
+        [
+          "autocrafter","acacia_boat_crafter","acacia_button_crafter","acacia_door_crafter","acacia_fence_crafter","acacia_fence_gate_crafter","acacia_planks_crafter","acacia_pressure_plate_crafter","acacia_sign_crafter","acacia_slab_crafter","acacia_stairs_crafter","acacia_trapdoor_crafter","acacia_wood_crafter","activator_rail_crafter","andesite_crafter","andesite_slab_crafter","andesite_stairs_crafter","andesite_wall_crafter","anvil_crafter","armor_stand_crafter","arrow_crafter","barrel_crafter","beacon_crafter","beehive_crafter","beetroot_soup_crafter","birch_boat_crafter","birch_button_crafter","birch_door_crafter","birch_fence_crafter","birch_fence_gate_crafter","birch_planks_crafter","birch_pressure_plate_crafter","birch_sign_crafter","birch_slab_crafter","birch_stairs_crafter","birch_trapdoor_crafter","birch_wood_crafter","blackstone_slab_crafter","blackstone_stairs_crafter","blackstone_wall_crafter","black_banner_crafter","black_bed_crafter","black_carpet_crafter","black_concrete_powder_crafter","black_dye_crafter","black_stained_glass_crafter","black_stained_glass_pane_crafter","black_terracotta_crafter","black_wool_crafter","blast_furnace_crafter","blaze_powder_crafter","blue_banner_crafter","blue_bed_crafter","blue_carpet_crafter","blue_concrete_powder_crafter","blue_dye_crafter","blue_ice_crafter","blue_stained_glass_crafter","blue_stained_glass_pane_crafter","blue_terracotta_crafter","blue_wool_crafter","bone_block_crafter","bone_meal_crafter","book_crafter","bookshelf_crafter","bow_crafter","bowl_crafter","bread_crafter","brewing_stand_crafter","bricks_crafter","brick_slab_crafter","brick_stairs_crafter","brick_wall_crafter","brown_banner_crafter","brown_bed_crafter","brown_carpet_crafter","brown_concrete_powder_crafter","brown_dye_crafter","brown_stained_glass_crafter","brown_stained_glass_pane_crafter","brown_terracotta_crafter","brown_wool_crafter","bucket_crafter","cake_crafter","campfire_crafter","carrot_on_a_stick_crafter","cartography_table_crafter","cauldron_crafter","chain_crafter","chest_crafter","chest_minecart_crafter","chiseled_nether_bricks_crafter","chiseled_polished_blackstone_crafter","chiseled_quartz_block_crafter","chiseled_red_sandstone_crafter","chiseled_sandstone_crafter","chiseled_stone_bricks_crafter","clay_crafter","clock_crafter","coal_crafter","coal_block_crafter","coarse_dirt_crafter","cobblestone_slab_crafter","cobblestone_stairs_crafter","cobblestone_wall_crafter","comparator_crafter","compass_crafter","composter_crafter","conduit_crafter","cookie_crafter","crafting_table_crafter","creeper_banner_pattern_crafter","crimson_button_crafter","crimson_door_crafter","crimson_fence_crafter","crimson_fence_gate_crafter","crimson_hyphae_crafter","crimson_planks_crafter","crimson_pressure_plate_crafter","crimson_sign_crafter","crimson_slab_crafter","crimson_stairs_crafter","crimson_trapdoor_crafter","crossbow_crafter","cut_red_sandstone_crafter","cut_red_sandstone_slab_crafter","cut_sandstone_crafter","cut_sandstone_slab_crafter","cyan_banner_crafter","cyan_bed_crafter","cyan_carpet_crafter","cyan_concrete_powder_crafter","cyan_dye_crafter","cyan_stained_glass_crafter","cyan_stained_glass_pane_crafter","cyan_terracotta_crafter","cyan_wool_crafter","dark_oak_boat_crafter","dark_oak_button_crafter","dark_oak_door_crafter","dark_oak_fence_crafter","dark_oak_fence_gate_crafter","dark_oak_planks_crafter","dark_oak_pressure_plate_crafter","dark_oak_sign_crafter","dark_oak_slab_crafter","dark_oak_stairs_crafter","dark_oak_trapdoor_crafter","dark_oak_wood_crafter","dark_prismarine_crafter","dark_prismarine_slab_crafter","dark_prismarine_stairs_crafter","daylight_detector_crafter","detector_rail_crafter","diamond_crafter","diamond_axe_crafter","diamond_block_crafter","diamond_boots_crafter","diamond_chestplate_crafter","diamond_helmet_crafter","diamond_hoe_crafter","diamond_leggings_crafter","diamond_pickaxe_crafter","diamond_shovel_crafter","diamond_sword_crafter","diorite_crafter","diorite_slab_crafter","diorite_stairs_crafter","diorite_wall_crafter","dispenser_crafter","dried_kelp_crafter","dried_kelp_block_crafter","dropper_crafter","emerald_crafter","emerald_block_crafter","enchanting_table_crafter","ender_chest_crafter","ender_eye_crafter","end_crystal_crafter","end_rod_crafter","end_stone_bricks_crafter","end_stone_brick_slab_crafter","end_stone_brick_stairs_crafter","end_stone_brick_wall_crafter","fermented_spider_eye_crafter","fire_charge_crafter","fishing_rod_crafter","fletching_table_crafter","flint_and_steel_crafter","flower_banner_pattern_crafter","flower_pot_crafter","furnace_crafter","furnace_minecart_crafter","glass_bottle_crafter","glass_pane_crafter","glistering_melon_slice_crafter","glowstone_crafter","golden_apple_crafter","golden_axe_crafter","golden_boots_crafter","golden_carrot_crafter","golden_chestplate_crafter","golden_helmet_crafter","golden_hoe_crafter","golden_leggings_crafter","golden_pickaxe_crafter","golden_shovel_crafter","golden_sword_crafter","gold_block_crafter","gold_ingot_crafter","gold_nugget_crafter","granite_crafter","granite_slab_crafter","granite_stairs_crafter","granite_wall_crafter","gray_banner_crafter","gray_bed_crafter","gray_carpet_crafter","gray_concrete_powder_crafter","gray_dye_crafter","gray_stained_glass_crafter","gray_stained_glass_pane_crafter","gray_terracotta_crafter","gray_wool_crafter","green_banner_crafter","green_bed_crafter","green_carpet_crafter","green_concrete_powder_crafter","green_stained_glass_crafter","green_stained_glass_pane_crafter","green_terracotta_crafter","green_wool_crafter","grindstone_crafter","hay_block_crafter","heavy_weighted_pressure_plate_crafter","honeycomb_block_crafter","honey_block_crafter","honey_bottle_crafter","hopper_crafter","hopper_minecart_crafter","iron_axe_crafter","iron_bars_crafter","iron_block_crafter","iron_boots_crafter","iron_chestplate_crafter","iron_door_crafter","iron_helmet_crafter","iron_hoe_crafter","iron_ingot_crafter","iron_leggings_crafter","iron_nugget_crafter","iron_pickaxe_crafter","iron_shovel_crafter","iron_sword_crafter","iron_trapdoor_crafter","item_frame_crafter","jack_o_lantern_crafter","jukebox_crafter","jungle_boat_crafter","jungle_button_crafter","jungle_door_crafter","jungle_fence_crafter","jungle_fence_gate_crafter","jungle_planks_crafter","jungle_pressure_plate_crafter","jungle_sign_crafter","jungle_slab_crafter","jungle_stairs_crafter","jungle_trapdoor_crafter","jungle_wood_crafter","ladder_crafter","lantern_crafter","lapis_block_crafter","lapis_lazuli_crafter","lead_crafter","leather_crafter","leather_boots_crafter","leather_chestplate_crafter","leather_helmet_crafter","leather_horse_armor_crafter","leather_leggings_crafter","lectern_crafter","lever_crafter","light_blue_banner_crafter","light_blue_bed_crafter","light_blue_carpet_crafter","light_blue_concrete_powder_crafter","light_blue_dye_crafter","light_blue_stained_glass_crafter","light_blue_stained_glass_pane_crafter","light_blue_terracotta_crafter","light_blue_wool_crafter","light_gray_banner_crafter","light_gray_bed_crafter","light_gray_carpet_crafter","light_gray_concrete_powder_crafter","light_gray_dye_crafter","light_gray_stained_glass_crafter","light_gray_stained_glass_pane_crafter","light_gray_terracotta_crafter","light_gray_wool_crafter","light_weighted_pressure_plate_crafter","lime_banner_crafter","lime_bed_crafter","lime_carpet_crafter","lime_concrete_powder_crafter","lime_dye_crafter","lime_stained_glass_crafter","lime_stained_glass_pane_crafter","lime_terracotta_crafter","lime_wool_crafter","lodestone_crafter","loom_crafter","magenta_banner_crafter","magenta_bed_crafter","magenta_carpet_crafter","magenta_concrete_powder_crafter","magenta_dye_crafter","magenta_stained_glass_crafter","magenta_stained_glass_pane_crafter","magenta_terracotta_crafter","magenta_wool_crafter","magma_block_crafter","magma_cream_crafter","map_crafter","melon_crafter","melon_seeds_crafter","minecart_crafter","mojang_banner_pattern_crafter","mossy_cobblestone_crafter","mossy_cobblestone_slab_crafter","mossy_cobblestone_stairs_crafter","mossy_cobblestone_wall_crafter","mossy_stone_bricks_crafter","mossy_stone_brick_slab_crafter","mossy_stone_brick_stairs_crafter","mossy_stone_brick_wall_crafter","mushroom_stew_crafter","netherite_block_crafter","netherite_ingot_crafter","nether_bricks_crafter","nether_brick_fence_crafter","nether_brick_slab_crafter","nether_brick_stairs_crafter","nether_brick_wall_crafter","nether_wart_block_crafter","note_block_crafter","oak_boat_crafter","oak_button_crafter","oak_door_crafter","oak_fence_crafter","oak_fence_gate_crafter","oak_planks_crafter","oak_pressure_plate_crafter","oak_sign_crafter","oak_slab_crafter","oak_stairs_crafter","oak_trapdoor_crafter","oak_wood_crafter","observer_crafter","orange_banner_crafter","orange_bed_crafter","orange_carpet_crafter","orange_concrete_powder_crafter","orange_dye_crafter","orange_stained_glass_crafter","orange_stained_glass_pane_crafter","orange_terracotta_crafter","orange_wool_crafter","packed_ice_crafter","painting_crafter","paper_crafter","pink_banner_crafter","pink_bed_crafter","pink_carpet_crafter","pink_concrete_powder_crafter","pink_dye_crafter","pink_stained_glass_crafter","pink_stained_glass_pane_crafter","pink_terracotta_crafter","pink_wool_crafter","piston_crafter","polished_andesite_crafter","polished_andesite_slab_crafter","polished_andesite_stairs_crafter","polished_basalt_crafter","polished_blackstone_crafter","polished_blackstone_bricks_crafter","polished_blackstone_brick_slab_crafter","polished_blackstone_brick_stairs_crafter","polished_blackstone_brick_wall_crafter","polished_blackstone_button_crafter","polished_blackstone_pressure_plate_crafter","polished_blackstone_slab_crafter","polished_blackstone_stairs_crafter","polished_blackstone_wall_crafter","polished_diorite_crafter","polished_diorite_slab_crafter","polished_diorite_stairs_crafter","polished_granite_crafter","polished_granite_slab_crafter","polished_granite_stairs_crafter","powered_rail_crafter","prismarine_crafter","prismarine_bricks_crafter","prismarine_brick_slab_crafter","prismarine_brick_stairs_crafter","prismarine_slab_crafter","prismarine_stairs_crafter","prismarine_wall_crafter","pumpkin_pie_crafter","pumpkin_seeds_crafter","purple_banner_crafter","purple_bed_crafter","purple_carpet_crafter","purple_concrete_powder_crafter","purple_dye_crafter","purple_stained_glass_crafter","purple_stained_glass_pane_crafter","purple_terracotta_crafter","purple_wool_crafter","purpur_block_crafter","purpur_pillar_crafter","purpur_slab_crafter","purpur_stairs_crafter","quartz_block_crafter","quartz_bricks_crafter","quartz_pillar_crafter","quartz_slab_crafter","quartz_stairs_crafter","rabbit_stew_crafter","rail_crafter","redstone_crafter","redstone_block_crafter","redstone_lamp_crafter","redstone_torch_crafter","red_banner_crafter","red_bed_crafter","red_carpet_crafter","red_concrete_powder_crafter","red_dye_crafter","red_nether_bricks_crafter","red_nether_brick_slab_crafter","red_nether_brick_stairs_crafter","red_nether_brick_wall_crafter","red_sandstone_crafter","red_sandstone_slab_crafter","red_sandstone_stairs_crafter","red_sandstone_wall_crafter","red_stained_glass_crafter","red_stained_glass_pane_crafter","red_terracotta_crafter","red_wool_crafter","repeater_crafter","respawn_anchor_crafter","sandstone_crafter","sandstone_slab_crafter","sandstone_stairs_crafter","sandstone_wall_crafter","scaffolding_crafter","sea_lantern_crafter","shears_crafter","shield_crafter","shulker_box_crafter","skull_banner_pattern_crafter","slime_ball_crafter","slime_block_crafter","smithing_table_crafter","smoker_crafter","smooth_quartz_slab_crafter","smooth_quartz_stairs_crafter","smooth_red_sandstone_slab_crafter","smooth_red_sandstone_stairs_crafter","smooth_sandstone_slab_crafter","smooth_sandstone_stairs_crafter","smooth_stone_slab_crafter","snow_crafter","snow_block_crafter","soul_campfire_crafter","soul_lantern_crafter","soul_torch_crafter","spectral_arrow_crafter","spruce_boat_crafter","spruce_button_crafter","spruce_door_crafter","spruce_fence_crafter","spruce_fence_gate_crafter","spruce_planks_crafter","spruce_pressure_plate_crafter","spruce_sign_crafter","spruce_slab_crafter","spruce_stairs_crafter","spruce_trapdoor_crafter","spruce_wood_crafter","stick_crafter","sticky_piston_crafter","stonecutter_crafter","stone_axe_crafter","stone_bricks_crafter","stone_brick_slab_crafter","stone_brick_stairs_crafter","stone_brick_wall_crafter","stone_button_crafter","stone_hoe_crafter","stone_pickaxe_crafter","stone_pressure_plate_crafter","stone_shovel_crafter","stone_slab_crafter","stone_stairs_crafter","stone_sword_crafter","stripped_acacia_wood_crafter","stripped_birch_wood_crafter","stripped_crimson_hyphae_crafter","stripped_dark_oak_wood_crafter","stripped_jungle_wood_crafter","stripped_oak_wood_crafter","stripped_spruce_wood_crafter","stripped_warped_hyphae_crafter","sugar_crafter","target_crafter","tnt_crafter","tnt_minecart_crafter","torch_crafter","trapped_chest_crafter","tripwire_hook_crafter","turtle_helmet_crafter","warped_button_crafter","warped_door_crafter","warped_fence_crafter","warped_fence_gate_crafter","warped_fungus_on_a_stick_crafter","warped_hyphae_crafter","warped_planks_crafter","warped_pressure_plate_crafter","warped_sign_crafter","warped_slab_crafter","warped_stairs_crafter","warped_trapdoor_crafter","wheat_crafter","white_banner_crafter","white_bed_crafter","white_carpet_crafter","white_concrete_powder_crafter","white_dye_crafter","white_stained_glass_crafter","white_stained_glass_pane_crafter","white_terracotta_crafter","white_wool_crafter","wooden_axe_crafter","wooden_hoe_crafter","wooden_pickaxe_crafter","wooden_shovel_crafter","wooden_sword_crafter","writable_book_crafter","yellow_banner_crafter","yellow_bed_crafter","yellow_carpet_crafter","yellow_concrete_powder_crafter","yellow_dye_crafter","yellow_stained_glass_crafter","yellow_stained_glass_pane_crafter","yellow_terracotta_crafter","yellow_wool_crafter"
+        ]
+      ],
     "rewards": {
         "function": "autocraft:internal/blocks/autocrafter/crafted_autocrafter"
     }

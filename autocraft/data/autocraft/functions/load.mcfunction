@@ -21,6 +21,6 @@ scoreboard players set #ready dt.ac.state 1
 scoreboard players set #craft dt.ac.state 2
 scoreboard players set #cooldown dt.ac.state 3
 
-#execute as @e[tag=dt.ac] at @s run setblock ~ ~ ~ air
+scoreboard objectives add dt.tmp dummy
 
 function autocraft:internal/raycast/load

@@ -1,0 +1,19 @@
+
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:crafting_table"
+      },
+      {
+        "item": "minecraft:dropper"
+      },
+      {
+        "item": "minecraft:red_stained_glass"
+      }
+    ],
+    "result": {
+      "item": "minecraft:knowledge_book"
+    }
+  }
+            
