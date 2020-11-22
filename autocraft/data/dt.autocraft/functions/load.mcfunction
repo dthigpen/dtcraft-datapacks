@@ -1,11 +1,11 @@
 say autocraft loaded!
                     
-scoreboard players set $autocraft.major load 0
-scoreboard players set $autocraft.minor load 1
-scoreboard players set $autocraft.patch load 0
+scoreboard players set $dt.autocraft.major load 0
+scoreboard players set $dt.autocraft.minor load 1
+scoreboard players set $dt.autocraft.patch load 0
                     
-schedule clear autocraft:tick
-schedule function autocraft:tick 1t replace
+schedule clear dt.autocraft:tick
+schedule function dt.autocraft:tick 1t replace
 
 
 scoreboard objectives add dt.ac.placed minecraft.used:minecraft.dropper
@@ -23,4 +23,4 @@ scoreboard players set #cooldown dt.ac.state 3
 
 scoreboard objectives add dt.tmp dummy
 
-function autocraft:internal/raycast/load
+function dt.autocraft:internal/raycast/load

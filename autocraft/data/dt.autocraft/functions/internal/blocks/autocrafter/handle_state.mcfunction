@@ -20,6 +20,6 @@ execute if score @s dt.ac.state = #cooldown dt.ac.state if block ~ ~-1 ~ hopper[
 # try to craft
 #execute if score @s dt.ac.state = #craft dt.ac.state run tellraw @a[distance=..5] [{"text":"Items: "},{"nbt":"Items","block":"~ ~ ~"}]
 #execute if score @s dt.ac.state = #craft dt.ac.state run tellraw @a[distance=..5] [{"text":"Below: "},{"nbt":"Items","block":"~ ~-1 ~"}]
-execute if score @s dt.ac.state = #craft dt.ac.state run function autocraft:internal/blocks/autocrafter/try_craft
+execute if score @s dt.ac.state = #craft dt.ac.state run function dt.autocraft:internal/blocks/autocrafter/try_craft
 
 function call_stack:pop

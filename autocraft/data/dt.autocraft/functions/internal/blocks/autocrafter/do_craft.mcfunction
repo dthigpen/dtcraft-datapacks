@@ -14,7 +14,7 @@ execute if data storage call_stack: this.cached_recipes[0] run data modify stora
 # if it was not in the cache but was found exhaustively, prepend it to the cache and save it
 execute if data storage call_stack: {this:{empty_cache:true}} if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.cached_recipes prepend from storage call_stack: this.recipe_result 
 execute if data storage call_stack: {this:{empty_cache:true}} if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.cached_recipes
-execute if data storage call_stack: {this:{empty_cache:true}} if data storage call_stack: this.recipe_result.result.id run function autocraft:internal/blocks/autocrafter/sava_data
+execute if data storage call_stack: {this:{empty_cache:true}} if data storage call_stack: this.recipe_result.result.id run function dt.autocraft:internal/blocks/autocrafter/sava_data
 #tellraw @p [{"text":"is empty: "},{"nbt":"this.empty_cache","storage":"call_stack:"}]
 
 # Overwrite dropper items with the result
