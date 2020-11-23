@@ -8,6 +8,3 @@ execute as @a store result score @s dt.ac.offblock run data get entity @s Invent
 execute as @a[scores={dt.ac.placed=1..}] run scoreboard players set @s dt.ac.placed 0
 
 execute as @e[tag=dt.ac] at @s run function dt.autocraft:internal/blocks/autocrafter/tick
-
-
-execute as @e[type=item,nbt={Item:{id:"minecraft:dropper",tag:{dt_autocrafter:1b}}}] at @s run function dt.autocraft:internal/blocks/floor_craft/search_nearby

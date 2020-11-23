@@ -1,4 +1,4 @@
-say dt.crafting_util loaded!
+#say dt.crafting_util loaded!
                     
 scoreboard players set $dt.crafting_util.major load 0
 scoreboard players set $dt.crafting_util.minor load 1
