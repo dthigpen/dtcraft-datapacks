@@ -1281,6 +1281,6 @@ execute if score @s dt.tmp matches 2.. run data modify storage call_stack: call.
 execute if score @s dt.tmp matches 2.. run function dt.crafting_util:internal/array/split_by_key
 execute if score @s dt.tmp matches 2.. run data modify storage call_stack: this.result append from storage call_stack: call.result[0]
 
-tellraw @p [{"text":"result: TODO store list of results that have multiple recipes"}]
+#tellraw @p [{"text":"result: TODO store list of results that have multiple recipes"}]
 #tellraw @p [{"text":"result: "},{"nbt":"this.result","storage":"call_stack:"}]
 function call_stack:pop
