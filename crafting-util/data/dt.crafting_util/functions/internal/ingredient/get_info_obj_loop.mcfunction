@@ -8,7 +8,7 @@ data modify storage call_stack: this.pair.id set from storage call_stack: this.i
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 data modify storage call_stack: call.arg1 set from storage call_stack: this.pair
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.matching set from storage call_stack: call.result[0]
 data modify storage call_stack: this.not_matching set from storage call_stack: call.result[1]
 

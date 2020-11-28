@@ -5,7 +5,7 @@ data modify storage call_stack: this.filtered set from storage call_stack: this.
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.group_values
 data modify storage call_stack: call.arg1 set from storage call_stack: this.items[0].id
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.matches set from storage call_stack: call.result[0]
 execute if data storage call_stack: this.matches[0] run data modify storage call_stack: this.filtered append from storage call_stack: this.items[0]
 

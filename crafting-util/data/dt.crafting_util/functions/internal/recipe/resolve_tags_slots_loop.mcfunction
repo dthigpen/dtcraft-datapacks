@@ -9,12 +9,12 @@ data modify storage call_stack: this.fail_early set value false
 # First check that the actual slots is a subset of the tag_slots
 data modify storage call_stack: call.arg0 set from storage call_stack: this.actual_slots
 data modify storage call_stack: call.arg1 set from storage call_stack: this.tag_slots[0]
-function dt.crafting_util:internal/array/difference
+function dt.array_util:api/difference
 execute if data storage call_stack: call.result[0] run data modify storage call_stack: this.fail_early set value true
 
 execute if data storage call_stack: {this:{fail_early:false}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.tag_slots[0]
 execute if data storage call_stack: {this:{fail_early:false}} run data modify storage call_stack: call.arg1 set from storage call_stack: this.actual_slots
-execute if data storage call_stack: {this:{fail_early:false}} run function dt.crafting_util:internal/array/difference
+execute if data storage call_stack: {this:{fail_early:false}} run function dt.array_util:api/difference
 execute if data storage call_stack: {this:{fail_early:false}} run data modify storage call_stack: this.new_slots append from storage call_stack: call.result
 execute if data storage call_stack: {this:{fail_early:true}} run data modify storage call_stack: this.new_slots append from storage call_stack: this.tag_slots[0]
 

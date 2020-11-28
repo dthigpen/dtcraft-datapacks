@@ -18,7 +18,7 @@ execute if data storage call_stack: {this:{has_slots:false}} run data modify sto
 # check if any slots are reduced to 0
 data modify storage call_stack: call.arg0 set from storage call_stack: this.tag.slots
 data modify storage call_stack: call.arg1 set value []
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.empty_slots set from storage call_stack: call.result[0]
 execute if data storage call_stack: this.empty_slots[0] run data modify storage call_stack: this.tag.count set value 0
 

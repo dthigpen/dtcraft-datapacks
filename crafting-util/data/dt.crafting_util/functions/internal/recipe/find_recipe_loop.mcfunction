@@ -7,7 +7,7 @@ data modify storage call_stack: this.item_counts set from storage call_stack: th
 #tellraw @p [{"text":"counts: "}, {"nbt":"this.item_counts","storage":"call_stack:"}]
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_recipes[0].ingredients
 data modify storage call_stack: call.arg1 set value {type:"tag"}
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.ingredients set from storage call_stack: call.result[1]
 data modify storage call_stack: this.tags set from storage call_stack: call.result[0]
 

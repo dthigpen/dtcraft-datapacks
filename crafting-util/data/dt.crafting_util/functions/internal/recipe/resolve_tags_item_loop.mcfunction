@@ -10,7 +10,7 @@ data modify storage call_stack: this.group_name set from storage call_stack: thi
 data modify storage call_stack: call.arg0 set from storage dt.crafting_util: groups
 data modify storage call_stack: call.arg1 set value {group:""}
 data modify storage call_stack: call.arg1.group set from storage call_stack: this.group_name
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.matching_groups set from storage call_stack: call.result[0]
 data modify storage call_stack: this.group set from storage call_stack: this.matching_groups[0]
 
@@ -35,7 +35,7 @@ execute if data storage call_stack: this.items_in_group[0] run data modify stora
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_counts
 data modify storage call_stack: call.arg1 set from storage call_stack: this.items_in_group
-function dt.crafting_util:internal/array/difference
+function dt.array_util:api/difference
 data modify storage call_stack: this.item_counts set from storage call_stack: call.result
 
 

@@ -6,7 +6,7 @@ data modify storage call_stack: this.expected set value [[{id:"minecraft:cobbles
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.key
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -24,7 +24,7 @@ data modify storage call_stack: this.expected set value [[{id:"minecraft:slime_b
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.key
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -41,7 +41,7 @@ data modify storage call_stack: this.expected set value [[],[{id:"minecraft:cobb
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.key
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -58,7 +58,7 @@ data modify storage call_stack: this.expected set value [[],[]]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.key
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -76,7 +76,7 @@ data modify storage call_stack: this.expected set value [[3],[1,2,4,5,6,7,8,9]]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.key
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -93,7 +93,7 @@ data modify storage call_stack: this.expected set value [["cccc"],["aa","bbb"]]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.key
-function dt.crafting_util:internal/array/split_by_key
+function dt.array_util:api/split_by_key
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected

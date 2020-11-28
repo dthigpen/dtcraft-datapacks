@@ -1278,7 +1278,7 @@ execute if data storage call_stack: this.result[0] if data block ~ ~ ~ {CustomNa
 execute if score @s dt.tmp matches 2.. run data modify storage call_stack: call.arg0 set from storage dt.crafting_util: recipes
 execute if score @s dt.tmp matches 2.. run data modify storage call_stack: call.arg1 set value {result:{id:""}}
 execute if score @s dt.tmp matches 2.. run data modify storage call_stack: call.arg1.result.id set from storage call_stack: this.recipe_name
-execute if score @s dt.tmp matches 2.. run function dt.crafting_util:internal/array/split_by_key
+execute if score @s dt.tmp matches 2.. run function dt.array_util:api/split_by_key
 execute if score @s dt.tmp matches 2.. run data modify storage call_stack: this.result append from storage call_stack: call.result[0]
 
 #tellraw @p [{"text":"result: TODO store list of results that have multiple recipes"}]

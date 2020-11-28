@@ -7,7 +7,7 @@ data modify storage call_stack: this.result set from storage call_stack: this.li
 
 execute if data storage call_stack: this.list2[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.list1
 execute if data storage call_stack: this.list2[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.list2
-execute if data storage call_stack: this.list2[0] run function dt.crafting_util:internal/array/concat_loop
+execute if data storage call_stack: this.list2[0] run function dt.array_util:internal/concat_loop
 execute if data storage call_stack: this.list2[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 
 function call_stack:pop

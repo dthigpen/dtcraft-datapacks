@@ -9,6 +9,6 @@ execute if data storage call_stack: this.all_items[0] run data modify storage ca
 execute if data storage call_stack: this.all_items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.key
 execute if data storage call_stack: this.all_items[0] run data modify storage call_stack: call.arg2 set value []
 execute if data storage call_stack: this.all_items[0] run data modify storage call_stack: call.arg3 set value []
-execute if data storage call_stack: this.all_items[0] run function dt.crafting_util:internal/array/split_by_key_loop
+execute if data storage call_stack: this.all_items[0] run function dt.array_util:internal/split_by_key_loop
 execute if data storage call_stack: this.all_items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 function call_stack:pop
