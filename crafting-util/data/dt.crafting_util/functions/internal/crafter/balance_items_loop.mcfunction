@@ -7,6 +7,17 @@ data modify storage call_stack: this.balanced set from storage call_stack: this.
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items
 function dt.crafting_util:internal/crafter/get_free_slots
 data modify storage call_stack: this.free_slots set from storage call_stack: call.result
+
+# slots from balanced
+data modify storage call_stack: call.arg0 set from storage call_stack: this.balanced
+function dt.crafting_util:internal/ingredient/items_to_slots
+data modify storage call_stack: this.slots_existing_balanced set from storage call_stack: call.result
+
+# the true free slots are the free_slots - balanced_slots
+data modify storage call_stack: call.arg0 set from storage call_stack: this.free_slots
+data modify storage call_stack: call.arg1 set from storage call_stack: this.slots_existing_balanced
+function dt.array_util:api/difference
+data modify storage call_stack: this.free_slots set from storage call_stack: call.result
 execute store result score #num_free dt.tmp run data get storage call_stack: this.free_slots
 
 # Get all items that have the id of the first item
@@ -55,6 +66,7 @@ data modify storage call_stack: call.arg1 set from storage call_stack: this.zero
 function dt.array_util:api/concat
 data modify storage call_stack: this.unbalanced_counts set from storage call_stack: call.result
 
+
 # Do the balancing
 data modify storage call_stack: call.arg0 set from storage call_stack: this.unbalanced_counts
 function dt.crafting_util:internal/crafter/balance_numbers
@@ -74,24 +86,29 @@ data modify storage call_stack: call.arg1 set from storage call_stack: this.bala
 function dt.crafting_util:internal/crafter/set_counts
 data modify storage call_stack: this.items_of_id_balanced set from storage call_stack: call.result
 
-data modify storage call_stack: call.arg0 set from storage call_stack: this.items_of_id_balanced
-data modify storage call_stack: call.arg1 set from storage call_stack: this.new_slots
-function dt.crafting_util:internal/crafter/set_slots
-data modify storage call_stack: this.items_of_id_balanced set from storage call_stack: call.result
+execute store result score #num_items dt.tmp run data get storage call_stack: this.items_of_id_balanced
+execute store result score #new_slots dt.tmp run data get storage call_stack: this.new_slots
 
+#tellraw @p [{"nbt":"this.items_of_id_balanced","storage":"call_stack:"}]
+#tellraw @p [{"nbt":"this.new_slots","storage":"call_stack:"}]
+
+execute unless score #num_items dt.tmp <= #new_slots dt.tmp run data modify storage call_stack: this.items_of_id_balanced set from storage call_stack: this.items_of_id
+execute unless score #num_items dt.tmp <= #new_slots dt.tmp run say yoo
+execute if score #num_items dt.tmp <= #new_slots dt.tmp run data modify storage call_stack: call.arg0 set from storage call_stack: this.items_of_id_balanced
+execute if score #num_items dt.tmp <= #new_slots dt.tmp run data modify storage call_stack: call.arg1 set from storage call_stack: this.new_slots
+execute if score #num_items dt.tmp <= #new_slots dt.tmp run function dt.crafting_util:internal/crafter/set_slots
+execute if score #num_items dt.tmp <= #new_slots dt.tmp run data modify storage call_stack: this.items_of_id_balanced set from storage call_stack: call.result
+
+# append the balanced items of this id to the balanced list
 data modify storage call_stack: call.arg0 set from storage call_stack: this.balanced
 data modify storage call_stack: call.arg1 set from storage call_stack: this.items_of_id_balanced
 function dt.array_util:api/concat
 data modify storage call_stack: this.balanced set from storage call_stack: call.result
 
-
-
-
-
 execute unless data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.result set from storage call_stack: this.balanced
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.balanced
-execute if data storage call_stack: this.temp_items[0] run function dt.crafting_util:internal/crafter/balance_loop
+execute if data storage call_stack: this.temp_items[0] run function dt.crafting_util:internal/crafter/balance_items_loop
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 
 function call_stack:pop

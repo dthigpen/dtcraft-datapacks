@@ -10,6 +10,8 @@ tellraw @p ["",{"text":"Internal tests"}]
 function dt.crafting_util:test/internal/cache/add_to_cache
 function dt.crafting_util:test/internal/crafter/distribute_stack
 function dt.crafting_util:test/internal/crafter/distribute_slots
+function dt.crafting_util:test/internal/crafter/balance_numbers
+function dt.crafting_util:test/internal/crafter/set_slots
 function dt.crafting_util:test/internal/get_free_slots
 function dt.crafting_util:test/internal/ingredient/items_to_slots
 function dt.crafting_util:test/internal/ingredient/get_info_obj
@@ -20,6 +22,6 @@ function dt.crafting_util:test/internal/recipe/result_to_item
 
 tellraw @p ["",{"text":"API tests"}]
 function dt.crafting_util:test/api/crafter/distribute_items
-#function dt.crafting_util:test/api/recipe/find
+function dt.crafting_util:test/api/crafter/balance_items
 
 function call_stack:pop

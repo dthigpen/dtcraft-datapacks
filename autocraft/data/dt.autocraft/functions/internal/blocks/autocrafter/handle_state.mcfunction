@@ -2,7 +2,7 @@
 function call_stack:push
 data modify storage call_stack: this.items set from block ~ ~ ~ Items
 data modify storage call_stack: call.arg0 set from block ~ ~ ~ Items
-function dt.crafting_util:api/crafter/distribute_items
+function dt.crafting_util:api/crafter/balance_items
 data modify block ~ ~ ~ Items set from storage call_stack: call.result
 
 # decrement cooldown
