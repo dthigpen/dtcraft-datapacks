@@ -1,0 +1,6 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": "Utility functions for array data structures"
+    }
+}
