@@ -1,10 +1,11 @@
 
-# cooldown -> ready
-execute if score @s dt.ac.state = #cooldown dt.ac.state if score @s dt.ac.cooldown matches ..0 run scoreboard players operation @s dt.ac.state = #ready dt.ac.state
-
 # craft -> cooldown
 execute if score @s dt.ac.state = #craft dt.ac.state run scoreboard players operation @s dt.ac.cooldown = #max dt.ac.cooldown
 execute if score @s dt.ac.state = #craft dt.ac.state run scoreboard players operation @s dt.ac.state = #cooldown dt.ac.state
+
+# cooldown -> ready
+execute if score @s dt.ac.state = #cooldown dt.ac.state if score #rate dt.ac.cooldown >= @s dt.ac.cooldown run scoreboard players operation @s dt.ac.state = #ready dt.ac.state
+execute if score @s dt.ac.state = #cooldown dt.ac.state if score @s dt.ac.cooldown matches ..0 run scoreboard players operation @s dt.ac.state = #ready dt.ac.state
 
 
 # ready -> craft
