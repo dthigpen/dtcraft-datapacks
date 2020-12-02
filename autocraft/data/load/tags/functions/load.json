@@ -1,1 +1,1 @@
-{"values": ["#load:rx/playerdb","call_stack:load","dt.array_util:load","dt.crafting_util:load","dt.autocraft:load"]}
+{"values": ["#load:rx/playerdb","call_stack:load","dt.array_util:load","dt.inv_util:load","dt.crafting_util:load","dt.autocraft:load"]}
