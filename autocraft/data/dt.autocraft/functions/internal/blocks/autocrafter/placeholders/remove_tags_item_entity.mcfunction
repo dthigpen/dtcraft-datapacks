@@ -1,4 +1,5 @@
-data remove entity @s Item.tag.dt_placeholder
-data remove entity @s Item.tag.placeholder
-execute store result score #has_tags dt.tmp run data get entity @s Item.tag
-execute if score #has_tags dt.tmp matches 0 run data remove entity @s Item.tag
+function call_stack:push
+data modify storage call_stack: this.item set from entity @s Item
+function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_item_tag_unsafe
+data modify entity @s Item set from storage call_stack: this.item
+function call_stack:pop
