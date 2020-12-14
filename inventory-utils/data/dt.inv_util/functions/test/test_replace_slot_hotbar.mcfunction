@@ -3,7 +3,7 @@ function call_stack:push
 # hotbar
 replaceitem entity @s hotbar.7 minecraft:slime_ball
 data modify storage call_stack: call.arg0 set value {Slot:7b,id:"minecraft:feather",Count:3b}
-function dt.inv_util:replace_slot
+function dt.inv_util:api/replace_slot
 
 execute store success score result dt.tmp run data get entity @s Inventory[{Slot:7b,id:"minecraft:feather"}]
 execute if score result dt.tmp matches 0 run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"text":"replace_slot hotbar"}]

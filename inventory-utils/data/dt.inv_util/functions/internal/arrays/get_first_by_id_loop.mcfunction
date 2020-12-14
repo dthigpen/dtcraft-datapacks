@@ -18,7 +18,7 @@ execute if data storage call_stack: {this:{not_equal:0}} run data modify storage
 execute if data storage call_stack: {this:{not_equal:1}} run data remove storage call_stack: this.items[0]
 execute if data storage call_stack: {this:{not_equal:1}} if data storage call_stack: this.items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: {this:{not_equal:1}} if data storage call_stack: this.items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.id
-execute if data storage call_stack: {this:{not_equal:1}} if data storage call_stack: this.items[0] run function dt.inv_util:arrays/get_first_by_id_loop
+execute if data storage call_stack: {this:{not_equal:1}} if data storage call_stack: this.items[0] run function dt.inv_util:internal/arrays/get_first_by_id_loop
 execute if data storage call_stack: {this:{not_equal:1}} if data storage call_stack: this.items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
 
 function call_stack:pop

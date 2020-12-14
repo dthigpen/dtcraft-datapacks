@@ -3,12 +3,12 @@ function call_stack:push
 
 data modify storage call_stack: this.this_user set from storage call_stack: this.arg0
 
-function dt.inv_util:get_inventory
+function dt.inv_util:api/get_inventory
 data modify storage call_stack: this.items set from storage call_stack: call.result
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 data modify storage call_stack: call.arg1 set from storage call_stack: this.this_user.data.selected.id
-function dt.inv_util:arrays/get_first_by_id
+function dt.inv_util:internal/arrays/get_first_by_id
 data modify storage call_stack: this.item_found set from storage call_stack: call.result
 
 execute if data storage call_stack: this.item_found.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.this_user

@@ -3,11 +3,11 @@ function call_stack:push
 clear @s minecraft:feather
 replaceitem entity @s inventory.17 minecraft:feather 2
 replaceitem entity @s inventory.24 minecraft:feather 3
-function dt.inv_util:get_inventory
+function dt.inv_util:api/get_inventory
 data modify storage call_stack: this.inventory set from storage call_stack: call.result
 data modify storage call_stack: call.arg0 set from storage call_stack: this.inventory
 data modify storage call_stack: call.arg1 set value "minecraft:feather"
-function dt.inv_util:arrays/get_first_by_id
+function dt.inv_util:internal/arrays/get_first_by_id
 data modify storage call_stack: this.found_item set from storage call_stack: call.result
 scoreboard players set result dt.tmp 0
 execute if data storage call_stack: this.found_item{Slot:26b, id:"minecraft:feather"} run scoreboard players set result dt.tmp 1

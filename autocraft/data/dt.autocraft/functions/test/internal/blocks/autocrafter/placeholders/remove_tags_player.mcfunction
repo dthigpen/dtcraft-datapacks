@@ -5,11 +5,11 @@ data modify storage call_stack: this.input set value [{id:"minecraft:cobblestone
 data modify storage call_stack: this.expected set value [{id:"minecraft:cobblestone",Slot:0b,Count:3b}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input[0]
-function dt.inv_util:loot_to_player
+function dt.inv_util:api/loot_to_player
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input[1]
-function dt.inv_util:loot_to_player
+function dt.inv_util:api/loot_to_player
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input[2]
-function dt.inv_util:loot_to_player
+function dt.inv_util:api/loot_to_player
 
 function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tags_player
 data modify storage call_stack: call.result set from entity @s Inventory
