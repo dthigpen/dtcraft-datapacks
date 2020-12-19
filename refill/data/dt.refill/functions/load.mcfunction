@@ -17,7 +17,9 @@ scoreboard players set #found dt.enum 0
 scoreboard players set #not_found dt.enum 1
 
 scoreboard objectives add dt.refill.toggle trigger
+scoreboard objectives add dt.refill.setup trigger
 
+function dt.refill:settings/default_settings
 # TODO Preserve users if present already
 data merge storage dt.refill: {users:[]}
 
