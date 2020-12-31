@@ -16,9 +16,9 @@ scoreboard players set $ptr_x dt.callback 0
 scoreboard players set $ptr_z dt.callback 0
 scoreboard players set $ptr_y dt.callback 0
 
-scoreboard players set $ptr_x_max dt.callback 2
-scoreboard players set $ptr_z_max dt.callback 2
-scoreboard players set $ptr_y_max dt.callback 2
+scoreboard players set $ptr_x_max dt.callback 3
+scoreboard players set $ptr_z_max dt.callback 3
+scoreboard players set $ptr_y_max dt.callback 255
 
 # ptr location 3333312 255 3333312
 forceload remove 3333312 3333312

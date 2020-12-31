@@ -18,11 +18,10 @@ execute as @e[tag=callback_loc,tag=init,limit=1] run function rx.playerdb:api/ge
 execute as @e[tag=callback_loc,tag=init,limit=1] run data modify storage rx:io playerdb.player.data.dt.callback set from storage call_stack: this.callback_info
 execute as @e[tag=callback_loc,tag=init,limit=1] run function rx.playerdb:api/save_self
 
-# for some reason PlayerDB only saves if I fetch the data again
-execute as @e[tag=callback_loc,tag=init,limit=1] run function rx.playerdb:api/get_self
-execute as @e[tag=callback_loc,tag=init,limit=1] run tellraw @p {"nbt":"UUID","entity":"@s"}
 tag @e[tag=callback_loc,tag=init] remove init
 
-function dt.callback:internal/ptr/do_next
+function dt.callback:internal/ptr/find_next_free
+data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: {this:{result:false}} run say No free memory, failed to add callback!
 
 function call_stack:pop

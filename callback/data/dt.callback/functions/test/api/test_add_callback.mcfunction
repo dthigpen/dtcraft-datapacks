@@ -9,7 +9,7 @@ data modify storage call_stack: this.expected set value 1111
 execute unless data storage dt.callback:test flags.test_add_callback_1 run data modify storage call_stack: call.arg0 set from storage call_stack: this.callback
 execute unless data storage dt.callback:test flags.test_add_callback_1 run data modify storage call_stack: call.arg1 set from storage call_stack: this.data
 execute unless data storage dt.callback:test flags.test_add_callback_1 run function dt.callback:api/add_callback_self
-execute unless data storage dt.callback:test flags.test_add_callback_1 run schedule function dt.callback:test/api/test_add_callback 10t replace
+execute unless data storage dt.callback:test flags.test_add_callback_1 run schedule function dt.callback:test/api/test_add_callback 3t replace
 
 
 execute if data storage dt.callback:test flags.test_add_callback_1 run data modify storage call_stack: this.actual set from storage dt.callback:test data.val1
