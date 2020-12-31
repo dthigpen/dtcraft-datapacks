@@ -14,10 +14,15 @@ execute store result storage call_stack: this.callback_info.rx_uid byte 1 run sc
 execute at @e[tag=callback_ptr,limit=1] run setblock ~ ~ ~ minecraft:repeating_command_block{auto:1b,Command:"help"} destroy
 execute at @e[tag=callback_ptr,limit=1] run data modify block ~ ~ ~ Command set from storage call_stack: this.callback
 execute at @e[tag=callback_ptr,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["callback_loc","init"],NoGravity:true}
-execute at @e[tag=callback_loc,tag=init,limit=1] run function rx.playerdb:api/get_self
-execute at @e[tag=callback_loc,tag=init,limit=1] run data modify storage rx:io playerdb.player.data.dt.callback set from storage call_stack: this.callback_info
+execute as @e[tag=callback_loc,tag=init,limit=1] run function rx.playerdb:api/get_self
+execute as @e[tag=callback_loc,tag=init,limit=1] run data modify storage rx:io playerdb.player.data.dt.callback set from storage call_stack: this.callback_info
+execute as @e[tag=callback_loc,tag=init,limit=1] run function rx.playerdb:api/save_self
+
+# for some reason PlayerDB only saves if I fetch the data again
+execute as @e[tag=callback_loc,tag=init,limit=1] run function rx.playerdb:api/get_self
+execute as @e[tag=callback_loc,tag=init,limit=1] run tellraw @p {"nbt":"UUID","entity":"@s"}
 tag @e[tag=callback_loc,tag=init] remove init
 
-execute as @e[tag=callback_ptr,limit=1] at @s run function dt.callback:internal/ptr/do_next
+function dt.callback:internal/ptr/do_next
 
 function call_stack:pop

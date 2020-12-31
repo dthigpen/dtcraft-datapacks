@@ -17,4 +17,5 @@ execute at @s if score $ptr_x dt.callback < $ptr_x_max dt.callback run tp @s ~1 
 # wrap position counters
 scoreboard players operation $ptr_x dt.callback %= $ptr_x_max dt.callback
 scoreboard players operation $ptr_z dt.callback %= $ptr_z_max dt.callback
+scoreboard players operation $ptr_y dt.callback %= $ptr_y_max dt.callback
 execute if score $ptr_y dt.callback = $ptr_y_max dt.callback run tellraw @p [{"text":"No slots available!"}]

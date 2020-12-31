@@ -1,0 +1,1 @@
+tp @e[type=armor_stand,tag=callback_ptr] 3333312 255 3333312
