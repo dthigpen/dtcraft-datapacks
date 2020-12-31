@@ -1,0 +1,1 @@
+execute as @e[type=armor_stand,tag=callback_ptr] at @s run function dt.callback:internal/ptr/next

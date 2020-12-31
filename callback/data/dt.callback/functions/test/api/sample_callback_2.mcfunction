@@ -1,0 +1,1 @@
+say sample_callback_2!
