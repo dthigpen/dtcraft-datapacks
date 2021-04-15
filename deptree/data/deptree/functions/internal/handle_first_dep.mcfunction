@@ -11,8 +11,8 @@ execute if data storage deptree: {temp:{not_equal:false}} run data modify storag
 execute if data storage deptree: {temp:{not_equal:true}} run data modify storage deptree: temp.equal_name set value false
 
 # Message
-execute if data storage deptree: {temp:{equal_name:false}} unless data storage deptree: temp.loaded_packs[1] run tellraw @p ["",{"text":"Error loading: ","color":"red"},{"nbt":"info.name","storage":"deptree:", "bold":false}]
-execute if data storage deptree: {temp:{equal_name:false}} unless data storage deptree: temp.loaded_packs[1] run tellraw @p ["",{"text":" - missing: "},{"nbt":"temp.new_pack_deps[0].name","storage":"deptree:", "color":"green"}]
+execute if data storage deptree: {temp:{equal_name:false}} unless data storage deptree: temp.loaded_packs[1] run tellraw @p ["",{"text":"Error loading: ","color":"red"},{"nbt":"info.name","storage":"deptree:register", "bold":false}]
+execute if data storage deptree: {temp:{equal_name:false}} unless data storage deptree: temp.loaded_packs[1] run tellraw @p ["",{"text":" - missing: "},{"nbt":"temp.new_pack_deps[0].name","storage":"deptree:register", "color":"green"}]
 #endregion
 
 #region version check
@@ -29,7 +29,7 @@ execute if data storage deptree: {temp:{equal_version:true}} store result score 
 execute if data storage deptree: {temp:{equal_version:true}} unless score $deptree.tmp1 load >= $deptree.tmp2 load run data modify storage deptree: temp.equal_version set value false
 
 # Message
-execute if data storage deptree: {temp:{equal_name:true}} if data storage deptree: {temp:{equal_version:false}} run tellraw @p ["",{"text":"Error loading: ","color":"red"},{"nbt":"info.name","storage":"deptree:", "bold":false}]
+execute if data storage deptree: {temp:{equal_name:true}} if data storage deptree: {temp:{equal_version:false}} run tellraw @p ["",{"text":"Error loading: ","color":"red"},{"nbt":"info.name","storage":"deptree:register", "bold":false}]
 execute if data storage deptree: {temp:{equal_name:true}} if data storage deptree: {temp:{equal_version:false}} run tellraw @p ["",{"text":" - found: "},{"nbt":"temp.loaded_packs[0].name","storage":"deptree:"},{"text":" "},{"nbt":"temp.loaded_packs[0].major","storage":"deptree:","color":"red"},{"text":"."},{"nbt":"temp.loaded_packs[0].minor","storage":"deptree:","color":"red"},{"text":", requires: "},{"nbt":"temp.new_pack_deps[0].major","storage":"deptree:","color":"green"},{"text":"."},{"nbt":"temp.new_pack_deps[0].minor","storage":"deptree:","color":"green"}]
 #endregion
 

@@ -5,12 +5,12 @@ scoreboard players set $deptree.patch load 0
 
 data modify storage deptree: datapacks set value []
 data modify storage deptree: temp set value {dependencies:[]}
-data modify storage deptree: info set value {}
+data modify storage deptree:register info set value {}
 
 # Load self
-data modify storage deptree: info set value {name:"deptree",major:0,minor:1,patch:0, dependencies:[]}
+data modify storage deptree:register info set value {name:"deptree",major:0,minor:1,patch:0, dependencies:[]}
 function deptree:register
 
-data modify storage deptree: info set value {}
+data modify storage deptree:register info set value {}
 
 
