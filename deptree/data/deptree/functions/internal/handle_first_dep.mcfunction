@@ -12,7 +12,7 @@ execute if data storage deptree: {temp:{not_equal:true}} run data modify storage
 
 # Message
 execute if data storage deptree: {temp:{equal_name:false}} unless data storage deptree: temp.loaded_packs[1] run tellraw @p ["",{"text":"Error loading: ","color":"red"},{"nbt":"info.name","storage":"deptree:register", "bold":false}]
-execute if data storage deptree: {temp:{equal_name:false}} unless data storage deptree: temp.loaded_packs[1] run tellraw @p ["",{"text":" - missing: "},{"nbt":"temp.new_pack_deps[0].name","storage":"deptree:register", "color":"green"}]
+execute if data storage deptree: {temp:{equal_name:false}} unless data storage deptree: temp.loaded_packs[1] run tellraw @p ["",{"text":" - missing: "},{"nbt":"temp.new_pack_deps[0].name","storage":"deptree:", "color":"green"}]
 #endregion
 
 #region version check
