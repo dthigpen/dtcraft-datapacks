@@ -1,1 +1,1 @@
-{"values": ["call_stack:load"]}
+{"values": ["deptree:load", "call_stack:load"]}

@@ -8,7 +8,7 @@ data modify storage deptree: temp set value {dependencies:[]}
 data modify storage deptree: info set value {}
 
 # Load self
-data modify storage deptree: info set value {name:"deptree",major:0,minor:1,patch:0, dependencies:[{name:"bob"}]}
+data modify storage deptree: info set value {name:"deptree",major:0,minor:1,patch:0, dependencies:[]}
 function deptree:register
 
 data modify storage deptree: info set value {}

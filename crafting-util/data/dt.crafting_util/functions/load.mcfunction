@@ -4,7 +4,8 @@ scoreboard players set $dt.crafting_util.major load 0
 scoreboard players set $dt.crafting_util.minor load 1
 scoreboard players set $dt.crafting_util.patch load 0
 
-
+data modify storage deptree: info set value {name:"crafting_util",major:0,minor:1,patch:0, dependencies:[{name:"call_stack"},{name:"array_util"}]}
+function deptree:register
 
 scoreboard objectives add dt.tmp dummy
 scoreboard players reset * dt.tmp

@@ -4,6 +4,9 @@ scoreboard players set $dt.inv_util.version.major load 0
 scoreboard players set $dt.inv_util.version.minor load 1
 scoreboard players set $dt.inv_util.version.patch load 0
 
+data modify storage deptree: info set value {name:"inv_util",major:0,minor:1,patch:0, dependencies:[{name:"call_stack"},{name:"array_util"}]}
+function deptree:register
+
 scoreboard objectives add dt.enum dummy
 scoreboard players set #equal dt.enum 0
 scoreboard players set #not_equal dt.enum 1

@@ -4,6 +4,9 @@ scoreboard players set $call_stack.version.major load 0
 scoreboard players set $call_stack.version.minor load 1
 scoreboard players set $call_stack.version.patch load 0
 
+data modify storage deptree: info set value {name:"call_stack",major:0,minor:1,patch:0, dependencies:[]}
+function deptree:register
+
 scoreboard objectives add dt.tmp dummy
 scoreboard objectives add dt.call_stack dummy
 scoreboard players set debug dt.call_stack 0
