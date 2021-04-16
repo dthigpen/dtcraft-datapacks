@@ -8,8 +8,7 @@ data modify storage deptree:register info set value {name:"autocraft",major:0,mi
 function deptree:register
 
 schedule clear dt.autocraft:tick
-schedule function dt.autocraft:tick 1t replace
-
+execute if data storage deptree:register loaded run schedule function dt.autocraft:tick 1t replace
 
 scoreboard objectives add dt.ac.placed minecraft.used:minecraft.dropper
 scoreboard objectives add dt.ac.curblock dummy
