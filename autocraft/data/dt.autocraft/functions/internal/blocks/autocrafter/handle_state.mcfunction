@@ -8,9 +8,9 @@ data modify block ~ ~ ~ Items set from storage call_stack: call.result
 # decrement cooldown
 # reset if use before cooldown period
 #execute if score @s dt.ac.state = #cooldown dt.ac.state run say cooling down..
-execute if score @s dt.ac.state = #cooldown dt.ac.state if block ~ ~-1 ~ hopper[enabled=false] run scoreboard players operation @s dt.ac.cooldown -= #rate dt.ac.cooldown
-# decrement cooldown even if powered
-execute if score @s dt.ac.state = #cooldown dt.ac.state if block ~ ~-1 ~ hopper[enabled=true] run scoreboard players operation @s dt.ac.cooldown -= #rate dt.ac.cooldown
+execute positioned ~ ~-1 ~ if score @s dt.ac.state = #cooldown dt.ac.state if block ~ ~ ~ hopper run scoreboard players operation @s dt.ac.cooldown -= #rate dt.ac.cooldown
+execute positioned ~ ~-1 ~ if score @s dt.ac.state = #cooldown dt.ac.state unless block ~ ~ ~ hopper if entity @e[predicate=dt.autocraft:hopper_minecraft,limit=1,sort=nearest] run scoreboard players operation @s dt.ac.cooldown -= #rate dt.ac.cooldown
+
 # punish if powered during cooldown by resetting to max cooldown
 #execute if score @s dt.ac.state = #cooldown dt.ac.state if score @s dt.ac.cooldown matches 1.. if block ~ ~ ~ minecraft:hopper[enabled=true] run scoreboard players operation @s dt.ac.cooldown = #max dt.ac.cooldown
 #execute if score @s dt.ac.state = #cooldown dt.ac.state run say @a[distance=..5] cooldown!
@@ -19,7 +19,7 @@ execute if score @s dt.ac.state = #cooldown dt.ac.state if block ~ ~-1 ~ hopper[
 
 
 # Add tags when in a locked state and remove tags from items below
-execute unless score @s dt.ac.state = #craft dt.ac.state positioned ~ ~ ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/add_tags_to_items
+execute unless score @s dt.ac.state = #craft dt.ac.state positioned ~ ~ ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/add_tags_to_block_items
 execute unless score @s dt.ac.state = #craft dt.ac.state positioned ~ ~-1 ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tags_from_items
 
 # Remove tags from items that were transfered to surrounding blocks

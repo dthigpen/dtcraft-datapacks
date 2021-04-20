@@ -8,7 +8,7 @@ data modify storage call_stack: this.expected[2].tag.dt_placeholder.owner set fr
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.autocraft:test/set_test_block_items
-execute positioned 777777 255 777777 run function dt.autocraft:internal/blocks/autocrafter/placeholders/add_tags_to_items
+execute positioned 777777 255 777777 run function dt.autocraft:internal/blocks/autocrafter/placeholders/add_tags_to_block_items
 function dt.autocraft:test/get_test_block_items
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
