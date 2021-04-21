@@ -1,7 +1,7 @@
 function call_stack:push
 
 # only craft if there are no stacks
-function dt.autocraft:internal/blocks/autocrafter/placeholders/get_items_from_block_or_entity
+function dt.autocraft:internal/blocks/autocrafter/get_items_from_block_or_entity
 data modify storage call_stack: call.arg0 set from storage call_stack: call.result
 
 function dt.autocraft:internal/blocks/autocrafter/can_craft
