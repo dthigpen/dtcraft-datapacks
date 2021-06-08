@@ -43,15 +43,15 @@ execute if data storage call_stack: this.sorted_items[0] run function dt.inv_sor
 #endregion
 
 #region fill hotbar with placeholders
-replaceitem entity @s hotbar.0 minecraft:stick{placeholder:0b}
-replaceitem entity @s hotbar.1 minecraft:stick{placeholder:1b}
-replaceitem entity @s hotbar.2 minecraft:stick{placeholder:2b}
-replaceitem entity @s hotbar.3 minecraft:stick{placeholder:3b}
-replaceitem entity @s hotbar.4 minecraft:stick{placeholder:4b}
-replaceitem entity @s hotbar.5 minecraft:stick{placeholder:5b}
-replaceitem entity @s hotbar.6 minecraft:stick{placeholder:6b}
-replaceitem entity @s hotbar.7 minecraft:stick{placeholder:7b}
-replaceitem entity @s hotbar.8 minecraft:stick{placeholder:8b}
+item replace entity @s hotbar.0 with minecraft:stick{placeholder:0b}
+item replace entity @s hotbar.1 with minecraft:stick{placeholder:1b}
+item replace entity @s hotbar.2 with minecraft:stick{placeholder:2b}
+item replace entity @s hotbar.3 with minecraft:stick{placeholder:3b}
+item replace entity @s hotbar.4 with minecraft:stick{placeholder:4b}
+item replace entity @s hotbar.5 with minecraft:stick{placeholder:5b}
+item replace entity @s hotbar.6 with minecraft:stick{placeholder:6b}
+item replace entity @s hotbar.7 with minecraft:stick{placeholder:7b}
+item replace entity @s hotbar.8 with minecraft:stick{placeholder:8b}
 #endregion
 
 #region give player their items back

@@ -1,8 +1,8 @@
 function call_stack:push
 
 clear @s minecraft:feather
-replaceitem entity @s hotbar.2 minecraft:feather 2
-replaceitem entity @s hotbar.6 minecraft:feather 3
+item replace entity @s hotbar.2 with minecraft:feather 2
+item replace entity @s hotbar.6 with minecraft:feather 3
 function dt.inv_util:api/get_hotbar
 data modify storage call_stack: this.hotbar set from storage call_stack: call.result
 data modify storage call_stack: call.arg0 set from storage call_stack: this.hotbar

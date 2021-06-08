@@ -1,8 +1,8 @@
 function call_stack:push
 
 clear @s minecraft:feather
-replaceitem entity @s inventory.17 minecraft:feather 2
-replaceitem entity @s inventory.24 minecraft:feather 3
+item replace entity @s inventory.17 with minecraft:feather 2
+item replace entity @s inventory.24 with minecraft:feather 3
 function dt.inv_util:api/get_inventory
 data modify storage call_stack: this.inventory set from storage call_stack: call.result
 data modify storage call_stack: call.arg0 set from storage call_stack: this.inventory

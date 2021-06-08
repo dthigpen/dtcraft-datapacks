@@ -1,7 +1,7 @@
 function call_stack:push
 
 # hotbar
-replaceitem entity @s hotbar.7 minecraft:slime_ball
+item replace entity @s hotbar.7 with minecraft:slime_ball
 data modify storage call_stack: call.arg0 set value {Slot:7b,id:"minecraft:feather",Count:3b}
 function dt.inv_util:api/replace_slot
 

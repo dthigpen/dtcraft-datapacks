@@ -1,6 +1,6 @@
 function call_stack:push
 
-replaceitem entity @s inventory.24 minecraft:slime_ball
+item replace entity @s inventory.24 with minecraft:slime_ball
 data modify storage call_stack: call.arg0 set value {Slot:33b,id:"minecraft:feather",Count:3b}
 function dt.inv_util:api/replace_slot
 execute store success score result dt.tmp run data get entity @s Inventory[{Slot:33b,id:"minecraft:feather"}]
