@@ -4,9 +4,9 @@ Automate the crafting process with a redstone enabled crafting table.
 ## Installation
 
 1. Visit the Releases page and download autocraft datapack zip file.
-2. Download the latest [PlayerDB Datapack](https://github.com/rx-modules/PlayerDB/releases).
-3. Copy the downloaded zip files into your world's datapacks folder at %APPDATA%\.minecraft\saves\world\datapacks
-4. Launch the world and type /reload
+2. Download the [v1.1.1 PlayerDB Datapack](https://github.com/rx-modules/PlayerDB/releases) `.zip` datapack.
+3. Copy the downloaded zip file into your world's datapacks folder at `%APPDATA%\.minecraft\saves\world\datapacks`
+4. Launch the world and type `/reload`
 5. Check that the datapack is installed under the "Installed Datapacks" Advancement tab with `Ctrl + L`
 
 
@@ -18,7 +18,7 @@ You can create an autocrafter for nearly any item in the game with the following
 <img src="docs/autocrafter.png" width=200>
 
 
-The autocrafter will only work when there is a `hopper` below it. Lock the `hopper` and fill in the items for the recipe, then unlock the `hopper` to craft the item. Items filled into the autocrafter will not stack if there are spaces available. For example if three iron ingots are fed into the block, they will spread to take up three slots as opposed to one.
+The autocrafter will only work when there is a `hopper` below it. Lock the `hopper` and fill in the items for the recipe, then unlock the `hopper` to craft the item. Items filled into the autocrafter will **not** stack if there are spaces available. For example if three iron ingots are fed into the slot, they will spread to take up three slots as opposed to one.
 
 <img src="docs/autocrafter2.png" width=200>
 
