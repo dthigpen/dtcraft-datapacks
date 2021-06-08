@@ -7,6 +7,6 @@ execute unless data block ~ ~ ~ {CustomName:'{"text":"Autocrafter"}'} run functi
 execute unless data block ~ ~ ~ {CustomName:'{"text":"Autocrafter"}'} run data modify storage call_stack: this.data.recipes set from storage call_stack: call.result
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.data
-function dt.autocraft:internal/blocks/autocrafter/sava_data
+function dt.autocraft:internal/blocks/autocrafter/save_autocraft_data
 
 function call_stack:pop
