@@ -23,8 +23,7 @@ execute if data storage call_stack: this.recipe_result.result.id run function dt
 execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.items set value []
 execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.items append from storage call_stack: call.result
 execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.items[0].Slot set value 0b
-execute if data storage call_stack: this.recipe_result.result.id run data modify block ~ ~ ~ Items set from storage call_stack: this.items
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: call.result[1]
+execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: this.recipe_result.result.id run function dt.autocraft:internal/blocks/autocrafter/set_items_for_block_or_entity
 
 function call_stack:pop
