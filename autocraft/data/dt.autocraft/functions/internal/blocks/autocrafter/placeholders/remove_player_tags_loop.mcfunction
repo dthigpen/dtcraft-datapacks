@@ -9,10 +9,10 @@ function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_item_tag_u
 
 # Remove the tagged item at the old slot
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item.Slot
-function dt.inv_util:api/remove_slot
+function dt.inventory:api/remove_slot
 # Loot back to the player so that it will stack on existing slots
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item
-function dt.inv_util:api/loot_to_player
+function dt.inventory:api/loot_to_player
 
 data remove storage call_stack: this.placeholders[0]
 execute if data storage call_stack: this.placeholders[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.placeholders

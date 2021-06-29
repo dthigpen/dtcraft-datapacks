@@ -9,7 +9,7 @@ data modify storage call_stack: this.remaining_items set from storage call_stack
 data modify storage call_stack: call.arg0 set from storage call_stack: this.remaining_items
 data modify storage call_stack: call.arg1 set value {Slot:-1b}
 data modify storage call_stack: call.arg1.Slot set from storage call_stack: this.tagged_items[0].tag.dt_placeholder.slot
-function dt.array_util:api/split_by_key
+function dt.array:api/split_by_key
 data modify storage call_stack: this.matching_item set from storage call_stack: call.result[0][0]
 # Drop any additional items that came up with the same slot since something would be wrong in that case
 data modify storage call_stack: this.remaining_items set from storage call_stack: call.result[1]
@@ -20,7 +20,7 @@ data modify storage call_stack: this.items_to_combine append from storage call_s
 data modify storage call_stack: this.items_to_combine[0].Slot set from storage call_stack: this.tagged_items[0].tag.dt_placeholder.slot
 data modify storage call_stack: this.items_to_combine append from storage call_stack: this.matching_item
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items_to_combine
-function dt.inv_util:api/combine_items
+function dt.inventory:api/combine_items
 data modify storage call_stack: this.combined_items set from storage call_stack: call.result
 data modify storage call_stack: this.combined_items[0].Slot set from storage call_stack: this.combined_items[0].tag.dt_placeholder.slot
 
@@ -38,7 +38,7 @@ execute unless data storage call_stack: this.tagged_items[0] run data modify sto
 execute unless data storage call_stack: this.tagged_items[0] run data modify storage call_stack: this.result.remaining_tags set from storage call_stack: this.remaining_tags
 execute unless data storage call_stack: this.tagged_items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.new_items
 execute unless data storage call_stack: this.tagged_items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.remaining_items
-execute unless data storage call_stack: this.tagged_items[0] run function dt.array_util:api/concat
+execute unless data storage call_stack: this.tagged_items[0] run function dt.array:api/concat
 execute unless data storage call_stack: this.tagged_items[0] run data modify storage call_stack: this.result.new_items set from storage call_stack: call.result
 
 execute if data storage call_stack: this.tagged_items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.tagged_items

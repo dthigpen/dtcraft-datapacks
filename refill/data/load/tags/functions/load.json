@@ -1,1 +1,1 @@
-{"values": ["call_stack:load","dt.user_util:load","dt.array_util:load","dt.inv_util:load", "dt.refill:load"]}
+{"values": ["call_stack:load","dt.user_util:load","dt.array:load","dt.inventory:load", "dt.refill:load"]}
