@@ -24,3 +24,5 @@ scoreboard players set #cooldown dt.ac.state 3
 scoreboard objectives add dt.tmp dummy
 
 function dt.autocraft:internal/raycast/load
+
+advancement revoke @s from dt.autocraft:autocrafter
