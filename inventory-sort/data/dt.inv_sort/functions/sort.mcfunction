@@ -1,4 +1,4 @@
-#say sort
+say sort
 function call_stack:push
 
 

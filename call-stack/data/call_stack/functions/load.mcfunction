@@ -1,8 +1,8 @@
 #say load call-stack
 
-scoreboard players set $call_stack.version.major load 0
-scoreboard players set $call_stack.version.minor load 1
-scoreboard players set $call_stack.version.patch load 0
+scoreboard players set $call_stack.version.major load.status 0
+scoreboard players set $call_stack.version.minor load.status 1
+scoreboard players set $call_stack.version.patch load.status 0
 
 scoreboard objectives add dt.tmp dummy
 scoreboard objectives add dt.call_stack dummy

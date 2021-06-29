@@ -1,8 +1,8 @@
 #say dt.crafting loaded!
                     
-scoreboard players set $dt.crafting.major load 0
-scoreboard players set $dt.crafting.minor load 1
-scoreboard players set $dt.crafting.patch load 0
+scoreboard players set $dt.crafting.major load.status 0
+scoreboard players set $dt.crafting.minor load.status 1
+scoreboard players set $dt.crafting.patch load.status 0
 
 
 
