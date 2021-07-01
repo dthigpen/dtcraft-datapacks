@@ -56,7 +56,7 @@ data modify storage call_stack: this.expected set value [{id:"minecraft:cobblest
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 function dt.crafting:api/crafter/balance_items
 data modify storage call_stack: this.actual set from storage call_stack: call.result
-tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
+#tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 

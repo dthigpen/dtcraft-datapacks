@@ -3,7 +3,7 @@ function call_stack:push
 data modify storage call_stack: this.temp_recipes set from storage call_stack: this.arg0
 data modify storage call_stack: this.item_counts set from storage call_stack: this.arg1
 
-#tellraw @p [{"text":"recipe: "}, {"nbt":"this.temp_recipes[0].result.id","storage":"call_stack:"}]
+#tellraw @p [{"text":"recipe: "}, {"nbt":"this.temp_recipes[0].ingredients","storage":"call_stack:"}]
 #tellraw @p [{"text":"counts: "}, {"nbt":"this.item_counts","storage":"call_stack:"}]
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_recipes[0].ingredients
 data modify storage call_stack: call.arg1 set value {type:"tag"}
