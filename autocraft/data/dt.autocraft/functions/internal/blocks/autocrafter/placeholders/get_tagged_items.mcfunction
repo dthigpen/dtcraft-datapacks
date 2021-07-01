@@ -9,5 +9,4 @@ execute if data storage call_stack: this.items[0] run data modify storage call_s
 execute if data storage call_stack: this.items[0] run function dt.array:api/split_by_key
 execute if data storage call_stack: this.items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result[0]
 
-execute if data storage call_stack: this.items[0] run tellraw @p ["","Items: ",{"nbt":"this.items","storage":"call_stack:"}]
 function call_stack:pop
