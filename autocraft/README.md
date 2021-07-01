@@ -4,7 +4,7 @@ Automate the crafting process with a redstone enabled crafting table.
 ## Installation
 
 1. Visit the Releases page and download autocraft datapack zip file.
-2. Download the [v1.1.1 PlayerDB Datapack](https://github.com/rx-modules/PlayerDB/releases) `.zip` datapack.
+2. Download the [v1.2.0 PlayerDB Datapack](https://github.com/rx-modules/PlayerDB/releases/tag/v1.2.0) `.zip` datapack.
 3. Copy the downloaded zip file into your world's datapacks folder at `%APPDATA%\.minecraft\saves\world\datapacks`
 4. Launch the world and type `/reload`
 5. Check that the datapack is installed under the "Installed Datapacks" Advancement tab with `Ctrl + L`
@@ -29,11 +29,7 @@ Crafting items is straightforward for blocks such as an `iron_block` composed of
 ## Caveats and Limitations
 - Currently only single item stacks are supported in the autocraft. For example, it will not craft when there are 2+ ingredients in a stack
 - Non-item specific crafting is possible but not recommended as it is a very resource intensive operation to perform every tick and causes **significant** lag.
-- Cannot move the table with pistons because it is a block entity.
 
 ## TODO
-- Customization settings
 - Item specific custom models to indicate autocrafter type
-- Improve recipe matching logic
 - Speed optimizations
-- balance item stacks across slots
