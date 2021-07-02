@@ -39,7 +39,7 @@ execute if score @s dt.ac.state = #craft dt.ac.state positioned ~ ~ ~ run functi
 # Get the tagged items from the block below then remove those items
 execute if score @s dt.ac.state = #craft dt.ac.state positioned ~ ~-1 ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/get_tagged_items
 execute if score @s dt.ac.state = #craft dt.ac.state run data modify storage call_stack: this.tagged_items_from_below set from storage call_stack: call.result
-execute if score @s dt.ac.state = #craft dt.ac.state positioned ~ ~-1 ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tagged_items
+
 
 execute if score @s dt.ac.state = #craft dt.ac.state run data modify storage call_stack: call.arg0 set from storage call_stack: this.tagged_items_from_below
 execute if score @s dt.ac.state = #craft dt.ac.state positioned ~ ~ ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/add_back_tagged_items
@@ -48,5 +48,8 @@ execute if score @s dt.ac.state = #craft dt.ac.state positioned ~ ~ ~ run functi
 #execute if score @s dt.ac.state = #craft dt.ac.state run tellraw @a[distance=..5] [{"text":"Items: "},{"nbt":"Items","block":"~ ~ ~"}]
 #execute if score @s dt.ac.state = #craft dt.ac.state run tellraw @a[distance=..5] [{"text":"Below: "},{"nbt":"Items","block":"~ ~-1 ~"}]
 execute if score @s dt.ac.state = #craft dt.ac.state run function dt.autocraft:internal/blocks/autocrafter/try_craft
+
+# Remove tagged items after attempted craft since a successful craft may replace items that dropped below
+execute if score @s dt.ac.state = #craft dt.ac.state positioned ~ ~-1 ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tagged_items
 
 function call_stack:pop
