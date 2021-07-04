@@ -27,24 +27,13 @@ execute if data storage call_stack: this.recipe_result.result.id run data modify
 # execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.items[0].Slot set value 0b
 # execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 # execute if data storage call_stack: this.recipe_result.result.id run function dt.autocraft:internal/blocks/autocrafter/set_items_for_block_or_entity
+execute if data storage call_stack: this.recipe_result.result.id run data modify block ~ ~ ~ Items set value []
+# try looting to the hopper in case there are free spots or spots with the result already
+execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.items[0]
+execute if data storage call_stack: this.recipe_result.result.id positioned ~ ~-1 ~ run function dt.inventory:api/loot_to_block
+execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.successful set from storage call_stack: call.result
 
-# replace as many items in hopper as possible, put remaining in dropper
-execute if data storage call_stack: this.recipe_result.result.id run execute positioned ~ ~-1 ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/get_tagged_items
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.tagged_items_from_below set from storage call_stack: call.result
-execute if data storage call_stack: this.recipe_result.result.id run execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
-execute if data storage call_stack: this.recipe_result.result.id run execute run data modify storage call_stack: call.arg1 set from storage call_stack: this.tagged_items_from_below
-execute if data storage call_stack: this.recipe_result.result.id run execute run function dt.autocraft:internal/blocks/autocrafter/copy_tag_slots
-execute if data storage call_stack: this.recipe_result.result.id run execute run data modify storage call_stack: this.slotted_unslotted set from storage call_stack: call.result
-execute run tellraw @p ["do_craft.mcfunction:38"," ",{"nbt":"this.slotted_unslotted","storage":"call_stack:"}]
-# place result in hopper 
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.slotted_unslotted.slotted
-execute if data storage call_stack: this.recipe_result.result.id positioned ~ ~-1 ~ run function dt.autocraft:internal/blocks/autocrafter/merge_items_for_block_or_entity
-# place remaining into dropper
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.slotted_unslotted.unslotted[0].Slot set value 0b
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.slotted_unslotted.unslotted[1].Slot set value 1b
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.slotted_unslotted.unslotted[2].Slot set value 2b
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.slotted_unslotted.unslotted
-execute if data storage call_stack: this.recipe_result.result.id run function dt.autocraft:internal/blocks/autocrafter/set_items_for_block_or_entity
+execute if data storage call_stack: this.recipe_result.result.id if data storage call_stack: {this:{successful:false}} run data modify block ~ ~ ~ Items set from storage call_stack: this.items
 
 
 
