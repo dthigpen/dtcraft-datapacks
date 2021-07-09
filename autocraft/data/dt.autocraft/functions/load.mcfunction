@@ -8,9 +8,7 @@ schedule clear dt.autocraft:tick
 schedule function dt.autocraft:tick 1t replace
 
 
-scoreboard objectives add dt.ac.placed minecraft.used:minecraft.dropper
-scoreboard objectives add dt.ac.curblock dummy
-scoreboard objectives add dt.ac.offblock dummy
+function dt.autocraft:internal/custom_block_placement/load
 
 scoreboard objectives add dt.ac.cooldown dummy
 scoreboard players set #max dt.ac.cooldown 20

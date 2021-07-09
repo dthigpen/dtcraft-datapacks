@@ -12,7 +12,7 @@ execute positioned ~ ~-1 ~ run function dt.autocraft:internal/blocks/autocrafter
 execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.tagged_items_from_below
 execute positioned ~ ~ ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/add_back_tagged_items
 execute positioned ~ ~ ~ run function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tags_from_items
-execute positioned ~ ~ ~ run function dt.autocraft:internal/blocks/autocrafter/try_craft
+execute positioned ~ ~ ~ run function dt.autocraft:internal/blocks/autocrafter/crafting/try
 
 function call_stack:pop
 

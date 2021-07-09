@@ -1,3 +1,5 @@
+# if out of bounds or being initalized set it to ready
+execute unless score @s dt.ac.state matches 0.. run scoreboard players operation @s dt.ac.state = #ready dt.ac.state
 
 # craft -> cooldown
 execute if score @s dt.ac.state = #craft dt.ac.state run scoreboard players operation @s dt.ac.cooldown = #max dt.ac.cooldown

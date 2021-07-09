@@ -1,6 +1,6 @@
 function call_stack:push
 
-function dt.autocraft:internal/blocks/autocrafter/get_items_from_block_or_entity
+function dt.autocraft:internal/util/get_items_from_block_or_entity
 data modify storage call_stack: this.items set from storage call_stack: call.result
 
 execute if data storage call_stack: this.items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
