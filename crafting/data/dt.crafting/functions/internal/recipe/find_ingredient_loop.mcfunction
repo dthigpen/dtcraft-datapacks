@@ -24,7 +24,7 @@ execute store result storage call_stack: this.id_count_match int 1 run data get 
 # TODO handle cases where this is not true
 # if there was a match (and only one match), check the slots
 data modify storage call_stack: this.matching_slots set value []
-execute if data storage call_stack: {this:{id_count_match:1}} unless data storage call_stack: this.matches[0].slots run data modify storage call_stack: this.matching_slots append value -1
+#execute if data storage call_stack: {this:{id_count_match:1}} unless data storage call_stack: this.matches[0].slots run data modify storage call_stack: this.matching_slots append value -1
 execute if data storage call_stack: {this:{id_count_match:1}} if data storage call_stack: this.matches[0].slots run data modify storage call_stack: call.arg0 set from storage call_stack: this.matches[0].slots
 execute if data storage call_stack: {this:{id_count_match:1}} if data storage call_stack: this.matches[0].slots run data modify storage call_stack: call.arg1 set from storage call_stack: this.slots
 execute if data storage call_stack: {this:{id_count_match:1}} if data storage call_stack: this.matches[0].slots run function dt.array:api/split_by_key
