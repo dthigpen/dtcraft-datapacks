@@ -3,7 +3,8 @@
 scoreboard players set $dt.autocraft.major load.status 0
 scoreboard players set $dt.autocraft.minor load.status 1
 scoreboard players set $dt.autocraft.patch load.status 0
-                    
+
+
 schedule clear dt.autocraft:tick
 schedule function dt.autocraft:tick 1t replace
 

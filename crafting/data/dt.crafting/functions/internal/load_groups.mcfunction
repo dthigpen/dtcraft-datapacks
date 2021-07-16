@@ -1,4 +1,11 @@
 data modify storage dt.crafting: groups set value []
+
+#[[[cog
+#   from datapack_utils import storage
+#   from datapack_utils import tags
+#   for line in storage.from_dict(tags.get_item_tags_storage_dict(),'dt.crafting:'):
+#       cog.outl(line)
+#]]]
 data modify storage dt.crafting: groups append value {"group": "minecraft:freeze_immune_wearables", "values": ["minecraft:leather_boots", "minecraft:leather_leggings", "minecraft:leather_chestplate", "minecraft:leather_helmet", "minecraft:leather_horse_armor"]}
 data modify storage dt.crafting: groups append value {"group": "minecraft:occludes_vibration_signals", "values": ["minecraft:white_wool", "minecraft:orange_wool", "minecraft:magenta_wool", "minecraft:light_blue_wool", "minecraft:yellow_wool", "minecraft:lime_wool", "minecraft:pink_wool", "minecraft:gray_wool", "minecraft:light_gray_wool", "minecraft:cyan_wool", "minecraft:purple_wool", "minecraft:blue_wool", "minecraft:brown_wool", "minecraft:green_wool", "minecraft:red_wool", "minecraft:black_wool"]}
 data modify storage dt.crafting: groups append value {"group": "minecraft:redstone_ores", "values": ["minecraft:redstone_ore", "minecraft:deepslate_redstone_ore"]}
@@ -68,3 +75,4 @@ data modify storage dt.crafting: groups append value {"group": "minecraft:ignore
 data modify storage dt.crafting: groups append value {"group": "minecraft:walls", "values": ["minecraft:cobblestone_wall", "minecraft:mossy_cobblestone_wall", "minecraft:brick_wall", "minecraft:prismarine_wall", "minecraft:red_sandstone_wall", "minecraft:mossy_stone_brick_wall", "minecraft:granite_wall", "minecraft:stone_brick_wall", "minecraft:nether_brick_wall", "minecraft:andesite_wall", "minecraft:red_nether_brick_wall", "minecraft:sandstone_wall", "minecraft:end_stone_brick_wall", "minecraft:diorite_wall", "minecraft:blackstone_wall", "minecraft:polished_blackstone_brick_wall", "minecraft:polished_blackstone_wall", "minecraft:cobbled_deepslate_wall", "minecraft:polished_deepslate_wall", "minecraft:deepslate_tile_wall", "minecraft:deepslate_brick_wall"]}
 data modify storage dt.crafting: groups append value {"group": "minecraft:music_discs", "values": ["minecraft:music_disc_pigstep", "minecraft:music_disc_13", "minecraft:music_disc_cat", "minecraft:music_disc_blocks", "minecraft:music_disc_chirp", "minecraft:music_disc_far", "minecraft:music_disc_mall", "minecraft:music_disc_mellohi", "minecraft:music_disc_stal", "minecraft:music_disc_strad", "minecraft:music_disc_ward", "minecraft:music_disc_11", "minecraft:music_disc_wait"]}
 data modify storage dt.crafting: groups append value {"group": "minecraft:wooden_pressure_plates", "values": ["minecraft:oak_pressure_plate", "minecraft:spruce_pressure_plate", "minecraft:birch_pressure_plate", "minecraft:jungle_pressure_plate", "minecraft:acacia_pressure_plate", "minecraft:dark_oak_pressure_plate", "minecraft:crimson_pressure_plate", "minecraft:warped_pressure_plate"]}
+#[[[end]]]

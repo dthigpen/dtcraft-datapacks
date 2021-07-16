@@ -1,8 +1,13 @@
 data modify storage dt.crafting: recipes set value []
+
+#[[[cog
+#   from datapack_utils import storage
+#   from datapack_utils import recipes
+#   for line in storage.from_dict(recipes.get_recipes_storage_dict(),'dt.crafting:'):
+#       cog.outl(line)
+#]]]
 data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 5, "slots": [[0, 1, 2, 3, 5]], "type": "id", "id": "minecraft:glass"}, {"count": 1, "slots": [[4]], "type": "id", "id": "minecraft:nether_star"}, {"count": 3, "slots": [[6, 7, 8]], "type": "id", "id": "minecraft:obsidian"}], "result": {"id": "minecraft:beacon", "count": 1}, "type": "shaped"}
-data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 3, "slots": [[0, 1, 2], [3, 4, 5]], "type": "id", "id": "minecraft:magenta_wool"}, {"count": 3, "slots": [[3, 4, 5], [6, 7, 8]], "type": "tag", "tag": "minecraft:planks"}], "result": {"id": "minecraft:magenta_bed", "count": 1}, "type": "shaped"}
-data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 6, "slots": [[0, 1, 2, 3, 4, 5], [3, 4, 5, 6, 7, 8]], "type": "id", "id": "minecraft:nether_bricks"}], "result": {"id": "minecraft:nether_brick_wall", "count": 6}, "type": "shaped"}
-data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 8, "type": "id", "id": "minecraft:lime_dye"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}], "result": {"id": "minecraft:lime_concrete_powder", "count": 8}, "type": "shapeless"}
+data modify storage dt.crafting:  append value {"ingredients": [{"count": 8, "type": "id", "id": "minecraft:lime_dye"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:sand"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}, {"count": 8, "type": "id", "id": "minecraft:gravel"}], "result": {"id": "minecraft:lime_concrete_powder", "count": 8}, "type": "shapeless"}
 data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 6, "slots": [[0, 3, 4, 6, 7, 8]], "type": "id", "id": "minecraft:waxed_weathered_cut_copper"}], "result": {"id": "minecraft:waxed_weathered_cut_copper_stairs", "count": 4}, "type": "shaped"}
 data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 8, "slots": [[0, 1, 2, 3, 5, 6, 7, 8]], "type": "id", "id": "minecraft:glass_pane"}, {"count": 1, "slots": [[4]], "type": "id", "id": "minecraft:red_dye"}], "result": {"id": "minecraft:red_stained_glass_pane", "count": 8}, "type": "shaped"}
 data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 8, "slots": [[0, 1, 2, 3, 5, 6, 7, 8]], "type": "id", "id": "minecraft:terracotta"}, {"count": 1, "slots": [[4]], "type": "id", "id": "minecraft:lime_dye"}], "result": {"id": "minecraft:lime_terracotta", "count": 8}, "type": "shaped"}
@@ -725,3 +730,4 @@ data modify storage dt.crafting: recipes append value {"ingredients": [{"count":
 data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 8, "slots": [[0, 1, 2, 3, 5, 6, 7, 8]], "type": "id", "id": "minecraft:white_carpet"}, {"count": 1, "slots": [[4]], "type": "id", "id": "minecraft:black_dye"}], "result": {"id": "minecraft:black_carpet", "count": 8}, "type": "shaped"}
 data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 3, "slots": [[0, 1, 2], [3, 4, 5], [6, 7, 8]], "type": "id", "id": "minecraft:diorite"}], "result": {"id": "minecraft:diorite_slab", "count": 6}, "type": "shaped"}
 data modify storage dt.crafting: recipes append value {"ingredients": [{"count": 9, "slots": [[0, 1, 2, 3, 4, 5, 6, 7, 8]], "type": "id", "id": "minecraft:netherite_ingot"}], "result": {"id": "minecraft:netherite_block", "count": 1}, "type": "shaped"}
+#[[[end]]]

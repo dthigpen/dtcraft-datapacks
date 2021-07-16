@@ -16,10 +16,3 @@ function dt.crafting:internal/load_groups
 #say Groups loaded
 function dt.crafting:internal/load_recipes
 #say Recipes loaded
-function dt.crafting:internal/load_recipe_tags
-#say Recipe tags loaded
-
-data modify storage dt.crafting: groups_cache set value []
-data modify storage dt.crafting: groups_cache_size set value 10
-data modify storage dt.crafting: recipes_cache set value []
-data modify storage dt.crafting: recipes_cache_size set value 50
