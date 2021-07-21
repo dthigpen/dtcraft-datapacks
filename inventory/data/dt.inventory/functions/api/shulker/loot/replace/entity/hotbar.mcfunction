@@ -1,0 +1,1 @@
+loot replace entity @s hotbar.0 9 mine 2999999 255 2999999 minecraft:stick{drop_contents:true}

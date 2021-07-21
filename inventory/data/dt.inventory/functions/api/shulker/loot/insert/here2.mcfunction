@@ -1,0 +1,1 @@
+loot insert ~ ~ ~ mine 2999999 254 2999999 minecraft:stick{drop_contents:true}

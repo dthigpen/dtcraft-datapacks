@@ -11,5 +11,9 @@ function dt.array:test/api/concat
 function dt.array:test/api/difference
 function dt.array:test/api/n_array_of
 function dt.array:test/api/split_by_key
+function dt.array:test/api/test_split_half
+function dt.array:test/api/sort/test_merge_sort
+function dt.array:test/api/convert/test_to_key_values
+function dt.array:test/api/test_index_of
 
 function call_stack:pop

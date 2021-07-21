@@ -1,0 +1,1 @@
+loot give @s mine 2999999 255 2999999 stick{drop_contents:true}

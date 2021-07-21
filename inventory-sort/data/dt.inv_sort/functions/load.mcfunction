@@ -1,4 +1,4 @@
-#say load inventory-sort
+# say load inventory-sort
 
 scoreboard players set $dt.inv_sort.version.major load.status 0
 scoreboard players set $dt.inv_sort.version.minor load.status 1

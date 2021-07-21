@@ -1,0 +1,1 @@
+data modify block 2999999 254 2999999 Items set value []

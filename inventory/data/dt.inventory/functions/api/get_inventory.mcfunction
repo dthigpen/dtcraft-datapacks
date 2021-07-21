@@ -1,4 +1,3 @@
-# say get_hotbar
 function call_stack:push
 
 data modify storage call_stack: this.result set value []
