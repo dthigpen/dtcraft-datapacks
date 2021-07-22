@@ -3,7 +3,7 @@ function call_stack:push
 
 data modify storage call_stack: this.this_user set from storage call_stack: this.arg0
 
-function dt.inventory:api/get_inventory
+function dt.inventory:api/player/get/inventory
 data modify storage call_stack: this.items set from storage call_stack: call.result
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items

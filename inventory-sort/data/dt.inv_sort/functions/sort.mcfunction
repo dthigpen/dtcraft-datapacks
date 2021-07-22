@@ -2,7 +2,7 @@
 function call_stack:push
 
 # get inventory
-function dt.inventory:api/get_inventory
+function dt.inventory:api/player/get/inventory
 data modify storage call_stack: this.remaining_items set from storage call_stack: call.result
 
 # combine non-full stacks
@@ -23,7 +23,7 @@ function dt.array:api/sort/merge_sort
 data modify storage call_stack: this.sorted_items append from storage call_stack: call.result[].value
 
 # clear existing player inventory
-execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/shulker/clear_items
+execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/shulker/items/clear
 execute if data storage call_stack: this.sorted_items[0] run data modify storage call_stack: call.arg0 set value []
 execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/player/replace/inventory
 

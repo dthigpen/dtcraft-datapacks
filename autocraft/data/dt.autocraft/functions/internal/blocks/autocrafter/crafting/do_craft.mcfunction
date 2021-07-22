@@ -26,8 +26,9 @@ execute if data storage call_stack: this.recipe_result.result.id run data modify
 execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.items append from storage call_stack: call.result
 execute if data storage call_stack: this.recipe_result.result.id run data modify block ~ ~ ~ Items set value []
 # try looting to the hopper in case there are free spots or spots with the result already
-execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.items[0]
-execute if data storage call_stack: this.recipe_result.result.id positioned ~ ~-1 ~ run function dt.inventory:api/loot_to_block
+execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
+execute if data storage call_stack: this.recipe_result.result.id run function dt.inventory:api/shulker/items/set
+execute if data storage call_stack: this.recipe_result.result.id positioned ~ ~-1 ~ run function dt.inventory:api/shulker/loot/insert/block
 execute if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.successful set from storage call_stack: call.result
 execute if data storage call_stack: this.recipe_result.result.id if data storage call_stack: {this:{successful:false}} run data modify block ~ ~ ~ Items set from storage call_stack: this.items
 
