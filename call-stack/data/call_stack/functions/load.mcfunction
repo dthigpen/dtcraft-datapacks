@@ -1,8 +1,26 @@
 #say load call-stack
 
+#[[[cog
+#   from datapack_utils import utils
+#   from datapack_utils.utils import Pack
+#   
+#   cog.outl(utils.setup_versioning(
+#       Pack(
+#           name='Call-stack',
+#           load_name='call_stack',
+#           version=Pack.Version(0,1,0)
+#       ))
+#   )
+#]]]
+
 scoreboard players set $call_stack.version.major load.status 0
 scoreboard players set $call_stack.version.minor load.status 1
 scoreboard players set $call_stack.version.patch load.status 0
+
+scoreboard players set $call_stack load.status 1
+
+
+#[[[end]]]
 
 scoreboard objectives add dt.tmp dummy
 scoreboard objectives add dt.call_stack dummy
