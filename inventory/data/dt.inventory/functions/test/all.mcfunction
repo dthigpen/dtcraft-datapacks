@@ -8,8 +8,8 @@ data modify storage call_stack: this.player_hotbar set from storage call_stack: 
 function dt.inventory:test/api/test_replace_slot_hotbar
 function dt.inventory:test/api/test_replace_slot_inventory
 
-function dt.inventory:test/api/player/get/test_inventory
-function dt.inventory:test/api/player/get/test_hotbar
+function dt.inventory:test/api/player/slot/test_remove
+function dt.inventory:test/api/player/slot/test_replace
 
 function dt.inventory:test/api/test_remove_slot_inventory
 function dt.inventory:test/api/test_combine_items

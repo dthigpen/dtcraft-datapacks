@@ -8,9 +8,9 @@ data modify storage call_stack: this.original_slot set from storage call_stack: 
 data modify storage call_stack: this.item.Slot set from storage call_stack: this.this_user.data.selected.slot
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item
-function dt.inventory:api/replace_slot
+function dt.inventory:api/player/slot/replace
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.original_slot
-function dt.inventory:api/remove_slot
+function dt.inventory:api/playerslot/remove
 
 function call_stack:pop

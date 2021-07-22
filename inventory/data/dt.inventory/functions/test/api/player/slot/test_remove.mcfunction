@@ -1,9 +1,10 @@
+
 function call_stack:push
 
 clear @s minecraft:feather
 item replace entity @s inventory.17 with minecraft:feather 2
 data modify storage call_stack: call.arg0 set value 26
-function dt.inventory:api/remove_slot
+function dt.inventory:api/playerslot/remove
 
 scoreboard players set result dt.tmp 0
 execute unless data entity @s Inventory[{id:"minecraft:feather"}] run scoreboard players set result dt.tmp 1
