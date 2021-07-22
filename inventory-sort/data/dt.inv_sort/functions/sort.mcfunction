@@ -7,7 +7,7 @@ data modify storage call_stack: this.remaining_items set from storage call_stack
 
 # combine non-full stacks
 data modify storage call_stack: call.arg0 set from storage call_stack: this.remaining_items
-function dt.inventory:api/combine_items
+function dt.inventory:api/items/combine
 data modify storage call_stack: this.remaining_items set from storage call_stack: call.result
 
 # assign item ordering ranks

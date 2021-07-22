@@ -3,7 +3,7 @@ data modify storage call_stack: this.items set from storage call_stack: this.arg
 
 # reset slots
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
-function dt.inventory:api/reset_slots
+function dt.inventory:api/items/reset_slots
 data modify storage call_stack: this.items set from storage call_stack: call.result
 
 # set items

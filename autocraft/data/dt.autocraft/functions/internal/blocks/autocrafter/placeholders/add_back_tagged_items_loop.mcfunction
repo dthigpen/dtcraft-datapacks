@@ -20,7 +20,7 @@ data modify storage call_stack: this.items_to_combine append from storage call_s
 data modify storage call_stack: this.items_to_combine[0].Slot set from storage call_stack: this.tagged_items[0].tag.dt_placeholder.slot
 data modify storage call_stack: this.items_to_combine append from storage call_stack: this.matching_item
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items_to_combine
-function dt.inventory:api/combine_items
+function dt.inventory:api/items/combine
 data modify storage call_stack: this.combined_items set from storage call_stack: call.result
 data modify storage call_stack: this.combined_items[0].Slot set from storage call_stack: this.combined_items[0].tag.dt_placeholder.slot
 

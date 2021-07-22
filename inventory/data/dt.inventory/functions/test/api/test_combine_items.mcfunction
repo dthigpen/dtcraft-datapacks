@@ -5,7 +5,7 @@ data modify storage call_stack: this.array set value []
 data modify storage call_stack: this.expected set value []
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-function dt.inventory:api/combine_items
+function dt.inventory:api/items/combine
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -21,7 +21,7 @@ data modify storage call_stack: this.array set value [{id:"minecraft:feather",Co
 data modify storage call_stack: this.expected set value [{id:"minecraft:feather",Count:2b, Slot:0b}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-function dt.inventory:api/combine_items
+function dt.inventory:api/items/combine
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -35,7 +35,7 @@ data modify storage call_stack: this.array set value [{id:"minecraft:feather",Co
 data modify storage call_stack: this.expected set value [{id:"minecraft:feather",Count:64b, Slot:0b},{id:"minecraft:feather",Count:1b, Slot:1b}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-function dt.inventory:api/combine_items
+function dt.inventory:api/items/combine
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
