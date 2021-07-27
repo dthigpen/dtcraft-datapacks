@@ -5,27 +5,17 @@
 #   from datapack_utils.utils import Pack
 #   
 #   cog.outl(utils.setup_versioning(
-#       Pack(
-#           name='Inventory-Sort',
-#           load_name='dt.inv_sort',
-#           version=Pack.Version(0,1,0),
-#           tick_function='dt.inv_sort:tick',
+#       Pack('dt.inv_sort',Pack.Version(1,0,0),name='Inventory-Sort',tick_function='dt.inv_sort:tick',
 #           dependencies = [
-#               Pack(
-#                   name='call-stack',
-#                   load_name='call_stack',
-#                   version=Pack.Version(0,1,0)),
-#               Pack(
-#                   name='Inventory',
-#                   load_name='dt.inventory',
-#                   version=Pack.Version(0,1,0))
+#               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
+#               Pack('dt.inventory',Pack.Version(1,0,0),name='Inventory')
 #           ]
 #       ))
 #   )
 #]]]
 
-scoreboard players set $dt.inv_sort.version.major load.status 0
-scoreboard players set $dt.inv_sort.version.minor load.status 1
+scoreboard players set $dt.inv_sort.version.major load.status 1
+scoreboard players set $dt.inv_sort.version.minor load.status 0
 scoreboard players set $dt.inv_sort.version.patch load.status 0
 
 scoreboard players set $dt.inv_sort load.status 1
@@ -38,10 +28,10 @@ execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load
 execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.inv_sort load.status 0
 
 # check for Inventory datapack
-execute unless score $dt.inventory load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Inventory-Sort","bold":true}," requires ",{"text":"Inventory ","bold":true},"0.1"]
+execute unless score $dt.inventory load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Inventory-Sort","bold":true}," requires ",{"text":"Inventory ","bold":true},"1.0"]
 scoreboard players set $dt.tmp.dep load.status 0
-execute if score $dt.inventory.version.major load.status matches 0 if score $dt.inventory.version.minor load.status matches 1.. run scoreboard players set $dt.tmp.dep load.status 1
-execute if score $dt.inventory load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Inventory-Sort","bold":true}," expected ",{"text":"Inventory ","bold":true},"0.1"," but found ",{"score":{"name":"$dt.inventory.version.major","objective":"load.status"}},".",{"score":{"name":"$dt.inventory.version.minor","objective":"load.status"}}]
+execute if score $dt.inventory.version.major load.status matches 1 if score $dt.inventory.version.minor load.status matches 0.. run scoreboard players set $dt.tmp.dep load.status 1
+execute if score $dt.inventory load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Inventory-Sort","bold":true}," expected ",{"text":"Inventory ","bold":true},"1.0"," but found ",{"score":{"name":"$dt.inventory.version.major","objective":"load.status"}},".",{"score":{"name":"$dt.inventory.version.minor","objective":"load.status"}}]
 execute if score $dt.inventory load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.inv_sort load.status 0
 
 scoreboard players reset $dt.tmp.dep load.status

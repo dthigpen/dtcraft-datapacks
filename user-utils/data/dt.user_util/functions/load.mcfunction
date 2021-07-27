@@ -5,22 +5,16 @@
 #   from datapack_utils.utils import Pack
 #   
 #   cog.outl(utils.setup_versioning(
-#       Pack(
-#           name='user-util',
-#           load_name='dt.user_util',
-#           version=Pack.Version(0,1,0),
+#       Pack('dt.user_util',Pack.Version(1,0,0),name='user-util',
 #           dependencies = [
-#               Pack(
-#                   name='call-stack',
-#                   load_name='call_stack',
-#                   version=Pack.Version(0,1,0)),
+#               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
 #           ]
 #       ))
 #   )
 #]]]
 
-scoreboard players set $dt.user_util.version.major load.status 0
-scoreboard players set $dt.user_util.version.minor load.status 1
+scoreboard players set $dt.user_util.version.major load.status 1
+scoreboard players set $dt.user_util.version.minor load.status 0
 scoreboard players set $dt.user_util.version.patch load.status 0
 
 scoreboard players set $dt.user_util load.status 1

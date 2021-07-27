@@ -5,12 +5,8 @@
 #   from datapack_utils.utils import Pack
 #   
 #   cog.outl(utils.setup_versioning(
-#       Pack(
-#           name='Call-stack',
-#           load_name='call_stack',
-#           version=Pack.Version(0,1,0)
-#       ))
-#   )
+#       Pack('call_stack',Pack.Version(0,1,0),name='call-stack')
+#   ))
 #]]]
 
 scoreboard players set $call_stack.version.major load.status 0

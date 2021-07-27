@@ -3,22 +3,17 @@
 #   from datapack_utils.utils import Pack
 #   
 #   cog.outl(utils.setup_versioning(
-#       Pack(
+#       Pack('dt.array',Pack.Version(0,2,0),
 #           name='Array',
-#           load_name='dt.array',
-#           version=Pack.Version(0,1,0),
 #           dependencies = [
-#               Pack(
-#                   name='call-stack',
-#                   load_name='call_stack',
-#                   version=Pack.Version(0,1,0)),
-#           ]
+#               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
+#           ]   
 #       ))
 #   )
 #]]]
 
 scoreboard players set $dt.array.version.major load.status 0
-scoreboard players set $dt.array.version.minor load.status 1
+scoreboard players set $dt.array.version.minor load.status 2
 scoreboard players set $dt.array.version.patch load.status 0
 
 scoreboard players set $dt.array load.status 1
