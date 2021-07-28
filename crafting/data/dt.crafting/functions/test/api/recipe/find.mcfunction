@@ -7,7 +7,7 @@ data modify storage call_stack: this.expected set value {"ingredients": [{"count
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find
 data modify storage call_stack: this.actual set from storage call_stack: call.result
-#tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
+
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
@@ -18,7 +18,7 @@ function call_stack:push
 
 data modify storage call_stack: this.test_name set value "find_recipe_stone_sword"
 data modify storage call_stack: this.input set value [{id:"minecraft:cobblestone",Slot:0b,Count:1b},{id:"minecraft:cobblestone",Slot:3b,Count:1b},{id:"minecraft:stick",Slot:6b,Count:1b}]
-data modify storage call_stack: this.expected set value {"ingredients": [{"count": 1, "id": "minecraft:stick", "type": "id", "slots": [[6], [7], [8]]}, {"count": 2, "tag": "minecraft:stone_tool_materials", "type": "tag", "slots": [[0, 3], [1, 4], [2, 5]]}], "result": {"id": "minecraft:stone_sword", "count": 1}, "type": "shaped"}
+data modify storage call_stack: this.expected set value {"ingredients": [{"count": 2, "tag": "minecraft:stone_tool_materials", "type": "tag", "slots": [[0, 3], [1, 4], [2, 5]]},{"count": 1, "id": "minecraft:stick", "type": "id", "slots": [[6], [7], [8]]}], "result": {"id": "minecraft:stone_sword", "count": 1}, "type": "shaped"}
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find
@@ -46,6 +46,27 @@ execute store success score result dt.tmp run data modify storage call_stack: th
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 function call_stack:pop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #execute if data storage dt.crafting: recipes[0] run data modify storage call_stack: call.arg0 set from storage dt.crafting: recipes
 #execute if data storage dt.crafting: recipes[0] run function dt.crafting:test/internal/recipe/test_find_loop
 #

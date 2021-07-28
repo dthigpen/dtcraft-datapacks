@@ -9,8 +9,8 @@ data modify storage call_stack: this.has_tags set from storage call_stack: this.
 data modify storage call_stack: this.slots set from storage call_stack: this.item_counts[0].slots
 data remove storage call_stack: this.item_counts[0].slots
 
-#tellraw @p [{"text":"item_counts: "},{"nbt":"this.item_counts","storage":"call_stack:"}]
-#tellraw @p [{"text":"ingredients: "},{"nbt":"this.ingredients","storage":"call_stack:"}]
+# tellraw @p [{"text":"item_counts: "},{"nbt":"this.item_counts","storage":"call_stack:"}]
+# tellraw @p [{"text":"ingredients: "},{"nbt":"this.ingredients","storage":"call_stack:"}]
 
 # Get the ingredients that match by both id and count
 data modify storage call_stack: call.arg0 set from storage call_stack: this.ingredients
@@ -29,7 +29,7 @@ execute if data storage call_stack: {this:{id_count_match:1}} if data storage ca
 execute if data storage call_stack: {this:{id_count_match:1}} if data storage call_stack: this.matches[0].slots run data modify storage call_stack: call.arg1 set from storage call_stack: this.slots
 execute if data storage call_stack: {this:{id_count_match:1}} if data storage call_stack: this.matches[0].slots run function dt.array:api/split_by_key
 execute if data storage call_stack: {this:{id_count_match:1}} if data storage call_stack: this.matches[0].slots run data modify storage call_stack: this.matching_slots set from storage call_stack: call.result[0]
-
+# tellraw @p ["find_ingredient_loop.mcfunction: ",{"nbt":"this.matches[0]","storage":"call_stack:"}]
 
 #tellraw @p [{"text":" idcountmatch: "},{"nbt":"this.id_count_match","storage":"call_stack:"}]
 #tellraw @p [{"text":" matching slots: "},{"nbt":"this.matching_slots","storage":"call_stack:"}]
@@ -37,7 +37,7 @@ execute if data storage call_stack: {this:{id_count_match:1}} if data storage ca
 
 # If the item_count did not match, add it to the remaining as it could be a tag
 execute unless data storage call_stack: {this:{id_count_match:1}} run data modify storage call_stack: this.remaining append from storage call_stack: this.item_counts[0]
-execute if data storage call_stack: {this:{id_count_match:1}} unless data storage call_stack: this.matching_slots[0] run data modify storage call_stack: this.remaining append from storage call_stack: this.item_counts[0]
+execute if data storage call_stack: {this:{id_count_match:1}} if data storage call_stack: this.matches[0].slots unless data storage call_stack: this.matching_slots[0] run data modify storage call_stack: this.remaining append from storage call_stack: this.item_counts[0]
 data remove storage call_stack: this.item_counts[0]
 data modify storage call_stack: this.ingredients set from storage call_stack: this.non_matches
 data modify storage call_stack: this.fail_early set value false
@@ -56,7 +56,7 @@ execute if data storage call_stack: {this:{fail_early:false}} unless data storag
 execute if data storage call_stack: {this:{fail_early:false}} unless data storage call_stack: this.ingredients[0] run function dt.array:api/concat
 execute if data storage call_stack: {this:{fail_early:false}} unless data storage call_stack: this.ingredients[0] run data modify storage call_stack: this.remaining set from storage call_stack: call.result
 execute if data storage call_stack: {this:{fail_early:false}} unless data storage call_stack: this.ingredients[0] run data modify storage call_stack: this.result.remaining set from storage call_stack: this.remaining
-
+# tellraw @p ["find_ingredient_loop.mcfunction: ",{"nbt":"this.fail_early","storage":"call_stack:"}]
 #tellraw @p [{"text":"item_counts: "},{"nbt":"this.item_counts","storage":"call_stack:"}]
 #tellraw @p [{"text":"ingredients: "},{"nbt":"this.ingredients","storage":"call_stack:"}]
 #tellraw @p [{"text":"remaining: "},{"nbt":"this.remaining","storage":"call_stack:"}]

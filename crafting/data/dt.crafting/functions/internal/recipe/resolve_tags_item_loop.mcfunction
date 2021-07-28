@@ -14,7 +14,7 @@ function dt.array:api/split_by_key
 data modify storage call_stack: this.matching_groups set from storage call_stack: call.result[0]
 data modify storage call_stack: this.group set from storage call_stack: this.matching_groups[0]
 
-#tellraw @p [{"text":"matching_groups: "},{"nbt":"this.matching_groups","storage":"call_stack:"}]
+# tellraw @p [{"text":"matching_groups: "},{"nbt":"this.matching_groups","storage":"call_stack:"}]
 
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_counts
@@ -22,7 +22,7 @@ data modify storage call_stack: call.arg1 set from storage call_stack: this.grou
 function dt.crafting:internal/group/filter_items_in_group
 data modify storage call_stack: this.items_in_group set from storage call_stack: call.result
 
-#tellraw @p [{"text":"items_in_group: "},{"nbt":"this.items_in_group","storage":"call_stack:"}]
+# tellraw @p [{"text":"items_in_group: "},{"nbt":"this.items_in_group","storage":"call_stack:"}]
 #tellraw @p [{"text":"item_counts: "},{"nbt":"this.item_counts","storage":"call_stack:"}]
 #tellraw @p [{"text":"tag before: "},{"nbt":"this.tags[0]","storage":"call_stack:"}]
 

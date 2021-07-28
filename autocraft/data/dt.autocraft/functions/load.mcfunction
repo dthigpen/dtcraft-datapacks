@@ -73,4 +73,4 @@ scoreboard objectives add dt.tmp dummy
 
 function dt.autocraft:internal/raycast/load
 
-advancement revoke @s from dt.autocraft:autocrafter
+# advancement revoke @s from dt.autocraft:autocrafter

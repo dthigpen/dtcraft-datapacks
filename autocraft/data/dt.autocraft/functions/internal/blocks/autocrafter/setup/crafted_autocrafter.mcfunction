@@ -1,3 +1,4 @@
+# say crafted_autocrafter
 #[[[cog
 #   from datapack_utils import autocraft
 #   cog.outl(autocraft.create_on_adv_granted_function_str())
@@ -7,6 +8,11 @@ advancement revoke @s only dt.autocraft:autocrafter
 scoreboard players set #has_recipe dt.tmp 0
 scoreboard players set #num_loot dt.tmp 0
 execute store result score #num_loot dt.tmp run clear @s minecraft:knowledge_book
+
+# autocrafter
+execute unless score #has_recipe dt.tmp matches 2 store success score #has_recipe dt.tmp run recipe take @s dt.autocraft:autocrafter
+execute unless score #has_recipe dt.tmp matches 2 if score #has_recipe dt.tmp matches 1 run summon item ~ ~ ~ {Item:{id:"minecraft:dropper",Count:1b, tag:{display:{Name:'{"text":"Autocrafter"}'},CustomModelData:777777,dt_autocrafter:1b,BlockEntityTag:{Lock:"dt_autocrafter"}}}}
+execute unless score #has_recipe dt.tmp matches 2 if score #has_recipe dt.tmp matches 1 run scoreboard players set #has_recipe dt.tmp 2
 
 # beacon_crafter
 execute unless score #has_recipe dt.tmp matches 2 store success score #has_recipe dt.tmp run recipe take @s dt.autocraft:beacon_crafter

@@ -1,0 +1,7 @@
+[[[cog
+    from pathlib import Path
+    from datapack_utils import autocraft
+    recipes_output_dir = Path(cog.inFile).parent
+    autocraft.create_crafter_recipe_files(recipes_output_dir)
+]]]
+[[[end]]]
