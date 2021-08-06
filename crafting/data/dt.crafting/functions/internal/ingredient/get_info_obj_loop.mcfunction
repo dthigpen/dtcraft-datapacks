@@ -20,7 +20,8 @@ data modify storage call_stack: this.counts append from storage call_stack: this
 #tellraw @p [{"text":" obj: "},{"nbt":"this.pair","storage":"call_stack:"}]
 data modify storage call_stack: this.items set from storage call_stack: this.not_matching
 #data remove storage call_stack: this.items[0]
-execute unless data storage call_stack: this.items[0] run data modify storage call_stack: this.result set from storage call_stack: this.counts
+execute unless data storage call_stack: this.items[0] run data modify storage call_stack: this.result set value {items:[]}
+execute unless data storage call_stack: this.items[0] run data modify storage call_stack: this.result.items set from storage call_stack: this.counts
 execute if data storage call_stack: this.items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: this.items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.counts
 execute if data storage call_stack: this.items[0] run function dt.crafting:internal/ingredient/get_info_obj_loop

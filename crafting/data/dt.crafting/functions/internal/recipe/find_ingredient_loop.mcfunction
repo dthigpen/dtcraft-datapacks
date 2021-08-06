@@ -5,6 +5,9 @@ data modify storage call_stack: this.ingredients set from storage call_stack: th
 data modify storage call_stack: this.remaining set from storage call_stack: this.arg2
 data modify storage call_stack: this.has_tags set from storage call_stack: this.arg3
 
+#> aglorithm
+# 
+
 # take out slots so we can match the with the result of the recipe object
 data modify storage call_stack: this.slots set from storage call_stack: this.item_counts[0].slots
 data remove storage call_stack: this.item_counts[0].slots

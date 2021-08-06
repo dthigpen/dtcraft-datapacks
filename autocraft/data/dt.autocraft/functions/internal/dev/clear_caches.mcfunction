@@ -1,0 +1,1 @@
+execute as @e[type=armor_stand, tag=dt.ac] at @s run function dt.autocraft:internal/dev/clear_cache_self

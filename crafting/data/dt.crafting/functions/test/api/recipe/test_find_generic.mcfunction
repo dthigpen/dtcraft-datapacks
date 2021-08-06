@@ -5,7 +5,7 @@ data modify storage call_stack: this.input set from storage call_stack: this.arg
 data modify storage call_stack: this.expected set from storage call_stack: this.arg2
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
-function dt.crafting:api/recipe/find
+function dt.crafting:api/recipe/find_old
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected

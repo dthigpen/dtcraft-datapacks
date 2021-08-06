@@ -44,6 +44,8 @@ scoreboard objectives add dt.enum dummy
 scoreboard players set #equal dt.enum 0
 scoreboard players set #not_equal dt.enum 1
 
+function dt.crafting:internal/load_global_settings
+
 function dt.crafting:internal/load_groups
 #say Groups loaded
 function dt.crafting:internal/load_recipes

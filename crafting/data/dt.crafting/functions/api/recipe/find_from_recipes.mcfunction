@@ -5,7 +5,7 @@ data modify storage call_stack: this.recipes set from storage call_stack: this.a
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.actual_items
 function dt.crafting:internal/ingredient/get_info_obj
-data modify storage call_stack: this.item_counts set from storage call_stack: call.result
+data modify storage call_stack: this.item_counts set from storage call_stack: call.result.items
 
 data modify storage call_stack: this.result set value {}
 

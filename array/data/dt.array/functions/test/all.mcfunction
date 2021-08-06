@@ -15,5 +15,7 @@ function dt.array:test/api/test_split_half
 function dt.array:test/api/sort/test_merge_sort
 function dt.array:test/api/convert/test_to_key_values
 function dt.array:test/api/test_index_of
-
+function dt.array:test/api/test_pop_n
+function dt.array:test/api/test_remove_n
+function dt.array:test/api/test_trim_to_size
 function call_stack:pop

@@ -3,6 +3,25 @@ function call_stack:push
 data modify storage call_stack: this.temp_recipes set from storage call_stack: this.arg0
 data modify storage call_stack: this.item_counts set from storage call_stack: this.arg1
 
+#> algorithm
+# for each recipe in temp_recipes
+#   split recipe ingredients into tags and regular_ingredients
+#   result = find_ingredient(item_counts, regular_ingredients, [], has_tags_bool)
+#   is_match = result.is_match
+#   remaining = result.remaining
+#   if is_match and not has_tags and no_remaining:
+#       found_recipe = true
+#   if is_match and has_tags and no_remaining:
+#       is_match = false
+#   if is_match and has_tags and remaining:
+#       found_recipe = resolve_tags(tags, remaining)
+#   if found_recipe:
+#       result = recipe
+#       break
+#   if not found_recipe:
+#       loop
+
+
 # tellraw @p [{"text":"recipe: "}, {"nbt":"this.temp_recipes[0].ingredients","storage":"call_stack:"}]
 #tellraw @p [{"text":"counts: "}, {"nbt":"this.item_counts","storage":"call_stack:"}]
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_recipes[0].ingredients
