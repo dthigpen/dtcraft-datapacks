@@ -56,4 +56,6 @@ data merge storage dt.inv_sort: {}
 function dt.inv_sort:load_storage
 function dt.inventory:load_shulker
 
-gamerule maxCommandChainLength 500000
+execute store result score $max dt.tmp run gamerule maxCommandChainLength
+execute if score $max dt.tmp matches ..4999999 run gamerule maxCommandChainLength 500000
+execute if score $max dt.tmp matches ..4999999 run tellraw @p ["Increased maxCommandChainLength from ",{"score":{"name":"$max","objective":"dt.tmp"}}, " to 500000"]
