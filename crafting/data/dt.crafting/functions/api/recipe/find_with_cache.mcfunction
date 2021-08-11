@@ -1,4 +1,11 @@
-# say recipe/find
+#> dt.crafting:api/recipe/find_with_cache
+# find a matching recipe from the given item list configuration first from the calling entity's cache then from all recipes in the game.
+# @params
+#   storage call_stack: call.arg0
+#       array of items
+# @output
+#   storage call_stack: call.result
+#       the recipe data for the given items or an empty object if none is found
 function call_stack:push
 data modify storage call_stack: this.actual_items set from storage call_stack: this.arg0
 

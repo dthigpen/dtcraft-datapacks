@@ -1,4 +1,11 @@
-# say api/crafter/distribute_items
+#> dt.crafting:api/crafter/distribute_items
+# distribute items with counts greater than one into free slots with 9 total slots
+# @params
+#   storage call_stack: call.arg0
+#       array of items
+# @output
+#   storage call_stack: call.result
+#       array of items
 function call_stack:push
 
 

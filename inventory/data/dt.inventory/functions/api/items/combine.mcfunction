@@ -1,3 +1,11 @@
+#> dt.inventory:api/items/combine
+# combine multiple partial item stacks into as few item stacks as possible
+# @params
+#   storage call_stack: call.arg0
+#       list of items
+# @output
+#   storage call_stack: call.result
+#       list of items
 function call_stack:push
 
 data modify storage call_stack: this.items set from storage call_stack: this.arg0

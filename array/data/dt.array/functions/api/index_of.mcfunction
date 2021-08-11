@@ -1,3 +1,13 @@
+#> dt.array:api/index_of
+# get the index of a value in an array
+# @params
+#   storage call_stack: call.arg0
+#       array
+#   storage call_stack: call.arg1
+#       value
+# @output
+#   storage call_stack: call.result
+#       index of item in array or -1 if not found
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 data modify storage call_stack: this.value set from storage call_stack: this.arg1

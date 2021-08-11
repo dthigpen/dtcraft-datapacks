@@ -1,3 +1,11 @@
+#> dt.array:api/split_half
+# split an array in half
+# @params
+#   storage call_stack: call.arg0
+#       array
+# @output
+#   storage call_stack: call.result
+#       array with two elements, [array1, array2]
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 

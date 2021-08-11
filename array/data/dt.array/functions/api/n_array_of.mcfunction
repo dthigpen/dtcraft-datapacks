@@ -1,3 +1,13 @@
+#> dt.array:api/n_array_of
+# create an array of length n consisting of the given repeated value
+# @params
+#   storage call_stack: call.arg0
+#       length n
+#   storage call_stack: call.arg2
+#       element value
+# @output
+#   storage call_stack: call.result
+#       list of values
 function call_stack:push
 
 execute store result score size1 dt.tmp run data get storage call_stack: this.arg0

@@ -1,3 +1,15 @@
+#> dt.array:api/split_by_key_limit_n
+# splits the given list into two lists, first for elements containing the key, and the second its complement
+# @params
+#   storage call_stack: call.arg0
+#       array
+#   storage call_stack: call.arg1
+#       key to match elements on
+#   storage call_stack: call.arg2
+#       limit integer, maximum number of results that match the key
+# @output
+#   storage call_stack: call.result
+#       array of two arrays. [[with-key],[complement]]
 # splits the given list into two lists, first for elements containing the key, and the second its complement
 function call_stack:push
 

@@ -1,3 +1,11 @@
+#> dt.inventory:api/player/replace/inventory
+# replace the current player's inventory with the given items
+# @params
+#   storage call_stack: call.arg0
+#       list of items
+# @output
+#   storage call_stack: call.result
+#       boolean successful if inventory items changed after replacement
 function call_stack:push
 data modify storage call_stack: call.arg0 set from storage call_stack: this.arg0
 function dt.inventory:api/shulker/items/set

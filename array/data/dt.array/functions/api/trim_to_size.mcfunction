@@ -1,3 +1,13 @@
+#> dt.array:api/trim_to_size
+# trim an array to a set size
+# @params
+#   storage call_stack: call.arg0
+#       array
+#   storage call_stack: call.arg1
+#       size of the array to trim to.
+# @output
+#   storage call_stack: call.result
+#       array
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 execute store result score $size1 dt.tmp run data get storage call_stack: this.arg1

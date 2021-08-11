@@ -1,3 +1,11 @@
+#> dt.inventory:api/items/reset_slots
+# reset the slots of the given items starting at Slot 0b
+# @params
+#   storage call_stack: call.arg0
+#       list of items
+# @output
+#   storage call_stack: call.result
+#       list of items
 function call_stack:push
 
 data modify storage call_stack: this.items set from storage call_stack: this.arg0

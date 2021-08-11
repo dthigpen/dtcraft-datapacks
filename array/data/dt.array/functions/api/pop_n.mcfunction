@@ -1,3 +1,11 @@
+#> dt.array:api/pop_n
+# pop n elements from the end of an array and return them
+# @params
+#   storage call_stack: call.arg0
+#       array
+# @output
+#   storage call_stack: call.result
+#       array
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 data modify storage call_stack: this.num_to_pop set from storage call_stack: this.arg1

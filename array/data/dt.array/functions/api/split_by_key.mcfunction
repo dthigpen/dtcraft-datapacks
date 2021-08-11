@@ -1,4 +1,13 @@
+#> dt.array:api/split_by_key
 # splits the given list into two lists, first for elements containing the key, and the second its complement
+# @params
+#   storage call_stack: call.arg0
+#       array
+#   storage call_stack: call.arg1
+#       key to match elements on
+# @output
+#   storage call_stack: call.result
+#       array of two arrays. [[with-key],[complement]]
 function call_stack:push
 
 data modify storage call_stack: this.all_items set from storage call_stack: this.arg0

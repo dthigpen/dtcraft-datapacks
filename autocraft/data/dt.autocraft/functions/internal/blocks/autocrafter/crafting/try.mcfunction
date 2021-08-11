@@ -7,7 +7,7 @@ function dt.autocraft:internal/util/get_items_from_block_or_entity
 data modify storage call_stack: this.items set from storage call_stack: call.result
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
-function dt.autocraft:internal/blocks/autocrafter/crafting/can_craft
+function dt.crafting:api/recipe/is_eligible
 execute if data storage call_stack: {call:{result:true}} run data modify storage call_stack: this.can_craft set value true
 
 execute if data storage call_stack: this.can_craft run function dt.autocraft:internal/blocks/autocrafter/db_data/fetch_or_init
@@ -30,6 +30,7 @@ execute if data storage call_stack: this.craft_from_specific_recipes if data sto
 # execute if data storage call_stack: this.craft_non_specific run tellraw @p ["try.mcfunction: non_specific craft",{"nbt":"this.variable","storage":"call_stack:"}]
 execute if data storage call_stack: this.craft_non_specific run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: this.craft_non_specific run function dt.crafting:api/recipe/find_with_cache
+execute if data storage call_stack: this.craft_non_specific run function dt.crafting:api/recipe/find
 execute if data storage call_stack: this.craft_non_specific run data modify storage call_stack: this.recipe_result set from storage call_stack: call.result
 execute if data storage call_stack: this.craft_non_specific if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.found_recipe set value true
 

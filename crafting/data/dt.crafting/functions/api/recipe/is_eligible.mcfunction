@@ -1,3 +1,11 @@
+#> dt.crafting:api/recipe/is_eligible
+# check that the given array of items is eligible to be a set of crafting ingredients.
+# @params
+#   storage call_stack: call.arg0
+#       array of items
+# @output
+#   storage call_stack: call.result
+#       true or false
 function call_stack:push
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
 

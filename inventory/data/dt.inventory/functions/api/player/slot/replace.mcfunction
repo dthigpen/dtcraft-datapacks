@@ -1,4 +1,11 @@
-#say replace_slot
+#> dt.inventory:api/player/slot/replace
+# replace the item in the current player's inventory with the given item
+# @params
+#   storage call_stack: call.arg0
+#       Item with the Slot:X attribute defined
+# @output
+#   storage call_stack: call.result
+#       boolean successful always true
 function call_stack:push
 
 data modify storage call_stack: this.item set from storage call_stack: this.arg0

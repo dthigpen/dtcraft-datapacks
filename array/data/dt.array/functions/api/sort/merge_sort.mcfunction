@@ -1,3 +1,11 @@
+#> dt.array:api/sort/merge_sort
+# sort the given value objects using the merge sort algorithm
+# @params
+#   storage call_stack: call.arg0
+#       array of value objects
+# @output
+#   storage call_stack: call.result
+#       array of value objects
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 

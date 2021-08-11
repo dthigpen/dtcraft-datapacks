@@ -1,3 +1,11 @@
+#> dt.array:api/math/sum
+# sum array of numbers
+# @params
+#   storage call_stack: call.arg0
+#       array of integers
+# @output
+#   storage call_stack: call.result
+#       integer sum of all values
 function call_stack:push
 
 data modify storage call_stack: this.numbers set from storage call_stack: this.arg0

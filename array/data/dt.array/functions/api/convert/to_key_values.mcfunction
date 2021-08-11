@@ -1,3 +1,11 @@
+#> dt.array:api/convert/to_key_values
+# convert the given array of values into key value pair objects with the keys defaulting to sequence numbers 1..n.
+# @params
+#   storage call_stack: call.arg0
+#       array
+# @output
+#   storage call_stack: call.result
+#       array of objects [{key:1,value:a}..{key:n,value:z}]
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 

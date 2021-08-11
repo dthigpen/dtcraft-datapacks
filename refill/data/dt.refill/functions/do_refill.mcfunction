@@ -11,6 +11,6 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.item
 function dt.inventory:api/player/slot/replace
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.original_slot
-function dt.inventory:api/playerslot/remove
+function dt.inventory:api/player/slot/remove
 
 function call_stack:pop

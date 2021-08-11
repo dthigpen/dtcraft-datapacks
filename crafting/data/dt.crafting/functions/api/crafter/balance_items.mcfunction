@@ -1,3 +1,11 @@
+#> dt.crafting:api/crafter/balance_items
+# balance item counts across other stacks of the same item in the list
+# @params
+#   storage call_stack: call.arg0
+#       array of items
+# @output
+#   storage call_stack: call.result
+#       array of items
 function call_stack:push
 
 data modify storage call_stack: this.temp_items set from storage call_stack: this.arg0

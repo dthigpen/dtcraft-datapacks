@@ -1,4 +1,4 @@
-say find from info obj
+# say find from info obj
 function call_stack:push
 data modify storage call_stack: this.info_obj set from storage call_stack: this.arg0
 

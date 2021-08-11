@@ -1,3 +1,8 @@
+#> dt.inventory:api/player/get/inventory
+# get the current player's true inventory items (Slots 9-35)
+# @output
+#   storage call_stack: call.result
+#       List of items
 function call_stack:push
 
 data modify storage call_stack: this.result set value []

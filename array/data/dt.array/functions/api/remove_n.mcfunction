@@ -1,3 +1,13 @@
+#> dt.array:api/remove_n
+# remove n elements from the end of the given array
+# @params
+#   storage call_stack: call.arg0
+#       array
+#   storage call_stack: call.arg2
+#       integer
+# @output
+#   storage call_stack: call.result
+#       array
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 # data modify storage call_stack: this.num_to_remove set from storage call_stack: this.arg1

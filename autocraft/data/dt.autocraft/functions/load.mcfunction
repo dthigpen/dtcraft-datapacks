@@ -73,4 +73,6 @@ scoreboard objectives add dt.tmp dummy
 
 function dt.autocraft:internal/raycast/load
 
-# advancement revoke @s from dt.autocraft:autocrafter
+execute store result score $max dt.tmp run gamerule maxCommandChainLength
+execute if score $max dt.tmp matches ..4999999 run gamerule maxCommandChainLength 5000000
+execute if score $max dt.tmp matches ..4999999 run tellraw @p ["Increased maxCommandChainLength from ",{"score":{"name":"$max","objective":"dt.tmp"}}, " to 5000000"]

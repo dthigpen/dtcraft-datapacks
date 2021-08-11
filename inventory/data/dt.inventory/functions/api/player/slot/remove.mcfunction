@@ -1,3 +1,8 @@
+#> dt.inventory:api/player/slot/remove
+# remove the item at the given slot from the current player's inventory
+# @params
+#   storage call_stack: call.arg0
+#       slot to be removed
 function call_stack:push
 
 data modify storage call_stack: this.slot set from storage call_stack: this.arg0
