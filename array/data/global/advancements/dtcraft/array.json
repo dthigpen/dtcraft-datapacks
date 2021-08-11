@@ -1,7 +1,7 @@
 {
     "display": {
-        "title": "inventory-utils",
-        "description": "Does nothing on it's own!",
+        "title": "Array",
+        "description": "Datapack library for array operations",
         "icon": {
             "item": "minecraft:command_block"
         },

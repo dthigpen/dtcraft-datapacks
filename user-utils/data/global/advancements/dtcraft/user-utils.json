@@ -1,7 +1,7 @@
 {
     "display": {
         "title": "user-utils",
-        "description": "Does nothing on it's own!",
+        "description": "Datapack library for providing CRUD database operations",
         "icon": {
             "item": "minecraft:command_block"
         },

@@ -1,7 +1,7 @@
 {
     "display": {
-        "title": "call-stack",
-        "description": "Datapack library for creating variable scopes",
+        "title": "Crafting",
+        "description": "Datapack library for emulating crafting mechanics",
         "icon": {
             "item": "minecraft:command_block"
         },

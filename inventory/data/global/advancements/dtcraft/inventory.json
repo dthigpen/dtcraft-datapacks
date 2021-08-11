@@ -1,7 +1,7 @@
 {
     "display": {
-        "title": "call-stack",
-        "description": "Datapack library for creating variable scopes",
+        "title": "Inventory",
+        "description": "Datapack library for inventory manipulation",
         "icon": {
             "item": "minecraft:command_block"
         },
