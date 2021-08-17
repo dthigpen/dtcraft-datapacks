@@ -1,47 +1,43 @@
-function call_stack:push
-data modify storage call_stack: this.test_name set value "index_of_empty_list"
-data modify storage call_stack: this.array set value []
-data modify storage call_stack: this.expected set value -1
+data modify storage unittest:in name set value "array n_array_of"
+function unittest:api/test_suite/setup
 
-data modify storage call_stack: call.arg0 set from storage call_stack: this.array
+
+data modify storage unittest:in name set value "empty list"
+function unittest:api/test_case/setup
+data modify storage unittest:in expected set value -1
+function call_stack:push
+data modify storage call_stack: call.arg0 set value []
 data modify storage call_stack: call.arg1 set value 3
 function dt.array:api/index_of
-data modify storage call_stack: this.actual set from storage call_stack: call.result
-
-execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
-execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
-execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
+data modify storage unittest:in actual set from storage call_stack: call.result
 function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
 
+
+data modify storage unittest:in name set value "found in list"
+function unittest:api/test_case/setup
+data modify storage unittest:in expected set value 1
 function call_stack:push
-data modify storage call_stack: this.test_name set value "index_of_list_of_6"
-data modify storage call_stack: this.array set value [1,2,3,4,5,6]
-data modify storage call_stack: this.expected set value 2
-
-data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-data modify storage call_stack: call.arg1 set value 3
+data modify storage call_stack: call.arg0 set value [1,2,3,4,5,6]
+data modify storage call_stack: call.arg1 set value 2
 function dt.array:api/index_of
-data modify storage call_stack: this.actual set from storage call_stack: call.result
-
-execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
-execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
-execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
+data modify storage unittest:in actual set from storage call_stack: call.result
 function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
 
+
+data modify storage unittest:in name set value "not found in list"
+function unittest:api/test_case/setup
+data modify storage unittest:in expected set value -1
 function call_stack:push
-data modify storage call_stack: this.test_name set value "index_of_list_of_6_not_found"
-data modify storage call_stack: this.array set value [1,2,3,4,5,6]
-data modify storage call_stack: this.expected set value -1
-
-data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-data modify storage call_stack: call.arg1 set value 99
+data modify storage call_stack: call.arg0 set value [1,2,3,4,5,6]
+data modify storage call_stack: call.arg1 set value 20
 function dt.array:api/index_of
-data modify storage call_stack: this.actual set from storage call_stack: call.result
-
-execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
-execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
-execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
+data modify storage unittest:in actual set from storage call_stack: call.result
 function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
+
+function unittest:api/test_suite/teardown

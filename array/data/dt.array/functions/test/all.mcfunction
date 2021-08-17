@@ -18,4 +18,6 @@ function dt.array:test/api/test_index_of
 function dt.array:test/api/test_pop_n
 function dt.array:test/api/test_remove_n
 function dt.array:test/api/test_trim_to_size
+
+
 function call_stack:pop

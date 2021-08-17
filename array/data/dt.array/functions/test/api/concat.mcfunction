@@ -1,67 +1,63 @@
-function call_stack:push
-data modify storage call_stack: this.test_name set value "array_concat"
-data modify storage call_stack: this.array set value [1,2,3]
-data modify storage call_stack: this.array2 set value [4,5]
-data modify storage call_stack: this.expected set value [1,2,3,4,5]
+# function unittest:api/config/enable/detailed_results
+data modify storage unittest:in name set value "array concat"
+function unittest:api/test_suite/setup
 
-data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-data modify storage call_stack: call.arg1 set from storage call_stack: this.array2
-function dt.array:api/concat
-data modify storage call_stack: this.actual set from storage call_stack: call.result
-#tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
-execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
-execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
-execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
-function call_stack:pop
+data modify storage unittest:in name set value "non_empty_arrays"
+function unittest:api/test_case/setup
+data modify storage unittest:in expected set value [1,2,3,4,5]
 
 function call_stack:push
-data modify storage call_stack: this.test_name set value "array_concat_empty_1"
-data modify storage call_stack: this.array set value []
-data modify storage call_stack: this.array2 set value [4,5]
-data modify storage call_stack: this.expected set value [4,5]
-
-data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-data modify storage call_stack: call.arg1 set from storage call_stack: this.array2
+data modify storage call_stack: call.arg0 set value [1,2,3]
+data modify storage call_stack: call.arg1 set value [4,5]
 function dt.array:api/concat
-data modify storage call_stack: this.actual set from storage call_stack: call.result
-#tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
-execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
-execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
-execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
+data modify storage unittest:in actual set from storage call_stack: call.result
 function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
+
+
+
+data modify storage unittest:in name set value "empty_first_array"
+function unittest:api/test_case/setup
+data modify storage unittest:in expected set value [4,5]
 
 function call_stack:push
-data modify storage call_stack: this.test_name set value "array_concat)empty_2"
-data modify storage call_stack: this.array set value [1,2,3]
-data modify storage call_stack: this.array2 set value []
-data modify storage call_stack: this.expected set value [1,2,3]
-
-data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-data modify storage call_stack: call.arg1 set from storage call_stack: this.array2
+data modify storage call_stack: call.arg0 set value []
+data modify storage call_stack: call.arg1 set value [4,5]
 function dt.array:api/concat
-data modify storage call_stack: this.actual set from storage call_stack: call.result
-#tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
-execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
-execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
-execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
+data modify storage unittest:in actual set from storage call_stack: call.result
 function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
 
+
+
+data modify storage unittest:in name set value "empty_second_array"
+function unittest:api/test_case/setup
+data modify storage unittest:in expected set value [4,5]
 function call_stack:push
-data modify storage call_stack: this.test_name set value "array_concat_empty_both"
-data modify storage call_stack: this.array set value []
-data modify storage call_stack: this.array2 set value []
-data modify storage call_stack: this.expected set value []
-
-data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-data modify storage call_stack: call.arg1 set from storage call_stack: this.array2
+data modify storage call_stack: call.arg0 set value [4,5]
+data modify storage call_stack: call.arg1 set value []
 function dt.array:api/concat
-data modify storage call_stack: this.actual set from storage call_stack: call.result
-#tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
-execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
-execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
-execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
+data modify storage unittest:in actual set from storage call_stack: call.result
 function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
+
+
+
+data modify storage unittest:in name set value "both_empty_arrays"
+function unittest:api/test_case/setup
+data modify storage unittest:in expected set value []
+function call_stack:push
+data modify storage call_stack: call.arg0 set value []
+data modify storage call_stack: call.arg1 set value []
+function dt.array:api/concat
+data modify storage unittest:in actual set from storage call_stack: call.result
+function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
+
+
+
+function unittest:api/test_suite/teardown
