@@ -12,5 +12,5 @@ execute as @a[tag=dt.tmp.add] run tag @s remove dt.tmp.add
 scoreboard players reset @a dt.refill.toggle
 scoreboard players enable @a dt.refill.toggle
 
-execute as @a[tag=dt.refill] run function dt.refill:check_refills
+execute as @a[tag=dt.refill] run function dt.refill:internal/check_refills
 schedule function dt.refill:tick 1t replace
