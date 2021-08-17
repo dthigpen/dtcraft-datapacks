@@ -1,5 +1,3 @@
-# say push
-
 data modify storage call_stack: frames prepend from storage call_stack: this
 data modify storage call_stack: this set value {result:{},call:{}}
 data modify storage call_stack: this.arg0 set from storage call_stack: call.arg0
