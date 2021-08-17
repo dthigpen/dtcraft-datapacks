@@ -28,7 +28,7 @@ execute if data storage call_stack: this.data_item_found.id run data modify stor
 # TODO check that new items durability is greater than current
 execute if data storage call_stack: this.actual_item_found.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.user
 execute if data storage call_stack: this.actual_item_found.id run data modify storage call_stack: call.arg1 set from storage call_stack: this.actual_item_found
-execute if data storage call_stack: this.actual_item_found.id run function dt.refill:do_refill
+execute if data storage call_stack: this.actual_item_found.id run function dt.refill:internal/do_refill
 # execute unless data storage call_stack: this.actual_item_found.id run data remove storage call_stack: this.user.data.selected
 
 function call_stack:pop
