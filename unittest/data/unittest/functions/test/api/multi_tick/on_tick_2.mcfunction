@@ -1,0 +1,2 @@
+say goodbye
+kill @s

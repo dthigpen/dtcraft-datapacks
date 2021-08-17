@@ -1,0 +1,1 @@
+data modify storage unittest: settings.show_detailed_results set value true

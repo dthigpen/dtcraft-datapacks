@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "unittest",
+        "description": "Datapack library for unit testing",
+        "icon": {
+            "item": "minecraft:command_block"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:dtcraft",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}
