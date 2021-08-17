@@ -1,2 +1,1 @@
-say goodbye
-kill @s
+say on tick 3
