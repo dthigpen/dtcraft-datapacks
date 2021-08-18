@@ -1,0 +1,2 @@
+execute if entity @s[nbt={data:{suite:{name:"no_sort_hotbar"}, tick:0}}] run function dt.inv_sort:test/system/test_no_sort_hotbar/tick/0
+execute if entity @s[nbt={data:{suite:{name:"no_sort_hotbar"}, tick:1}}] run function dt.inv_sort:test/system/test_no_sort_hotbar/tick/1
