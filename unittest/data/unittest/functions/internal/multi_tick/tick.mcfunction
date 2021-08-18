@@ -26,5 +26,7 @@ execute store result entity @s data.tick int 1 run scoreboard players get $tick 
 
 execute unless data entity @s data.suite.results[-1].results[-1] run data merge storage unittest:internal {temp:{result:{pass:true}}}
 execute if data entity @s data.suite.results[-1] run data modify storage unittest:internal temp.result set from entity @s data.suite.results[-1].results[-1]
-execute unless data storage unittest:internal {temp:{result:{pass:true}}} if data entity @s data.suite.results[-1] if data entity @s data.suite.results[-1].results[0] unless data entity @s data.suite.results[-1].results[1] if data entity @s data.suite.results[-1].results[{pass:false, msg:"force fail"}] run data remove entity @s data.suite.results[-1].results[{pass:false, msg:"force fail"}]
+# Remove the result from running on an extra tick
+# If the suite has at least two test cases in which the last has only one result and that result is the sentinal, remove it
+execute unless data storage unittest:internal {temp:{result:{pass:true}}} if data entity @s data.suite.results[1] if data entity @s data.suite.results[-1].results[0] unless data entity @s data.suite.results[-1].results[1] if data entity @s data.suite.results[-1].results[{pass:false, msg:"force fail"}] run data remove entity @s data.suite.results[-1]
 execute unless data storage unittest:internal {temp:{result:{pass:true}}} run function unittest:api/multi_tick/teardown
