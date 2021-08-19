@@ -1,4 +1,4 @@
-# Array Util
+# Array
 
 This datapack encapsulates common array operations.
 

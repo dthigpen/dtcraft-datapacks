@@ -1,4 +1,4 @@
-# Crafting Util
+# Crafting
 
 This datapack offers an api for crafting items from recipes through commands.
 
