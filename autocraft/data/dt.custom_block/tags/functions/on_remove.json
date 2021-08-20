@@ -1,3 +1,5 @@
-{"values": [
-    {"id": "dt.autocraft:internal/custom_block_placement/remove_if_autocraft_block", "required": false}
-]}
+{
+  "values": [
+    "dt.autocraft:internal/custom_block_placement/remove_if_autocraft_block"
+  ]
+}
