@@ -9,7 +9,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Autocrafter\"}'},CustomModelData:777777,dt_autocrafter:1b,BlockEntityTag:{Lock:\"dt_autocrafter\"}}"
+                "tag": "{display:{Name:'{\"text\":\"Autocrafter\"}'},CustomModelData:777777,dt_autocrafter:1b, custom_block:1b,BlockEntityTag:{Lock:\"dt_autocrafter\"}}"
               }
             ]
           }

@@ -2,7 +2,7 @@ function call_stack:push
 
 function rx.playerdb:api/get_self
 
-data modify storage call_stack: this.data set value {recipes:[], name:"Autocrafter", is_item_specific:false}
+data modify storage call_stack: this.data set value {recipes:[], name:'{"text":"Autocrafter"}', is_item_specific:false}
 
 data modify storage call_stack: this.data set from storage rx:io playerdb.player.data.dtcraft.autocraft
 
