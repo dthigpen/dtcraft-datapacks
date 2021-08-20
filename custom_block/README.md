@@ -40,7 +40,7 @@ execute if data block ~ ~ ~ {Lock:"unique_block_name"} run say do custom block s
 ```
 ```mcfunction
 # on_remove_check.mcfunction
-execute if entity @s[tag=dt.ac] run say do custom block clean up
+execute if entity @s[tag=my.custom.tag] run say do custom block clean up
 ```
 
 4. If you want to apply a `CustomBlockModel` you can call `dt.custom_block:api/set_model` in the `on_place_check.mcfunction` or later. Optionally you can do the lock check, then call a function to do all of the setup. The example below shows setting a directional model for the custom block in the `on_place_check.mcfunction` file.

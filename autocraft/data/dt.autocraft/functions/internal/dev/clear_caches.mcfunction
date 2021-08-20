@@ -1,1 +1,1 @@
-execute as @e[type=armor_stand, tag=dt.ac] at @s run function dt.autocraft:internal/dev/clear_cache_self
+execute as @e[type=armor_stand, tag=dt.ac.block_entity] at @s run function dt.autocraft:internal/dev/clear_cache_self

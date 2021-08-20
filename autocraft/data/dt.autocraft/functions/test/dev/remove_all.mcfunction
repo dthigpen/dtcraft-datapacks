@@ -1,0 +1,1 @@
+execute as @e[tag=dt.ac.block_entity] at @s run setblock ~ ~ ~ air destroy

@@ -13,7 +13,7 @@ scoreboard players set $hit_sentinal dt.rc.tmp -2
 # tellraw @p ["cast.mcfunction: max: ",{"score":{"name":"$max_distance","objective":"dt.raycast"}}]
 # tellraw @p ["cast.mcfunction: step: ",{"score":{"name":"$step_distance","objective":"dt.raycast"}}]
 # tellraw @p ["cast.mcfunction: limit: ",{"score":{"name":"$limit","objective":"dt.rc.tmp"}}]
-execute as @s at @s positioned ~ ~1.5 ~ run function dt.raycast:internal/loop
+execute as @s at @s anchored eyes positioned ^ ^ ^ anchored feet run function dt.raycast:internal/loop
 
 # reset values to default
 scoreboard players operation $max_distance dt.raycast = $max_distance dt.rc.defaults

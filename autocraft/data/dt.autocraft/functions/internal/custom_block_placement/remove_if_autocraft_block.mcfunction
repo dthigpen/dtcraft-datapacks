@@ -1,1 +1,1 @@
-execute if entity @s[tag=dt.ac] run function dt.autocraft:internal/blocks/autocrafter/remove
+execute if entity @s[tag=dt.ac.block_entity] run function dt.autocraft:internal/blocks/autocrafter/remove

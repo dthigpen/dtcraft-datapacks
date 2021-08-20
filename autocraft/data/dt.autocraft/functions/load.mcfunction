@@ -58,8 +58,6 @@ schedule clear dt.autocraft:tick
 execute if score $dt.autocraft load.status matches 1 run schedule function dt.autocraft:tick 1t replace
 #[[[end]]]
 
-function dt.autocraft:internal/custom_block_placement/load
-
 scoreboard objectives add dt.ac.cooldown dummy
 scoreboard players set #max dt.ac.cooldown 20
 scoreboard players set #rate dt.ac.cooldown 20
@@ -71,7 +69,8 @@ scoreboard players set #cooldown dt.ac.state 3
 
 scoreboard objectives add dt.tmp dummy
 
-function dt.autocraft:internal/raycast/load
+# Keep backward compatibility for existing worlds
+function dt.autocraft:internal/compat
 
 execute store result score $max dt.tmp run gamerule maxCommandChainLength
 execute if score $max dt.tmp matches ..4999999 run gamerule maxCommandChainLength 5000000
