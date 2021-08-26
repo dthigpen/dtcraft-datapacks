@@ -1,0 +1,10 @@
+{
+  "parent": "custom_block/autocrafter_item",
+	"display": {
+		"fixed": {
+			"rotation": [-90.0, 180.0, 0.0],
+			"translation": [0.0, 0.0, -16.0],
+			"scale":  [ 2.001, 2.001, 2.001 ]
+		}
+	}
+}

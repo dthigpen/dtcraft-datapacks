@@ -4,50 +4,49 @@ Easily create blocks with custom models and behaviors.
 
 ## Usage
 
-1. Create a custom `minecraft:item` for a `minecraft:dropper`. This should include the following `nbt`, replacing the `CustomModelData` value with your resource pack's block model and the `Lock` value with a unique identifier for your block:
-
-```json
-{
-    "id": "minecraft:dropper",
-    "tag": {
-      "custom_block": true,
-      "CusomModelData": 1234567,
-      "BlockEntityTag": {
-        "Lock": "unique_block_name"
-      }
-    }
-  }
+1. Build an NBT object with the properties of the custom block and item you want to create. See [Properties](#Properties) section for details. Note the storage destination `call_stack: call.arg0`.
+```mcfunction
+# your_file.mcfunction
+data modify storage call_stack: call.arg0 set value {block:{model:1},item:{model:3}}
 ```
-2. Create a function tags for the on place and on remove hooks. The on place tag should be located at `<your-datapack>/data/dt.custom_block/tags/functions/on_place.json`. The on remove tag should be located at `<your-datapack>/data/dt.custom_block/tags/functions/on_place.json`.
-```json
-// <your-datapack>/data/dt.custom_block/tags/functions/on_place.json
+2. Call the `dt.custom_block:api/item/summon` function with the properties you created to summon a `minecraft:item` that can be used to spawn custom blocks.
+```mcfunction
+# your_file.mcfunction
+data modify storage call_stack: call.arg0 set value {block:{model:1},item:{model:3}}
+function dt.custom_block:api/item/summon
+```
+3. If you included `destroy:false` in your properties, you must manually call the `dt.custom_block:api/block/destroy`. For example you could remove the database entry for the entity or remove block loot (if you changed the block) but then the destroy function must be called to kill the block entity.
+```mcfunction
+# your custom block tick function
+execute unless block ~ ~ ~ dropper run function rx.playerdb:admin/delete_player
+execute unless block ~ ~ ~ dropper run kill @e[type=item,nbt={Item:{id:"minecraft:dropper"}},distance=..0.5,limit=1]
+execute unless block ~ ~ ~ dropper run function dt.custom_block:api/block/destroy
+```
+## Properties
+Here is an example of all the properties that can be used to create a custom item/block. All are optional, but `item.name` is recommended at a minimum.
+```jsonc
 {
-    "values": ["your_namespace:path/to/your/place/block/check"]
+    "block": {
+        "name": "{\"text\": \"Test Block\"}", // Custom block name
+        "model": 1, // Identifier for a model in your resource pack
+        "overrides": { // Model overrides when facing up or down
+            "up": 2,
+            "down": 3
+        },
+        "xp": {
+          "value": 5, // xp points, use byte in nbt. Ex: 5b
+          "count": 1 // use byte in nbt. Ex: 1b
+        },
+        "Tags": ["my.block.tag"], // Tags copied onto the block entity
+        "tag": {"myKey": "arbitrary NBT tag data"} // NBT copied onto block entity's Item.tag
+    },
+    "item": { // Properties for the item loot for this block
+        "name": "{\"text\": \"Test Item\"}",
+        "model": 4,
+        },
+        "Tags": ["my.item.tag"],
+        "tag": {"myKey": "arbitrary NBT tag data"}
+    },
+    "destroy": false // do not automatically create custom item loot and kill block entity when the block at the block entity becomes air
 }
-```
-```json
-// <your-datapack>/data/dt.custom_block/tags/functions/on_remove.json
-{
-    "values": ["your_namespace:path/to/your/remove/block/check"]
-}
-```
-
-3. Create the functions that the tags in the step above will call. This function should **not** do the placing/removing directly. They must check that the block/entity contains your unique id before doing the placing and removing.
-```mcfunction
-# on_place_check.mcfunction
-execute if data block ~ ~ ~ {Lock:"unique_block_name"} run tag @s add my.custom.tag
-execute if data block ~ ~ ~ {Lock:"unique_block_name"} run say do custom block setup
-```
-```mcfunction
-# on_remove_check.mcfunction
-execute if entity @s[tag=my.custom.tag] run say do custom block clean up
-```
-
-4. If you want to apply a `CustomBlockModel` you can call `dt.custom_block:api/set_model` in the `on_place_check.mcfunction` or later. Optionally you can do the lock check, then call a function to do all of the setup. The example below shows setting a directional model for the custom block in the `on_place_check.mcfunction` file.
-```mcfunction
-# on_place_check.mcfunction
-execute if data block ~ ~ ~ {Lock:"unique_block_name"} run data modify storage dt.custom_block:in item set value {id:"minecraft:dropper", Count:1b, tag:{CustomModelData:777777}}
-execute if data block ~ ~ ~ {Lock:"unique_block_name"} run data modify storage dt.custom_block:in overrides.up set value {id:"minecraft:dropper", Count:1b, tag:{CustomModelData:777778}}
-execute if data block ~ ~ ~ {Lock:"unique_block_name"} run data modify storage dt.custom_block:in overrides.down set value {id:"minecraft:dropper", Count:1b, tag:{CustomModelData:777779}}
-execute if data block ~ ~ ~ {Lock:"unique_block_name"} run function dt.custom_block:api/set_model
 ```
