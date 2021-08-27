@@ -2,7 +2,6 @@
   "values": [
     "#load:rx/playerdb",
     "call_stack:load",
-    "dt.raycast:load",
     "dt.custom_block:load",
     "dt.array:load",
     "dt.inventory:load",

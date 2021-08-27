@@ -10,6 +10,7 @@
 #           name='Autocraft',
 #           dependencies = [
 #               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
+#               Pack('dt.custom_block',Pack.Version(0,1,0),name='Custom Block'),
 #               Pack('dt.array',Pack.Version(0,2,0),name='Array'),
 #               Pack('dt.inventory',Pack.Version(1,0,0),name='Inventory'),
 #               Pack('dt.crafting',Pack.Version(1,0,0),name='Crafting')
@@ -30,6 +31,13 @@ scoreboard players set $dt.tmp.dep load.status 0
 execute if score $call_stack.version.major load.status matches 0 if score $call_stack.version.minor load.status matches 1.. run scoreboard players set $dt.tmp.dep load.status 1
 execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," expected ",{"text":"call-stack ","bold":true},"0.1"," but found ",{"score":{"name":"$call_stack.version.major","objective":"load.status"}},".",{"score":{"name":"$call_stack.version.minor","objective":"load.status"}}]
 execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.autocraft load.status 0
+
+# check for Custom Block datapack
+execute unless score $dt.custom_block load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," requires ",{"text":"Custom Block ","bold":true},"0.1"]
+scoreboard players set $dt.tmp.dep load.status 0
+execute if score $dt.custom_block.version.major load.status matches 0 if score $dt.custom_block.version.minor load.status matches 1.. run scoreboard players set $dt.tmp.dep load.status 1
+execute if score $dt.custom_block load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," expected ",{"text":"Custom Block ","bold":true},"0.1"," but found ",{"score":{"name":"$dt.custom_block.version.major","objective":"load.status"}},".",{"score":{"name":"$dt.custom_block.version.minor","objective":"load.status"}}]
+execute if score $dt.custom_block load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.autocraft load.status 0
 
 # check for Array datapack
 execute unless score $dt.array load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," requires ",{"text":"Array ","bold":true},"0.2"]

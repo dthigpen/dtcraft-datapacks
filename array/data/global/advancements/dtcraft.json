@@ -4,7 +4,7 @@
         "description": "",
         "icon": {
             "item": "minecraft:player_head",
-            "nbt": "{SkullOwner: \"davidthigs\"}"
+            "nbt": "{SkullOwner: 'davidthigs'}"
         },
         "show_toast": false,
         "announce_to_chat": false

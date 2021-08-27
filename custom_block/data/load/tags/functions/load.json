@@ -1,1 +1,1 @@
-{"values": ["dt.custom_block:load"]}
+{"values": ["call_stack:load", "dt.custom_block:load"]}
