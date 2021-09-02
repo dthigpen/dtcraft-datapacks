@@ -1,0 +1,1 @@
+scoreboard players operation @s dt.craft.state = #inventory dt.craft.state
