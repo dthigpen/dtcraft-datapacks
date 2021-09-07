@@ -1,4 +1,4 @@
-#> dt.inventory:api/summon
+#> dt.inventory:api/item/summon
 # summon an arbitrary item and merge in the given nbt
 # @params
 #   storage call_stack: call.arg0

@@ -5,7 +5,7 @@
 #   from datapack_utils.utils import Pack
 #   
 #   cog.outl(utils.setup_versioning(
-#       Pack('dt.inventory', Pack.Version(1,0,0),name='Inventory',
+#       Pack('dt.inventory', Pack.Version(2,0,0),name='Inventory',
 #           dependencies = [
 #               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
 #           ]
@@ -13,7 +13,7 @@
 #   )
 #]]]
 
-scoreboard players set $dt.inventory.version.major load.status 1
+scoreboard players set $dt.inventory.version.major load.status 2
 scoreboard players set $dt.inventory.version.minor load.status 0
 scoreboard players set $dt.inventory.version.patch load.status 0
 

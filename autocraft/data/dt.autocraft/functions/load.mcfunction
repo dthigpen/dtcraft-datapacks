@@ -12,7 +12,7 @@
 #               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
 #               Pack('dt.custom_block',Pack.Version(0,1,0),name='Custom Block'),
 #               Pack('dt.array',Pack.Version(0,2,0),name='Array'),
-#               Pack('dt.inventory',Pack.Version(1,0,0),name='Inventory'),
+#               Pack('dt.inventory',Pack.Version(2,0,0),name='Inventory'),
 #               Pack('dt.crafting',Pack.Version(1,0,0),name='Crafting')
 #           ]
 #       ))

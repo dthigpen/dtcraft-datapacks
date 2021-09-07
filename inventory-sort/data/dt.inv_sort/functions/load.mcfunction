@@ -8,7 +8,7 @@
 #       Pack('dt.inv_sort',Pack.Version(1,0,0),name='Inventory-Sort',tick_function='dt.inv_sort:tick',
 #           dependencies = [
 #               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
-#               Pack('dt.inventory',Pack.Version(1,0,0),name='Inventory')
+#               Pack('dt.inventory',Pack.Version(2,0,0),name='Inventory')
 #           ]
 #       ))
 #   )

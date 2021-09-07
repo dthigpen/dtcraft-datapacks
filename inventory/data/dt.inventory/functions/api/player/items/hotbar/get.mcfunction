@@ -1,4 +1,4 @@
-#> dt.inventory:api/player/get/hotbar
+#> dt.inventory:api/player/items/hotbar/get
 # get the current player's true hotbar items (Slots 0-8)
 # @output
 #   storage call_stack: call.result

@@ -8,6 +8,6 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.arg0
 function dt.custom_block:api/item/create_nbt
 data modify storage call_stack: this.item_nbt set from storage call_stack: call.result
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_nbt
-function dt.inventory:api/summon
+function dt.inventory:api/item/summon
 
 function call_stack:pop

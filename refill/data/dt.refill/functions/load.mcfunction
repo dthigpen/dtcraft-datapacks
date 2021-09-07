@@ -10,7 +10,7 @@
 #               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
 #               Pack('dt.user_util',Pack.Version(1,0,0),name='user-util'),
 #               Pack('dt.array',Pack.Version(0,2,0),name='Array'),
-#               Pack('dt.inventory',Pack.Version(1,0,0),name='Inventory')
+#               Pack('dt.inventory',Pack.Version(2,0,0),name='Inventory')
 #           ]
 #       ))
 #   )
