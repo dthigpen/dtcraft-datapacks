@@ -1,8 +1,8 @@
-#> dt.inventory:api/player/replace/hotbar
-# replace the current player's hotbar with the given items
+#> dt.inventory:api/player/items/inventory/replace
+# replace the current player's inventory with the given items
 # @params
 #   storage call_stack: call.arg0
-#       List of items
+#       list of items
 # @output
 #   storage call_stack: call.result
 #       boolean successful if inventory items changed after replacement
@@ -12,7 +12,7 @@ function dt.inventory:api/shulker/items/set
 
 data modify storage call_stack: this.inventory_before set from entity @s Inventory
 
-function dt.inventory:api/shulker/loot/replace/hotbar
+function dt.inventory:api/shulker/loot/replace/entity/inventory
 
 data modify storage call_stack: this.inventory_after set from entity @s Inventory
 execute store success storage call_stack: this.result byte 1 run data modify storage call_stack: this.inventory_before set from storage call_stack: this.inventory_after

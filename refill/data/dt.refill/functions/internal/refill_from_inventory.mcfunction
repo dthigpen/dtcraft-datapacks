@@ -12,7 +12,7 @@ function dt.array:api/split_by_key_limit_n
 data modify storage call_stack: this.data_item_found set from storage call_stack: call.result[0][0] 
 
 # if found in inventory data, match with actual inventory
-execute if data storage call_stack: this.data_item_found.id run function dt.inventory:api/player/get/inventory
+execute if data storage call_stack: this.data_item_found.id run function dt.inventory:api/player/items/inventory/get
 execute if data storage call_stack: this.data_item_found.id run data modify storage call_stack: this.items set from storage call_stack: call.result
 
 execute if data storage call_stack: this.data_item_found.id run data modify storage call_stack: call.arg0 set from storage call_stack: this.items

@@ -1,3 +1,11 @@
+#> dt.custom_block:api/item/create_nbt
+# Create a custom item NBT to be summoned with the api/item/summon command.
+# @params
+#   storage call_stack: call.arg0
+#       NBT item properties that determine the attributes of the custom item. See README.md for details.
+# @output
+#   storage call_stack: call.result
+#       NBT item
 function call_stack:push
 data modify storage call_stack: this.props set from storage call_stack: this.arg0
 data modify storage call_stack: this.item_nbt set value {Item:{id:"minecraft:item_frame",Count:1b,tag:{EntityTag:{Item: {id: "minecraft:item_frame",Count: 1b,tag: {EntityTag: {Item: { id: "minecraft:stick", Count: 1b },Facing: 1b,Silent: 1b,Invulnerable: 1b,id: "minecraft:glow_item_frame",Invisible: 1b,Fixed: 1b},hold: { display: { Name: '{"text":"Custom Block"}' } }}},Facing: 1b,Silent: 1b,Invulnerable: 1b,id: "minecraft:glow_item_frame",Invisible: 1b,Tags: ["custom_block", "unset"],Fixed: 1b}}}}

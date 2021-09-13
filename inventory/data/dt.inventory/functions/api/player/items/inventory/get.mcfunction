@@ -1,4 +1,4 @@
-#> dt.inventory:api/player/get/inventory
+#> dt.inventory:api/player/items/inventory/get
 # get the current player's true inventory items (Slots 9-35)
 # @output
 #   storage call_stack: call.result

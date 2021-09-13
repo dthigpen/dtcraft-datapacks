@@ -1,4 +1,4 @@
-#> dt.inventory:api/player/slot/replace
+#> dt.inventory:api/player/item/replace
 # replace the item in the current player's inventory with the given item
 # @params
 #   storage call_stack: call.arg0

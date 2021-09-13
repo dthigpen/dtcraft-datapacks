@@ -12,7 +12,7 @@
 #               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
 #               Pack('dt.custom_block',Pack.Version(0,1,0),name='Custom Block'),
 #               Pack('dt.array',Pack.Version(0,2,0),name='Array'),
-#               Pack('dt.inventory',Pack.Version(1,0,0),name='Inventory'),
+#               Pack('dt.inventory',Pack.Version(2,0,0),name='Inventory'),
 #               Pack('dt.crafting',Pack.Version(1,0,0),name='Crafting')
 #           ]
 #       ))
@@ -47,10 +47,10 @@ execute if score $dt.array load.status matches 1 unless score $dt.tmp.dep load.s
 execute if score $dt.array load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.autocraft load.status 0
 
 # check for Inventory datapack
-execute unless score $dt.inventory load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," requires ",{"text":"Inventory ","bold":true},"1.0"]
+execute unless score $dt.inventory load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," requires ",{"text":"Inventory ","bold":true},"2.0"]
 scoreboard players set $dt.tmp.dep load.status 0
-execute if score $dt.inventory.version.major load.status matches 1 if score $dt.inventory.version.minor load.status matches 0.. run scoreboard players set $dt.tmp.dep load.status 1
-execute if score $dt.inventory load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," expected ",{"text":"Inventory ","bold":true},"1.0"," but found ",{"score":{"name":"$dt.inventory.version.major","objective":"load.status"}},".",{"score":{"name":"$dt.inventory.version.minor","objective":"load.status"}}]
+execute if score $dt.inventory.version.major load.status matches 2 if score $dt.inventory.version.minor load.status matches 0.. run scoreboard players set $dt.tmp.dep load.status 1
+execute if score $dt.inventory load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Autocraft","bold":true}," expected ",{"text":"Inventory ","bold":true},"2.0"," but found ",{"score":{"name":"$dt.inventory.version.major","objective":"load.status"}},".",{"score":{"name":"$dt.inventory.version.minor","objective":"load.status"}}]
 execute if score $dt.inventory load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.autocraft load.status 0
 
 # check for Crafting datapack

@@ -10,7 +10,7 @@ data modify storage call_stack: call.arg0 append value {id:"minecraft:spruce_pla
 data modify storage call_stack: call.arg0 append value {id:"minecraft:melon_slice", Count:1b}
 data modify storage call_stack: call.arg0 append value {id:"minecraft:wheat_seeds", Count:1b}
 data modify storage call_stack: call.arg0 append value {id:"minecraft:coal", Count:1b}
-execute as @p run function dt.inventory:api/player/replace/inventory
+execute as @p run function dt.inventory:api/player/items/inventory/replace
 
 execute as @p run trigger dt.sort
 function unittest:api/assert/force/pass

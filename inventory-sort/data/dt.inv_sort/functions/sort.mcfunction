@@ -2,7 +2,7 @@
 function call_stack:push
 
 # get inventory
-function dt.inventory:api/player/get/inventory
+function dt.inventory:api/player/items/inventory/get
 data modify storage call_stack: this.remaining_items set from storage call_stack: call.result
 
 # combine non-full stacks
@@ -25,11 +25,11 @@ data modify storage call_stack: this.sorted_items append from storage call_stack
 # clear existing player inventory
 execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/shulker/items/clear
 execute if data storage call_stack: this.sorted_items[0] run data modify storage call_stack: call.arg0 set value []
-execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/player/replace/inventory
+execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/player/items/inventory/replace
 
 # set inventory to sorted items
 execute if data storage call_stack: this.sorted_items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.sorted_items
-execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/player/replace/inventory
+execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/player/items/inventory/replace
 
 tellraw @s {"text":"Inventory Sorted","color":"dark_green"}
 
