@@ -44,7 +44,7 @@ execute unless data storage call_stack: this.is_same_as_last if data storage cal
 
 # Check bad items
 execute if data storage call_stack: this.not_in_good_recipes run data modify storage call_stack: call.arg0 set from storage call_stack: this.actual_items
-execute if data storage call_stack: this.not_in_good_recipes run function dt.crafting:internal/ingredient/get_info_obj
+execute if data storage call_stack: this.not_in_good_recipes run function dt.crafting:internal/model/ingredients/from_items
 execute if data storage call_stack: this.not_in_good_recipes run data modify storage call_stack: this.info_obj set from storage call_stack: call.result
 execute if data storage call_stack: this.not_in_good_recipes run data modify storage call_stack: this.info_obj_items set from storage call_stack: this.info_obj.items
 #execute if data storage call_stack: this.not_in_good_recipes run tellraw @p ["find_with_cache.mcfunction: checking bad items cache",{"nbt":"this.variable","storage":"call_stack:"}]
