@@ -5,10 +5,16 @@ data modify storage call_stack: this.item set from storage call_stack: this.arg0
 
 function dt.crafting:internal/click_craft/database/fetch_or_init
 data modify storage call_stack: this.data set from storage call_stack: call.result
-data modify storage call_stack: this.data.craft_with append from storage call_stack: this.item
 
-data modify storage call_stack: call.arg0 set from storage call_stack: this.data
-function dt.crafting:internal/click_craft/database/save
+data modify storage call_stack: call.arg0 set from storage call_stack: this.data.craft_with
+data modify storage call_stack: call.arg1 set from storage call_stack: this.item
+function dt.array:api/index_of
+data modify storage call_stack: this.index set from storage call_stack: call.result
+
+tellraw @p ["add_ingredient.mcfunction: ",{"nbt":"this.index","storage":"call_stack:"}]
+execute if data storage call_stack: {this:{index:-1}} run data modify storage call_stack: this.data.craft_with append from storage call_stack: this.item
+execute if data storage call_stack: {this:{index:-1}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.data
+execute if data storage call_stack: {this:{index:-1}} run function dt.crafting:internal/click_craft/database/save
 
 # reshow the inventory screen again
 scoreboard players operation @s dt.click_craft = #inventory dt.craft.state

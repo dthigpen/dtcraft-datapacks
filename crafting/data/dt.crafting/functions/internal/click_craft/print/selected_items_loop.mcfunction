@@ -2,6 +2,7 @@ function call_stack:push
 data modify storage call_stack: this.remaining set from storage call_stack: this.arg0
 
 execute unless data storage call_stack: this.remaining run function dt.crafting:internal/click_craft/database/fetch_or_init
+# execute unless data storage call_stack: this.remaining run tellraw @p ["selected_items_loop.mcfunction: ",{"nbt":"call.result.craft_with[0]","storage":"call_stack:"}]
 execute unless data storage call_stack: this.remaining if data storage call_stack: call.result.craft_with[0] run tellraw @s ["Selected Items:"]
 execute unless data storage call_stack: this.remaining run data modify storage call_stack: this.remaining set from storage call_stack: call.result.craft_with
 
@@ -9,12 +10,12 @@ execute unless data storage call_stack: this.remaining run data modify storage c
 #   output = ''
 #   count = 9
 #   for i in range(0,count):
-#       output += f'{{"nbt":"this.remaining[{i}]","storage":"call_stack:", "interpret": true}}, " ",'
+#       output += f'{{"text":""}}, {{"nbt":"this.remaining[{i}].icon","storage":"call_stack:", "interpret": true}}, " ",'
 #   output += '""'
 #   cog.outl(f'tellraw @s [{output}]')
 #   cog.outl(('data remove storage call_stack: this.remaining[0]\n' * count))
 #]]]
-tellraw @s [{"nbt":"this.remaining[0]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[1]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[2]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[3]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[4]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[5]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[6]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[7]","storage":"call_stack:", "interpret": true}, " ",{"nbt":"this.remaining[8]","storage":"call_stack:", "interpret": true}, " ",""]
+tellraw @s [{"text":""}, {"nbt":"this.remaining[0].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[1].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[2].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[3].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[4].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[5].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[6].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[7].icon","storage":"call_stack:", "interpret": true}, " ",{"text":""}, {"nbt":"this.remaining[8].icon","storage":"call_stack:", "interpret": true}, " ",""]
 data remove storage call_stack: this.remaining[0]
 data remove storage call_stack: this.remaining[0]
 data remove storage call_stack: this.remaining[0]
