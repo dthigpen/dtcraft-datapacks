@@ -8,7 +8,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.inpu
 data modify storage call_stack: call.arg1 set value [{count: 5, slots: [[0, 1, 2, 3, 5]], id: "minecraft:glass", type: "id"}, {count: 1, slots: [[4]], id: "minecraft:nether_star", type: "id"}, {count: 3, slots: [[6, 7, 8]], id: "minecraft:obsidian", type: "id"}]
 data modify storage call_stack: call.arg2 set value []
 data modify storage call_stack: call.arg3 set value true
-function dt.crafting:internal/recipe/find_ingredient_loop
+function dt.crafting:internal/recipe/match_ingredients_loop
 data modify storage call_stack: this.actual set from storage call_stack: call.result
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected

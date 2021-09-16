@@ -11,9 +11,8 @@
 function call_stack:push
 
 data modify storage call_stack: this.actual_items set from storage call_stack: this.arg0
-
 data modify storage call_stack: call.arg0 set from storage call_stack: this.actual_items
-function dt.crafting:internal/ingredient/get_info_obj
+function dt.crafting:internal/model/ingredients/from_items
 data modify storage call_stack: this.item_counts set from storage call_stack: call.result.items
 
 execute store result score $size dt.tmp run data get storage call_stack: this.actual_items
