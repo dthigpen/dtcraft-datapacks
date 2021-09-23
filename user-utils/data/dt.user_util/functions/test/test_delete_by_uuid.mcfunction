@@ -3,7 +3,7 @@ function call_stack:push
 # delete by uuid
 data modify storage call_stack: this.test_name set value "delete_by_uuid"
 function dt.user_util:create
-data modify storage call_stack: this.test_user set from storage call_stack: call.result
+data modify storage call_stack: this.test_user set from storage call_stack: call.return
 data modify storage call_stack: this.test_users set value []
 data modify storage call_stack: this.test_users append from storage call_stack: this.test_user
 data modify storage call_stack: call.arg0 set from storage call_stack: this.test_users

@@ -10,7 +10,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.inpu
 function dt.autocraft:test/set_test_block_items
 execute positioned 777777 255 777777 run function dt.autocraft:internal/blocks/autocrafter/placeholders/add_tags_to_block_items
 function dt.autocraft:test/get_test_block_items
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected

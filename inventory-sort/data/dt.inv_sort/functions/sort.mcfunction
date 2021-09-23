@@ -3,24 +3,24 @@ function call_stack:push
 
 # get inventory
 function dt.inventory:api/player/items/inventory/get
-data modify storage call_stack: this.remaining_items set from storage call_stack: call.result
+data modify storage call_stack: this.remaining_items set from storage call_stack: call.return
 
 # combine non-full stacks
 data modify storage call_stack: call.arg0 set from storage call_stack: this.remaining_items
 function dt.inventory:api/items/combine
-data modify storage call_stack: this.remaining_items set from storage call_stack: call.result
+data modify storage call_stack: this.remaining_items set from storage call_stack: call.return
 
 # assign item ordering ranks
 data modify storage call_stack: call.arg0 set from storage call_stack: this.remaining_items
 data modify storage call_stack: call.arg1 set value []
 function dt.inv_sort:internal/assign_order_values_loop
-data modify storage call_stack: this.ranked_items set from storage call_stack: call.result
+data modify storage call_stack: this.ranked_items set from storage call_stack: call.return
 
 # sort
 data modify storage call_stack: this.sorted_items set value []
 data modify storage call_stack: call.arg0 set from storage call_stack: this.ranked_items
 function dt.array:api/sort/merge_sort
-data modify storage call_stack: this.sorted_items append from storage call_stack: call.result[].value
+data modify storage call_stack: this.sorted_items append from storage call_stack: call.return[].value
 
 # clear existing player inventory
 execute if data storage call_stack: this.sorted_items[0] run function dt.inventory:api/shulker/items/clear

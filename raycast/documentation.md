@@ -10,7 +10,7 @@ Cast a ray with max distance set by $max_distance dt.raycast or default 200 mete
    storage call_stack: call.arg0
        description
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        description
  Increment hit id
 ```

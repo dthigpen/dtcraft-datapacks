@@ -19,7 +19,7 @@ Create a custom item NBT to be summoned with the api/item/summon command.
    storage call_stack: call.arg0
        NBT item properties that determine the attributes of the custom item. See README.md for details.
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        NBT item
 ```
 #### `function dt.custom_block:api/block/destroy`

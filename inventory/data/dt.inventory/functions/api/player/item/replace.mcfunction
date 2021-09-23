@@ -4,7 +4,7 @@
 #   storage call_stack: call.arg0
 #       Item with the Slot:X attribute defined
 # @output
-#   storage call_stack: call.result
+#   storage call_stack: call.return
 #       boolean successful always true
 function call_stack:push
 
@@ -12,10 +12,10 @@ data modify storage call_stack: this.item set from storage call_stack: this.arg0
 scoreboard players reset $int1 dt.tmp
 execute store result score $int1 dt.tmp run data get storage call_stack: this.item.Slot
 
-data modify storage call_stack: this.result set value false
-execute if data storage call_stack: {this:{result:false}} if score $int1 dt.tmp matches 0..35 run data modify storage call_stack: this.result set value true
-execute if data storage call_stack: {this:{result:false}} if score $int1 dt.tmp matches 100..103 run data modify storage call_stack: this.result set value true
-execute if data storage call_stack: {this:{result:false}} if score $int1 dt.tmp matches -106 run data modify storage call_stack: this.result set value true
+data modify storage call_stack: this.return set value false
+execute if data storage call_stack: {this:{result:false}} if score $int1 dt.tmp matches 0..35 run data modify storage call_stack: this.return set value true
+execute if data storage call_stack: {this:{result:false}} if score $int1 dt.tmp matches 100..103 run data modify storage call_stack: this.return set value true
+execute if data storage call_stack: {this:{result:false}} if score $int1 dt.tmp matches -106 run data modify storage call_stack: this.return set value true
 
 data modify storage call_stack: this.item.Slot set value 0
 data modify block 2999999 255 2999999 Items set value []

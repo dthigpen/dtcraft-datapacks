@@ -17,6 +17,6 @@ data modify storage call_stack: call.arg1 set from storage call_stack: this.item
 execute store result score size1 dt.tmp run data get storage call_stack: this.recipe_items
 execute store result score size2 dt.tmp run data get storage call_stack: this.item_counts
 execute if score result dt.tmp = #equal dt.enum if score size1 dt.tmp matches 1.. if score size2 dt.tmp matches 1.. run function dt.crafting:internal/recipe/compare_ing_counts_loop
-execute if score result dt.tmp = #not_equal dt.enum run data modify storage call_stack: this.result set value {}
+execute if score result dt.tmp = #not_equal dt.enum run data modify storage call_stack: this.return set value {}
 
 function call_stack:pop

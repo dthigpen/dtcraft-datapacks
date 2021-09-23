@@ -24,7 +24,7 @@ Remove n elements from the end of the given array
    storage call_stack: call.arg2
        integer
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array
 ```
 #### `function dt.array:api/difference`
@@ -36,7 +36,7 @@ The difference between two arrays. Elements common to both lists will not be inc
    storage call_stack: call.arg1
        array
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array
 ```
 #### `function dt.array:api/concat`
@@ -49,7 +49,7 @@ concatenate two arrays
    storage call_stack: call.arg1
        array2
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array
 ```
 #### `function dt.array:api/trim_to_size`
@@ -61,7 +61,7 @@ Trim an array to a set size
    storage call_stack: call.arg1
        size of the array to trim to.
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array
 ```
 #### `function dt.array:api/split_by_key`
@@ -73,7 +73,7 @@ Splits the given list into two lists, first for elements containing the key, and
    storage call_stack: call.arg1
        key to match elements on
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array of two arrays. [[with-key],[complement]]
 ```
 #### `function dt.array:api/split_by_key_limit_n`
@@ -87,7 +87,7 @@ Splits the given list into two lists, first for elements containing the key, and
    storage call_stack: call.arg2
        limit integer, maximum number of results that match the key
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array of two arrays. [[with-key],[complement]]
  splits the given list into two lists, first for elements containing the key, and the second its complement
 ```
@@ -98,7 +98,7 @@ Pop n elements from the end of an array and return them
    storage call_stack: call.arg0
        array
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array
 ```
 #### `function dt.array:api/index_of`
@@ -110,7 +110,7 @@ Get the index of a value in an array
    storage call_stack: call.arg1
        value
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        index of item in array or -1 if not found
 ```
 #### `function dt.array:api/split_half`
@@ -120,7 +120,7 @@ Split an array in half
    storage call_stack: call.arg0
        array
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array with two elements, [array1, array2]
 ```
 #### `function dt.array:api/n_array_of`
@@ -132,7 +132,7 @@ Create an array of length n consisting of the given repeated value
    storage call_stack: call.arg2
        element value
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        list of values
 ```
 #### `function dt.array:api/convert/to_key_values`
@@ -142,7 +142,7 @@ Convert the given array of values into key value pair objects with the keys defa
    storage call_stack: call.arg0
        array
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array of objects [{key:1,value:a}..{key:n,value:z}]
 ```
 #### `function dt.array:api/math/sum`
@@ -152,7 +152,7 @@ Sum array of numbers
    storage call_stack: call.arg0
        array of integers
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        integer sum of all values
 ```
 #### `function dt.array:api/sort/merge_sort`
@@ -162,6 +162,6 @@ Sort the given value objects using the merge sort algorithm
    storage call_stack: call.arg0
        array of value objects
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array of value objects
 ```

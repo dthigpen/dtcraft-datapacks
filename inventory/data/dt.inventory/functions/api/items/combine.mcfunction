@@ -4,7 +4,7 @@
 #   storage call_stack: call.arg0
 #       list of items
 # @output
-#   storage call_stack: call.result
+#   storage call_stack: call.return
 #       list of items
 function call_stack:push
 
@@ -17,5 +17,5 @@ function dt.inventory:api/shulker/items/clear
 execute positioned 2999999 255 2999999 run function dt.inventory:api/shulker/loot/insert/block2
 
 function dt.inventory:api/shulker/items/get
-data modify storage call_stack: this.result set from storage call_stack: call.result
+data modify storage call_stack: this.return set from storage call_stack: call.return
 function call_stack:pop

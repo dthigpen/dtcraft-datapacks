@@ -12,7 +12,7 @@ data modify storage call_stack: call.arg0 set value ["minecraft:planks"]
 data modify storage call_stack: call.arg1 set value ["minecraft:oak_planks","minecraft:redstone"]
 data modify storage call_stack: call.arg2 set value []
 function dt.crafting:internal/recipe/resolve_groups_loop
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 # tellraw @p ["test_partial_find.mcfunction: actual: ",{"nbt":"actual","storage":"unittest:in"}]
 # tellraw @p ["test_partial_find.mcfunction: expected: ",{"nbt":"expected","storage":"unittest:in"}]
 function call_stack:pop
@@ -29,7 +29,7 @@ data modify storage call_stack: call.arg0 set value ["minecraft:planks","minecra
 data modify storage call_stack: call.arg1 set value ["minecraft:oak_planks","minecraft:cobblestone"]
 data modify storage call_stack: call.arg2 set value []
 function dt.crafting:internal/recipe/resolve_groups_loop
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 tellraw @p ["test_resolve_groups_loop.mcfunction: ",{"nbt":"actual","storage":"unittest:in"}]
 # tellraw @p ["test_partial_find.mcfunction: actual: ",{"nbt":"actual","storage":"unittest:in"}]
 # tellraw @p ["test_partial_find.mcfunction: expected: ",{"nbt":"expected","storage":"unittest:in"}]

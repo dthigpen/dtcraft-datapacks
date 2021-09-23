@@ -16,7 +16,7 @@ Convert a recipe object into a game item that can be looted to players or contai
    storage call_stack: call.arg0
        Recipe object
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        Item object
 ```
 #### `function dt.crafting:api/recipe/find_from_recipes`
@@ -28,7 +28,7 @@ Find a matching recipe from the given item list configuration from a set of reci
    storage call_stack: call.arg1
        array of recipe objects
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        Matching recipe object or empty object if no match
 ```
 #### `function dt.crafting:api/recipe/is_eligible`
@@ -38,7 +38,7 @@ Check that the given array of items is eligible to be a set of crafting ingredie
    storage call_stack: call.arg0
        array of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        true or false
 ```
 #### `function dt.crafting:api/recipe/find_with_cache`
@@ -48,7 +48,7 @@ Find a matching recipe from the given item list configuration first from the cal
    storage call_stack: call.arg0
        array of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        the recipe data for the given items or an empty object if none is found
 ```
 #### `function dt.crafting:api/recipe/find`
@@ -58,7 +58,7 @@ Find a matching recipe from the given item list using all recipes in the game
    storage call_stack: call.arg0
        array of items from crafter to be checked for the first matching recipe
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        the recipe data for the given items or an empty object if none is found
 ```
 #### `function dt.crafting:api/crafter/distribute_items`
@@ -68,7 +68,7 @@ Distribute items with counts greater than one into free slots with 9 total slots
    storage call_stack: call.arg0
        array of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array of items
 ```
 #### `function dt.crafting:api/crafter/balance_items`
@@ -78,6 +78,6 @@ Balance item counts across other stacks of the same item in the list
    storage call_stack: call.arg0
        array of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        array of items
 ```

@@ -9,7 +9,7 @@ data modify storage call_stack: this.key_value_objects set from storage call_sta
 execute unless data storage call_stack: this.array_values[0] run data modify storage call_stack: this.base_case set value true
 
 # case 1
-execute if data storage call_stack: this.base_case run data modify storage call_stack: this.result set from storage call_stack: this.key_value_objects
+execute if data storage call_stack: this.base_case run data modify storage call_stack: this.return set from storage call_stack: this.key_value_objects
 
 # case 2
 execute unless data storage call_stack: this.base_case run data modify storage call_stack: this.key_value_objects append value {}
@@ -19,7 +19,7 @@ execute unless data storage call_stack: this.base_case run data remove storage c
 execute unless data storage call_stack: this.base_case run data modify storage call_stack: call.arg0 set from storage call_stack: this.array_values
 execute unless data storage call_stack: this.base_case run data modify storage call_stack: call.arg1 set from storage call_stack: this.key_value_objects
 execute unless data storage call_stack: this.base_case run function dt.array:internal/convert/to_key_values_loop
-execute unless data storage call_stack: this.base_case run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute unless data storage call_stack: this.base_case run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 
 

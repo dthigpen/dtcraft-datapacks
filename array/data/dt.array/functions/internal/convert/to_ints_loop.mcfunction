@@ -7,9 +7,9 @@ execute if data storage call_stack: this.values[0] store result storage call_sta
 execute if data storage call_stack: this.values[0] run data remove storage call_stack: this.values[0]
 
 execute if data storage call_stack: this.values[0] run data modify storage call_stack: this.continue set value true
-execute unless data storage call_stack: this.continue run data modify storage call_stack: this.result set from storage call_stack: this.ints
+execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: this.ints
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.values
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.ints
 execute if data storage call_stack: this.continue run function dt.array:internal/convert/to_ints_loop
-execute if data storage call_stack: this.continue run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: call.return
 function call_stack:pop

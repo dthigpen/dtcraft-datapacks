@@ -9,7 +9,7 @@ data modify storage call_stack: this.items set from storage call_stack: this.arg
 # reset slots
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 function dt.inventory:api/items/reset_slots
-data modify storage call_stack: this.items set from storage call_stack: call.result
+data modify storage call_stack: this.items set from storage call_stack: call.return
 
 # set items
 data modify block 2999999 254 2999999 Items set from storage call_stack: this.items

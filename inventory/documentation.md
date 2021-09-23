@@ -29,7 +29,7 @@ Summon an arbitrary item and merge in the given nbt
    storage call_stack: call.arg0
        item nbt that is merged into the data of the summoned item. Ex: {Item:{id:"minecraft:egg",Count:1b}}
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        boolean true if item was successfully summoned
 ```
 #### `function dt.inventory:api/shulker/items/get2`
@@ -38,7 +38,7 @@ Get the shulker2 items
 @params
 
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        list of items
 ```
 #### `function dt.inventory:api/shulker/items/set2`
@@ -56,7 +56,7 @@ Get the shulker items
 @params
 
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        list of items
 ```
 #### `function dt.inventory:api/shulker/items/clear2`
@@ -131,7 +131,7 @@ Reset the slots of the given items starting at Slot 0b
    storage call_stack: call.arg0
        list of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        list of items
 ```
 #### `function dt.inventory:api/items/combine`
@@ -141,7 +141,7 @@ Combine multiple partial item stacks into as few item stacks as possible
    storage call_stack: call.arg0
        list of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        list of items
 ```
 #### `function dt.inventory:api/player/item/replace`
@@ -151,7 +151,7 @@ Replace the item in the current player's inventory with the given item
    storage call_stack: call.arg0
        Item with the Slot:X attribute defined
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        boolean successful always true
 ```
 #### `function dt.inventory:api/player/item/slot/remove`
@@ -170,7 +170,7 @@ Replace the current player's inventory with the given items
    storage call_stack: call.arg0
        list of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        boolean successful if inventory items changed after replacement
 ```
 #### `function dt.inventory:api/player/items/inventory/get`
@@ -179,7 +179,7 @@ Get the current player's true inventory items (Slots 9-35)
 @params
 
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        List of items
 ```
 #### `function dt.inventory:api/player/items/hotbar/replace`
@@ -189,7 +189,7 @@ Replace the current player's hotbar with the given items
    storage call_stack: call.arg0
        List of items
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        boolean successful if inventory items changed after replacement
 ```
 #### `function dt.inventory:api/player/items/hotbar/get`
@@ -198,6 +198,6 @@ Get the current player's true hotbar items (Slots 0-8)
 @params
 
 @output
-   storage call_stack: call.result
+   storage call_stack: call.return
        List of items
 ```

@@ -64,6 +64,6 @@ execute if score $total_count dt.tmp matches 9 if score $unique_count dt.tmp mat
 
 execute if data storage call_stack: this.valid_count run data modify storage call_stack: call.arg1 set from storage call_stack: this.info_obj.items
 execute if data storage call_stack: this.valid_count run function dt.crafting:internal/recipe/find_recipe_loop
-execute if data storage call_stack: this.valid_count run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.valid_count run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

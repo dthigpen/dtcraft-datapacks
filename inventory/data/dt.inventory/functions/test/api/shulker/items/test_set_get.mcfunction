@@ -6,7 +6,7 @@ data modify storage call_stack: this.expected set value []
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 function dt.inventory:api/shulker/items/set
 function dt.inventory:api/shulker/items/get
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -22,7 +22,7 @@ data modify storage call_stack: this.expected set value [{id:"minecraft:feather"
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 function dt.inventory:api/shulker/items/set
 function dt.inventory:api/shulker/items/get
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 

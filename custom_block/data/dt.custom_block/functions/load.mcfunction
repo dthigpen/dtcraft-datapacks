@@ -7,7 +7,7 @@
 #           tick_function='dt.custom_block:tick',
 #           name='Custom Block',
 #           dependencies = [
-#               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
+#               Pack('call_stack',Pack.Version(1,0,0),name='call-stack'),
 #           ]
 #       ))
 #   )
@@ -20,10 +20,10 @@ scoreboard players set $dt.custom_block.version.patch load.status 0
 scoreboard players set $dt.custom_block load.status 1
 
 # check for call-stack datapack
-execute unless score $call_stack load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Custom Block","bold":true}," requires ",{"text":"call-stack ","bold":true},"0.1"]
+execute unless score $call_stack load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Custom Block","bold":true}," requires ",{"text":"call-stack ","bold":true},"1.0"]
 scoreboard players set $dt.tmp.dep load.status 0
-execute if score $call_stack.version.major load.status matches 0 if score $call_stack.version.minor load.status matches 1.. run scoreboard players set $dt.tmp.dep load.status 1
-execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Custom Block","bold":true}," expected ",{"text":"call-stack ","bold":true},"0.1"," but found ",{"score":{"name":"$call_stack.version.major","objective":"load.status"}},".",{"score":{"name":"$call_stack.version.minor","objective":"load.status"}}]
+execute if score $call_stack.version.major load.status matches 1 if score $call_stack.version.minor load.status matches 0.. run scoreboard players set $dt.tmp.dep load.status 1
+execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Custom Block","bold":true}," expected ",{"text":"call-stack ","bold":true},"1.0"," but found ",{"score":{"name":"$call_stack.version.major","objective":"load.status"}},".",{"score":{"name":"$call_stack.version.minor","objective":"load.status"}}]
 execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.custom_block load.status 0
 
 scoreboard players reset $dt.tmp.dep load.status

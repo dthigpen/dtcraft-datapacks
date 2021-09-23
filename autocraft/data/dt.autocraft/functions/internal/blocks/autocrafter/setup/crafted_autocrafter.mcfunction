@@ -3493,7 +3493,7 @@ execute as @e[type=item,sort=nearest,limit=1,nbt={Item:{tag:{dt_autocrafter:1b}}
 #[[[end]]]
 
 function dt.autocraft:internal/blocks/autocrafter/setup/get_custom_block_properties
-data modify storage call_stack: this.properties set from storage call_stack: call.result
+data modify storage call_stack: this.properties set from storage call_stack: call.return
 data modify storage call_stack: this.properties.block.name set from storage call_stack: this.name
 data modify storage call_stack: this.properties.item.name set from storage call_stack: this.name
 

@@ -10,7 +10,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value [{a:1},{b:2},{c:3}]
 data modify storage call_stack: call.arg1 set value [1b,2b,3b]
 function dt.inventory:internal/apply/count
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
 function unittest:api/assert/equal
@@ -24,7 +24,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value [{a:1},{b:2}]
 data modify storage call_stack: call.arg1 set value [1b,2b,3b]
 function dt.inventory:internal/apply/count
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
 function unittest:api/assert/equal
@@ -39,8 +39,8 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value [{a:1},{b:2},{c:3}]
 data modify storage call_stack: call.arg1 set value [1b,2b]
 function dt.inventory:internal/apply/count
-data modify storage unittest:in actual set from storage call_stack: call.result
-tellraw @p ["test_count.mcfunction: ",{"nbt":"call.result","storage":"call_stack:"}]
+data modify storage unittest:in actual set from storage call_stack: call.return
+tellraw @p ["test_count.mcfunction: ",{"nbt":"call.return","storage":"call_stack:"}]
 function call_stack:pop
 
 function unittest:api/assert/equal

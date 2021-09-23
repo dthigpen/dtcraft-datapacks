@@ -9,8 +9,8 @@ function dt.inventory:api/shulker/items/set
 function dt.inventory:api/shulker/loot/give/player
 
 function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tags_player
-data modify storage call_stack: call.result set from entity @s Inventory
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: call.return set from entity @s Inventory
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected

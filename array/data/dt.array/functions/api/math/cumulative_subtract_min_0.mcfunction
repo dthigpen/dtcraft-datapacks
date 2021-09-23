@@ -16,25 +16,25 @@ execute if score $int1 dt.tmp matches ..-1 run data modify storage call_stack: t
 execute unless data storage call_stack: this.has_remainder run data modify storage call_stack: this.total set value 0
 execute if data storage call_stack: this.has_remainder run data modify storage call_stack: call.arg0 set from storage call_stack: this.difference
 execute if data storage call_stack: this.has_remainder run function dt.array:api/helper/math/abs
-execute if data storage call_stack: this.has_remainder run data modify storage call_stack: this.total set from storage call_stack: call.result
+execute if data storage call_stack: this.has_remainder run data modify storage call_stack: this.total set from storage call_stack: call.return
 
 data modify storage call_stack: call.arg0 set value 0
 data modify storage call_stack: call.arg1 set from storage call_stack: this.difference
 function dt.array:api/helper/math/max
-data modify storage call_stack: this.max set from storage call_stack: call.result
+data modify storage call_stack: this.max set from storage call_stack: call.return
 
 data modify storage call_stack: this._values append from storage call_stack: this.max
 
 data remove storage call_stack: this.numbers[0]
 execute if data storage call_stack: this.numbers[0] run data modify storage call_stack: this.continue set value true
-execute unless data storage call_stack: this.continue run data modify storage call_stack: this.result set value {values:[], remainder:0}
-execute unless data storage call_stack: this.continue run data modify storage call_stack: this.result.values set from storage call_stack: this._values
-execute unless data storage call_stack: this.continue run data modify storage call_stack: this.result.remainder set from storage call_stack: this.total
+execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return set value {values:[], remainder:0}
+execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return.values set from storage call_stack: this._values
+execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return.remainder set from storage call_stack: this.total
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.numbers
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.total
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg2 set from storage call_stack: this._values
 execute if data storage call_stack: this.continue run function dt.array:api/math/cumulative_subtract_min_0
-execute if data storage call_stack: this.continue run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 
 function call_stack:pop

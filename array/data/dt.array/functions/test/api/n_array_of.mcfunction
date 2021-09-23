@@ -10,7 +10,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value 3
 data modify storage call_stack: call.arg1 set value 42
 function dt.array:api/n_array_of
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
@@ -24,7 +24,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value -1
 data modify storage call_stack: call.arg1 set value 42
 function dt.array:api/n_array_of
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
@@ -37,7 +37,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value 0
 data modify storage call_stack: call.arg1 set value 42
 function dt.array:api/n_array_of
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
@@ -50,7 +50,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value 2
 data modify storage call_stack: call.arg1 set value {foo:bar}
 function dt.array:api/n_array_of
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown

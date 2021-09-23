@@ -42,12 +42,12 @@ execute if data storage call_stack: this.both_non_empty if score $value1 dt.tmp 
 # check for case 4 again
 execute unless data storage call_stack: this.array1[0] unless data storage call_stack: this.array2[0] run data modify storage call_stack: this.both_empty set value true
 # case 4
-execute if data storage call_stack: this.both_empty run data modify storage call_stack: this.result set from storage call_stack: this.merged
+execute if data storage call_stack: this.both_empty run data modify storage call_stack: this.return set from storage call_stack: this.merged
 
 # case 1-3 recurse
 execute unless data storage call_stack: this.both_empty run data modify storage call_stack: call.arg0 set from storage call_stack: this.array1
 execute unless data storage call_stack: this.both_empty run data modify storage call_stack: call.arg1 set from storage call_stack: this.array2
 execute unless data storage call_stack: this.both_empty run data modify storage call_stack: call.arg2 set from storage call_stack: this.merged
 execute unless data storage call_stack: this.both_empty run function dt.array:internal/sort/merge_sorted_loop
-execute unless data storage call_stack: this.both_empty run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute unless data storage call_stack: this.both_empty run data modify storage call_stack: this.return set from storage call_stack: call.return
 function call_stack:pop

@@ -7,7 +7,7 @@
 #   cog.outl(utils.setup_versioning(
 #       Pack('dt.crafting',Pack.Version(1,0,0),name='Crafting',
 #           dependencies = [
-#               Pack('call_stack',Pack.Version(0,1,0),name='call-stack'),
+#               Pack('call_stack',Pack.Version(1,0,0),name='call-stack'),
 #               Pack('dt.array',Pack.Version(0,2,0),name='Array')
 #           ]
 #       ))
@@ -21,10 +21,10 @@ scoreboard players set $dt.crafting.version.patch load.status 0
 scoreboard players set $dt.crafting load.status 1
 
 # check for call-stack datapack
-execute unless score $call_stack load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Crafting","bold":true}," requires ",{"text":"call-stack ","bold":true},"0.1"]
+execute unless score $call_stack load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Crafting","bold":true}," requires ",{"text":"call-stack ","bold":true},"1.0"]
 scoreboard players set $dt.tmp.dep load.status 0
-execute if score $call_stack.version.major load.status matches 0 if score $call_stack.version.minor load.status matches 1.. run scoreboard players set $dt.tmp.dep load.status 1
-execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Crafting","bold":true}," expected ",{"text":"call-stack ","bold":true},"0.1"," but found ",{"score":{"name":"$call_stack.version.major","objective":"load.status"}},".",{"score":{"name":"$call_stack.version.minor","objective":"load.status"}}]
+execute if score $call_stack.version.major load.status matches 1 if score $call_stack.version.minor load.status matches 0.. run scoreboard players set $dt.tmp.dep load.status 1
+execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Crafting","bold":true}," expected ",{"text":"call-stack ","bold":true},"1.0"," but found ",{"score":{"name":"$call_stack.version.major","objective":"load.status"}},".",{"score":{"name":"$call_stack.version.minor","objective":"load.status"}}]
 execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.crafting load.status 0
 
 # check for Array datapack

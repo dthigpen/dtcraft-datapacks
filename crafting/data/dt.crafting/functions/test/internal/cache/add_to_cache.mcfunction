@@ -9,7 +9,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.inpu
 data modify storage call_stack: call.arg1 set from storage call_stack: this.input2
 data modify storage call_stack: call.arg2 set from storage call_stack: this.input3
 function dt.crafting:internal/cache/update_cache
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -28,7 +28,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.inpu
 data modify storage call_stack: call.arg1 set from storage call_stack: this.input2
 data modify storage call_stack: call.arg2 set from storage call_stack: this.input3
 function dt.crafting:internal/cache/update_cache
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -47,7 +47,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.inpu
 data modify storage call_stack: call.arg1 set from storage call_stack: this.input2
 data modify storage call_stack: call.arg2 set from storage call_stack: this.input3
 function dt.crafting:internal/cache/update_cache
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 

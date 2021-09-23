@@ -11,7 +11,7 @@ function dt.inventory:api/shulker/items/set
 execute positioned 2999999 250 2999999 run function dt.inventory:api/shulker/loot/insert/block
 
 data modify storage call_stack: this.actual set from block 2999999 250 2999999 Items
-data modify storage call_stack: this.success set from storage call_stack: call.result
+data modify storage call_stack: this.success set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"text":"replace_slot hotbar"}]

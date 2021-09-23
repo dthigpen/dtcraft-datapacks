@@ -4,7 +4,7 @@
 #   storage call_stack: call.arg0
 #       NBT item properties that determine the attributes of the custom item. See README.md for details.
 # @output
-#   storage call_stack: call.result
+#   storage call_stack: call.return
 #       NBT item
 function call_stack:push
 data modify storage call_stack: this.props set from storage call_stack: this.arg0
@@ -25,5 +25,5 @@ data modify storage call_stack: this.item_nbt.Item.tag.EntityTag.Item.tag.Entity
 data modify storage call_stack: this.item_nbt.Item.tag.EntityTag.Item.tag.hold set from storage call_stack: this.props
 data modify storage call_stack: this.item_nbt.Item.tag.EntityTag.Item.tag.CustomModelData set from storage call_stack: this.props.block.model
 data modify storage call_stack: this.item_nbt.Tags set from storage call_stack: this.props.item.Tags
-data modify storage call_stack: this.result set from storage call_stack: this.item_nbt
+data modify storage call_stack: this.return set from storage call_stack: this.item_nbt
 function call_stack:pop

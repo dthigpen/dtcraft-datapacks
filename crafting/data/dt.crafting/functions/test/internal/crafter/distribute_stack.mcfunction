@@ -4,8 +4,8 @@ data modify storage call_stack: this.item set value {id:"minecraft:cobblestone",
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item
 data modify storage call_stack: call.arg1 set value [1]
 function dt.crafting:internal/crafter/distribute_stack
-data modify storage call_stack: this.new_items set from storage call_stack: call.result.new_items
-data modify storage call_stack: this.free_slots set from storage call_stack: call.result.free_slots
+data modify storage call_stack: this.new_items set from storage call_stack: call.return.new_items
+data modify storage call_stack: this.free_slots set from storage call_stack: call.return.free_slots
 
 # tellraw @p [{"nbt":"this.new_items","storage":"call_stack:"}]
 # tellraw @p [{"nbt":"this.free_slots","storage":"call_stack:"}]
@@ -23,8 +23,8 @@ data modify storage call_stack: this.test_name set value "distribute_stack_item_
 data modify storage call_stack: call.arg0 set value {id:"minecraft:cobblestone",Slot:0b,Count:3b}
 data modify storage call_stack: call.arg1 set value [1]
 function dt.crafting:internal/crafter/distribute_stack
-data modify storage call_stack: this.new_items set from storage call_stack: call.result.new_items
-data modify storage call_stack: this.free_slots set from storage call_stack: call.result.free_slots
+data modify storage call_stack: this.new_items set from storage call_stack: call.return.new_items
+data modify storage call_stack: this.free_slots set from storage call_stack: call.return.free_slots
 
 # tellraw @p [{"nbt":"this.new_items","storage":"call_stack:"}]
 # tellraw @p [{"nbt":"this.free_slots","storage":"call_stack:"}]
@@ -42,8 +42,8 @@ data modify storage call_stack: this.test_name set value "distribute_stack_item_
 data modify storage call_stack: call.arg0 set value {id:"minecraft:cobblestone",Slot:0b,Count:3b}
 data modify storage call_stack: call.arg1 set value [1,2,3,4]
 function dt.crafting:internal/crafter/distribute_stack
-data modify storage call_stack: this.new_items set from storage call_stack: call.result.new_items
-data modify storage call_stack: this.free_slots set from storage call_stack: call.result.free_slots
+data modify storage call_stack: this.new_items set from storage call_stack: call.return.new_items
+data modify storage call_stack: this.free_slots set from storage call_stack: call.return.free_slots
 
 # tellraw @p [{"nbt":"this.new_items","storage":"call_stack:"}]
 # tellraw @p [{"nbt":"this.free_slots","storage":"call_stack:"}]
@@ -64,8 +64,8 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.item
 data modify storage call_stack: call.arg1 set value []
 data modify storage call_stack: call.arg2 set value []
 function dt.crafting:internal/crafter/distribute_stack
-data modify storage call_stack: this.new_items set from storage call_stack: call.result.new_items
-data modify storage call_stack: this.free_slots set from storage call_stack: call.result.free_slots
+data modify storage call_stack: this.new_items set from storage call_stack: call.return.new_items
+data modify storage call_stack: this.free_slots set from storage call_stack: call.return.free_slots
 
 # tellraw @p [{"nbt":"this.new_items","storage":"call_stack:"}]
 # tellraw @p [{"nbt":"this.free_slots","storage":"call_stack:"}]
@@ -86,8 +86,8 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.item
 data modify storage call_stack: call.arg1 set value []
 data modify storage call_stack: call.arg2 set value []
 function dt.crafting:internal/crafter/distribute_stack
-data modify storage call_stack: this.new_items set from storage call_stack: call.result.new_items
-data modify storage call_stack: this.free_slots set from storage call_stack: call.result.free_slots
+data modify storage call_stack: this.new_items set from storage call_stack: call.return.new_items
+data modify storage call_stack: this.free_slots set from storage call_stack: call.return.free_slots
 
 # tellraw @p [{"nbt":"this.new_items","storage":"call_stack:"}]
 # tellraw @p [{"nbt":"this.free_slots","storage":"call_stack:"}]

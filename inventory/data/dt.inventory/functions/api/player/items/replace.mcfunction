@@ -3,7 +3,7 @@ data modify storage call_stack: this.items set from storage call_stack: this.arg
 data modify storage call_stack: this.successful set value false
 execute if data storage call_stack: this.items[0].Slot run data modify storage call_stack: call.arg0 set from storage call_stack: this.items[0]
 execute if data storage call_stack: this.items[0].Slot run function dt.inventory:api/player/item/replace
-execute if data storage call_stack: this.items[0].Slot run data modify storage call_stack: this.successful set from storage call_stack: call.result
+execute if data storage call_stack: this.items[0].Slot run data modify storage call_stack: this.successful set from storage call_stack: call.return
 
 # TODO wait till end and attempt to give to user if slot is not present or failed to replace
 # execute if data storage call_stack: {this:{successful:false}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.item

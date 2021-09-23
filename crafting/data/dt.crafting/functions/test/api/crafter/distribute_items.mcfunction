@@ -5,7 +5,7 @@ data modify storage call_stack: this.expected set from storage call_stack: this.
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/crafter/distribute_items
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
@@ -22,7 +22,7 @@ data modify storage call_stack: this.expected set value [{id:"minecraft:cobblest
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/crafter/distribute_items
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -39,7 +39,7 @@ data modify storage call_stack: this.expected set value [{id:"minecraft:cobblest
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/crafter/distribute_items
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
@@ -55,7 +55,7 @@ data modify storage call_stack: this.expected set value [{id:"minecraft:cobblest
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/crafter/distribute_items
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 #tellraw @p [{"nbt":"this.expected","storage":"call_stack:"}]
@@ -72,7 +72,7 @@ data modify storage call_stack: this.expected set value []
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/crafter/distribute_items
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
