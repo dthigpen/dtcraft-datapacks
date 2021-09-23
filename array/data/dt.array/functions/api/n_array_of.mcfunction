@@ -6,7 +6,7 @@
 #   storage call_stack: call.arg2
 #       element value
 # @output
-#   storage call_stack: call.result
+#   storage call_stack: call.return
 #       list of values
 function call_stack:push
 
@@ -17,11 +17,11 @@ data modify storage call_stack: this.value set from storage call_stack: this.arg
 execute if score size1 dt.tmp matches 1.. run data modify storage call_stack: this.continue set value true
 execute store result storage call_stack: this.length int 1 run scoreboard players get size1 dt.tmp
 
-data modify storage call_stack: this.result set value []
+data modify storage call_stack: this.return set value []
 execute if data storage call_stack: this.continue store result storage call_stack: call.arg0 int 1 run scoreboard players get size1 dt.tmp
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.value
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg2 set value []
 execute if data storage call_stack: this.continue run function dt.array:internal/n_array_of_loop
-execute if data storage call_stack: this.continue run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

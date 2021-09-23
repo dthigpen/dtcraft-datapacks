@@ -14,7 +14,7 @@ data modify storage call_stack: call.arg0 append from storage dt.crafting: recip
 data modify storage call_stack: call.arg1 set value ["minecraft:oak_planks","minecraft:stick"]
 data modify storage call_stack: call.arg2 set value []
 function dt.crafting:internal/recipe/partial_find_loop
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 tellraw @p ["test_partial_find.mcfunction: actual: ",{"nbt":"actual","storage":"unittest:in"}]
 # tellraw @p ["test_partial_find.mcfunction: expected: ",{"nbt":"expected","storage":"unittest:in"}]
 function call_stack:pop

@@ -12,6 +12,6 @@ execute if score size2 dt.tmp matches 1.. run data modify storage call_stack: th
 execute if score size2 dt.tmp matches ..0 run data remove storage call_stack: this.cache[-1]
 execute if score size2 dt.tmp matches ..0 run data modify storage call_stack: this.cache prepend from storage call_stack: this.item
 
-data modify storage call_stack: this.result set from storage call_stack: this.cache
+data modify storage call_stack: this.return set from storage call_stack: this.cache
 
 function call_stack:pop

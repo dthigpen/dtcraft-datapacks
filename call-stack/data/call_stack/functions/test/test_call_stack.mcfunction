@@ -45,4 +45,24 @@ data modify storage unittest:in actual set from storage call_stack: this.variabl
 function unittest:api/assert/is_not_set
 
 function unittest:api/test_case/teardown
+
+data modify storage unittest:in name set value "Return value"
+function unittest:api/test_case/setup
+function call_stack:push
+data modify storage call_stack: this.return set value {foo:true}
+function call_stack:pop
+data modify storage unittest:in actual set from storage call_stack: call.return
+function unittest:api/assert/is_set
+function unittest:api/test_case/teardown
+
+
+data modify storage unittest:in name set value "No return value"
+function unittest:api/test_case/setup
+function call_stack:push
+function call_stack:pop
+data modify storage unittest:in actual set from storage call_stack: call.return
+function unittest:api/assert/is_not_set
+function unittest:api/test_case/teardown
+
+
 function unittest:api/test_suite/teardown

@@ -42,8 +42,8 @@ data modify storage call_stack: call.arg1 set from storage call_stack: this.id_i
 data modify storage call_stack: call.arg2 set value []
 data modify storage call_stack: call.arg3 set from storage call_stack: this.has_tags
 function dt.crafting:internal/recipe/match_ingredients_loop
-data modify storage call_stack: this.is_match set from storage call_stack: call.result.is_match
-data modify storage call_stack: this.remaining_item_counts set from storage call_stack: call.result.remaining
+data modify storage call_stack: this.is_match set from storage call_stack: call.return.is_match
+data modify storage call_stack: this.remaining_item_counts set from storage call_stack: call.return.remaining
 
 data modify storage call_stack: this.found_recipe set value false
 execute if data storage call_stack: {this:{is_match:true}} if data storage call_stack: {this:{has_tags:false}} unless data storage call_stack: this.remaining_item_counts[0] run data modify storage call_stack: this.found_recipe set value true
@@ -52,10 +52,10 @@ execute if data storage call_stack: {this:{is_match:true}} if data storage call_
 execute if data storage call_stack: {this:{is_match:true}} if data storage call_stack: {this:{has_tags:true}} if data storage call_stack: this.remaining_item_counts[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.tag_ingredients
 execute if data storage call_stack: {this:{is_match:true}} if data storage call_stack: {this:{has_tags:true}} if data storage call_stack: this.remaining_item_counts[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.remaining_item_counts
 execute if data storage call_stack: {this:{is_match:true}} if data storage call_stack: {this:{has_tags:true}} if data storage call_stack: this.remaining_item_counts[0] run function dt.crafting:internal/recipe/resolve_tags
-execute if data storage call_stack: {this:{is_match:true}} if data storage call_stack: {this:{has_tags:true}} if data storage call_stack: this.remaining_item_counts[0] run data modify storage call_stack: this.found_recipe set from storage call_stack: call.result
+execute if data storage call_stack: {this:{is_match:true}} if data storage call_stack: {this:{has_tags:true}} if data storage call_stack: this.remaining_item_counts[0] run data modify storage call_stack: this.found_recipe set from storage call_stack: call.return
 
-data modify storage call_stack: this.result set value {}
-execute if data storage call_stack: {this:{found_recipe:true}} run data modify storage call_stack: this.result set from storage call_stack: this.temp_recipes[0]
+data modify storage call_stack: this.return set value {}
+execute if data storage call_stack: {this:{found_recipe:true}} run data modify storage call_stack: this.return set from storage call_stack: this.temp_recipes[0]
 
 data remove storage call_stack: this.temp_recipes[0]
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_recipes
@@ -63,6 +63,6 @@ execute if data storage call_stack: this.temp_recipes[0] if data storage call_st
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg2 set from storage call_stack: this.check_slots
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg3 set from storage call_stack: this.partial_matches
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run function dt.crafting:internal/recipe/find_recipe_loop
-execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

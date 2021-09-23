@@ -22,8 +22,8 @@ data remove storage call_stack: this.curr_crafting_ingredient.slots
 data modify storage call_stack: call.arg0 set from storage call_stack: this.recipe_ingredients
 data modify storage call_stack: call.arg1 set from storage call_stack: this.curr_crafting_ingredient
 function dt.array:api/split_by_key
-data modify storage call_stack: this.matching_recipe_ingredients set from storage call_stack: call.result[0]
-data modify storage call_stack: this.non_matching_recipe_ingredients set from storage call_stack: call.result[1]
+data modify storage call_stack: this.matching_recipe_ingredients set from storage call_stack: call.return[0]
+data modify storage call_stack: this.non_matching_recipe_ingredients set from storage call_stack: call.return[1]
 
 # Get the first match if and only if there is one match
 # TODO can unless condition be removed
@@ -36,7 +36,7 @@ execute unless data storage call_stack: this.first_matching_recipe_ingredient.sl
 execute if data storage call_stack: this.first_matching_recipe_ingredient.slots run data modify storage call_stack: call.arg0 set from storage call_stack: this.first_matching_recipe_ingredient.slots
 execute if data storage call_stack: this.first_matching_recipe_ingredient.slots run data modify storage call_stack: call.arg1 set from storage call_stack: this.slots
 execute if data storage call_stack: this.first_matching_recipe_ingredient.slots run function dt.array:api/split_by_key
-execute if data storage call_stack: this.first_matching_recipe_ingredient.slots if data storage call_stack: call.result[0] run data modify storage call_stack: this.no_slots_or_matching set value true
+execute if data storage call_stack: this.first_matching_recipe_ingredient.slots if data storage call_stack: call.return[0] run data modify storage call_stack: this.no_slots_or_matching set value true
 #endregion
 
 # tellraw @p ["find_ingredient_loop.mcfunction: ",{"nbt":"this.matching_recipe_ingredients[0]","storage":"call_stack:"}]
@@ -64,10 +64,10 @@ execute if data storage call_stack: {this:{has_tags:false}} unless data storage 
 #endregion
 
 #region return logic
-data modify storage call_stack: this.result set value {is_match: false, remaining: []}
-execute unless data storage call_stack: this.fail_early unless data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.result.is_match set value true
-execute unless data storage call_stack: this.fail_early unless data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.result.remaining append from storage call_stack: this.remaining[]
-execute unless data storage call_stack: this.fail_early unless data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.result.remaining append from storage call_stack: this.crafting_ingredients[]
+data modify storage call_stack: this.return set value {is_match: false, remaining: []}
+execute unless data storage call_stack: this.fail_early unless data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.return.is_match set value true
+execute unless data storage call_stack: this.fail_early unless data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.return.remaining append from storage call_stack: this.remaining[]
+execute unless data storage call_stack: this.fail_early unless data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.return.remaining append from storage call_stack: this.crafting_ingredients[]
 #endregion
 
 # tellraw @p ["find_ingredient_loop.mcfunction: ",{"nbt":"this.fail_early","storage":"call_stack:"}]
@@ -75,7 +75,7 @@ execute unless data storage call_stack: this.fail_early unless data storage call
 #tellraw @p [{"text":"ingredients: "},{"nbt":"this.recipe_ingredients","storage":"call_stack:"}]
 #tellraw @p [{"text":"remaining: "},{"nbt":"this.remaining","storage":"call_stack:"}]
 
-#tellraw @p [{"text":"result: "},{"nbt":"this.result","storage":"call_stack:"}]
+#tellraw @p [{"text":"result: "},{"nbt":"this.return","storage":"call_stack:"}]
 
 execute unless data storage call_stack: this.fail_early if data storage call_stack: this.more_crafting_ingredients if data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: call.arg0 set from storage call_stack: this.crafting_ingredients
 execute unless data storage call_stack: this.fail_early if data storage call_stack: this.more_crafting_ingredients if data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: call.arg1 set from storage call_stack: this.recipe_ingredients
@@ -83,6 +83,6 @@ execute unless data storage call_stack: this.fail_early if data storage call_sta
 execute unless data storage call_stack: this.fail_early if data storage call_stack: this.more_crafting_ingredients if data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: call.arg3 set from storage call_stack: this.has_tags
 execute unless data storage call_stack: this.fail_early if data storage call_stack: this.more_crafting_ingredients if data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: call.arg4 set from storage call_stack: this.check_slots
 execute unless data storage call_stack: this.fail_early if data storage call_stack: this.more_crafting_ingredients if data storage call_stack: this.more_recipe_ingredients run function dt.crafting:internal/recipe/match_ingredients_loop
-execute unless data storage call_stack: this.fail_early if data storage call_stack: this.more_crafting_ingredients if data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute unless data storage call_stack: this.fail_early if data storage call_stack: this.more_crafting_ingredients if data storage call_stack: this.more_recipe_ingredients run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

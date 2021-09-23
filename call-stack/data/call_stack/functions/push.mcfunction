@@ -1,15 +1,8 @@
 #> call_stack:push
 # Push a new variable scope to the stack. Variables created in this scope will remain until pop is called.
-# Example: data modify storage call_stack: this set value "foo"
-data modify storage call_stack: frames prepend from storage call_stack: this
-data modify storage call_stack: this set value {result:{},call:{}}
-data modify storage call_stack: this.arg0 set from storage call_stack: call.arg0
-data modify storage call_stack: this.arg1 set from storage call_stack: call.arg1
-data modify storage call_stack: this.arg2 set from storage call_stack: call.arg2
-data modify storage call_stack: this.arg3 set from storage call_stack: call.arg3
-data modify storage call_stack: this.arg4 set from storage call_stack: call.arg4
-data modify storage call_stack: this.arg5 set from storage call_stack: call.arg5
-data modify storage call_stack: this.arg6 set from storage call_stack: call.arg6
-data modify storage call_stack: this.arg7 set from storage call_stack: call.arg7
-data modify storage call_stack: this.arg8 set from storage call_stack: call.arg8
+# Example: data modify storage call_stack: this.var set value "foo"
+data modify storage call_stack: frames append from storage call_stack: this
+data remove storage call_stack: call.return
+data modify storage call_stack: this set value {}
+data modify storage call_stack: this merge from storage call_stack: call
 data modify storage call_stack: call set value {}

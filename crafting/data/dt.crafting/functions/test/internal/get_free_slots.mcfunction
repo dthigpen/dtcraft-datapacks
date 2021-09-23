@@ -5,7 +5,7 @@ data modify storage call_stack: this.expected set value [0,1,2,3,4,5,6,7,8]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:internal/crafter/get_free_slots
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -20,7 +20,7 @@ data modify storage call_stack: this.expected set value [0,1,2,3,4,5,6,8]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:internal/crafter/get_free_slots
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -35,7 +35,7 @@ data modify storage call_stack: this.expected set value []
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:internal/crafter/get_free_slots
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -50,7 +50,7 @@ data modify storage call_stack: this.expected set value []
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:internal/crafter/get_free_slots
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 

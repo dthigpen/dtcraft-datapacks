@@ -6,6 +6,6 @@ execute if data storage call_stack: this.items[0] if data storage call_stack: th
 execute if data storage call_stack: this.items[0] if data storage call_stack: this.group_values[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.group_values
 execute if data storage call_stack: this.items[0] if data storage call_stack: this.group_values[0] run data modify storage call_stack: call.arg2 set value []
 execute if data storage call_stack: this.items[0] if data storage call_stack: this.group_values[0] run function dt.crafting:internal/group/filter_items_in_group_loop
-execute if data storage call_stack: this.items[0] if data storage call_stack: this.group_values[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.items[0] if data storage call_stack: this.group_values[0] run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

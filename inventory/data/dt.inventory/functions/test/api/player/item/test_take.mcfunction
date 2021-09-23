@@ -42,7 +42,7 @@ function dt.inventory:api/player/items/replace
 data modify storage call_stack: call.arg0 set value "minecraft:feather"
 data modify storage call_stack: call.arg1 set value 20
 function dt.inventory:api/player/item/take
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 clear @s feather
 function call_stack:pop
 data modify storage unittest:in expected set value 8

@@ -5,7 +5,7 @@ data modify storage call_stack: this.numbers set from storage call_stack: this.a
 execute store result score #length dt.tmp run data get storage call_stack: this.numbers
 data modify storage call_stack: call.arg0 set from storage call_stack: this.numbers
 function dt.array:api/math/sum
-data modify storage call_stack: this.total set from storage call_stack: call.result
+data modify storage call_stack: this.total set from storage call_stack: call.return
 execute store result score #total dt.tmp run data get storage call_stack: this.total
 
 # base = total / min(total, length)
@@ -27,16 +27,16 @@ scoreboard players operation #num_base dt.tmp -= #remaining dt.tmp
 execute store result storage call_stack: call.arg0 byte 1 run scoreboard players get #remaining dt.tmp
 execute store result storage call_stack: call.arg1 byte 1 run scoreboard players get #partial dt.tmp
 function dt.array:api/n_array_of
-data modify storage call_stack: this.partial_array set from storage call_stack: call.result
+data modify storage call_stack: this.partial_array set from storage call_stack: call.return
 
 execute store result storage call_stack: call.arg0 byte 1 run scoreboard players get #num_base dt.tmp
 execute store result storage call_stack: call.arg1 byte 1 run scoreboard players get #base dt.tmp
 function dt.array:api/n_array_of
-data modify storage call_stack: this.base_array set from storage call_stack: call.result
+data modify storage call_stack: this.base_array set from storage call_stack: call.return
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.partial_array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.base_array
 function dt.array:api/concat
-data modify storage call_stack: this.result set from storage call_stack: call.result
+data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

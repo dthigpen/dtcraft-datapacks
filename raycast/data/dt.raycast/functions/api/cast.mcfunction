@@ -4,7 +4,7 @@
 #   storage call_stack: call.arg0
 #       description
 # @output
-#   storage call_stack: call.result
+#   storage call_stack: call.return
 #       description
 # Increment hit id
 scoreboard players set $hit_id dt.raycast 1

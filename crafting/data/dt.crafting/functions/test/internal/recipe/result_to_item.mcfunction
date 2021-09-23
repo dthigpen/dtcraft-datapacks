@@ -6,7 +6,7 @@ data modify storage call_stack: this.expected set value {id:"minecraft:stone", C
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/result_to_item
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]

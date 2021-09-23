@@ -7,14 +7,14 @@ data modify storage call_stack: this.difference set from storage call_stack: thi
 data modify storage call_stack: call.arg0 set from storage call_stack: this.list1
 data modify storage call_stack: call.arg1 set from storage call_stack: this.list2[0]
 function dt.array:api/split_by_key
-data modify storage call_stack: this.list1 set from storage call_stack: call.result[1]
+data modify storage call_stack: this.list1 set from storage call_stack: call.return[1]
 
-data modify storage call_stack: this.result set from storage call_stack: this.list1
+data modify storage call_stack: this.return set from storage call_stack: this.list1
 
 data remove storage call_stack: this.list2[0]
 execute if data storage call_stack: this.list1[0] if data storage call_stack: this.list2[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.list1
 execute if data storage call_stack: this.list1[0] if data storage call_stack: this.list2[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.list2
 execute if data storage call_stack: this.list1[0] if data storage call_stack: this.list2[0] run data modify storage call_stack: call.arg2 set value []
 execute if data storage call_stack: this.list1[0] if data storage call_stack: this.list2[0] run function dt.array:internal/difference_loop
-execute if data storage call_stack: this.list1[0] if data storage call_stack: this.list2[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.list1[0] if data storage call_stack: this.list2[0] run data modify storage call_stack: this.return set from storage call_stack: call.return
 function call_stack:pop

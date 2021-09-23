@@ -8,7 +8,7 @@ data modify storage unittest:in expected set value []
 function call_stack:push
 data modify storage call_stack: call.arg0 set value []
 function dt.array:api/sort/merge_sort
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
@@ -20,7 +20,7 @@ data modify storage unittest:in expected set value [{key:1,value:"foo"}]
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{key:1,value:"foo"}]
 function dt.array:api/sort/merge_sort
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
@@ -32,7 +32,7 @@ data modify storage unittest:in expected set value [{key:1,value:"foo"},{key:2,v
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{key:2,value:"bar"}, {key:1,value:"foo"}]
 function dt.array:api/sort/merge_sort
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
@@ -44,7 +44,7 @@ data modify storage unittest:in expected set value [{key:1,value:"foo"}, {key:2,
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{key:3,value:"!!!"},{key:2,value:"bar"}, {key:1,value:"foo"}]
 function dt.array:api/sort/merge_sort
-data modify storage unittest:in actual set from storage call_stack: call.result
+data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown

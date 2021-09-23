@@ -14,13 +14,13 @@ data modify storage call_stack: this.free_slots set from storage call_stack: thi
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items[0]
 data modify storage call_stack: call.arg1 set from storage call_stack: this.free_slots
 function dt.crafting:internal/crafter/distribute_stack
-data modify storage call_stack: this.new_items set from storage call_stack: call.result.new_items
-data modify storage call_stack: this.new_free_slots set from storage call_stack: call.result.free_slots
+data modify storage call_stack: this.new_items set from storage call_stack: call.return.new_items
+data modify storage call_stack: this.new_free_slots set from storage call_stack: call.return.free_slots
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.distributed_items
 data modify storage call_stack: call.arg1 set from storage call_stack: this.new_items
 function dt.crafting:internal/crafter/after_distributed
-data modify storage call_stack: this.distributed_items set from storage call_stack: call.result
+data modify storage call_stack: this.distributed_items set from storage call_stack: call.return
 
 # #endregion
 # execute unless data storage call_stack: this.free_slots[0] run data modify storage call_stack: this.distributed_items append from storage call_stack: this.temp_items[0]
@@ -30,13 +30,13 @@ data remove storage call_stack: this.temp_items[0]
 # tellraw @p ["temp: ",{"nbt":"this.temp_items","storage":"call_stack:"}]
 # base case
 # execute if score int1 dt.tmp matches 1 run tellraw @p ["final: ",{"nbt":"this.distributed_items","storage":"call_stack:"}]
-execute unless data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.result set from storage call_stack: this.distributed_items
-# execute unless data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.result set from storage call_stack: this.distributed_items
+execute unless data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.return set from storage call_stack: this.distributed_items
+# execute unless data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.return set from storage call_stack: this.distributed_items
 # loop
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg1 set from storage call_stack: this.distributed_items
 execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: call.arg2 set from storage call_stack: this.new_free_slots
 execute if data storage call_stack: this.temp_items[0] run function dt.crafting:internal/crafter/distribute_slots
-execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.result set from storage call_stack: call.result
+execute if data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

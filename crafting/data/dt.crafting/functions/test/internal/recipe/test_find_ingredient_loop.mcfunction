@@ -9,7 +9,7 @@ data modify storage call_stack: call.arg1 set value [{count: 5, slots: [[0, 1, 2
 data modify storage call_stack: call.arg2 set value []
 data modify storage call_stack: call.arg3 set value true
 function dt.crafting:internal/recipe/match_ingredients_loop
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]

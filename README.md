@@ -49,7 +49,7 @@ example.mcfunction
 ```mcfunction
 data modify storage call_stack: call.arg0 set value "foo"
 function namespace:some/function
-data modify storage namepace:storage from storage call_stack: call.result
+data modify storage namepace:storage from storage call_stack: call.return
 ```
 lib/foo_bar.mcfunction
 ```mcfunction
@@ -57,7 +57,7 @@ lib/foo_bar.mcfunction
 function call_stack:push
 
 data modify storage call_stack: this.foo set from storage call_stack: this.arg0
-data modify storage call_stack: this.result value "bar"
+data modify storage call_stack: this.return value "bar"
 
 # pop the frame and replace with parent frame
 function call_stack:pop

@@ -20,5 +20,5 @@ data remove storage call_stack: this.this_user.data.inventory[{Slot:6b}]
 data remove storage call_stack: this.this_user.data.inventory[{Slot:7b}]
 data remove storage call_stack: this.this_user.data.inventory[{Slot:8b}]
 
-data modify storage call_stack: this.result set from storage call_stack: this.this_user
+data modify storage call_stack: this.return set from storage call_stack: this.this_user
 function call_stack:pop

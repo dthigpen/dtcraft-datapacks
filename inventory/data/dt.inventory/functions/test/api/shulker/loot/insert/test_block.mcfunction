@@ -8,7 +8,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.arra
 function dt.inventory:api/shulker/items/set
 execute positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
 function dt.inventory:api/shulker/items/get2
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
@@ -26,7 +26,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.arra
 function dt.inventory:api/shulker/items/set
 execute positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
 function dt.inventory:api/shulker/items/get2
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 

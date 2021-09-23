@@ -5,7 +5,7 @@ data modify storage call_stack: this.expected set from storage call_stack: this.
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:internal/ingredient/count_of_each
-data modify storage call_stack: this.actual set from storage call_stack: call.result
+data modify storage call_stack: this.actual set from storage call_stack: call.return
 tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 

@@ -1,9 +1,9 @@
 function call_stack:push
 
 function dt.inventory:api/player/items/inventory/get
-data modify storage call_stack: this.player_inventory set from storage call_stack: call.result
+data modify storage call_stack: this.player_inventory set from storage call_stack: call.return
 function dt.inventory:api/player/items/hotbar/get
-data modify storage call_stack: this.player_hotbar set from storage call_stack: call.result
+data modify storage call_stack: this.player_hotbar set from storage call_stack: call.return
 
 function dt.inventory:test/api/test_replace_slot_hotbar
 function dt.inventory:test/api/test_replace_slot_inventory
