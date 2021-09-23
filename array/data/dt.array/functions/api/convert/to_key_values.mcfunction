@@ -7,10 +7,12 @@
 #   storage call_stack: call.return
 #       array of objects [{key:1,value:a}..{key:n,value:z}]
 function call_stack:push
-data modify storage call_stack: this.array set from storage call_stack: this.arg0
-
-execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-execute run data modify storage call_stack: call.arg1 set value []
+data modify storage call_stack: this.keys set from storage call_stack: this.arg0
+data modify storage call_stack: this.values set from storage call_stack: this.arg1
+execute run data modify storage call_stack: call.arg0 set value []
+execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.keys
+execute run data modify storage call_stack: call.arg1 set from storage call_stack: this.values
+execute run data modify storage call_stack: call.arg2 set value []
 execute run function dt.array:internal/convert/to_key_values_loop
 execute run data modify storage call_stack: this.return set from storage call_stack: call.return
 

@@ -1,11 +1,7 @@
-#say find_recipe_loop
 function call_stack:push
 data modify storage call_stack: this.temp_recipes set from storage call_stack: this.arg0
 data modify storage call_stack: this.item_counts set from storage call_stack: this.arg1
-data modify storage call_stack: this.check_slots set value true
-data modify storage call_stack: this.check_slots set from storage call_stack: this.arg2
-data modify storage call_stack: this.partial_matches set value false
-data modify storage call_stack: this.partial_matches set from storage call_stack: this.arg3
+data modify storage call_stack: this.options set from storage call_stack: this.arg2
 
 #> algorithm
 # for each recipe in temp_recipes
@@ -36,11 +32,11 @@ data modify storage call_stack: this.tag_ingredients set value []
 data modify storage call_stack: this.id_ingredients append from storage call_stack: this.all_ingredients[{type:"id"}]
 data modify storage call_stack: this.tag_ingredients append from storage call_stack: this.all_ingredients[{type:"tag"}]
 execute store success storage call_stack: this.has_tags byte 1 run data get storage call_stack: this.tag_ingredients[0]
-
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_counts
 data modify storage call_stack: call.arg1 set from storage call_stack: this.id_ingredients
 data modify storage call_stack: call.arg2 set value []
 data modify storage call_stack: call.arg3 set from storage call_stack: this.has_tags
+execute if data storage call_stack: {this:{options:{ignore_slots:true}}} run data modify storage call_stack: call.arg4 set value false
 function dt.crafting:internal/recipe/match_ingredients_loop
 data modify storage call_stack: this.is_match set from storage call_stack: call.return.is_match
 data modify storage call_stack: this.remaining_item_counts set from storage call_stack: call.return.remaining
@@ -60,8 +56,7 @@ execute if data storage call_stack: {this:{found_recipe:true}} run data modify s
 data remove storage call_stack: this.temp_recipes[0]
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_recipes
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg1 set from storage call_stack: this.item_counts
-execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg2 set from storage call_stack: this.check_slots
-execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg3 set from storage call_stack: this.partial_matches
+execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: call.arg2 set from storage call_stack: this.options
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run function dt.crafting:internal/recipe/find_recipe_loop
 execute if data storage call_stack: this.temp_recipes[0] if data storage call_stack: {this:{found_recipe:false}} run data modify storage call_stack: this.return set from storage call_stack: call.return
 

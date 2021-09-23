@@ -1,6 +1,7 @@
-# say find from info obj
+say find from info obj
 function call_stack:push
 data modify storage call_stack: this.info_obj set from storage call_stack: this.arg0
+data modify storage call_stack: this.options set from storage call_stack: this.arg1
 
 scoreboard players reset $total_count dt.tmp
 scoreboard players reset $unique_count dt.tmp
@@ -61,8 +62,10 @@ execute if score $total_count dt.tmp matches 9 if score $unique_count dt.tmp mat
 execute if score $total_count dt.tmp matches 9 if score $unique_count dt.tmp matches 8 run data modify storage call_stack: call.arg0 set from storage dt.crafting: recipe_tree.9.8
 execute if score $total_count dt.tmp matches 9 if score $unique_count dt.tmp matches 9 run data modify storage call_stack: call.arg0 set from storage dt.crafting: recipe_tree.9.9
 #[[[end]]]
-
+tellraw @p ["find_from_info_obj.mcfunction: ",{"score":{"name":"$total_count","objective":"dt.tmp"}}]
+tellraw @p ["find_from_info_obj.mcfunction: ",{"score":{"name":"$unique_count","objective":"dt.tmp"}}]
 execute if data storage call_stack: this.valid_count run data modify storage call_stack: call.arg1 set from storage call_stack: this.info_obj.items
+execute if data storage call_stack: this.valid_count run data modify storage call_stack: call.arg2 set from storage call_stack: this.options
 execute if data storage call_stack: this.valid_count run function dt.crafting:internal/recipe/find_recipe_loop
 execute if data storage call_stack: this.valid_count run data modify storage call_stack: this.return set from storage call_stack: call.return
 

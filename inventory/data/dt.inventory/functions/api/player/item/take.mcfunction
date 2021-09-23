@@ -19,38 +19,18 @@ data modify storage call_stack: this.count set from storage call_stack: this.arg
 function dt.inventory:api/player/items/get
 data modify storage call_stack: this.player_items set from storage call_stack: call.return
 
-# Get all items that have the given id
 data modify storage call_stack: call.arg0 set from storage call_stack: this.player_items
-data modify storage call_stack: call.arg1 set value {}
-data modify storage call_stack: call.arg1.id set from storage call_stack: this.item_id
-function dt.array:api/split_by_key
-data modify storage call_stack: this.matching_items set from storage call_stack: call.return[0]
-
-# subtract the counts
-data modify storage call_stack: this.matching_counts set value []
-data modify storage call_stack: this.matching_counts append from storage call_stack: this.matching_items[].Count
-data modify storage call_stack: call.arg0 set from storage call_stack: this.matching_counts
-data modify storage call_stack: call.arg1 set from storage call_stack: this.count
-function dt.array:api/math/cumulative_subtract_min_0
-data modify storage call_stack: this.adjusted_counts set from storage call_stack: call.return.values
-data modify storage call_stack: this.remaining_count set from storage call_stack: call.return.remainder
-
-
-# convert int -> byte
-data modify storage call_stack: call.arg0 set from storage call_stack: this.adjusted_counts
-function dt.array:api/convert/to_bytes
-data modify storage call_stack: this.adjusted_counts set from storage call_stack: call.return
-# update Count keys
-data modify storage call_stack: call.arg0 set from storage call_stack: this.matching_items
-data modify storage call_stack: call.arg1 set from storage call_stack: this.adjusted_counts
-function dt.inventory:internal/apply/count
-data modify storage call_stack: this.matching_items set from storage call_stack: call.return
+data modify storage call_stack: call.arg1 set from storage call_stack: this.item_id
+data modify storage call_stack: call.arg2 set from storage call_stack: this.count
+function dt.inventory:internal/items/take
+data modify storage call_stack: this.success set from storage call_stack: call.return.success
+execute if data storage call_stack: {this:{success:true}} run data modify storage call_stack: this.updated_items set from storage call_stack: call.return.items
 
 # replace changed items
-data modify storage call_stack: call.arg0 set from storage call_stack: this.matching_items
-function dt.inventory:api/player/items/replace
+execute if data storage call_stack: {this:{success:true}} run data modify storage call_stack: call.arg0 set from storage call_stack: this.updated_items
+execute if data storage call_stack: {this:{success:true}} run function dt.inventory:api/player/items/replace
 
 # return the remaining count
-data modify storage call_stack: this.return set from storage call_stack: this.remaining_count
+execute if data storage call_stack: {this:{success:true}} run data modify storage call_stack: this.return set from storage call_stack: this.remaining_count
 
 function call_stack:pop
