@@ -22,7 +22,7 @@ data modify storage call_stack: this.player_items set from storage call_stack: c
 data modify storage call_stack: call.arg0 set from storage call_stack: this.player_items
 data modify storage call_stack: call.arg1 set from storage call_stack: this.item_id
 data modify storage call_stack: call.arg2 set from storage call_stack: this.count
-function dt.inventory:internal/items/take
+function dt.inventory:api/items/take
 data modify storage call_stack: this.success set from storage call_stack: call.return.success
 execute if data storage call_stack: {this:{success:true}} run data modify storage call_stack: this.updated_items set from storage call_stack: call.return.items
 

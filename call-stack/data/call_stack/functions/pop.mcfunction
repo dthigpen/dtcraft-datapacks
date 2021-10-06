@@ -1,7 +1,7 @@
 #> call_stack:pop
 # pop (and destroy) the top of the variable scope from the stack and load this variable with the next top.
 
-# return result back to caller by setting call result
+# return result back to caller by setting call.return
 data modify storage call_stack: call set value {}
 data modify storage call_stack: call.return set from storage call_stack: this.return
 

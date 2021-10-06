@@ -5,7 +5,7 @@ data modify storage call_stack: this.expected set value {Fire:-1s, Item:{id:"min
 data modify storage call_stack: call.arg0 set from storage call_stack: this.expected
 execute positioned ~2 ~ ~2 run function dt.inventory:api/item/summon
 scoreboard players operation result dt.tmp = #not_equal dt.enum
-execute if data storage call_stack: {call:{result:true}} run scoreboard players operation result dt.tmp = #equal dt.enum
+execute if data storage call_stack: {call:{return:true}} run scoreboard players operation result dt.tmp = #equal dt.enum
 execute if score result dt.tmp = #equal dt.enum as @e[type=item,distance=..0.2,sort=nearest,limit=1] run data modify storage call_stack: this.actual set from entity @s
 execute if score result dt.tmp = #equal dt.enum as @e[type=item,distance=..0.2,sort=nearest,limit=1] store success score result dt.tmp run data modify storage call_stack: this.actual merge from storage call_stack: this.expected
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]

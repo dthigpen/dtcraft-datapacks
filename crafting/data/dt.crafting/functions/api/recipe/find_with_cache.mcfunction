@@ -11,8 +11,9 @@ data modify storage call_stack: this.actual_items set from storage call_stack: t
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.actual_items
 function dt.crafting:api/recipe/is_eligible
-execute if data storage call_stack: {call:{result:true}} run data modify storage call_stack: this.is_eligible set value true
+execute if data storage call_stack: {call:{return:true}} run data modify storage call_stack: this.is_eligible set value true
 
+function dt.autocraft:internal/dev/clear_cache_self
 execute if data storage call_stack: this.is_eligible run function dt.crafting:internal/database/fetch_or_init
 execute if data storage call_stack: this.is_eligible run data modify storage call_stack: this.entity_crafting_data set from storage call_stack: call.return
 
@@ -33,6 +34,8 @@ execute store result score $size2 dt.tmp run data get storage call_stack: this.e
 # uncomment below for debugging
 # data remove storage call_stack: this.is_same_as_last
 
+# TODO remove this line
+data modify storage call_stack: this.entity_crafting_data.cache.good_recipes set value []
 # try good recipes
 execute unless data storage call_stack: this.is_same_as_last run data modify storage call_stack: this.not_in_good_recipes set value true
 #execute unless data storage call_stack: this.is_same_as_last if data storage call_stack: this.entity_crafting_data.cache.good_recipes[0] run tellraw @p ["find_with_cache.mcfunction: checking good recipes cache",{"nbt":"this.variable","storage":"call_stack:"}]
@@ -66,6 +69,7 @@ execute if data storage call_stack: this.not_in_good_recipes unless data storage
 execute if data storage call_stack: this.not_in_good_recipes unless data storage call_stack: this.in_bad_items if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.in_all_recipes set value true
 execute if data storage call_stack: this.not_in_good_recipes unless data storage call_stack: this.in_bad_items unless data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.not_in_all_recipes set value true
 #execute if data storage call_stack: this.not_in_good_recipes unless data storage call_stack: this.in_bad_items unless data storage call_stack: this.recipe_result.result.id run tellraw @p ["find_with_cache.mcfunction: NOT IN ALL ITEMS ",{"nbt":"this.variable","storage":"call_stack:"}]
+# tellraw @p ["find_with_cache.mcfunction: a ",{"nbt":"this.is_same_as_last","storage":"call_stack:"}]
 # tellraw @p ["find_with_cache.mcfunction: a ",{"nbt":"this.in_bad_items","storage":"call_stack:"}]
 # tellraw @p ["find_with_cache.mcfunction: b ",{"nbt":"this.not_in_good_recipes","storage":"call_stack:"}]
 # tellraw @p ["find_with_cache.mcfunction: c ",{"nbt":"this.not_in_all_recipes","storage":"call_stack:"}]

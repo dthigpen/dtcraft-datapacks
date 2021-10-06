@@ -2,7 +2,7 @@ function call_stack:push
 
 data modify storage call_stack: this.test_name set value "find_recipe_stone_button"
 data modify storage call_stack: this.input set value [{id:"minecraft:stone",Slot:0b,Count:1b}]
-data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{result:{id:"minecraft:stone_button"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{return:{id:"minecraft:stone_button"}}]
 # data modify storage call_stack: this.expected set value {"ingredients": [{"count": 1, "id": "minecraft:stone", "type": "id"}], "result": {"id": "minecraft:stone_button", "count": 1}, "type": "shapeless"}
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
@@ -19,7 +19,7 @@ function call_stack:push
 
 data modify storage call_stack: this.test_name set value "find_recipe_stone_sword"
 data modify storage call_stack: this.input set value [{id:"minecraft:cobblestone",Slot:0b,Count:1b},{id:"minecraft:cobblestone",Slot:3b,Count:1b},{id:"minecraft:stick",Slot:6b,Count:1b}]
-data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{result:{id:"minecraft:stone_sword"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{return:{id:"minecraft:stone_sword"}}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find

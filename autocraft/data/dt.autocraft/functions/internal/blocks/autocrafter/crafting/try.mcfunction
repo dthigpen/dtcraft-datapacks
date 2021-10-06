@@ -1,5 +1,4 @@
 function call_stack:push
-
 data modify storage call_stack: this.recipe_result set value {}
 
 # only craft if there are no stacks
@@ -8,7 +7,7 @@ data modify storage call_stack: this.items set from storage call_stack: call.ret
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 function dt.crafting:api/recipe/is_eligible
-execute if data storage call_stack: {call:{result:true}} run data modify storage call_stack: this.can_craft set value true
+execute if data storage call_stack: {call:{return:true}} run data modify storage call_stack: this.can_craft set value true
 
 execute if data storage call_stack: this.can_craft run function dt.autocraft:internal/blocks/autocrafter/db_data/fetch_or_init
 execute if data storage call_stack: this.can_craft run data modify storage call_stack: this.autocrafter_data set from storage call_stack: call.return
@@ -25,13 +24,11 @@ execute if data storage call_stack: this.craft_from_specific_recipes run data mo
 execute if data storage call_stack: this.craft_from_specific_recipes run function dt.crafting:api/recipe/find_from_recipes
 execute if data storage call_stack: this.craft_from_specific_recipes run data modify storage call_stack: this.recipe_result set from storage call_stack: call.return
 execute if data storage call_stack: this.craft_from_specific_recipes if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.found_recipe set value true
-
-
-# execute if data storage call_stack: this.craft_non_specific run tellraw @p ["try.mcfunction: non_specific craft",{"nbt":"this.variable","storage":"call_stack:"}]
 execute if data storage call_stack: this.craft_non_specific run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: this.craft_non_specific run function dt.crafting:api/recipe/find_with_cache
 execute if data storage call_stack: this.craft_non_specific run data modify storage call_stack: this.recipe_result set from storage call_stack: call.return
 execute if data storage call_stack: this.craft_non_specific if data storage call_stack: this.recipe_result.result.id run data modify storage call_stack: this.found_recipe set value true
+
 
 # Execute if recipe was found regardless of method
 ## Overwrite dropper items with the result

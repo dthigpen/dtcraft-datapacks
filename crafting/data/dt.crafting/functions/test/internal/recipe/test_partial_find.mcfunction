@@ -4,12 +4,12 @@ data modify storage unittest:in name set value "Match"
 
 function unittest:api/test_case/setup
 data modify storage unittest:in expected set value []
-data modify storage unittest:in expected append from storage dt.crafting: recipes[{result:{id:"minecraft:redstone_block"}}]
+data modify storage unittest:in expected append from storage dt.crafting: recipes[{return:{id:"minecraft:redstone_block"}}]
 function call_stack:push
 
 say running
 data modify storage call_stack: call.arg0 set value []
-# data modify storage call_stack: call.arg0 append from storage dt.crafting: recipes[{result:{id:"minecraft:redstone_block"}}]
+# data modify storage call_stack: call.arg0 append from storage dt.crafting: recipes[{return:{id:"minecraft:redstone_block"}}]
 data modify storage call_stack: call.arg0 append from storage dt.crafting: recipes[]
 data modify storage call_stack: call.arg1 set value ["minecraft:oak_planks","minecraft:stick"]
 data modify storage call_stack: call.arg2 set value []

@@ -4,7 +4,7 @@ function call_stack:push
 function dt.autocraft:internal/dev/clear_cache_self
 data modify storage call_stack: this.test_name set value "find_two_ingredient_shaped"
 data modify storage call_stack: this.input set value [{id:"minecraft:coal",Slot:0b,Count:1b}, {id:"minecraft:stick",Slot:3b,Count:1b}]
-data modify storage call_stack: this.expected set from storage dt.crafting: recipe_tree.2.2[{result:{id:"minecraft:torch"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipe_tree.2.2[{return:{id:"minecraft:torch"}}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find_with_cache
@@ -22,7 +22,7 @@ function call_stack:push
 function dt.autocraft:internal/dev/clear_cache_self
 data modify storage call_stack: this.test_name set value "find_two_ingredient_shapeless"
 data modify storage call_stack: this.input set value [{id:"minecraft:gray_dye",Slot:0b,Count:1b}, {id:"minecraft:white_bed",Slot:3b,Count:1b}]
-data modify storage call_stack: this.expected set from storage dt.crafting: recipe_tree.2.2[{result:{id:"minecraft:gray_bed"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipe_tree.2.2[{return:{id:"minecraft:gray_bed"}}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find_with_cache

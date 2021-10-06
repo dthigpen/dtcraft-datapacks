@@ -5,7 +5,7 @@ function dt.autocraft:internal/dev/clear_cache_self
 data modify storage call_stack: this.test_name set value "find_nine_ingredient_shaped"
 data modify storage call_stack: this.input set value [{id:"minecraft:white_carpet",Slot:0b,Count:1b},{id:"minecraft:white_carpet",Slot:1b,Count:1b},{id:"minecraft:white_carpet",Slot:2b,Count:1b}, {id:"minecraft:white_carpet",Slot:3b,Count:1b}, {id:"minecraft:white_carpet",Slot:5b,Count:1b},{id:"minecraft:white_carpet",Slot:6b,Count:1b},{id:"minecraft:white_carpet",Slot:7b,Count:1b},{id:"minecraft:white_carpet",Slot:8b,Count:1b}, {id:"minecraft:black_dye",Slot:4b,Count:1b}]
 data modify storage call_stack: this.expected set value {}
-data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{result:{id:"minecraft:black_carpet"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{return:{id:"minecraft:black_carpet"}}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find_with_cache
@@ -24,7 +24,7 @@ function dt.autocraft:internal/dev/clear_cache_self
 data modify storage call_stack: this.test_name set value "find_nine_ingredient_shapeless"
 data modify storage call_stack: this.input set value [{id:"minecraft:sand",Slot:0b,Count:1b},{id:"minecraft:sand",Slot:1b,Count:1b},{id:"minecraft:sand",Slot:2b,Count:1b},{id:"minecraft:sand",Slot:3b,Count:1b},{id:"minecraft:gravel",Slot:4b,Count:1b},{id:"minecraft:gravel",Slot:5b,Count:1b},{id:"minecraft:gravel",Slot:6b,Count:1b},{id:"minecraft:gravel",Slot:7b,Count:1b},{id:"minecraft:orange_dye",Slot:9b,Count:1b}]
 data modify storage call_stack: this.expected set value {}
-data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{result:{id:"minecraft:orange_concrete_powder"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{return:{id:"minecraft:orange_concrete_powder"}}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find_with_cache

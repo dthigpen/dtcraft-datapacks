@@ -5,7 +5,7 @@ function dt.autocraft:internal/dev/clear_cache_self
 data modify storage call_stack: this.test_name set value "find_eight_ingredient_shaped"
 data modify storage call_stack: this.input set value [{id:"minecraft:oak_planks",Slot:0b,Count:1b},{id:"minecraft:oak_planks",Slot:2b,Count:1b}, {id:"minecraft:oak_planks",Slot:3b,Count:1b}, {id:"minecraft:oak_planks",Slot:5b,Count:1b},{id:"minecraft:oak_planks",Slot:8b,Count:1b}, {id:"minecraft:oak_planks",Slot:5b,Count:1b}, {id:"minecraft:oak_slab",Slot:1b,Count:1b},{id:"minecraft:oak_slab",Slot:7b,Count:1b}]
 data modify storage call_stack: this.expected set value {}
-data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{result:{id:"minecraft:barrel"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{return:{id:"minecraft:barrel"}}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find_with_cache
@@ -24,7 +24,7 @@ function dt.autocraft:internal/dev/clear_cache_self
 data modify storage call_stack: this.test_name set value "find_eight_ingredient_shapeless"
 data modify storage call_stack: this.input set value [{id:"minecraft:netherite_scrap",Slot:0b,Count:1b},{id:"minecraft:netherite_scrap",Slot:1b,Count:1b},{id:"minecraft:netherite_scrap",Slot:2b,Count:1b},{id:"minecraft:netherite_scrap",Slot:3b,Count:1b},{id:"minecraft:gold_ingot",Slot:4b,Count:1b},{id:"minecraft:gold_ingot",Slot:5b,Count:1b},{id:"minecraft:gold_ingot",Slot:6b,Count:1b},{id:"minecraft:gold_ingot",Slot:7b,Count:1b}]
 data modify storage call_stack: this.expected set value {}
-data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{result:{id:"minecraft:netherite_ingot"}}]
+data modify storage call_stack: this.expected set from storage dt.crafting: recipes[{return:{id:"minecraft:netherite_ingot"}}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.crafting:api/recipe/find_with_cache
