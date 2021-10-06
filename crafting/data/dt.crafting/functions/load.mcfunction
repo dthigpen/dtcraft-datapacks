@@ -51,7 +51,5 @@ function dt.crafting:internal/load_groups
 function dt.crafting:internal/load_recipes
 #say Recipes loaded
 
-function dt.crafting:internal/click_craft/load
-
 schedule clear dt.crafting:tick
 schedule function dt.crafting:tick 1t replace
