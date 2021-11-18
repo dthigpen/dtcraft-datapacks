@@ -1,0 +1,8 @@
+{
+    "values": [
+        "#load:rx/playerdb",
+        "call_stack:load",
+        "dt.inventory:load",
+        "dt.gui:load"
+    ]
+}

@@ -6,6 +6,7 @@
     "dt.array:load",
     "dt.inventory:load",
     "dt.crafting:load",
+    "dt.gui:load",
     "dt.autocraft:load"
   ]
 }

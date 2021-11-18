@@ -16,6 +16,7 @@ summon item ~ ~ ~ {Item:{id:"minecraft:knowledge_book",Count:1b},Tags:["dt.inven
 execute as @e[type=item,tag=dt.inventory.init,limit=1,distance=..0.2,sort=nearest] run data modify entity @s {} merge from storage call_stack: this.item
 execute as @e[type=item,tag=dt.inventory.init,limit=1,distance=..0.2,sort=nearest] run data modify storage call_stack: this.return set value true
 execute as @e[type=item,tag=dt.inventory.init,limit=1,distance=..0.2,sort=nearest] run data modify entity @s Tags set from storage call_stack: this.new_tags
+kill @e[type=item,tag=dt.inventory.init,limit=1,distance=..0.2,sort=nearest, nbt={Item:{id:"minecraft:knowledge_book"}}]
 tag @e[type=item,tag=dt.inventory.init,limit=1,distance=..0.2,sort=nearest] remove dt.inventory.init
 
 function call_stack:pop
