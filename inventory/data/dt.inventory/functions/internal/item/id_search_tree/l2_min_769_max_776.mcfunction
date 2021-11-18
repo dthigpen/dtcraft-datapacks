@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 769 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_sign"
+execute if score $id dt.tmp matches 770 run data modify storage call_stack: global.dt.name set value "minecraft:birch_sign"
+execute if score $id dt.tmp matches 771 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_sign"
+execute if score $id dt.tmp matches 772 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_sign"
+execute if score $id dt.tmp matches 773 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_sign"
+execute if score $id dt.tmp matches 774 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_sign"
+execute if score $id dt.tmp matches 775 run data modify storage call_stack: global.dt.name set value "minecraft:warped_sign"
+execute if score $id dt.tmp matches 776 run data modify storage call_stack: global.dt.name set value "minecraft:bucket"

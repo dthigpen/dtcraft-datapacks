@@ -37,3 +37,4 @@ scoreboard players set #found dt.enum 0
 scoreboard players set #not_found dt.enum 1
 
 function dt.inventory:load_shulker
+execute unless entity @e[type=armor_stand,tag=dt_inventory] run summon minecraft:armor_stand 2999999.5 256 2999999.5 {Invulnerable:1b,NoGravity:1b,Invisible:0b,Tags:["dt_inventory"]}

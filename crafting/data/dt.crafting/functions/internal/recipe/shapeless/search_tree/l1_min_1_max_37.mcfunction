@@ -1,0 +1,12 @@
+execute if score $id dt.tmp matches 1 run function dt.crafting:internal/recipe/shapeless/search_tree/1_ing1_start
+execute if score $id dt.tmp matches 4 run function dt.crafting:internal/recipe/shapeless/search_tree/4_ing1_start
+execute if score $id dt.tmp matches 21 run function dt.crafting:internal/recipe/shapeless/search_tree/21_ing1_start
+execute if score $id dt.tmp matches 22 run function dt.crafting:internal/recipe/shapeless/search_tree/22_ing1_start
+execute if score $id dt.tmp matches 23 run function dt.crafting:internal/recipe/shapeless/search_tree/23_ing1_start
+execute if score $id dt.tmp matches 24 run function dt.crafting:internal/recipe/shapeless/search_tree/24_ing1_start
+execute if score $id dt.tmp matches 25 run function dt.crafting:internal/recipe/shapeless/search_tree/25_ing1_start
+execute if score $id dt.tmp matches 26 run function dt.crafting:internal/recipe/shapeless/search_tree/26_ing1_start
+execute if score $id dt.tmp matches 27 run function dt.crafting:internal/recipe/shapeless/search_tree/27_ing1_start
+execute if score $id dt.tmp matches 28 run function dt.crafting:internal/recipe/shapeless/search_tree/28_ing1_start
+execute if score $id dt.tmp matches 29 run function dt.crafting:internal/recipe/shapeless/search_tree/29_ing1_start
+execute if score $id dt.tmp matches 37 run function dt.crafting:internal/recipe/shapeless/search_tree/37_ing1_start

@@ -1,0 +1,12 @@
+execute if score $id dt.tmp matches 234..283 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_234_max_283
+execute if score $id dt.tmp matches 284..352 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_284_max_352
+execute if score $id dt.tmp matches 372..403 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_372_max_403
+execute if score $id dt.tmp matches 404..415 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_404_max_415
+execute if score $id dt.tmp matches 432..587 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_432_max_587
+execute if score $id dt.tmp matches 592..690 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_592_max_690
+execute if score $id dt.tmp matches 691..734 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_691_max_734
+execute if score $id dt.tmp matches 736..797 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_736_max_797
+execute if score $id dt.tmp matches 800..818 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_800_max_818
+execute if score $id dt.tmp matches 819..850 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_819_max_850
+execute if score $id dt.tmp matches 858..971 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_858_max_971
+execute if score $id dt.tmp matches 1000..1073 run function dt.crafting:internal/recipe/shaped/search_tree/l1_min_1000_max_1073

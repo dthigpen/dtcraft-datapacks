@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 130 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_wood"
+execute if score $id dt.tmp matches 131 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_hyphae"
+execute if score $id dt.tmp matches 132 run data modify storage call_stack: global.dt.name set value "minecraft:warped_hyphae"
+execute if score $id dt.tmp matches 144 run data modify storage call_stack: global.dt.name set value "minecraft:tinted_glass"
+execute if score $id dt.tmp matches 145 run data modify storage call_stack: global.dt.name set value "minecraft:lapis_block"
+execute if score $id dt.tmp matches 146 run data modify storage call_stack: global.dt.name set value "minecraft:sandstone"
+execute if score $id dt.tmp matches 147 run data modify storage call_stack: global.dt.name set value "minecraft:chiseled_sandstone"
+execute if score $id dt.tmp matches 148 run data modify storage call_stack: global.dt.name set value "minecraft:cut_sandstone"

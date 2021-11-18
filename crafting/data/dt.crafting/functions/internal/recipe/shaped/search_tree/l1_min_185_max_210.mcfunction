@@ -1,0 +1,12 @@
+execute if score $id dt.tmp matches 185 run function dt.crafting:internal/recipe/shaped/search_tree/185_ing1_start
+execute if score $id dt.tmp matches 187 run function dt.crafting:internal/recipe/shaped/search_tree/187_ing1_start
+execute if score $id dt.tmp matches 196 run function dt.crafting:internal/recipe/shaped/search_tree/196_ing1_start
+execute if score $id dt.tmp matches 199 run function dt.crafting:internal/recipe/shaped/search_tree/199_ing1_start
+execute if score $id dt.tmp matches 203 run function dt.crafting:internal/recipe/shaped/search_tree/203_ing1_start
+execute if score $id dt.tmp matches 204 run function dt.crafting:internal/recipe/shaped/search_tree/204_ing1_start
+execute if score $id dt.tmp matches 205 run function dt.crafting:internal/recipe/shaped/search_tree/205_ing1_start
+execute if score $id dt.tmp matches 206 run function dt.crafting:internal/recipe/shaped/search_tree/206_ing1_start
+execute if score $id dt.tmp matches 207 run function dt.crafting:internal/recipe/shaped/search_tree/207_ing1_start
+execute if score $id dt.tmp matches 208 run function dt.crafting:internal/recipe/shaped/search_tree/208_ing1_start
+execute if score $id dt.tmp matches 209 run function dt.crafting:internal/recipe/shaped/search_tree/209_ing1_start
+execute if score $id dt.tmp matches 210 run function dt.crafting:internal/recipe/shaped/search_tree/210_ing1_start

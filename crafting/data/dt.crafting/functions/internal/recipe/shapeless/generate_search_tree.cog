@@ -1,0 +1,12 @@
+#[[[cog
+#   import os
+#   from pathlib import Path
+#   from datapack_utils import file_utils
+#   tree_path = file_utils.get_parent_dir() / 'search_tree'
+#   cog.msg(f'Removing files at {tree_path}')
+#   for f in tree_path.iterdir():
+#       #cog.msg(f'file: {f}')
+#       os.remove(f)
+#   file_utils.write_recipe_search_tree(tree_path,'shapeless_recipes_by_ingredient.json')
+#]]]
+#[[[end]]]

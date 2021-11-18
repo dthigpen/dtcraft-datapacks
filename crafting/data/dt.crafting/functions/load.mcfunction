@@ -51,5 +51,13 @@ function dt.crafting:internal/load_groups
 function dt.crafting:internal/load_recipes
 #say Recipes loaded
 
+data modify storage dt.test: array set value []
+data modify storage dt.test: array append from storage dt.crafting: recipes[{ingredients:[{id:"minecraft:diamond"}]}]
+
+data modify storage dt.test: value set from storage dt.test: array[{result:{id:"minecraft:diamond_pickaxe"}}]
+data modify storage dt.test: array2 set value []
+data modify storage dt.test: array2 append from storage dt.test: value.ingredients[{type:"id"}]
+
+
 schedule clear dt.crafting:tick
 schedule function dt.crafting:tick 1t replace

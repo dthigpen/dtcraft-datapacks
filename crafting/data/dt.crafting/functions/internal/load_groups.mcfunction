@@ -1,11 +1,10 @@
-data modify storage dt.crafting: groups set value []
-
 #[[[cog
 #   from datapack_utils import storage
 #   from datapack_utils import tags
-#   for line in storage.from_dict(tags.get_item_tags_storage_dict(),'dt.crafting:'):
+#   for line in storage.set_array('dt.crafting:', 'groups', tags.get_item_tags_storage_dict()['groups']):
 #       cog.outl(line)
 #]]]
+data modify storage dt.crafting: groups set value []
 data modify storage dt.crafting: groups append value {"group": "minecraft:freeze_immune_wearables", "values": ["minecraft:leather_boots", "minecraft:leather_leggings", "minecraft:leather_chestplate", "minecraft:leather_helmet", "minecraft:leather_horse_armor"]}
 data modify storage dt.crafting: groups append value {"group": "minecraft:occludes_vibration_signals", "values": ["minecraft:white_wool", "minecraft:orange_wool", "minecraft:magenta_wool", "minecraft:light_blue_wool", "minecraft:yellow_wool", "minecraft:lime_wool", "minecraft:pink_wool", "minecraft:gray_wool", "minecraft:light_gray_wool", "minecraft:cyan_wool", "minecraft:purple_wool", "minecraft:blue_wool", "minecraft:brown_wool", "minecraft:green_wool", "minecraft:red_wool", "minecraft:black_wool"]}
 data modify storage dt.crafting: groups append value {"group": "minecraft:redstone_ores", "values": ["minecraft:redstone_ore", "minecraft:deepslate_redstone_ore"]}

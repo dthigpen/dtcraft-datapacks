@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 29 run data modify storage call_stack: global.dt.name set value "minecraft:warped_planks"
+execute if score $id dt.tmp matches 59 run data modify storage call_stack: global.dt.name set value "minecraft:coal_block"
+execute if score $id dt.tmp matches 60 run data modify storage call_stack: global.dt.name set value "minecraft:raw_iron_block"
+execute if score $id dt.tmp matches 61 run data modify storage call_stack: global.dt.name set value "minecraft:raw_copper_block"
+execute if score $id dt.tmp matches 62 run data modify storage call_stack: global.dt.name set value "minecraft:raw_gold_block"
+execute if score $id dt.tmp matches 63 run data modify storage call_stack: global.dt.name set value "minecraft:amethyst_block"
+execute if score $id dt.tmp matches 65 run data modify storage call_stack: global.dt.name set value "minecraft:iron_block"
+execute if score $id dt.tmp matches 66 run data modify storage call_stack: global.dt.name set value "minecraft:copper_block"

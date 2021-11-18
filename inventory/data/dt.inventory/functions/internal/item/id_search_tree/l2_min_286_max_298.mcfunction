@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 286 run data modify storage call_stack: global.dt.name set value "minecraft:chiseled_stone_bricks"
+execute if score $id dt.tmp matches 287 run data modify storage call_stack: global.dt.name set value "minecraft:deepslate_bricks"
+execute if score $id dt.tmp matches 289 run data modify storage call_stack: global.dt.name set value "minecraft:deepslate_tiles"
+execute if score $id dt.tmp matches 291 run data modify storage call_stack: global.dt.name set value "minecraft:chiseled_deepslate"
+execute if score $id dt.tmp matches 295 run data modify storage call_stack: global.dt.name set value "minecraft:iron_bars"
+execute if score $id dt.tmp matches 296 run data modify storage call_stack: global.dt.name set value "minecraft:chain"
+execute if score $id dt.tmp matches 297 run data modify storage call_stack: global.dt.name set value "minecraft:glass_pane"
+execute if score $id dt.tmp matches 298 run data modify storage call_stack: global.dt.name set value "minecraft:melon"

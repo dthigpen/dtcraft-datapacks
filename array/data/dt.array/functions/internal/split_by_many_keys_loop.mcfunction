@@ -1,4 +1,4 @@
-#> dt.array:api/split_by_key
+#> dt.array:internal/split_by_many_keys_loop
 # splits the given list into two lists, first for elements containing the key, and the second its complement
 # @params
 #   storage call_stack: call.arg0

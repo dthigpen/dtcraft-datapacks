@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 993 run data modify storage call_stack: global.dt.name set value "minecraft:blue_banner"
+execute if score $id dt.tmp matches 994 run data modify storage call_stack: global.dt.name set value "minecraft:brown_banner"
+execute if score $id dt.tmp matches 995 run data modify storage call_stack: global.dt.name set value "minecraft:green_banner"
+execute if score $id dt.tmp matches 996 run data modify storage call_stack: global.dt.name set value "minecraft:red_banner"
+execute if score $id dt.tmp matches 997 run data modify storage call_stack: global.dt.name set value "minecraft:black_banner"
+execute if score $id dt.tmp matches 998 run data modify storage call_stack: global.dt.name set value "minecraft:end_crystal"
+execute if score $id dt.tmp matches 1003 run data modify storage call_stack: global.dt.name set value "minecraft:beetroot_soup"
+execute if score $id dt.tmp matches 1006 run data modify storage call_stack: global.dt.name set value "minecraft:spectral_arrow"

@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 628 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_pressure_plate"
+execute if score $id dt.tmp matches 629 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_pressure_plate"
+execute if score $id dt.tmp matches 630 run data modify storage call_stack: global.dt.name set value "minecraft:warped_pressure_plate"
+execute if score $id dt.tmp matches 631 run data modify storage call_stack: global.dt.name set value "minecraft:iron_door"
+execute if score $id dt.tmp matches 632 run data modify storage call_stack: global.dt.name set value "minecraft:oak_door"
+execute if score $id dt.tmp matches 633 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_door"
+execute if score $id dt.tmp matches 634 run data modify storage call_stack: global.dt.name set value "minecraft:birch_door"
+execute if score $id dt.tmp matches 635 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_door"

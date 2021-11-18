@@ -31,7 +31,6 @@ execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 function call_stack:pop
 
-
 function call_stack:push
 
 data modify storage call_stack: this.test_name set value "find_recipe_bad_recipe"

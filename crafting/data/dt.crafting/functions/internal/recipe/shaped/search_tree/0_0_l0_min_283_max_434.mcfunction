@@ -1,0 +1,12 @@
+execute if score $id dt.tmp matches 283 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_283_ing3_start
+execute if score $id dt.tmp matches 284 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_284_ing3_start
+execute if score $id dt.tmp matches 287 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_287_ing3_start
+execute if score $id dt.tmp matches 289 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_289_ing3_start
+execute if score $id dt.tmp matches 305 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_305_ing3_start
+execute if score $id dt.tmp matches 313 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_313_ing3_start
+execute if score $id dt.tmp matches 349 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_349_ing3_start
+execute if score $id dt.tmp matches 350 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_350_ing3_start
+execute if score $id dt.tmp matches 352 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_352_ing3_start
+execute if score $id dt.tmp matches 432 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_432_ing3_start
+execute if score $id dt.tmp matches 433 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_433_ing3_start
+execute if score $id dt.tmp matches 434 run function dt.crafting:internal/recipe/shaped/search_tree/0_0_434_ing3_start

@@ -3,8 +3,7 @@
 #[[[cog
 #   from datapack_utils import storage
 #   from datapack_utils import tags
-#   cog.outl('data modify storage dt.inv_sort: groups set value []')
-#   for line in storage.from_dict(tags.get_custom_item_tags_storage_dict(),'dt.inv_sort:'):
+#   for line in storage.set_array('dt.inv_sort:', 'groups', tags.get_custom_item_tags_storage_dict()['groups']):
 #       cog.outl(line)
 #]]]
 data modify storage dt.inv_sort: groups set value []
