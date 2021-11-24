@@ -7,7 +7,7 @@ data modify storage call_stack: this.expected set value {slotted:[{id:"minecraft
 
 execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.return_items
 execute run data modify storage call_stack: call.arg1 set from storage call_stack: this.tagged_items
-execute run function dt.autocraft:internal/blocks/autocrafter/old/copy_tag_slots
+execute run function dt.autocraft:internal/autocrafter/old/copy_tag_slots
 execute run data modify storage call_stack: this.actual set from storage call_stack: call.return
 scoreboard players reset result dt.tmp
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
@@ -26,7 +26,7 @@ data modify storage call_stack: this.expected set value {slotted:[{id:"minecraft
 
 execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.return_items
 execute run data modify storage call_stack: call.arg1 set from storage call_stack: this.tagged_items
-execute run function dt.autocraft:internal/blocks/autocrafter/old/copy_tag_slots
+execute run function dt.autocraft:internal/autocrafter/old/copy_tag_slots
 execute run data modify storage call_stack: this.actual set from storage call_stack: call.return
 # execute run tellraw @p [{"nbt":"this.expected","storage":"call_stack:"}]
 # execute run tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
@@ -46,7 +46,7 @@ data modify storage call_stack: this.expected set value {slotted:[{id:"minecraft
 
 execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.return_items
 execute run data modify storage call_stack: call.arg1 set from storage call_stack: this.tagged_items
-execute run function dt.autocraft:internal/blocks/autocrafter/old/copy_tag_slots
+execute run function dt.autocraft:internal/autocrafter/old/copy_tag_slots
 execute run data modify storage call_stack: this.actual set from storage call_stack: call.return
 scoreboard players reset result dt.tmp
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected

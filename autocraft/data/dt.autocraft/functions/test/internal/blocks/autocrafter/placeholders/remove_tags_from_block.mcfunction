@@ -7,7 +7,7 @@ data modify storage call_stack: this.input[1].tag.dt_placeholder.owner set from 
 data modify storage call_stack: this.input[2].tag.dt_placeholder.owner set from entity @s UUID
 data modify storage call_stack: call.arg0 set from storage call_stack: this.input
 function dt.autocraft:test/set_test_block_items
-execute positioned 777777 255 777777 run function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tags_from_items
+execute positioned 777777 255 777777 run function dt.autocraft:internal/autocrafter/placeholders/remove_tags_from_items
 function dt.autocraft:test/get_test_block_items
 data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]

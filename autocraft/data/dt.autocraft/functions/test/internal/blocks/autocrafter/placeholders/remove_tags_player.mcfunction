@@ -8,7 +8,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.inpu
 function dt.inventory:api/shulker/items/set
 function dt.inventory:api/shulker/loot/give/player
 
-function dt.autocraft:internal/blocks/autocrafter/placeholders/remove_tags_player
+function dt.autocraft:internal/autocrafter/placeholders/remove_tags_player
 data modify storage call_stack: call.return set from entity @s Inventory
 data modify storage call_stack: this.actual set from storage call_stack: call.return
 #tellraw @p [{"nbt":"this.actual","storage":"call_stack:"}]
