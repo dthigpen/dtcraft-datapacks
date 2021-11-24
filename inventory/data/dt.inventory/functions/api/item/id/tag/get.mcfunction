@@ -7,7 +7,6 @@ data modify storage call_stack: this.slot set from storage call_stack: this.item
 data remove storage call_stack: this.item.Slot
 data modify storage call_stack: this.item.tag.drop_contents set value true
 execute as @e[type=armor_stand,tag=dt_inventory,limit=1] run data modify entity @s HandItems[0] set from storage call_stack: this.item
-
 data remove storage call_stack: this.item.tag.drop_contents
 
 data modify storage call_stack: this.item.Slot set value 0b

@@ -2,8 +2,8 @@
   "parent": "minecraft:block/orientable",
   "textures": {
     "top": "minecraft:block/crafting_table_top",
-    "front": "minecraft:block/dropper_front",
+    "front": "minecraft:block/crafting_table_side",
     "side": "minecraft:block/crafting_table_side",
-    "bottom": "minecraft:block/oak_planks"
+    "bottom": "minecraft:block/crafting_table_side"
   }
 }

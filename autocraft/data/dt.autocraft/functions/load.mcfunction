@@ -66,6 +66,7 @@ schedule clear dt.autocraft:tick
 execute if score $dt.autocraft load.status matches 1 run schedule function dt.autocraft:tick 1t replace
 #[[[end]]]
 
+# TODO Remove when old state logic is removed
 scoreboard objectives add dt.ac.cooldown dummy
 scoreboard players set #max dt.ac.cooldown 20
 scoreboard players set #rate dt.ac.cooldown 20
@@ -74,6 +75,8 @@ scoreboard objectives add dt.ac.state dummy
 scoreboard players set #ready dt.ac.state 1
 scoreboard players set #craft dt.ac.state 2
 scoreboard players set #cooldown dt.ac.state 3
+scoreboard players set #empty_result_slot dt.ac.state 4
+scoreboard players set #non_empty_result_slot dt.ac.state 5
 
 scoreboard objectives add dt.tmp dummy
 

@@ -2,7 +2,7 @@ function call_stack:push
 data modify storage call_stack: this.test_name set value "loot_insert_block_empty_list"
 data modify storage call_stack: this.array set value []
 data modify storage call_stack: this.expected set value []
-function dt.inventory:api/shulker/items/clear1
+function dt.inventory:api/shulker/items/clear
 function dt.inventory:api/shulker/items/clear2
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 function dt.inventory:api/shulker/items/set
@@ -20,7 +20,7 @@ function call_stack:push
 data modify storage call_stack: this.test_name set value "loot_insert_block_non_empty"
 data modify storage call_stack: this.array set value [{id:"minecraft:feather",Count:1b,Slot:-1b}]
 data modify storage call_stack: this.expected set value [{id:"minecraft:feather",Count:1b,Slot:0b}]
-function dt.inventory:api/shulker/items/clear1
+function dt.inventory:api/shulker/items/clear
 function dt.inventory:api/shulker/items/clear2
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 function dt.inventory:api/shulker/items/set

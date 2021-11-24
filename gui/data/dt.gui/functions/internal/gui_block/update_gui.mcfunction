@@ -1,9 +1,5 @@
 function call_stack:push
-
-data modify block ~ ~ ~ Items set from block ~ ~ ~ Items
-
-function dt.gui:internal/database/fetch_or_init
-data modify storage call_stack: this.gui_data set from storage call_stack: call.return
+data modify storage call_stack: this.gui_data set from storage call_stack: this.arg0
 
 # if the slot is not in the whitelist and the slot in the items is not a placeholder add it to the items
 data modify storage call_stack: this.items_to_drop set value []
@@ -97,14 +93,11 @@ execute unless data storage call_stack: this.gui_data.whitelist[{Slot:26b}] unle
 execute unless data storage call_stack: this.gui_data.whitelist[{Slot:26b}] unless data block ~ ~ ~ Items[{Slot:26b}] run data modify block ~ ~ ~ Items append value {Slot:26b, id:"minecraft:gray_stained_glass_pane", Count:1b,tag:{dt_gui:{placeholder:true}}}
 #[[[end]]]
 
-
-# tellraw @p ["refresh this.final_items: ",{"nbt":"this.final_items","storage":"call_stack:"}]
 execute if data storage call_stack: this.items_to_drop[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.items_to_drop
 execute if data storage call_stack: this.items_to_drop[0] run function dt.inventory:api/items/summon2
 
-# data modify block ~ ~ ~ Items set from storage call_stack: this.final_items
-
-function dt.gui:internal/clear_placeholders_unsafe
-
+scoreboard players reset $success dt.tmp
+execute positioned ~ ~-1 ~ if block ~ ~ ~ hopper store success score $success dt.tmp run data remove block ~ ~ ~ Items[{tag:{dt_gui:{placeholder:1b}}}]
+execute positioned ~ ~-1 ~ if block ~ ~ ~ hopper if score $success dt.tmp matches 1 run data modify block ~ ~ ~ TransferCooldown set value 0
 
 function call_stack:pop

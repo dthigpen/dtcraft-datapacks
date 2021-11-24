@@ -3,9 +3,12 @@ data modify storage call_stack: this.items set from storage call_stack: this.arg
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 function dt.crafting:internal/model/ingredients/from_items
-data modify storage call_stack: this.item_id_grid set from storage call_stack: call.return[0]
-data modify storage call_stack: this.item_count_grid set from storage call_stack: call.return[1]
+data modify storage call_stack: this.item_id_grid set from storage call_stack: call.return.grid[0]
+data modify storage call_stack: this.item_count_grid set from storage call_stack: call.return.grid[1]
+data modify storage call_stack: this.crafting_items set from storage call_stack: call.return.items.crafting
+data modify storage call_stack: this.extras set from storage call_stack: call.return.items.extras
 
+# tellraw @p ["from_items call.return: ",{"nbt":"call.return","storage":"call_stack:"}]
 # compress
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_id_grid
 data modify storage call_stack: call.arg1 set from storage call_stack: this.item_count_grid

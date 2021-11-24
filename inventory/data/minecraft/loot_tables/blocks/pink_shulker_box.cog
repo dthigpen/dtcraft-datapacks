@@ -1,7 +1,6 @@
 #[[[cog
 #   from datapack_utils import loot_table
 #   from datapack_utils import file_utils
-#   
-#   file_utils.dump_json(loot_table.get_id_assigning_shulker_loot_table(), 'yellow_shulker_box.json')
+#   file_utils.dump_json(loot_table.get_id_assigning_shulker_loot_table(), 'pink_shulker_box.json')
 #]]]
 #[[[end]]]

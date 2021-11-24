@@ -12,7 +12,7 @@ function call_stack:push
 data modify storage call_stack: this.temp_items set from storage call_stack: this.arg0
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items
-function dt.crafting:internal/crafter/get_free_slots
+function dt.crafting:internal/crafter/get_free_slots_27_3x3
 data modify storage call_stack: this.free_slots set from storage call_stack: call.return
 
 data modify storage call_stack: this.return set from storage call_stack: this.temp_items
