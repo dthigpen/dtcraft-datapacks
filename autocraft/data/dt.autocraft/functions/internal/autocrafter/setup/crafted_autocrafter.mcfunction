@@ -1,4 +1,4 @@
-# say crafted_autocrafter
+say crafted_autocrafter
 function call_stack:push
 
 #[[[cog

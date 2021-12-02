@@ -8,7 +8,7 @@ function unittest:api/test_case/setup
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{Slot: 1b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 2b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 10b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 11b, id: "minecraft:stick", Count: 2b}, {Slot: 20b, id: "minecraft:stick", Count: 2b}]
-function dt.crafting:api/craft/from_items
+function dt.crafting:internal/recipe/iterative/start
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
@@ -22,7 +22,7 @@ function unittest:api/test_case/setup
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{Slot: 1b, id: "minecraft:iron_ingot", Count: 2b}, {Slot: 2b, id: "minecraft:iron_ingot", Count: 2b}, {Slot: 10b, id: "minecraft:iron_ingot", Count: 2b}, {Slot: 11b, id: "minecraft:iron_ingot", Count: 2b}, {Slot: 19b, id: "minecraft:iron_ingot", Count: 2b},{Slot: 20b, id: "minecraft:iron_ingot", Count: 2b}]
-function dt.crafting:api/craft/from_items
+function dt.crafting:internal/recipe/iterative/start
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
@@ -36,7 +36,7 @@ function unittest:api/test_case/setup
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{Slot: 1b, id: "minecraft:oak_planks", Count: 1b}, {Slot: 2b, id: "minecraft:oak_planks", Count: 1b}, {Slot: 3b, id: "minecraft:oak_planks", Count: 1b}, {Slot: 10b, id: "minecraft:oak_planks", Count: 1b}, {Slot: 12b, id: "minecraft:oak_planks", Count: 1b}, {Slot: 19b, id: "minecraft:oak_planks", Count: 1b}, {Slot: 20b, id: "minecraft:oak_planks", Count: 1b}, {Slot: 21b, id: "minecraft:oak_planks", Count: 1b}]
-function dt.crafting:api/craft/from_items
+function dt.crafting:internal/recipe/iterative/start
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
@@ -51,7 +51,7 @@ function unittest:api/test_case/setup
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{Slot: 10b, id: "minecraft:white_bed", Count: 1b}, {Slot: 20b, id: "minecraft:red_dye", Count: 2b}]
-function dt.crafting:api/craft/from_items
+function dt.crafting:internal/recipe/iterative/start
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
@@ -64,7 +64,7 @@ function unittest:api/test_case/setup
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{Slot:0b,id:"minecraft:apple",Count:1b},{Slot:24b,id:"minecraft:apple",Count:1b},{Slot: 1b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 2b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 10b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 11b, id: "minecraft:stick", Count: 2b}, {Slot: 20b, id: "minecraft:stick", Count: 2b}]
-function dt.crafting:api/craft/from_items
+function dt.crafting:internal/recipe/iterative/start
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 

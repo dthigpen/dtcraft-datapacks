@@ -1,7 +1,6 @@
 function call_stack:push
 data modify storage call_stack: this.ingredients set from storage call_stack: this.arg0
-say setting ingredients
-tellraw @p ["set_ingredients this.ingredients: ",{"nbt":"this.ingredients","storage":"call_stack:"}]
+# tellraw @p ["set_ingredients this.ingredients: ",{"nbt":"this.ingredients","storage":"call_stack:"}]
 #[[[cog
 #   from datapack_utils import *
 #   for slot in [1,2,3,10,11,12,19,20,21]:

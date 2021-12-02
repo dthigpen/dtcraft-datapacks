@@ -82,6 +82,7 @@ scoreboard objectives add dt.tmp dummy
 
 # Keep backward compatibility for existing worlds
 function dt.autocraft:internal/compat
+recipe take @a dt.autocraft:autocrafter
 
 execute store result score $max dt.tmp run gamerule maxCommandChainLength
 execute if score $max dt.tmp matches ..4999999 run gamerule maxCommandChainLength 5000000

@@ -13,6 +13,6 @@
         ]
     ],
     "rewards": {
-        "function": "dt.autocraft:internal/blocks/autocrafter/setup/crafted_autocrafter"
+        "function": "dt.autocraft:internal/autocrafter/setup/crafted_autocrafter"
     }
 }
