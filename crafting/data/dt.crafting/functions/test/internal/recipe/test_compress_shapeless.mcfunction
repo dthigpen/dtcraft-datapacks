@@ -9,7 +9,7 @@ function unittest:api/test_case/setup
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [[1,0,1],[2,0,0],[0,3,0]]
-function dt.crafting:internal/recipe/compress_shapeless
+function dt.crafting:internal/craft/compress_shapeless
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
@@ -22,7 +22,7 @@ function unittest:api/test_case/setup
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [[1]]
-function dt.crafting:internal/recipe/compress_shapeless
+function dt.crafting:internal/craft/compress_shapeless
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
