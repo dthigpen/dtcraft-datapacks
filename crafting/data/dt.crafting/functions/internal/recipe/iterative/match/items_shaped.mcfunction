@@ -19,7 +19,7 @@ execute unless data storage call_stack: this.fail if data storage call_stack: th
 execute unless data storage call_stack: this.fail if data storage call_stack: this.item_rows[1] if data storage call_stack: this.set_rows[1] run function dt.array:api/split/in_set3
 execute unless data storage call_stack: this.fail if data storage call_stack: this.item_rows[1] if data storage call_stack: this.set_rows[1] if data storage call_stack: call.return[1][0] run data modify storage call_stack: this.fail set value true
 
-# row 2
+# row 3
 execute unless data storage call_stack: this.fail if data storage call_stack: this.item_rows[2] if data storage call_stack: this.set_rows[2] run data modify storage call_stack: call.arg0 set from storage call_stack: this.item_rows[2]
 execute unless data storage call_stack: this.fail if data storage call_stack: this.item_rows[2] if data storage call_stack: this.set_rows[2] run data modify storage call_stack: call.arg1 set from storage call_stack: this.item_rows[2]
 execute unless data storage call_stack: this.fail if data storage call_stack: this.item_rows[2] if data storage call_stack: this.set_rows[2] run data modify storage call_stack: call.arg2 set from storage call_stack: this.set_rows[2]
@@ -27,4 +27,5 @@ execute unless data storage call_stack: this.fail if data storage call_stack: th
 execute unless data storage call_stack: this.fail if data storage call_stack: this.item_rows[2] if data storage call_stack: this.set_rows[2] if data storage call_stack: call.return[1][0] run data modify storage call_stack: this.fail set value true
 
 execute unless data storage call_stack: this.fail run scoreboard players set #items_match dt.crafting.tmp 1
+execute unless data storage call_stack: this.fail run data modify storage call_stack: this.return set value true
 function call_stack:pop
