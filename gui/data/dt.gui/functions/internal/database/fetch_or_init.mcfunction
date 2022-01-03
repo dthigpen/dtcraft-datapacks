@@ -1,5 +1,5 @@
 function call_stack:push
-function rx.playerdb:api/get_self
+function #rx.playerdb:api/v2/get/self
 
 # Default object
 function dt.gui:internal/database/get_init_data

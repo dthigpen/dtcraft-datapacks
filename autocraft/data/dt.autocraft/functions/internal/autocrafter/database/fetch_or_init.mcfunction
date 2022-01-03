@@ -1,6 +1,6 @@
 function call_stack:push
 
-function rx.playerdb:api/get_self
+function #rx.playerdb:api/v2/get/self
 # Default object
 function dt.autocraft:internal/autocrafter/database/get_init_data
 data modify storage call_stack: this.return set from storage call_stack: call.return

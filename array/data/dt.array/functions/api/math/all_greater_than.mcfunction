@@ -4,7 +4,6 @@ data modify storage call_stack: this.value set from storage call_stack: this.arg
 
 execute if data storage call_stack: this.numbers[0] run data modify storage call_stack: this.continue set value true
 execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return set value true
-execute if data storage call_stack: this.continue 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.numbers[0]
 data modify storage call_stack: call.arg1 set from storage call_stack: this.value
 function dt.array:api/helper/math/greater_than

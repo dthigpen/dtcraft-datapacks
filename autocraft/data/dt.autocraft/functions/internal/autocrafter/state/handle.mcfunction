@@ -9,7 +9,7 @@ function dt.crafting:api/crafter/distribute_items
 data modify block ~ ~ ~ Items set from storage call_stack: call.return
 data modify block ~ ~ ~ Items append from storage call_stack: this.recipe_result
 
-function dt.autocraft:internal/autocrafter/database/fetch_or_init
+function dt.autocraft:internal/autocrafter/database/item_frame/fetch_or_init
 data modify storage call_stack: this.autocrafter_data set from storage call_stack: call.return
 
 # Get crafting grid items
@@ -40,6 +40,6 @@ execute if data storage call_stack: this.changed_ingredients run function dt.aut
 data modify storage call_stack: this.autocrafter_data.ingredients set from storage call_stack: this.ingredients
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.autocrafter_data
-function dt.autocraft:internal/autocrafter/database/save
+function dt.autocraft:internal/autocrafter/database/item_frame/save
 
 function call_stack:pop

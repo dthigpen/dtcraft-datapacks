@@ -45,9 +45,6 @@ execute if score #count dt.tmp matches 7 run data modify storage call_stack: glo
 execute if score #count dt.tmp matches 8 run data modify storage call_stack: global.dt.recipes set from storage dt.crafting: recipes_by_count.8
 execute if score #count dt.tmp matches 9 run data modify storage call_stack: global.dt.recipes set from storage dt.crafting: recipes_by_count.9
 
-# data modify storage call_stack: global.dt.recipes set value []
-# data modify storage call_stack: global.dt.recipes append from storage dt.crafting: recipes_by_count.5[{name:"stone_axe"}]
-say starting search
 data remove storage call_stack: global.dt.crafting.result
 data modify storage call_stack: call.recipes set from storage call_stack: global.dt.recipes
 function call_stack:push

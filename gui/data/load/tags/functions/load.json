@@ -1,6 +1,6 @@
 {
     "values": [
-        "#load:rx/playerdb",
+        "#rx.playerdb:load",
         "call_stack:load",
         "dt.inventory:load",
         "dt.gui:load"
