@@ -4,4 +4,4 @@ This datapack provides basic functions for user specific storage based on player
 
 ## Installation
 
-1. Use Latern Load to load this datapack.
+1. Use Lantern Load to load this datapack.

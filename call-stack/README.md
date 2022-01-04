@@ -2,6 +2,12 @@
 
 This datapack provides some bare bones support for a call stack like data structure, providing scope to your function files variables. Very convenient for avoiding side effects from other function files overwriting variable values.
 
+## Installation
+
+1. Navigate to the Releases tab and download the latest `.zip` for this datapack.
+2. Place this datapack in your world's datapacks folder.
+3. Add `call_stack:load` before your datapack's load function in the Lantern Load `load.json` tag at `your_pack/data/load/tags/functions/load.json`.
+
 ## Usage
 
 ### Scoping function variables
@@ -57,7 +63,3 @@ function call_stack:pop
 
 ### Function Return Values
 Return data from a function by setting the storage `call_stack: this.return`. This value will be copied into caller functions scope at `call_stack: call.return`.
-
-## Installation
-
-1. Use Latern Load to load this datapack by adding `call_stack:load` before your datapack's load function.

@@ -4,7 +4,7 @@ This datapack offers an api for testing functions. Additionally includes experim
 
 ## Installation
 
-1. Use Latern Load to load this datapack.
+1. Use Lantern Load to load this datapack.
 
 ## Examples
 Create a named test suite for grouping test cases and cleanly outputing the results.

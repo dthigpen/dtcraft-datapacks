@@ -1,8 +1,17 @@
 # Raycast
+
 A utility datapack used for performing raycasts with configurable parameters.
 
+## Installation
+
+1. Navigate to the Releases tab and download the latest `.zip` for this datapack.
+2. Place this datapack in your world's datapacks folder.
+3. Add `dt.raycast:load` before your datapack's load function in the Lantern Load `load.json` tag at `your_pack/data/load/tags/functions/load.json`.
+
 ## Usage
+
 Open a `.mcfunction` file in your datapack where you want to perform a raycast.
+
 ```mcfunction
 # your_funct.mcfunction
 

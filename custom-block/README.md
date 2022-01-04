@@ -2,6 +2,12 @@
 
 Easily create blocks with custom models and behaviors.
 
+## Installation
+
+1. Navigate to the Releases tab and download the latest `.zip` for this datapack.
+2. Place this datapack in your world's datapacks folder.
+3. Add `dt.custom_block:load` before your datapack's load function in the Lantern Load `load.json` tag at `your_pack/data/load/tags/functions/load.json`.
+
 ## Usage
 
 1. Build an NBT object with the properties of the custom block and item you want to create. See [Properties](#Properties) section for details. Note the storage destination `call_stack: call.arg0`.

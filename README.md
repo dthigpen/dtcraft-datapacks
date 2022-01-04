@@ -1,6 +1,6 @@
 # dtcraft-datapacks
 
-A collection of vanilla enhancement datapacks and utilities. Click on the following datapacks for specific usage and installation information.
+A collection of vanilla enhancement datapacks and utilities. Click on the following datapacks for specific usage and installation information or see the general [Installation](#installation) section here.
 
 ## [Autocraft](autocraft/README.md)
 
@@ -14,13 +14,13 @@ A quality of life datapack that will sort your inventory (excluding hotbar) into
 
 Automatically refill an empty stack of a hotbar item with available stacks from your inventory.
 
-## Utility Datapacks
+## Library Datapacks
 
 The following datapacks are libraries of functions that are intended to be used by other datapacks, and **are not standalone**.
 
 ### [Call-stack](call-stack/README.md)
 
-This datapack provides some bare bones support for a call stack like data structure, providing scope to your function files variables. Very convenient for avoiding side effects from other function files overwriting variable values.
+This datapack provides some bare bones support for a call stack like data structure, providing scope to your function variables. This is very convenient for avoiding side effects from other functions overwriting variable values.
 
 ### [Array](array/README.md)
 
@@ -38,22 +38,41 @@ This datapack offers a number of commonly repeated functions for manipulating pl
 
 A utility datapack used for performing raycasts with configurable parameters.
 
-### [Custom-Block](custom_block/README.md)
+### [Custom-Block](custom-block/README.md)
 
 Easily create blocks with custom models and behaviors.
+
+### [GUI](gui/README.md)
+
+Easily create container based GUIs.
 
 ### [Unit-Test](unittest/README.md)
 
 This datapack offers an api for testing functions. Additionally includes experimental multi-tick testing functionality.
 
-
 ### [User](user-utils/README.md)
 
 This datapack provides basic functions for user specific storage based on player UUID. It provides basic CRUD (Create, Read, Update, Delete) operations. Note, it does not store user data for the calling datapack, it simply modifies and returns the data for the caller to store.
 
+## Installation
+
+Navigate to the Releases tab and download the desired datapack's `.zip` file. Copy the zip file into your Minecraft world's `datapacks` folder. Open your Minecraft world and type `/reload`.
+
+Library datapacks (intended for datapack devs) such as `call-stack` or `crafting` can be added to existing datapacks with [Lantern Load](https://github.com/LanternMC/Load). This entails adding the load function of the library datapack to the `load.json` tag.
+For example:
+
+```json
+{
+    "values": [
+        "dt.crafting:load",
+        "your_pack:load"
+    ]
+}
+```
+
 ## Datapack Conventions
 
-All of these datapacks utilize the `dtcraft:call-stack` utility when calling functions. Functions that implement this utility have function level variables, arguments, and return values without chance of side effects from other functions.
+All of these datapacks utilize the `call-stack` utility when calling functions. Functions that implement this utility have function level variables, arguments, and return values without chance of side effects from other functions.
 
 ### Example
 
