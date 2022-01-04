@@ -5,8 +5,6 @@
   },
 	"overrides": [
 		{"predicate": {"custom_model_data":1}, "model": "custom_block/autocrafter_block"},
-		{"predicate": {"custom_model_data":2}, "model": "custom_block/autocrafter_item"},
-		{"predicate": {"custom_model_data":3}, "model": "custom_block/autocrafter_vertical_block"},
-		{"predicate": {"custom_model_data":4}, "model": "custom_block/autocrafter_vertical_down_block"}
+		{"predicate": {"custom_model_data":2}, "model": "custom_block/autocrafter_item"}
 	]
 }
