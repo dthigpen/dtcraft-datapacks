@@ -5,10 +5,9 @@
 #   from datapack_utils.utils import Pack
 #   
 #   cog.outl(utils.setup_versioning(
-#       Pack('dt.refill',Pack.Version(1,0,0),name='Refill',tick_function='dt.refill:tick',
+#       Pack('dt.refill',Pack.Version(2,0,0),name='Refill',tick_function='dt.refill:tick',
 #           dependencies = [
 #               Pack('call_stack',Pack.Version(1,0,0),name='call-stack'),
-#               Pack('dt.user_util',Pack.Version(1,0,0),name='user-util'),
 #               Pack('dt.array',Pack.Version(0,2,0),name='Array'),
 #               Pack('dt.inventory',Pack.Version(2,0,0),name='Inventory')
 #           ]
@@ -16,7 +15,7 @@
 #   )
 #]]]
 
-scoreboard players set $dt.refill.version.major load.status 1
+scoreboard players set $dt.refill.version.major load.status 2
 scoreboard players set $dt.refill.version.minor load.status 0
 scoreboard players set $dt.refill.version.patch load.status 0
 
@@ -28,13 +27,6 @@ scoreboard players set $dt.tmp.dep load.status 0
 execute if score $call_stack.version.major load.status matches 1 if score $call_stack.version.minor load.status matches 0.. run scoreboard players set $dt.tmp.dep load.status 1
 execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Refill","bold":true}," expected ",{"text":"call-stack ","bold":true},"1.0"," but found ",{"score":{"name":"$call_stack.version.major","objective":"load.status"}},".",{"score":{"name":"$call_stack.version.minor","objective":"load.status"}}]
 execute if score $call_stack load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.refill load.status 0
-
-# check for user-util datapack
-execute unless score $dt.user_util load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Refill","bold":true}," requires ",{"text":"user-util ","bold":true},"1.0"]
-scoreboard players set $dt.tmp.dep load.status 0
-execute if score $dt.user_util.version.major load.status matches 1 if score $dt.user_util.version.minor load.status matches 0.. run scoreboard players set $dt.tmp.dep load.status 1
-execute if score $dt.user_util load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Refill","bold":true}," expected ",{"text":"user-util ","bold":true},"1.0"," but found ",{"score":{"name":"$dt.user_util.version.major","objective":"load.status"}},".",{"score":{"name":"$dt.user_util.version.minor","objective":"load.status"}}]
-execute if score $dt.user_util load.status matches 1 unless score $dt.tmp.dep load.status matches 1 run scoreboard players set $dt.refill load.status 0
 
 # check for Array datapack
 execute unless score $dt.array load.status matches 1 run tellraw @p ["",{"text":"Error: ","color":"dark_red"},{"text":"Refill","bold":true}," requires ",{"text":"Array ","bold":true},"0.2"]
@@ -63,9 +55,4 @@ scoreboard players set #found dt.enum 0
 scoreboard players set #not_found dt.enum 1
 
 scoreboard objectives add dt.refill.toggle trigger
-
-# TODO Preserve users if present already
-data merge storage dt.refill: {users:[]}
-
-function dt.inventory:load_shulker
 
