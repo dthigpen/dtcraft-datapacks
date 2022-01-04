@@ -48,11 +48,5 @@ schedule clear dt.refill:tick
 execute if score $dt.refill load.status matches 1 run schedule function dt.refill:tick 1t replace
 #[[[end]]]
 
-scoreboard objectives add dt.enum dummy
-scoreboard players set #equal dt.enum 0
-scoreboard players set #not_equal dt.enum 1
-scoreboard players set #found dt.enum 0
-scoreboard players set #not_found dt.enum 1
-
 scoreboard objectives add dt.refill.toggle trigger
 
