@@ -31,4 +31,4 @@ execute if entity @s[tag=facing.down] if data entity @s Item.tag.hold.block.over
 data modify entity @s Tags append from entity @s Item.tag.hold.block.Tags[]
 
 # set default base block
-setblock ~ ~ ~ spawner{SpawnCount:0,SpawnRange:0,RequiredPlayerRange:0,MaxNearbyEntities:0,SpawnData:{id:"minecraft:area_effect_cloud"}}
+setblock ~ ~ ~ spawner{SpawnCount:0,SpawnRange:0,RequiredPlayerRange:0,MaxNearbyEntities:0,SpawnData:{entity:{id:"minecraft:area_effect_cloud"}}}
