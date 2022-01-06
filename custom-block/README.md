@@ -33,7 +33,6 @@ Here is an example of all the properties that can be used to create a custom ite
 ```jsonc
 {
     "block": {
-        "name": "{\"text\": \"Test Block\"}", // Custom block name
         "model": 1, // Identifier for a model in your resource pack
         "overrides": { // Model overrides when facing up or down
             "up": 2,

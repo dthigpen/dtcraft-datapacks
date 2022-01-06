@@ -2,7 +2,6 @@ function call_stack:push
 data modify storage call_stack: this.ingredients set from storage call_stack: this.arg0
 # tellraw @p ["set_ingredients this.ingredients: ",{"nbt":"this.ingredients","storage":"call_stack:"}]
 #[[[cog
-#   from datapack_utils import *
 #   for slot in [1,2,3,10,11,12,19,20,21]:
 #       cog.outl(f'execute if data storage call_stack: this.ingredients[{{Slot:{slot}b}}] run data modify block ~ ~ ~ Items[{{Slot:{slot}b}}] set from storage call_stack: this.ingredients[{{Slot:{slot}b}}]')
 #       cog.outl(f'execute unless data storage call_stack: this.ingredients[{{Slot:{slot}b}}] run data remove block ~ ~ ~ Items[{{Slot:{slot}b}}]')

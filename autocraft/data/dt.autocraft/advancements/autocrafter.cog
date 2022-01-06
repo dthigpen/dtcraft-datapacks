@@ -1,7 +1,0 @@
-[[[cog
-    from pathlib import Path
-    from datapack_utils import autocraft
-    autocraft_advancement_path = Path(cog.inFile).parent / 'autocrafter.json'
-    autocraft.create_autocrafter_advancement_file(autocraft_advancement_path)
-]]]
-[[[end]]]

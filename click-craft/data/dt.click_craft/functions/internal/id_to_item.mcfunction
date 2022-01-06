@@ -1106,5 +1106,6 @@ execute if score $id dt.tmp matches 1096 run data modify storage call_stack: thi
 execute if score $id dt.tmp matches 1097 run data modify storage call_stack: this.return set from storage dt.click_craft: items[{id:1097}]
 execute if score $id dt.tmp matches 1098 run data modify storage call_stack: this.return set from storage dt.click_craft: items[{id:1098}]
 execute if score $id dt.tmp matches 1099 run data modify storage call_stack: this.return set from storage dt.click_craft: items[{id:1099}]
+execute if score $id dt.tmp matches 1100 run data modify storage call_stack: this.return set from storage dt.click_craft: items[{id:1100}]
 #[[[end]]]
 function call_stack:pop

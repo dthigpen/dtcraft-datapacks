@@ -2,7 +2,6 @@ function call_stack:push
 data modify storage call_stack: this.return set value []
 
 #[[[cog
-#   from datapack_utils import *
 #   for slot in [1,2,3,10,11,12,19,20,21]:
 #       cog.outl(f'execute if data block ~ ~ ~ Items[{{Slot:{slot}b}}] run data modify storage call_stack: this.return append from block ~ ~ ~ Items[{{Slot:{slot}b}}]')
 #]]]

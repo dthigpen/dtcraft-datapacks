@@ -14391,7 +14391,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:music_disc_pigstep"
+                                                    "minecraft:music_disc_otherside"
                                                 ]
                                             }
                                         }
@@ -14405,7 +14405,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:trident"
+                                                    "minecraft:music_disc_pigstep"
                                                 ]
                                             }
                                         }
@@ -14419,7 +14419,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:phantom_membrane"
+                                                    "minecraft:trident"
                                                 ]
                                             }
                                         }
@@ -14433,7 +14433,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:nautilus_shell"
+                                                    "minecraft:phantom_membrane"
                                                 ]
                                             }
                                         }
@@ -14447,7 +14447,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:heart_of_the_sea"
+                                                    "minecraft:nautilus_shell"
                                                 ]
                                             }
                                         }
@@ -14461,7 +14461,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:crossbow"
+                                                    "minecraft:heart_of_the_sea"
                                                 ]
                                             }
                                         }
@@ -14475,7 +14475,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:suspicious_stew"
+                                                    "minecraft:crossbow"
                                                 ]
                                             }
                                         }
@@ -14489,7 +14489,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:loom"
+                                                    "minecraft:suspicious_stew"
                                                 ]
                                             }
                                         }
@@ -14503,7 +14503,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:flower_banner_pattern"
+                                                    "minecraft:loom"
                                                 ]
                                             }
                                         }
@@ -14517,7 +14517,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:creeper_banner_pattern"
+                                                    "minecraft:flower_banner_pattern"
                                                 ]
                                             }
                                         }
@@ -14531,7 +14531,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:skull_banner_pattern"
+                                                    "minecraft:creeper_banner_pattern"
                                                 ]
                                             }
                                         }
@@ -14545,7 +14545,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:mojang_banner_pattern"
+                                                    "minecraft:skull_banner_pattern"
                                                 ]
                                             }
                                         }
@@ -14559,7 +14559,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:globe_banner_pattern"
+                                                    "minecraft:mojang_banner_pattern"
                                                 ]
                                             }
                                         }
@@ -14573,7 +14573,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:piglin_banner_pattern"
+                                                    "minecraft:globe_banner_pattern"
                                                 ]
                                             }
                                         }
@@ -14587,7 +14587,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:composter"
+                                                    "minecraft:piglin_banner_pattern"
                                                 ]
                                             }
                                         }
@@ -14601,7 +14601,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:barrel"
+                                                    "minecraft:composter"
                                                 ]
                                             }
                                         }
@@ -14615,7 +14615,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:smoker"
+                                                    "minecraft:barrel"
                                                 ]
                                             }
                                         }
@@ -14629,7 +14629,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:blast_furnace"
+                                                    "minecraft:smoker"
                                                 ]
                                             }
                                         }
@@ -14643,7 +14643,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:cartography_table"
+                                                    "minecraft:blast_furnace"
                                                 ]
                                             }
                                         }
@@ -14657,7 +14657,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:fletching_table"
+                                                    "minecraft:cartography_table"
                                                 ]
                                             }
                                         }
@@ -14671,7 +14671,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:grindstone"
+                                                    "minecraft:fletching_table"
                                                 ]
                                             }
                                         }
@@ -14685,7 +14685,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:smithing_table"
+                                                    "minecraft:grindstone"
                                                 ]
                                             }
                                         }
@@ -14699,7 +14699,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:stonecutter"
+                                                    "minecraft:smithing_table"
                                                 ]
                                             }
                                         }
@@ -14713,7 +14713,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:bell"
+                                                    "minecraft:stonecutter"
                                                 ]
                                             }
                                         }
@@ -14727,7 +14727,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:lantern"
+                                                    "minecraft:bell"
                                                 ]
                                             }
                                         }
@@ -14741,7 +14741,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:soul_lantern"
+                                                    "minecraft:lantern"
                                                 ]
                                             }
                                         }
@@ -14755,7 +14755,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:sweet_berries"
+                                                    "minecraft:soul_lantern"
                                                 ]
                                             }
                                         }
@@ -14769,7 +14769,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:glow_berries"
+                                                    "minecraft:sweet_berries"
                                                 ]
                                             }
                                         }
@@ -14783,7 +14783,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:campfire"
+                                                    "minecraft:glow_berries"
                                                 ]
                                             }
                                         }
@@ -14797,7 +14797,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:soul_campfire"
+                                                    "minecraft:campfire"
                                                 ]
                                             }
                                         }
@@ -14811,7 +14811,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:shroomlight"
+                                                    "minecraft:soul_campfire"
                                                 ]
                                             }
                                         }
@@ -14825,7 +14825,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:honeycomb"
+                                                    "minecraft:shroomlight"
                                                 ]
                                             }
                                         }
@@ -14839,7 +14839,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:bee_nest"
+                                                    "minecraft:honeycomb"
                                                 ]
                                             }
                                         }
@@ -14853,7 +14853,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:beehive"
+                                                    "minecraft:bee_nest"
                                                 ]
                                             }
                                         }
@@ -14867,7 +14867,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:honey_bottle"
+                                                    "minecraft:beehive"
                                                 ]
                                             }
                                         }
@@ -14881,7 +14881,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:honeycomb_block"
+                                                    "minecraft:honey_bottle"
                                                 ]
                                             }
                                         }
@@ -14895,7 +14895,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:lodestone"
+                                                    "minecraft:honeycomb_block"
                                                 ]
                                             }
                                         }
@@ -14909,7 +14909,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:crying_obsidian"
+                                                    "minecraft:lodestone"
                                                 ]
                                             }
                                         }
@@ -14923,7 +14923,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:blackstone"
+                                                    "minecraft:crying_obsidian"
                                                 ]
                                             }
                                         }
@@ -14937,7 +14937,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:blackstone_slab"
+                                                    "minecraft:blackstone"
                                                 ]
                                             }
                                         }
@@ -14951,7 +14951,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:blackstone_stairs"
+                                                    "minecraft:blackstone_slab"
                                                 ]
                                             }
                                         }
@@ -14965,7 +14965,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:gilded_blackstone"
+                                                    "minecraft:blackstone_stairs"
                                                 ]
                                             }
                                         }
@@ -14979,7 +14979,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:polished_blackstone"
+                                                    "minecraft:gilded_blackstone"
                                                 ]
                                             }
                                         }
@@ -14993,7 +14993,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:polished_blackstone_slab"
+                                                    "minecraft:polished_blackstone"
                                                 ]
                                             }
                                         }
@@ -15007,7 +15007,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:polished_blackstone_stairs"
+                                                    "minecraft:polished_blackstone_slab"
                                                 ]
                                             }
                                         }
@@ -15021,7 +15021,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:chiseled_polished_blackstone"
+                                                    "minecraft:polished_blackstone_stairs"
                                                 ]
                                             }
                                         }
@@ -15035,7 +15035,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:polished_blackstone_bricks"
+                                                    "minecraft:chiseled_polished_blackstone"
                                                 ]
                                             }
                                         }
@@ -15049,7 +15049,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:polished_blackstone_brick_slab"
+                                                    "minecraft:polished_blackstone_bricks"
                                                 ]
                                             }
                                         }
@@ -15063,7 +15063,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:polished_blackstone_brick_stairs"
+                                                    "minecraft:polished_blackstone_brick_slab"
                                                 ]
                                             }
                                         }
@@ -15077,7 +15077,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:cracked_polished_blackstone_bricks"
+                                                    "minecraft:polished_blackstone_brick_stairs"
                                                 ]
                                             }
                                         }
@@ -15091,7 +15091,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:respawn_anchor"
+                                                    "minecraft:cracked_polished_blackstone_bricks"
                                                 ]
                                             }
                                         }
@@ -15105,7 +15105,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:candle"
+                                                    "minecraft:respawn_anchor"
                                                 ]
                                             }
                                         }
@@ -15119,7 +15119,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:white_candle"
+                                                    "minecraft:candle"
                                                 ]
                                             }
                                         }
@@ -15133,7 +15133,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:orange_candle"
+                                                    "minecraft:white_candle"
                                                 ]
                                             }
                                         }
@@ -15147,7 +15147,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:magenta_candle"
+                                                    "minecraft:orange_candle"
                                                 ]
                                             }
                                         }
@@ -15161,7 +15161,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:light_blue_candle"
+                                                    "minecraft:magenta_candle"
                                                 ]
                                             }
                                         }
@@ -15175,7 +15175,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:yellow_candle"
+                                                    "minecraft:light_blue_candle"
                                                 ]
                                             }
                                         }
@@ -15189,7 +15189,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:lime_candle"
+                                                    "minecraft:yellow_candle"
                                                 ]
                                             }
                                         }
@@ -15203,7 +15203,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:pink_candle"
+                                                    "minecraft:lime_candle"
                                                 ]
                                             }
                                         }
@@ -15217,7 +15217,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:gray_candle"
+                                                    "minecraft:pink_candle"
                                                 ]
                                             }
                                         }
@@ -15231,7 +15231,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:light_gray_candle"
+                                                    "minecraft:gray_candle"
                                                 ]
                                             }
                                         }
@@ -15245,7 +15245,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:cyan_candle"
+                                                    "minecraft:light_gray_candle"
                                                 ]
                                             }
                                         }
@@ -15259,7 +15259,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:purple_candle"
+                                                    "minecraft:cyan_candle"
                                                 ]
                                             }
                                         }
@@ -15273,7 +15273,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:blue_candle"
+                                                    "minecraft:purple_candle"
                                                 ]
                                             }
                                         }
@@ -15287,7 +15287,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:brown_candle"
+                                                    "minecraft:blue_candle"
                                                 ]
                                             }
                                         }
@@ -15301,7 +15301,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:green_candle"
+                                                    "minecraft:brown_candle"
                                                 ]
                                             }
                                         }
@@ -15315,7 +15315,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:red_candle"
+                                                    "minecraft:green_candle"
                                                 ]
                                             }
                                         }
@@ -15329,7 +15329,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:black_candle"
+                                                    "minecraft:red_candle"
                                                 ]
                                             }
                                         }
@@ -15343,7 +15343,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:small_amethyst_bud"
+                                                    "minecraft:black_candle"
                                                 ]
                                             }
                                         }
@@ -15357,7 +15357,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:medium_amethyst_bud"
+                                                    "minecraft:small_amethyst_bud"
                                                 ]
                                             }
                                         }
@@ -15371,7 +15371,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:large_amethyst_bud"
+                                                    "minecraft:medium_amethyst_bud"
                                                 ]
                                             }
                                         }
@@ -15385,7 +15385,7 @@
                                             "condition": "minecraft:match_tool",
                                             "predicate": {
                                                 "items": [
-                                                    "minecraft:amethyst_cluster"
+                                                    "minecraft:large_amethyst_bud"
                                                 ]
                                             }
                                         }
@@ -15394,6 +15394,20 @@
                                 {
                                     "function": "minecraft:set_nbt",
                                     "tag": "{dt:{id:1099}}",
+                                    "conditions": [
+                                        {
+                                            "condition": "minecraft:match_tool",
+                                            "predicate": {
+                                                "items": [
+                                                    "minecraft:amethyst_cluster"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "function": "minecraft:set_nbt",
+                                    "tag": "{dt:{id:1100}}",
                                     "conditions": [
                                         {
                                             "condition": "minecraft:match_tool",
