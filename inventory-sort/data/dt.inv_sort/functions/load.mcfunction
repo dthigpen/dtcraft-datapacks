@@ -54,7 +54,6 @@ scoreboard players enable @a dt.sort
 data merge storage dt.inv_sort: {}
 
 function dt.inv_sort:load_storage
-function dt.inventory:load_shulker
 
 execute store result score $max dt.tmp run gamerule maxCommandChainLength
 execute if score $max dt.tmp matches ..499999 run gamerule maxCommandChainLength 500000

@@ -1,1 +1,1 @@
-{"values": ["call_stack:load","dt.inventory:load"]}
+{"values": ["call_stack:load","dt.array:load", "dt.inventory:load"]}
