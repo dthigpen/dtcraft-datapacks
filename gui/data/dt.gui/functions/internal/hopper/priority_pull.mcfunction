@@ -70,7 +70,6 @@ execute unless data storage call_stack: this.item_to_pull if data storage call_s
 execute unless data storage call_stack: this.item_to_pull if data storage call_stack: whitelist_slots[{Slot:26b}] if data block ~ ~1 ~ Items[{Slot:26b}] run data modify storage call_stack: this.item_to_pull set from block ~ ~1 ~ Items[{Slot:26b}]
 #[[[end]]]
 
-execute if data storage call_stack: this.item_to_pull run tellraw @p ["priority_pull_unsafe this.item_to_pull: ",{"nbt":"this.item_to_pull","storage":"call_stack:"}]
 execute if data storage call_stack: this.item_to_pull run data modify storage call_stack: call.arg0 set from storage call_stack: this.item_to_pull
 execute if data storage call_stack: this.item_to_pull run function dt.gui:internal/hopper/pull_item
 execute if data storage call_stack: this.item_to_pull run data modify storage call_stack: this.successful_pull set from storage call_stack: call.return
