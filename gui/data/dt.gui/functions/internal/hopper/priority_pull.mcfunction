@@ -1,7 +1,6 @@
 function call_stack:push
 data modify storage call_stack: this.priority_slots set from storage call_stack: this.arg0
 data modify storage call_stack: this.whitelist_slots set from storage call_stack: this.arg1
-
 data remove storage call_stack: this.item_to_pull
 
 # Get the next item to be pulled into the hopper
@@ -69,7 +68,6 @@ execute unless data storage call_stack: this.item_to_pull if data storage call_s
 execute unless data storage call_stack: this.item_to_pull if data storage call_stack: whitelist_slots[{Slot:25b}] if data block ~ ~1 ~ Items[{Slot:25b}] run data modify storage call_stack: this.item_to_pull set from block ~ ~1 ~ Items[{Slot:25b}]
 execute unless data storage call_stack: this.item_to_pull if data storage call_stack: whitelist_slots[{Slot:26b}] if data block ~ ~1 ~ Items[{Slot:26b}] run data modify storage call_stack: this.item_to_pull set from block ~ ~1 ~ Items[{Slot:26b}]
 #[[[end]]]
-
 execute if data storage call_stack: this.item_to_pull run data modify storage call_stack: call.arg0 set from storage call_stack: this.item_to_pull
 execute if data storage call_stack: this.item_to_pull run function dt.gui:internal/hopper/pull_item
 execute if data storage call_stack: this.item_to_pull run data modify storage call_stack: this.successful_pull set from storage call_stack: call.return

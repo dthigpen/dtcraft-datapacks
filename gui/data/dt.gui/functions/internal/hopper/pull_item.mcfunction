@@ -2,6 +2,10 @@ function call_stack:push
 data modify storage call_stack: this.item set from storage call_stack: this.arg0
 # strip out dt tags
 data remove storage call_stack: this.item.tag.dt
+data modify storage call_stack: call.argt0 set from storage call_stack: this.item.tag
+data modify storage call_stack: call.argt1 set value {}
+function dt.array:api/helper/are_equal
+execute if data storage call_stack: call.return run data remove storage call_stack: this.item.tag
 data modify storage call_stack: this.items_before set from block ~ ~ ~ Items
 data modify storage call_stack: call.arg0 set value []
 data modify storage call_stack: call.arg0 append from storage call_stack: this.item
@@ -76,4 +80,5 @@ execute if score $looted dt.tmp matches 1 if score $count dt.tmp matches ..0 if 
 execute if score $looted dt.tmp matches 1 if score $slot dt.tmp matches 26 store result block ~ ~1 ~ Items[{Slot:26b}].Count byte 1 run scoreboard players get $count dt.tmp
 execute if score $looted dt.tmp matches 1 if score $count dt.tmp matches ..0 if data storage call_stack: {this:{item:{Slot:26b}}} run data remove block ~ ~1 ~ Items[{Slot:26b}]
 #[[[end]]]
+
 function call_stack:pop
