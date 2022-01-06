@@ -1,5 +1,6 @@
 function call_stack:push
 data modify storage call_stack: this.remaining_items set from storage call_stack: this.arg0
+data modify storage call_stack: this.processed_items set value []
 data modify storage call_stack: this.processed_items set from storage call_stack: this.arg1
 
 # base-case: input is empty list, return processed_items

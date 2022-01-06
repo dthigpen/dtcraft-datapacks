@@ -5,7 +5,7 @@
 #   from datapack_utils.utils import Pack
 #   
 #   cog.outl(utils.setup_versioning(
-#       Pack('dt.inv_sort',Pack.Version(1,0,0),name='Inventory-Sort',tick_function='dt.inv_sort:tick',
+#       Pack('dt.inv_sort',Pack.Version(1,0,0),name='Inventory-Sort',tick_function='dt.inv_sort:internal/tick',
 #           dependencies = [
 #               Pack('call_stack',Pack.Version(1,0,0),name='call-stack'),
 #               Pack('dt.inventory',Pack.Version(2,0,0),name='Inventory')
@@ -36,16 +36,9 @@ execute if score $dt.inventory load.status matches 1 unless score $dt.tmp.dep lo
 
 scoreboard players reset $dt.tmp.dep load.status
 # Only tick if successfully loaded
-schedule clear dt.inv_sort:tick
-execute if score $dt.inv_sort load.status matches 1 run schedule function dt.inv_sort:tick 1t replace
+schedule clear dt.inv_sort:internal/tick
+execute if score $dt.inv_sort load.status matches 1 run schedule function dt.inv_sort:internal/tick 1t replace
 #[[[end]]]
-
-scoreboard objectives add dt.enum dummy
-scoreboard players set #equal dt.enum 0
-scoreboard players set #not_equal dt.enum 1
-scoreboard players set #found dt.enum 0
-scoreboard players set #not_found dt.enum 1
-
 
 scoreboard objectives add dt.tmp dummy
 scoreboard objectives add dt.sort trigger
@@ -53,7 +46,7 @@ scoreboard players enable @a dt.sort
 
 data merge storage dt.inv_sort: {}
 
-function dt.inv_sort:load_storage
+function dt.inv_sort:internal/load_storage
 
 execute store result score $max dt.tmp run gamerule maxCommandChainLength
 execute if score $max dt.tmp matches ..499999 run gamerule maxCommandChainLength 500000
