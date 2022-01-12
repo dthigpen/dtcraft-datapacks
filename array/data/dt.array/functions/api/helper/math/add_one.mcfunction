@@ -1,3 +1,11 @@
+#> dt.array:api/helper/math/add_one
+# Add one to the given number
+# @params
+#   storage call_stack: call.arg0
+#       number
+# @output
+#   storage call_stack: this.return
+#       number
 function call_stack:push
 scoreboard players reset #int1 dt.tmp
 execute store result score #int dt.tmp run data get storage call_stack: this.arg0

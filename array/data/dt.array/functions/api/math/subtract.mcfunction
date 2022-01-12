@@ -1,3 +1,13 @@
+#> dt.array:api/math/subtract
+# Subtract each element of the given array of numbers by the given value
+# @params
+#   storage call_stack: call.arg0
+#       array of numbers
+#   storage call_stack: call.arg1
+#       int number to subtract by
+# @output
+#   storage call_stack: this.return
+#       array of numbers
 function call_stack:push
 data modify storage call_stack: this.numbers set from storage call_stack: this.arg0
 data modify storage call_stack: this.subtract_by set from storage call_stack: this.arg1

@@ -1,3 +1,13 @@
+#> dt.array:api/helper/is_greater_than
+# Return true if the first given number is greater than the second given number
+# @params
+#   storage call_stack: call.arg0
+#       number
+#   storage call_stack: call.arg0
+#       number
+# @output
+#   storage call_stack: this.return
+#       true or not set
 function call_stack:push
 scoreboard players reset $int1 dt.tmp
 scoreboard players reset $int2 dt.tmp

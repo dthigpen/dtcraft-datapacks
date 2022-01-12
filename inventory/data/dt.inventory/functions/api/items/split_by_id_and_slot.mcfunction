@@ -1,3 +1,15 @@
+#> dt.inventory:api/items/split_by_id_and_slot
+# Split the given array of all items by whether or not they have the given id and slots
+# @params
+#   storage call_stack: call.arg0
+#       array of all items
+#   storage call_stack: call.arg1
+#       string requested item id
+#   storage call_stack: call.arg2
+#       array of valid slots
+# @output
+#   storage call_stack: this.return
+#       array of two arrays, [[matches],[non-matches]]
 function call_stack:push
 data modify storage call_stack: this.all_items set from storage call_stack: this.arg0
 data modify storage call_stack: this.requested_item_id set from storage call_stack: this.arg1

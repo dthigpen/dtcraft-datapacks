@@ -1,3 +1,19 @@
+#> dt.inventory:api/items/take
+# Take the requested item id and count from the given set of all items
+# @params
+#   storage call_stack: call.arg0
+#       array of all items such an inventory
+#   storage call_stack: call.arg1
+#       string requested item id
+#   storage call_stack: call.arg2
+#       int requested item count
+#   storage call_stack: call.arg3
+#       bool distribute the take across all stacks
+#   storage call_stack: call.arg4
+#       array of slots to be able to choose from
+# @output
+#   storage call_stack: this.return
+#       object {success:bool, items:[], remaining_count: int}
 function call_stack:push
 data modify storage call_stack: this.all_items set from storage call_stack: this.arg0
 data modify storage call_stack: this.requested_item_id set from storage call_stack: this.arg1

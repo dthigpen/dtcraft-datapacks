@@ -1,3 +1,15 @@
+#> dt.array:api/split/in_set_unique
+# Split the given array into two arrays based on whether they are contained in the given set
+# @params
+#   storage call_stack: call.arg0
+#       array of values to split into arrays
+#   storage call_stack: call.arg1
+#       array of values used to perform the uniqueness check on
+#   storage call_stack: call.arg1
+#       array of values to compare each value in the main array against
+# @output
+#   storage call_stack: this.return
+#       array of two arrays of which the first element is the array of values that are in the set array and the second element is the complement
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 data modify storage call_stack: this.values set from storage call_stack: this.arg1

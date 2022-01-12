@@ -1,3 +1,14 @@
+#> dt.array:api/math/cumulative_subtract_min_0
+# Given an array of integers, subtract the given total across all numbers.
+# Example: arg0 = [10,2,5], arg1 = 13, return = [0,0,4]
+# @params
+#   storage call_stack: call.arg0
+#       array of integers
+#   storage call_stack: call.arg1
+#       integer total to subtract
+# @output
+#   storage call_stack: call.arg0
+#       array of integers
 function call_stack:push
 data modify storage call_stack: this.numbers set from storage call_stack: this.arg0
 data modify storage call_stack: this.total set from storage call_stack: this.arg1

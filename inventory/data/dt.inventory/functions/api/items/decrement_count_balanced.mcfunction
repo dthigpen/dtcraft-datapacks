@@ -1,3 +1,13 @@
+#> dt.inventory:api/items/decrement_count_balanced
+# Remove the given amount from the given items Count fields 
+# @params
+#   storage call_stack: call.arg0
+#       array of items
+#   storage call_stack: call.arg1
+#       int count to decrement each item by
+# @output
+#   storage call_stack: this.return
+#       array [[removed-items], [remaining-items]]
 function call_stack:push
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
 data modify storage call_stack: this.num_rounds set from storage call_stack: this.arg1

@@ -1,3 +1,9 @@
+#> dt.inventory:api/items/chest/get
+# Get items from the block at the current position. If it is a double chest all items will be returned.
+# TODO: update slots
+# @output
+#   storage call_stack: this.return
+#       array of items
 function call_stack:push
 
 data modify storage call_stack: this.return set from block ~ ~ ~ Items

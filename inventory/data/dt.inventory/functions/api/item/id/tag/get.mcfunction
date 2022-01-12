@@ -1,3 +1,11 @@
+#> dt.inventory:api/item/id/tag/get
+# tag the given item with its corresponding numeric id at path tag.dt.id
+# @params
+#   storage call_stack: call.arg0
+#       object item
+# @output
+#   storage call_stack: this.return
+#       object item
 function call_stack:push
 data modify storage call_stack: this.item set from storage call_stack: this.arg0
 

@@ -1,3 +1,15 @@
+#> dt.array:api/split/in_set
+# Split the given array (using the given values) based on whether they are contained in the given set
+# @params
+#   storage call_stack: call.arg0
+#       array of values (actual data)
+#   storage call_stack: call.arg1
+#       array of values (comparison data)
+#   storage call_stack: call.arg2
+#       array of values (set to check membership with)
+# @output
+#   storage call_stack: this.return
+#       array of two arrays in which the first element is the matches and second is the complement
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 data modify storage call_stack: this.values set from storage call_stack: this.arg1

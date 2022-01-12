@@ -1,3 +1,11 @@
+#> dt.crafting:api/craft/from_items
+# Craft a result and remaining items from the given input items
+# @params
+#   storage call_stack: call.arg0
+#       array of items to try to craft with
+# @output
+#   storage call_stack: this.return
+#       array such that the first element is the remaining items and the second element is the crafted result
 function call_stack:push
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
 

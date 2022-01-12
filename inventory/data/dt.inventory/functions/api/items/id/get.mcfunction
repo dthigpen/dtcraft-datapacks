@@ -1,3 +1,11 @@
+#> dt.inventory:api/items/id/get
+# Get numeric ids for the given array of items
+# @params
+#   storage call_stack: call.arg0
+#       array of items
+# @output
+#   storage call_stack: this.return
+#       array of numeric ids
 function call_stack:push
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
 execute unless data storage call_stack: this.temp_return run data modify storage call_stack: this.temp_return set value []

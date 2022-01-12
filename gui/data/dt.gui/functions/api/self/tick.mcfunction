@@ -1,3 +1,5 @@
+#> dt.gui:api/self/tick
+# Tick the current gui entity
 function call_stack:push
 function dt.gui:internal/database/fetch_or_init
 data modify storage call_stack: this.gui_data set from storage call_stack: call.return

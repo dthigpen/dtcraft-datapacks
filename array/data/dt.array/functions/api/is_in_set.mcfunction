@@ -1,4 +1,9 @@
-# init the loop data
+#> dt.array:api/is_in_set
+# Return if the given set contains the given value
+# @deprecated
+#   use the one at dt.array:api/helper/is_in_set
+# @params
+# @output
 function call_stack:push
 
 execute unless data storage call_stack: this.temp_return run data modify storage call_stack: call.temp_return set value []

@@ -1,3 +1,8 @@
+#> dt.inventory:api/items/chest/set
+# Set the contents of the double chest at the current position
+# @params
+#   storage call_stack: call.arg0
+#       array of items
 function call_stack:push
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
 
