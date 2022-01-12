@@ -7,7 +7,7 @@
 #   storage call_stack: call.return
 #       description
 # Increment hit id
-scoreboard players set $hit_id dt.raycast 1
+scoreboard players add $hit_id dt.raycast 1
 # Reset player score
 scoreboard players reset @s dt.raycast
 # Reset score tracking iterations
@@ -18,9 +18,6 @@ scoreboard players operation $limit dt.rc.tmp /= #two dt.rc.tmp
 # scoreboard players operation $limit dt.rc.tmp /= $step_distance dt.raycast
 scoreboard players set $hit_sentinal dt.rc.tmp -2
 
-# tellraw @p ["cast.mcfunction: max: ",{"score":{"name":"$max_distance","objective":"dt.raycast"}}]
-# tellraw @p ["cast.mcfunction: step: ",{"score":{"name":"$step_distance","objective":"dt.raycast"}}]
-# tellraw @p ["cast.mcfunction: limit: ",{"score":{"name":"$limit","objective":"dt.rc.tmp"}}]
 execute as @s at @s anchored eyes positioned ^ ^ ^ anchored feet run function dt.raycast:internal/loop
 
 # reset values to default

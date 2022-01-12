@@ -40,9 +40,12 @@ schedule clear dt.inv_sort:internal/tick
 execute if score $dt.inv_sort load.status matches 1 run schedule function dt.inv_sort:internal/tick 1t replace
 #[[[end]]]
 
+scoreboard objectives add dt.inv_sort dummy
 scoreboard objectives add dt.tmp dummy
 scoreboard objectives add dt.sort trigger
 scoreboard players enable @a dt.sort
+scoreboard objectives add dt.sort_chest trigger
+scoreboard players enable @a dt.sort_chest
 
 data merge storage dt.inv_sort: {}
 

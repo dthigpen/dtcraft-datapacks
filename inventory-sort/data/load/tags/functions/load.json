@@ -1,1 +1,1 @@
-{"values": ["call_stack:load","dt.inventory:load", "dt.array:load","dt.inv_sort:load"]}
+{"values": ["call_stack:load","dt.inventory:load", "dt.array:load","dt.raycast:load", "dt.inv_sort:load"]}
