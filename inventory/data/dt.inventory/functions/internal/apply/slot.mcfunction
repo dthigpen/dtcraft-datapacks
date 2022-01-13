@@ -3,7 +3,6 @@
 # @params
 #   storage call_stack: call.arg0
 #       array[NBT] objects
-# @params
 #   storage call_stack: call.arg1
 #       array[any] values
 # @output

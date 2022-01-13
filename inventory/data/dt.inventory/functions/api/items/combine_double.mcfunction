@@ -10,6 +10,11 @@ function call_stack:push
 
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
 
+# data modify storage call_stack: call.arg0 set from storage call_stack: this.items
+# function dt.inventory:api/items/reset_slots
+# data modify storage call_stack: this.items set from storage call_stack: call.return
+
+# split in half because their can be at most a double chest worth of items
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 function dt.array:api/split_half
 data modify storage call_stack: this.half1 set from storage call_stack: call.return[0]
@@ -31,6 +36,8 @@ function dt.inventory:api/shulker/items/set2
 
 # loot to double chest
 execute positioned 2999999 253 2999999 run function dt.inventory:api/shulker/loot/insert/block2
+execute positioned 2999999 253 2999999 run tellraw @p ["combine_double Items:",{"nbt":"Items","block":"~ ~ ~"}]
+execute positioned 2999999 253 2999999 run function dt.inventory:api/items/chest/get
+data modify storage call_stack: this.return set from storage call_stack: call.return
 
-data modify storage call_stack: this.return set from block 2999999 253 2999999 Items
 function call_stack:pop

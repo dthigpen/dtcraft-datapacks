@@ -5,17 +5,20 @@
 #       array of items
 function call_stack:push
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
-
-data modify storage call_stack: call.arg0 set from storage call_stack: this.items
-function dt.inventory:api/items/reset_slots
+tellraw @p ["set this.items: ",{"nbt":"this.items","storage":"call_stack:"}]
+# data modify storage call_stack: call.arg0 set from storage call_stack: this.items
+# function dt.inventory:api/items/reset_slots
 data modify storage call_stack: this.items set from storage call_stack: call.return
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 data modify storage call_stack: call.arg1 set value []
 data modify storage call_stack: call.arg1 append from storage call_stack: this.items[].Slot
+tellraw @p ["set call.arg1: ",{"nbt":"call.arg1","storage":"call_stack:"}]
 data modify storage call_stack: call.arg2 set value 26b
 function dt.array:api/split/greater_than
-data modify storage call_stack: this.half1 set from storage call_stack: call.return[0]
-data modify storage call_stack: this.half2 set from storage call_stack: call.return[1]
+data modify storage call_stack: this.half2 set from storage call_stack: call.return[0]
+data modify storage call_stack: this.half1 set from storage call_stack: call.return[1]
+
+# tellraw @p ["set this.half2: ",{"nbt":"this.half2","storage":"call_stack:"}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.half1
 function dt.inventory:api/items/reset_slots
