@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 617 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_button"
+execute if score $id dt.tmp matches 618 run data modify storage call_stack: global.dt.name set value "minecraft:warped_button"
+execute if score $id dt.tmp matches 619 run data modify storage call_stack: global.dt.name set value "minecraft:stone_pressure_plate"
+execute if score $id dt.tmp matches 620 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_pressure_plate"
+execute if score $id dt.tmp matches 621 run data modify storage call_stack: global.dt.name set value "minecraft:light_weighted_pressure_plate"
+execute if score $id dt.tmp matches 622 run data modify storage call_stack: global.dt.name set value "minecraft:heavy_weighted_pressure_plate"
+execute if score $id dt.tmp matches 623 run data modify storage call_stack: global.dt.name set value "minecraft:oak_pressure_plate"
+execute if score $id dt.tmp matches 624 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_pressure_plate"

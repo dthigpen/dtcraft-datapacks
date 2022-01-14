@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 497 run data modify storage call_stack: global.dt.name set value "minecraft:green_concrete"
+execute if score $id dt.tmp matches 498 run data modify storage call_stack: global.dt.name set value "minecraft:red_concrete"
+execute if score $id dt.tmp matches 499 run data modify storage call_stack: global.dt.name set value "minecraft:black_concrete"
+execute if score $id dt.tmp matches 500 run data modify storage call_stack: global.dt.name set value "minecraft:white_concrete_powder"
+execute if score $id dt.tmp matches 501 run data modify storage call_stack: global.dt.name set value "minecraft:orange_concrete_powder"
+execute if score $id dt.tmp matches 502 run data modify storage call_stack: global.dt.name set value "minecraft:magenta_concrete_powder"
+execute if score $id dt.tmp matches 503 run data modify storage call_stack: global.dt.name set value "minecraft:light_blue_concrete_powder"
+execute if score $id dt.tmp matches 504 run data modify storage call_stack: global.dt.name set value "minecraft:yellow_concrete_powder"

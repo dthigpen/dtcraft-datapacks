@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1041 run data modify storage call_stack: global.dt.name set value "minecraft:piglin_banner_pattern"
+execute if score $id dt.tmp matches 1042 run data modify storage call_stack: global.dt.name set value "minecraft:composter"
+execute if score $id dt.tmp matches 1043 run data modify storage call_stack: global.dt.name set value "minecraft:barrel"
+execute if score $id dt.tmp matches 1044 run data modify storage call_stack: global.dt.name set value "minecraft:smoker"
+execute if score $id dt.tmp matches 1045 run data modify storage call_stack: global.dt.name set value "minecraft:blast_furnace"
+execute if score $id dt.tmp matches 1046 run data modify storage call_stack: global.dt.name set value "minecraft:cartography_table"
+execute if score $id dt.tmp matches 1047 run data modify storage call_stack: global.dt.name set value "minecraft:fletching_table"
+execute if score $id dt.tmp matches 1048 run data modify storage call_stack: global.dt.name set value "minecraft:grindstone"

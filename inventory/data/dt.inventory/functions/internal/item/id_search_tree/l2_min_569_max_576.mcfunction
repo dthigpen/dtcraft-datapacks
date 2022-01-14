@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 569 run data modify storage call_stack: global.dt.name set value "minecraft:mossy_stone_brick_slab"
+execute if score $id dt.tmp matches 570 run data modify storage call_stack: global.dt.name set value "minecraft:polished_diorite_slab"
+execute if score $id dt.tmp matches 571 run data modify storage call_stack: global.dt.name set value "minecraft:mossy_cobblestone_slab"
+execute if score $id dt.tmp matches 572 run data modify storage call_stack: global.dt.name set value "minecraft:end_stone_brick_slab"
+execute if score $id dt.tmp matches 573 run data modify storage call_stack: global.dt.name set value "minecraft:smooth_sandstone_slab"
+execute if score $id dt.tmp matches 574 run data modify storage call_stack: global.dt.name set value "minecraft:smooth_quartz_slab"
+execute if score $id dt.tmp matches 575 run data modify storage call_stack: global.dt.name set value "minecraft:granite_slab"
+execute if score $id dt.tmp matches 576 run data modify storage call_stack: global.dt.name set value "minecraft:andesite_slab"

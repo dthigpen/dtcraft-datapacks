@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 273 run data modify storage call_stack: global.dt.name set value "minecraft:smooth_basalt"
+execute if score $id dt.tmp matches 274 run data modify storage call_stack: global.dt.name set value "minecraft:soul_torch"
+execute if score $id dt.tmp matches 275 run data modify storage call_stack: global.dt.name set value "minecraft:glowstone"
+execute if score $id dt.tmp matches 276 run data modify storage call_stack: global.dt.name set value "minecraft:infested_stone"
+execute if score $id dt.tmp matches 277 run data modify storage call_stack: global.dt.name set value "minecraft:infested_cobblestone"
+execute if score $id dt.tmp matches 278 run data modify storage call_stack: global.dt.name set value "minecraft:infested_stone_bricks"
+execute if score $id dt.tmp matches 279 run data modify storage call_stack: global.dt.name set value "minecraft:infested_mossy_stone_bricks"
+execute if score $id dt.tmp matches 280 run data modify storage call_stack: global.dt.name set value "minecraft:infested_cracked_stone_bricks"

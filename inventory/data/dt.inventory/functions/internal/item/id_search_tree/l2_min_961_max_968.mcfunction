@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 961 run data modify storage call_stack: global.dt.name set value "minecraft:firework_rocket"
+execute if score $id dt.tmp matches 962 run data modify storage call_stack: global.dt.name set value "minecraft:firework_star"
+execute if score $id dt.tmp matches 963 run data modify storage call_stack: global.dt.name set value "minecraft:enchanted_book"
+execute if score $id dt.tmp matches 964 run data modify storage call_stack: global.dt.name set value "minecraft:nether_brick"
+execute if score $id dt.tmp matches 965 run data modify storage call_stack: global.dt.name set value "minecraft:prismarine_shard"
+execute if score $id dt.tmp matches 966 run data modify storage call_stack: global.dt.name set value "minecraft:prismarine_crystals"
+execute if score $id dt.tmp matches 967 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit"
+execute if score $id dt.tmp matches 968 run data modify storage call_stack: global.dt.name set value "minecraft:cooked_rabbit"

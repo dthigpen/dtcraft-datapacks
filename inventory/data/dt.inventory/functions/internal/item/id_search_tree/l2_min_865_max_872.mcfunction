@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 865 run data modify storage call_stack: global.dt.name set value "minecraft:spider_eye"
+execute if score $id dt.tmp matches 866 run data modify storage call_stack: global.dt.name set value "minecraft:fermented_spider_eye"
+execute if score $id dt.tmp matches 867 run data modify storage call_stack: global.dt.name set value "minecraft:blaze_powder"
+execute if score $id dt.tmp matches 868 run data modify storage call_stack: global.dt.name set value "minecraft:magma_cream"
+execute if score $id dt.tmp matches 869 run data modify storage call_stack: global.dt.name set value "minecraft:brewing_stand"
+execute if score $id dt.tmp matches 870 run data modify storage call_stack: global.dt.name set value "minecraft:cauldron"
+execute if score $id dt.tmp matches 871 run data modify storage call_stack: global.dt.name set value "minecraft:ender_eye"
+execute if score $id dt.tmp matches 872 run data modify storage call_stack: global.dt.name set value "minecraft:glistering_melon_slice"

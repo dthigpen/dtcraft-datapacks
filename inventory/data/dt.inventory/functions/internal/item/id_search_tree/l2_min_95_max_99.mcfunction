@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 95 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_weathered_cut_copper_stairs"
-execute if score $id dt.tmp matches 96 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_oxidized_cut_copper_stairs"
-execute if score $id dt.tmp matches 96 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_oxidized_cut_copper_stairs"
-execute if score $id dt.tmp matches 97 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_cut_copper_slab"
-execute if score $id dt.tmp matches 97 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_cut_copper_slab"
-execute if score $id dt.tmp matches 98 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_exposed_cut_copper_slab"
-execute if score $id dt.tmp matches 98 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_exposed_cut_copper_slab"
-execute if score $id dt.tmp matches 99 run data modify storage call_stack: global.dt.name set value "minecraft:waxed_weathered_cut_copper_slab"

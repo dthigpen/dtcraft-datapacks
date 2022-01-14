@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 401 run data modify storage call_stack: global.dt.name set value "minecraft:orange_stained_glass"
+execute if score $id dt.tmp matches 402 run data modify storage call_stack: global.dt.name set value "minecraft:magenta_stained_glass"
+execute if score $id dt.tmp matches 403 run data modify storage call_stack: global.dt.name set value "minecraft:light_blue_stained_glass"
+execute if score $id dt.tmp matches 404 run data modify storage call_stack: global.dt.name set value "minecraft:yellow_stained_glass"
+execute if score $id dt.tmp matches 405 run data modify storage call_stack: global.dt.name set value "minecraft:lime_stained_glass"
+execute if score $id dt.tmp matches 406 run data modify storage call_stack: global.dt.name set value "minecraft:pink_stained_glass"
+execute if score $id dt.tmp matches 407 run data modify storage call_stack: global.dt.name set value "minecraft:gray_stained_glass"
+execute if score $id dt.tmp matches 408 run data modify storage call_stack: global.dt.name set value "minecraft:light_gray_stained_glass"

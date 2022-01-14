@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 849 run data modify storage call_stack: global.dt.name set value "minecraft:melon_slice"
+execute if score $id dt.tmp matches 850 run data modify storage call_stack: global.dt.name set value "minecraft:dried_kelp"
+execute if score $id dt.tmp matches 851 run data modify storage call_stack: global.dt.name set value "minecraft:pumpkin_seeds"
+execute if score $id dt.tmp matches 852 run data modify storage call_stack: global.dt.name set value "minecraft:melon_seeds"
+execute if score $id dt.tmp matches 853 run data modify storage call_stack: global.dt.name set value "minecraft:beef"
+execute if score $id dt.tmp matches 854 run data modify storage call_stack: global.dt.name set value "minecraft:cooked_beef"
+execute if score $id dt.tmp matches 855 run data modify storage call_stack: global.dt.name set value "minecraft:chicken"
+execute if score $id dt.tmp matches 856 run data modify storage call_stack: global.dt.name set value "minecraft:cooked_chicken"

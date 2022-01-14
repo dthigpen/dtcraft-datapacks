@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 577 run data modify storage call_stack: global.dt.name set value "minecraft:red_nether_brick_slab"
+execute if score $id dt.tmp matches 578 run data modify storage call_stack: global.dt.name set value "minecraft:polished_andesite_slab"
+execute if score $id dt.tmp matches 579 run data modify storage call_stack: global.dt.name set value "minecraft:diorite_slab"
+execute if score $id dt.tmp matches 580 run data modify storage call_stack: global.dt.name set value "minecraft:cobbled_deepslate_slab"
+execute if score $id dt.tmp matches 581 run data modify storage call_stack: global.dt.name set value "minecraft:polished_deepslate_slab"
+execute if score $id dt.tmp matches 582 run data modify storage call_stack: global.dt.name set value "minecraft:deepslate_brick_slab"
+execute if score $id dt.tmp matches 583 run data modify storage call_stack: global.dt.name set value "minecraft:deepslate_tile_slab"
+execute if score $id dt.tmp matches 584 run data modify storage call_stack: global.dt.name set value "minecraft:scaffolding"

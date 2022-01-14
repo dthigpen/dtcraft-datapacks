@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 201 run data modify storage call_stack: global.dt.name set value "minecraft:big_dripleaf"
+execute if score $id dt.tmp matches 202 run data modify storage call_stack: global.dt.name set value "minecraft:small_dripleaf"
+execute if score $id dt.tmp matches 203 run data modify storage call_stack: global.dt.name set value "minecraft:bamboo"
+execute if score $id dt.tmp matches 204 run data modify storage call_stack: global.dt.name set value "minecraft:oak_slab"
+execute if score $id dt.tmp matches 205 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_slab"
+execute if score $id dt.tmp matches 206 run data modify storage call_stack: global.dt.name set value "minecraft:birch_slab"
+execute if score $id dt.tmp matches 207 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_slab"
+execute if score $id dt.tmp matches 208 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_slab"

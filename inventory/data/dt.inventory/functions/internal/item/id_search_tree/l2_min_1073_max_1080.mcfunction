@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1073 run data modify storage call_stack: global.dt.name set value "minecraft:chiseled_polished_blackstone"
+execute if score $id dt.tmp matches 1074 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_bricks"
+execute if score $id dt.tmp matches 1075 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_brick_slab"
+execute if score $id dt.tmp matches 1076 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_brick_stairs"
+execute if score $id dt.tmp matches 1077 run data modify storage call_stack: global.dt.name set value "minecraft:cracked_polished_blackstone_bricks"
+execute if score $id dt.tmp matches 1078 run data modify storage call_stack: global.dt.name set value "minecraft:respawn_anchor"
+execute if score $id dt.tmp matches 1079 run data modify storage call_stack: global.dt.name set value "minecraft:candle"
+execute if score $id dt.tmp matches 1080 run data modify storage call_stack: global.dt.name set value "minecraft:white_candle"

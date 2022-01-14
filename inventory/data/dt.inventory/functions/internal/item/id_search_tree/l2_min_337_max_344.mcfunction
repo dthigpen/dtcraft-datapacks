@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 337 run data modify storage call_stack: global.dt.name set value "minecraft:end_stone_brick_wall"
+execute if score $id dt.tmp matches 338 run data modify storage call_stack: global.dt.name set value "minecraft:diorite_wall"
+execute if score $id dt.tmp matches 339 run data modify storage call_stack: global.dt.name set value "minecraft:blackstone_wall"
+execute if score $id dt.tmp matches 340 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_wall"
+execute if score $id dt.tmp matches 341 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_brick_wall"
+execute if score $id dt.tmp matches 342 run data modify storage call_stack: global.dt.name set value "minecraft:cobbled_deepslate_wall"
+execute if score $id dt.tmp matches 343 run data modify storage call_stack: global.dt.name set value "minecraft:polished_deepslate_wall"
+execute if score $id dt.tmp matches 344 run data modify storage call_stack: global.dt.name set value "minecraft:deepslate_brick_wall"

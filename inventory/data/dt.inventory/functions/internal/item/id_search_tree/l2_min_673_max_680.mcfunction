@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 673 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_boat"
+execute if score $id dt.tmp matches 674 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_boat"
+execute if score $id dt.tmp matches 675 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_boat"
+execute if score $id dt.tmp matches 676 run data modify storage call_stack: global.dt.name set value "minecraft:structure_block"
+execute if score $id dt.tmp matches 677 run data modify storage call_stack: global.dt.name set value "minecraft:jigsaw"
+execute if score $id dt.tmp matches 678 run data modify storage call_stack: global.dt.name set value "minecraft:turtle_helmet"
+execute if score $id dt.tmp matches 679 run data modify storage call_stack: global.dt.name set value "minecraft:scute"
+execute if score $id dt.tmp matches 680 run data modify storage call_stack: global.dt.name set value "minecraft:flint_and_steel"

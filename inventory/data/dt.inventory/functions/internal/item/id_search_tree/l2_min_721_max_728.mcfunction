@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 721 run data modify storage call_stack: global.dt.name set value "minecraft:diamond_pickaxe"
+execute if score $id dt.tmp matches 722 run data modify storage call_stack: global.dt.name set value "minecraft:diamond_axe"
+execute if score $id dt.tmp matches 723 run data modify storage call_stack: global.dt.name set value "minecraft:diamond_hoe"
+execute if score $id dt.tmp matches 724 run data modify storage call_stack: global.dt.name set value "minecraft:netherite_sword"
+execute if score $id dt.tmp matches 725 run data modify storage call_stack: global.dt.name set value "minecraft:netherite_shovel"
+execute if score $id dt.tmp matches 726 run data modify storage call_stack: global.dt.name set value "minecraft:netherite_pickaxe"
+execute if score $id dt.tmp matches 727 run data modify storage call_stack: global.dt.name set value "minecraft:netherite_axe"
+execute if score $id dt.tmp matches 728 run data modify storage call_stack: global.dt.name set value "minecraft:netherite_hoe"

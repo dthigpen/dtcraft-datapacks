@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 324 run data modify storage call_stack: global.dt.name set value "minecraft:beacon"
-execute if score $id dt.tmp matches 325 run data modify storage call_stack: global.dt.name set value "minecraft:cobblestone_wall"
-execute if score $id dt.tmp matches 326 run data modify storage call_stack: global.dt.name set value "minecraft:mossy_cobblestone_wall"
-execute if score $id dt.tmp matches 327 run data modify storage call_stack: global.dt.name set value "minecraft:brick_wall"
-execute if score $id dt.tmp matches 328 run data modify storage call_stack: global.dt.name set value "minecraft:prismarine_wall"
-execute if score $id dt.tmp matches 329 run data modify storage call_stack: global.dt.name set value "minecraft:red_sandstone_wall"
-execute if score $id dt.tmp matches 330 run data modify storage call_stack: global.dt.name set value "minecraft:mossy_stone_brick_wall"
-execute if score $id dt.tmp matches 331 run data modify storage call_stack: global.dt.name set value "minecraft:granite_wall"

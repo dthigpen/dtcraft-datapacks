@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 665 run data modify storage call_stack: global.dt.name set value "minecraft:tnt_minecart"
+execute if score $id dt.tmp matches 666 run data modify storage call_stack: global.dt.name set value "minecraft:hopper_minecart"
+execute if score $id dt.tmp matches 667 run data modify storage call_stack: global.dt.name set value "minecraft:carrot_on_a_stick"
+execute if score $id dt.tmp matches 668 run data modify storage call_stack: global.dt.name set value "minecraft:warped_fungus_on_a_stick"
+execute if score $id dt.tmp matches 669 run data modify storage call_stack: global.dt.name set value "minecraft:elytra"
+execute if score $id dt.tmp matches 670 run data modify storage call_stack: global.dt.name set value "minecraft:oak_boat"
+execute if score $id dt.tmp matches 671 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_boat"
+execute if score $id dt.tmp matches 672 run data modify storage call_stack: global.dt.name set value "minecraft:birch_boat"

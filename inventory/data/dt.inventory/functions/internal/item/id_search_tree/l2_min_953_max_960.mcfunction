@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 953 run data modify storage call_stack: global.dt.name set value "minecraft:skeleton_skull"
+execute if score $id dt.tmp matches 954 run data modify storage call_stack: global.dt.name set value "minecraft:wither_skeleton_skull"
+execute if score $id dt.tmp matches 955 run data modify storage call_stack: global.dt.name set value "minecraft:player_head"
+execute if score $id dt.tmp matches 956 run data modify storage call_stack: global.dt.name set value "minecraft:zombie_head"
+execute if score $id dt.tmp matches 957 run data modify storage call_stack: global.dt.name set value "minecraft:creeper_head"
+execute if score $id dt.tmp matches 958 run data modify storage call_stack: global.dt.name set value "minecraft:dragon_head"
+execute if score $id dt.tmp matches 959 run data modify storage call_stack: global.dt.name set value "minecraft:nether_star"
+execute if score $id dt.tmp matches 960 run data modify storage call_stack: global.dt.name set value "minecraft:pumpkin_pie"

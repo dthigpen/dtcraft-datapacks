@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1001 run data modify storage call_stack: global.dt.name set value "minecraft:beetroot"
+execute if score $id dt.tmp matches 1002 run data modify storage call_stack: global.dt.name set value "minecraft:beetroot_seeds"
+execute if score $id dt.tmp matches 1003 run data modify storage call_stack: global.dt.name set value "minecraft:beetroot_soup"
+execute if score $id dt.tmp matches 1004 run data modify storage call_stack: global.dt.name set value "minecraft:dragon_breath"
+execute if score $id dt.tmp matches 1005 run data modify storage call_stack: global.dt.name set value "minecraft:splash_potion"
+execute if score $id dt.tmp matches 1006 run data modify storage call_stack: global.dt.name set value "minecraft:spectral_arrow"
+execute if score $id dt.tmp matches 1007 run data modify storage call_stack: global.dt.name set value "minecraft:tipped_arrow"
+execute if score $id dt.tmp matches 1008 run data modify storage call_stack: global.dt.name set value "minecraft:lingering_potion"

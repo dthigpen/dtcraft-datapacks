@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 657 run data modify storage call_stack: global.dt.name set value "minecraft:powered_rail"
+execute if score $id dt.tmp matches 658 run data modify storage call_stack: global.dt.name set value "minecraft:detector_rail"
+execute if score $id dt.tmp matches 659 run data modify storage call_stack: global.dt.name set value "minecraft:rail"
+execute if score $id dt.tmp matches 660 run data modify storage call_stack: global.dt.name set value "minecraft:activator_rail"
+execute if score $id dt.tmp matches 661 run data modify storage call_stack: global.dt.name set value "minecraft:saddle"
+execute if score $id dt.tmp matches 662 run data modify storage call_stack: global.dt.name set value "minecraft:minecart"
+execute if score $id dt.tmp matches 663 run data modify storage call_stack: global.dt.name set value "minecraft:chest_minecart"
+execute if score $id dt.tmp matches 664 run data modify storage call_stack: global.dt.name set value "minecraft:furnace_minecart"

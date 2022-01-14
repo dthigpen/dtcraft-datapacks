@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1017 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_blocks"
+execute if score $id dt.tmp matches 1018 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_chirp"
+execute if score $id dt.tmp matches 1019 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_far"
+execute if score $id dt.tmp matches 1020 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_mall"
+execute if score $id dt.tmp matches 1021 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_mellohi"
+execute if score $id dt.tmp matches 1022 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_stal"
+execute if score $id dt.tmp matches 1023 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_strad"
+execute if score $id dt.tmp matches 1024 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_ward"

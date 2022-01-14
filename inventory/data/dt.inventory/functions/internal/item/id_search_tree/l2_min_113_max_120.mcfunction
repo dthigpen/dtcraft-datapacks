@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 113 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_acacia_log"
+execute if score $id dt.tmp matches 114 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_dark_oak_log"
+execute if score $id dt.tmp matches 115 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_crimson_stem"
+execute if score $id dt.tmp matches 116 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_warped_stem"
+execute if score $id dt.tmp matches 117 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_oak_wood"
+execute if score $id dt.tmp matches 118 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_spruce_wood"
+execute if score $id dt.tmp matches 119 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_birch_wood"
+execute if score $id dt.tmp matches 120 run data modify storage call_stack: global.dt.name set value "minecraft:stripped_jungle_wood"

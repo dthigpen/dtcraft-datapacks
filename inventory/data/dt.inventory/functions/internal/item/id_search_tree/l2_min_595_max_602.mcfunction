@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 595 run data modify storage call_stack: global.dt.name set value "minecraft:hopper"
-execute if score $id dt.tmp matches 596 run data modify storage call_stack: global.dt.name set value "minecraft:dispenser"
-execute if score $id dt.tmp matches 597 run data modify storage call_stack: global.dt.name set value "minecraft:dropper"
-execute if score $id dt.tmp matches 598 run data modify storage call_stack: global.dt.name set value "minecraft:lectern"
-execute if score $id dt.tmp matches 599 run data modify storage call_stack: global.dt.name set value "minecraft:target"
-execute if score $id dt.tmp matches 600 run data modify storage call_stack: global.dt.name set value "minecraft:lever"
-execute if score $id dt.tmp matches 601 run data modify storage call_stack: global.dt.name set value "minecraft:lightning_rod"
-execute if score $id dt.tmp matches 602 run data modify storage call_stack: global.dt.name set value "minecraft:daylight_detector"

@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1009 run data modify storage call_stack: global.dt.name set value "minecraft:shield"
+execute if score $id dt.tmp matches 1010 run data modify storage call_stack: global.dt.name set value "minecraft:totem_of_undying"
+execute if score $id dt.tmp matches 1011 run data modify storage call_stack: global.dt.name set value "minecraft:shulker_shell"
+execute if score $id dt.tmp matches 1012 run data modify storage call_stack: global.dt.name set value "minecraft:iron_nugget"
+execute if score $id dt.tmp matches 1013 run data modify storage call_stack: global.dt.name set value "minecraft:knowledge_book"
+execute if score $id dt.tmp matches 1014 run data modify storage call_stack: global.dt.name set value "minecraft:debug_stick"
+execute if score $id dt.tmp matches 1015 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_13"
+execute if score $id dt.tmp matches 1016 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_cat"

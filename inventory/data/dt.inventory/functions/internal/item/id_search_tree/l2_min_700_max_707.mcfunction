@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 700 run data modify storage call_stack: global.dt.name set value "minecraft:wooden_shovel"
-execute if score $id dt.tmp matches 701 run data modify storage call_stack: global.dt.name set value "minecraft:wooden_pickaxe"
-execute if score $id dt.tmp matches 702 run data modify storage call_stack: global.dt.name set value "minecraft:wooden_axe"
-execute if score $id dt.tmp matches 703 run data modify storage call_stack: global.dt.name set value "minecraft:wooden_hoe"
-execute if score $id dt.tmp matches 704 run data modify storage call_stack: global.dt.name set value "minecraft:stone_sword"
-execute if score $id dt.tmp matches 705 run data modify storage call_stack: global.dt.name set value "minecraft:stone_shovel"
-execute if score $id dt.tmp matches 706 run data modify storage call_stack: global.dt.name set value "minecraft:stone_pickaxe"
-execute if score $id dt.tmp matches 707 run data modify storage call_stack: global.dt.name set value "minecraft:stone_axe"

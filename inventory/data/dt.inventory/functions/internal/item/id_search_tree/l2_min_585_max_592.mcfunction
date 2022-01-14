@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 585 run data modify storage call_stack: global.dt.name set value "minecraft:redstone"
+execute if score $id dt.tmp matches 586 run data modify storage call_stack: global.dt.name set value "minecraft:redstone_torch"
+execute if score $id dt.tmp matches 587 run data modify storage call_stack: global.dt.name set value "minecraft:redstone_block"
+execute if score $id dt.tmp matches 588 run data modify storage call_stack: global.dt.name set value "minecraft:repeater"
+execute if score $id dt.tmp matches 589 run data modify storage call_stack: global.dt.name set value "minecraft:comparator"
+execute if score $id dt.tmp matches 590 run data modify storage call_stack: global.dt.name set value "minecraft:piston"
+execute if score $id dt.tmp matches 591 run data modify storage call_stack: global.dt.name set value "minecraft:sticky_piston"
+execute if score $id dt.tmp matches 592 run data modify storage call_stack: global.dt.name set value "minecraft:slime_block"

@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 801 run data modify storage call_stack: global.dt.name set value "minecraft:cod"
+execute if score $id dt.tmp matches 802 run data modify storage call_stack: global.dt.name set value "minecraft:salmon"
+execute if score $id dt.tmp matches 803 run data modify storage call_stack: global.dt.name set value "minecraft:tropical_fish"
+execute if score $id dt.tmp matches 804 run data modify storage call_stack: global.dt.name set value "minecraft:pufferfish"
+execute if score $id dt.tmp matches 805 run data modify storage call_stack: global.dt.name set value "minecraft:cooked_cod"
+execute if score $id dt.tmp matches 806 run data modify storage call_stack: global.dt.name set value "minecraft:cooked_salmon"
+execute if score $id dt.tmp matches 807 run data modify storage call_stack: global.dt.name set value "minecraft:ink_sac"
+execute if score $id dt.tmp matches 808 run data modify storage call_stack: global.dt.name set value "minecraft:glow_ink_sac"

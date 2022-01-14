@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1057 run data modify storage call_stack: global.dt.name set value "minecraft:soul_campfire"
+execute if score $id dt.tmp matches 1058 run data modify storage call_stack: global.dt.name set value "minecraft:shroomlight"
+execute if score $id dt.tmp matches 1059 run data modify storage call_stack: global.dt.name set value "minecraft:honeycomb"
+execute if score $id dt.tmp matches 1060 run data modify storage call_stack: global.dt.name set value "minecraft:bee_nest"
+execute if score $id dt.tmp matches 1061 run data modify storage call_stack: global.dt.name set value "minecraft:beehive"
+execute if score $id dt.tmp matches 1062 run data modify storage call_stack: global.dt.name set value "minecraft:honey_bottle"
+execute if score $id dt.tmp matches 1063 run data modify storage call_stack: global.dt.name set value "minecraft:honeycomb_block"
+execute if score $id dt.tmp matches 1064 run data modify storage call_stack: global.dt.name set value "minecraft:lodestone"

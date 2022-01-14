@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 857 run data modify storage call_stack: global.dt.name set value "minecraft:rotten_flesh"
+execute if score $id dt.tmp matches 858 run data modify storage call_stack: global.dt.name set value "minecraft:ender_pearl"
+execute if score $id dt.tmp matches 859 run data modify storage call_stack: global.dt.name set value "minecraft:blaze_rod"
+execute if score $id dt.tmp matches 860 run data modify storage call_stack: global.dt.name set value "minecraft:ghast_tear"
+execute if score $id dt.tmp matches 861 run data modify storage call_stack: global.dt.name set value "minecraft:gold_nugget"
+execute if score $id dt.tmp matches 862 run data modify storage call_stack: global.dt.name set value "minecraft:nether_wart"
+execute if score $id dt.tmp matches 863 run data modify storage call_stack: global.dt.name set value "minecraft:potion"
+execute if score $id dt.tmp matches 864 run data modify storage call_stack: global.dt.name set value "minecraft:glass_bottle"

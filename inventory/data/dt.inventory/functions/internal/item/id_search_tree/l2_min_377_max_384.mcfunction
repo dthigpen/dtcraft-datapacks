@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 377 run data modify storage call_stack: global.dt.name set value "minecraft:yellow_carpet"
+execute if score $id dt.tmp matches 378 run data modify storage call_stack: global.dt.name set value "minecraft:lime_carpet"
+execute if score $id dt.tmp matches 379 run data modify storage call_stack: global.dt.name set value "minecraft:pink_carpet"
+execute if score $id dt.tmp matches 380 run data modify storage call_stack: global.dt.name set value "minecraft:gray_carpet"
+execute if score $id dt.tmp matches 381 run data modify storage call_stack: global.dt.name set value "minecraft:light_gray_carpet"
+execute if score $id dt.tmp matches 382 run data modify storage call_stack: global.dt.name set value "minecraft:cyan_carpet"
+execute if score $id dt.tmp matches 383 run data modify storage call_stack: global.dt.name set value "minecraft:purple_carpet"
+execute if score $id dt.tmp matches 384 run data modify storage call_stack: global.dt.name set value "minecraft:blue_carpet"

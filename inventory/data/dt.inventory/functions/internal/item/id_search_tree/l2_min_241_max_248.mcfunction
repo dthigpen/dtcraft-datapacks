@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 241 run data modify storage call_stack: global.dt.name set value "minecraft:purpur_pillar"
+execute if score $id dt.tmp matches 242 run data modify storage call_stack: global.dt.name set value "minecraft:purpur_stairs"
+execute if score $id dt.tmp matches 243 run data modify storage call_stack: global.dt.name set value "minecraft:spawner"
+execute if score $id dt.tmp matches 244 run data modify storage call_stack: global.dt.name set value "minecraft:oak_stairs"
+execute if score $id dt.tmp matches 245 run data modify storage call_stack: global.dt.name set value "minecraft:chest"
+execute if score $id dt.tmp matches 246 run data modify storage call_stack: global.dt.name set value "minecraft:crafting_table"
+execute if score $id dt.tmp matches 247 run data modify storage call_stack: global.dt.name set value "minecraft:farmland"
+execute if score $id dt.tmp matches 248 run data modify storage call_stack: global.dt.name set value "minecraft:furnace"

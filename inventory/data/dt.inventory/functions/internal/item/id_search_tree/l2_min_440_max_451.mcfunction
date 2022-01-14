@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 440 run data modify storage call_stack: global.dt.name set value "minecraft:chiseled_red_sandstone"
-execute if score $id dt.tmp matches 441 run data modify storage call_stack: global.dt.name set value "minecraft:cut_red_sandstone"
-execute if score $id dt.tmp matches 442 run data modify storage call_stack: global.dt.name set value "minecraft:red_sandstone_stairs"
-execute if score $id dt.tmp matches 445 run data modify storage call_stack: global.dt.name set value "minecraft:magma_block"
-execute if score $id dt.tmp matches 446 run data modify storage call_stack: global.dt.name set value "minecraft:nether_wart_block"
-execute if score $id dt.tmp matches 448 run data modify storage call_stack: global.dt.name set value "minecraft:red_nether_bricks"
-execute if score $id dt.tmp matches 449 run data modify storage call_stack: global.dt.name set value "minecraft:bone_block"
-execute if score $id dt.tmp matches 451 run data modify storage call_stack: global.dt.name set value "minecraft:shulker_box"

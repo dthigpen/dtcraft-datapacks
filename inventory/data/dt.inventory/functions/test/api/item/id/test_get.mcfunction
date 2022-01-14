@@ -1,4 +1,4 @@
-function unittest:api/config/enable/detailed_results
+# function unittest:api/config/enable/detailed_results
 data modify storage unittest:in name set value "Test Item Id Get"
 function unittest:api/test_suite/setup
 

@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 641 run data modify storage call_stack: global.dt.name set value "minecraft:oak_trapdoor"
+execute if score $id dt.tmp matches 642 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_trapdoor"
+execute if score $id dt.tmp matches 643 run data modify storage call_stack: global.dt.name set value "minecraft:birch_trapdoor"
+execute if score $id dt.tmp matches 644 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_trapdoor"
+execute if score $id dt.tmp matches 645 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_trapdoor"
+execute if score $id dt.tmp matches 646 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_trapdoor"
+execute if score $id dt.tmp matches 647 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_trapdoor"
+execute if score $id dt.tmp matches 648 run data modify storage call_stack: global.dt.name set value "minecraft:warped_trapdoor"

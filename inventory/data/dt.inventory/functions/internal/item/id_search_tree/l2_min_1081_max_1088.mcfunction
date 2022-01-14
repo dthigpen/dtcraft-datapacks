@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1081 run data modify storage call_stack: global.dt.name set value "minecraft:orange_candle"
+execute if score $id dt.tmp matches 1082 run data modify storage call_stack: global.dt.name set value "minecraft:magenta_candle"
+execute if score $id dt.tmp matches 1083 run data modify storage call_stack: global.dt.name set value "minecraft:light_blue_candle"
+execute if score $id dt.tmp matches 1084 run data modify storage call_stack: global.dt.name set value "minecraft:yellow_candle"
+execute if score $id dt.tmp matches 1085 run data modify storage call_stack: global.dt.name set value "minecraft:lime_candle"
+execute if score $id dt.tmp matches 1086 run data modify storage call_stack: global.dt.name set value "minecraft:pink_candle"
+execute if score $id dt.tmp matches 1087 run data modify storage call_stack: global.dt.name set value "minecraft:gray_candle"
+execute if score $id dt.tmp matches 1088 run data modify storage call_stack: global.dt.name set value "minecraft:light_gray_candle"

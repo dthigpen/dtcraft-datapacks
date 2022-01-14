@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 177 run data modify storage call_stack: global.dt.name set value "minecraft:azure_bluet"
+execute if score $id dt.tmp matches 178 run data modify storage call_stack: global.dt.name set value "minecraft:red_tulip"
+execute if score $id dt.tmp matches 179 run data modify storage call_stack: global.dt.name set value "minecraft:orange_tulip"
+execute if score $id dt.tmp matches 180 run data modify storage call_stack: global.dt.name set value "minecraft:white_tulip"
+execute if score $id dt.tmp matches 181 run data modify storage call_stack: global.dt.name set value "minecraft:pink_tulip"
+execute if score $id dt.tmp matches 182 run data modify storage call_stack: global.dt.name set value "minecraft:oxeye_daisy"
+execute if score $id dt.tmp matches 183 run data modify storage call_stack: global.dt.name set value "minecraft:cornflower"
+execute if score $id dt.tmp matches 184 run data modify storage call_stack: global.dt.name set value "minecraft:lily_of_the_valley"

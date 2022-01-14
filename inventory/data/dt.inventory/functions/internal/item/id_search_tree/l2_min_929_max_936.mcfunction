@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 929 run data modify storage call_stack: global.dt.name set value "minecraft:villager_spawn_egg"
+execute if score $id dt.tmp matches 930 run data modify storage call_stack: global.dt.name set value "minecraft:vindicator_spawn_egg"
+execute if score $id dt.tmp matches 931 run data modify storage call_stack: global.dt.name set value "minecraft:wandering_trader_spawn_egg"
+execute if score $id dt.tmp matches 932 run data modify storage call_stack: global.dt.name set value "minecraft:witch_spawn_egg"
+execute if score $id dt.tmp matches 933 run data modify storage call_stack: global.dt.name set value "minecraft:wither_skeleton_spawn_egg"
+execute if score $id dt.tmp matches 934 run data modify storage call_stack: global.dt.name set value "minecraft:wolf_spawn_egg"
+execute if score $id dt.tmp matches 935 run data modify storage call_stack: global.dt.name set value "minecraft:zoglin_spawn_egg"
+execute if score $id dt.tmp matches 936 run data modify storage call_stack: global.dt.name set value "minecraft:zombie_spawn_egg"

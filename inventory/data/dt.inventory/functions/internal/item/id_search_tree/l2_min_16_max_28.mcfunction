@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 16 run data modify storage call_stack: global.dt.name set value "minecraft:coarse_dirt"
-execute if score $id dt.tmp matches 22 run data modify storage call_stack: global.dt.name set value "minecraft:oak_planks"
-execute if score $id dt.tmp matches 23 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_planks"
-execute if score $id dt.tmp matches 24 run data modify storage call_stack: global.dt.name set value "minecraft:birch_planks"
-execute if score $id dt.tmp matches 25 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_planks"
-execute if score $id dt.tmp matches 26 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_planks"
-execute if score $id dt.tmp matches 27 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_planks"
-execute if score $id dt.tmp matches 28 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_planks"

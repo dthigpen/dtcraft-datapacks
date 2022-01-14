@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 961 run data modify storage call_stack: global.dt.name set value "minecraft:firework_rocket"
-execute if score $id dt.tmp matches 969 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit_stew"
-execute if score $id dt.tmp matches 972 run data modify storage call_stack: global.dt.name set value "minecraft:armor_stand"
-execute if score $id dt.tmp matches 976 run data modify storage call_stack: global.dt.name set value "minecraft:leather_horse_armor"
-execute if score $id dt.tmp matches 977 run data modify storage call_stack: global.dt.name set value "minecraft:lead"
-execute if score $id dt.tmp matches 982 run data modify storage call_stack: global.dt.name set value "minecraft:white_banner"
-execute if score $id dt.tmp matches 983 run data modify storage call_stack: global.dt.name set value "minecraft:orange_banner"
-execute if score $id dt.tmp matches 984 run data modify storage call_stack: global.dt.name set value "minecraft:magenta_banner"

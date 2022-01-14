@@ -1,8 +1,0 @@
-execute if score $id dt.tmp matches 2 run data modify storage call_stack: global.dt.name set value "minecraft:granite"
-execute if score $id dt.tmp matches 3 run data modify storage call_stack: global.dt.name set value "minecraft:polished_granite"
-execute if score $id dt.tmp matches 4 run data modify storage call_stack: global.dt.name set value "minecraft:diorite"
-execute if score $id dt.tmp matches 5 run data modify storage call_stack: global.dt.name set value "minecraft:polished_diorite"
-execute if score $id dt.tmp matches 6 run data modify storage call_stack: global.dt.name set value "minecraft:andesite"
-execute if score $id dt.tmp matches 7 run data modify storage call_stack: global.dt.name set value "minecraft:polished_andesite"
-execute if score $id dt.tmp matches 10 run data modify storage call_stack: global.dt.name set value "minecraft:polished_deepslate"
-execute if score $id dt.tmp matches 13 run data modify storage call_stack: global.dt.name set value "minecraft:dripstone_block"

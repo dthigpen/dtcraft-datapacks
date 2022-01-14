@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 969 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit_stew"
+execute if score $id dt.tmp matches 970 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit_foot"
+execute if score $id dt.tmp matches 971 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit_hide"
+execute if score $id dt.tmp matches 972 run data modify storage call_stack: global.dt.name set value "minecraft:armor_stand"
+execute if score $id dt.tmp matches 973 run data modify storage call_stack: global.dt.name set value "minecraft:iron_horse_armor"
+execute if score $id dt.tmp matches 974 run data modify storage call_stack: global.dt.name set value "minecraft:golden_horse_armor"
+execute if score $id dt.tmp matches 975 run data modify storage call_stack: global.dt.name set value "minecraft:diamond_horse_armor"
+execute if score $id dt.tmp matches 976 run data modify storage call_stack: global.dt.name set value "minecraft:leather_horse_armor"

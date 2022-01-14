@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 649 run data modify storage call_stack: global.dt.name set value "minecraft:oak_fence_gate"
+execute if score $id dt.tmp matches 650 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_fence_gate"
+execute if score $id dt.tmp matches 651 run data modify storage call_stack: global.dt.name set value "minecraft:birch_fence_gate"
+execute if score $id dt.tmp matches 652 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_fence_gate"
+execute if score $id dt.tmp matches 653 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_fence_gate"
+execute if score $id dt.tmp matches 654 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_fence_gate"
+execute if score $id dt.tmp matches 655 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_fence_gate"
+execute if score $id dt.tmp matches 656 run data modify storage call_stack: global.dt.name set value "minecraft:warped_fence_gate"
