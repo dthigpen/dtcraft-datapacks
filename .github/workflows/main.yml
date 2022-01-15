@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ master, test]
   pull_request:
-    branches: [ master ]
+    branches: [ master, test]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,48 +22,77 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      # clone dependencies
-      - name: Clone minecraft-data
-        uses: actions/checkout@v2
+      - name: Set up JRE 17
+        uses: actions/setup-java@v1
         with:
-          repository: PrismarineJS/minecraft-data
-          
-      - name: Clone minecraft-assets
-        uses: actions/checkout@v2
-        with:
-          repository: InventivetalentDev/minecraft-assets
-          ref: "refs/heads/1.18.1"
-        
-      # Get dependency datapacks
-      - uses: robinraju/release-downloader@v1.3
-        with:
-          repository: "rx-modules/PlayerDB"
-          latest: true
-          zipBall: true
-          out-file-path: "libraries"
-
-      - name: Unzip library datapacks
-        run: |
-          find libraries -name '*.zip' -exec bash -c 'file={}; unzip $file -d ${file%.zip}' \;
-          echo Unzipped library datapacks
-          
-      - name: Clone datapack-utils
-        uses: actions/checkout@v2
-        with:
-          repository: dthigpen/datapack-utils
+          java-version: 17
+          java-package: jre # optional (jdk, jre, jdk+fx or jre+fx) - defaults to jdk
       
-      - name: Clone dpbuild
+      - name: Check JRE
+        run: java -version
+      # Check out this repo
+      - name: Checkout dtcraft-datapacks
+        uses: actions/checkout@v2
+        with:
+          path: dtcraft-datapacks
+
+      - name: Checkout dpbuild
         uses: actions/checkout@v2
         with:
           repository: dthigpen/dpbuild
+          path: dpbuild
       
-      
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: ls
-
-      - name: Run dpbuild in release mode for all datapacks
+      # This action creates permission issues when writing to the same folder so first put in downloads
+      - name: Download PlayerDB
+        uses: Legion2/download-release-action@v2.1.0
+        with:
+          repository: rx-modules/PlayerDB
+          tag: 'v2.0.1'
+          path: downloads
+          file: PlayerDB.v2.0.1.zip
+        
+      - name: Unzip library datapacks
         run: |
-          echo Mock dpbuild running..
+          mkdir libraries
+          find downloads -name '*.zip' -exec bash -c 'file=$(basename {}); unzip {} -d libraries/${file%.zip}' \;
+          echo Unzipped library datapacks
+
+      - name: Build datapacks to artifacts directory with dpbuild
+        run: |
+          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest test-artifacts' \;
+          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest artifacts --release' \;
+
+
+      - name: Download Minecraft server jar
+        run: |
+          mkdir server
+          echo "Downloading Minecraft server jar"
+          wget -q -P server https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar
+        shell: bash
+
+      - name: Get runnable tests
+        run: |
+          find dtcraft-datapacks -wholename '*/test/api/**/test_*.mcfunction' | sed 's/\.mcfunction$//' | sed 's/.*data\///g' | sed 's/\/functions\//:/g' > server/tests.txt
+
+      - name: Run Minecraft server setup script
+        run: ./dtcraft-datapacks/.github/scripts/setup_minecraft_server.sh
+        shell: bash
+      
+      - name: Check for unit test failures
+        run: |
+          if [ -s server/failed.txt ]; then
+            echo "Failed unit tests:"
+            cat server/failed.txt
+            exit 1
+          else
+            echo "Pass"
+          fi
+
+        shell: bash
+#       - name: Upload artifacts
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: datapacks
+#           path: artifacts/*.zip
+      
+      
