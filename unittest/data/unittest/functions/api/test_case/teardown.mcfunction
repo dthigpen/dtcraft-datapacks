@@ -2,7 +2,7 @@ function unittest:internal/storage/clear/in
 function unittest:internal/storage/clear/out
 
 
-# tellraw @p ["Teardown Test Case: ",{"nbt":"case.name","storage":"unittest:internal"}]
+# tellraw @s ["Teardown Test Case: ",{"nbt":"case.name","storage":"unittest:internal"}]
 # add test case results to test suite
 data modify storage unittest:internal suite.results append value {}
 data modify storage unittest:internal suite.results[-1].name set from storage unittest:internal case.name
