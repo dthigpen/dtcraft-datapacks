@@ -8,7 +8,7 @@ execute unless block ~ ~ ~ minecraft:barrel run function dt.autocraft:internal/a
 execute if block ~ ~ ~ minecraft:barrel run function dt.gui:api/self/tick
 # manually handle hopper interactions with the gui
 execute if block ~ ~ ~ minecraft:barrel run function dt.gui:api/self/tick_hopper
-# replace result placeholders
-execute if block ~ ~ ~ minecraft:barrel run function dt.autocraft:internal/autocrafter/placeholder/replace_all
+# replace item entity placeholders
+execute if block ~ ~ ~ minecraft:barrel run function dt.autocraft:internal/autocrafter/placeholder/item_entity/replace
 # handle the crafter state
 execute if block ~ ~ ~ minecraft:barrel run function dt.autocraft:internal/autocrafter/state/handle

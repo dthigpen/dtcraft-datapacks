@@ -10,19 +10,19 @@ function unittest:api/test_case/setup
 function unittest:api/assert/force/fail
 function #unittest:multi_tick
 function unittest:api/test_case/teardown
-# tellraw @p ["tick.mcfunction: ",{"nbt":"suite.results[-1]","storage":"unittest:internal"}]
+# tellraw @s ["tick.mcfunction: ",{"nbt":"suite.results[-1]","storage":"unittest:internal"}]
 execute if data storage unittest:internal suite.results[-1].results[1] run data remove storage unittest:internal suite.results[-1].results[0]
 data modify entity @s data.suite.results append from storage unittest:internal suite.results[-1]
 function unittest:internal/storage/clear/all
 
-# tellraw @p ["tick.mcfunction: ",{"nbt":"temp","storage":"unittest:internal"}]
+# tellraw @s ["tick.mcfunction: ",{"nbt":"temp","storage":"unittest:internal"}]
 # increment tick
 scoreboard players set $tick dt.tmp 0
 execute store result score $tick dt.tmp run data get entity @s data.tick
 scoreboard players add $tick dt.tmp 1
 execute store result entity @s data.tick int 1 run scoreboard players get $tick dt.tmp
-# tellraw @p ["tick.mcfunction: ",{"score":{"name":"$tick","objective":"dt.tmp"}}]
-# tellraw @p ["tick.mcfunction: ",{"nbt":"data.suite.results[-1]","entity":"@s"}]
+# tellraw @s ["tick.mcfunction: ",{"score":{"name":"$tick","objective":"dt.tmp"}}]
+# tellraw @s ["tick.mcfunction: ",{"nbt":"data.suite.results[-1]","entity":"@s"}]
 
 execute unless data entity @s data.suite.results[-1].results[-1] run data merge storage unittest:internal {temp:{return:{pass:true}}}
 execute if data entity @s data.suite.results[-1] run data modify storage unittest:internal temp.result set from entity @s data.suite.results[-1].results[-1]

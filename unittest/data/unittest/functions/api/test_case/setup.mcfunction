@@ -4,6 +4,6 @@ function unittest:internal/storage/clear/out
 data modify storage unittest:internal case set value {name:"Unnamed", results:[]}
 data modify storage unittest:internal case.name set from storage unittest:in name
 
-# tellraw @p ["Setup Test Case: ",{"nbt":"case.name","storage":"unittest:internal"}]
+# tellraw @s ["Setup Test Case: ",{"nbt":"case.name","storage":"unittest:internal"}]
 
 function unittest:internal/storage/clear/in
