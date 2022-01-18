@@ -1,7 +1,7 @@
 {
     "values": [
-        {"id": "dt.inv_sort:test/system/test_sort_one_item/on_multi_tick", "required": false},
-        {"id": "dt.inv_sort:test/system/test_no_sort_hotbar/on_multi_tick", "required": false},
-        {"id": "dt.inv_sort:test/system/test_sort_reverse/on_multi_tick", "required": false}
+        {"id": "dt.inv_sort:test/system/client_test_sort_one_item/on_multi_tick", "required": false},
+        {"id": "dt.inv_sort:test/system/client_test_no_sort_hotbar/on_multi_tick", "required": false},
+        {"id": "dt.inv_sort:test/system/client_test_sort_reverse/on_multi_tick", "required": false}
     ]
 }

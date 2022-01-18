@@ -1,8 +1,8 @@
 {
     "values": [
-      { "id": "dt.refill:test/system/test_refill_good/on_multi_tick", "required": false },
-      { "id": "dt.refill:test/system/test_refill_hotbar_to_inventory/on_multi_tick", "required": false },
-      { "id": "dt.refill:test/system/test_refill_drop_stack/on_multi_tick", "required": false }
+      { "id": "dt.refill:test/client_test_refill_good/on_multi_tick", "required": false },
+      { "id": "dt.refill:test/client_test_refill_hotbar_to_inventory/on_multi_tick", "required": false },
+      { "id": "dt.refill:test/client_test_refill_drop_stack/on_multi_tick", "required": false }
     ]
   }
   
