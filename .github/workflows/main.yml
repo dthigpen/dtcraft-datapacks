@@ -77,16 +77,17 @@ jobs:
           echo "rcon.port=25575" >> server.properties
           echo "enable-rcon=true" >> server.properties
           echo "rcon.password=${RCON_PWD}" >> server.properties
-
+          mkdir -p logs
+          echo "" >> logs/latest.log
           screen -dmS minecraft java -Xmx2048M -Xms2048M -jar server.jar nogui
           popd
-          echo "Waiting 150s for server to start up"
-          sleep 150
+          echo "Waiting for RCON server to start up"
+          tail -f server/logs/latest.log | sed '/.*RCON running on.* / q'
+          sleep 5
           echo "Copying datapacks"
           cp -r test-artifacts/* server/world/datapacks
           pip install pytest
           pip install mctools
-          tail -10 server/logs/latest.log
           pytest -q --tb=no ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
       
       
