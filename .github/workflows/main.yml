@@ -27,9 +27,7 @@ jobs:
         with:
           java-version: 17
           java-package: jre # optional (jdk, jre, jdk+fx or jre+fx) - defaults to jdk
-      
-      - name: Check JRE
-        run: java -version
+            
       # Check out this repo
       - name: Checkout dtcraft-datapacks
         uses: actions/checkout@v2
@@ -70,25 +68,17 @@ jobs:
           wget -q -P server https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar
         shell: bash
 
-      - name: Get runnable tests
+      - name: Start server and run pytest
         run: |
-          find dtcraft-datapacks -wholename '*/test/api/**/test_*.mcfunction' | sed 's/\.mcfunction$//' | sed 's/.*data\///g' | sed 's/\/functions\//:/g' > server/tests.txt
-
-      - name: Run Minecraft server setup script
-        run: ./dtcraft-datapacks/.github/scripts/setup_minecraft_server.sh
-        shell: bash
+          pushd server
+          screen -dmS minecraft java -Xmx2048M -Xms2048M -jar server.jar nogui
+          popd
+          echo "Waiting 180s for server to start up"
+          sleep 180
+          pip install pytest
+          pytest ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
       
-      - name: Check for unit test failures
-        run: |
-          if [ -s server/failed.txt ]; then
-            echo "Failed unit tests:"
-            cat server/failed.txt
-            exit 1
-          else
-            echo "Pass"
-          fi
-
-        shell: bash
+      
 #       - name: Upload artifacts
 #         uses: actions/upload-artifact@v2
 #         with:
