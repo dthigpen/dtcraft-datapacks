@@ -1,5 +1,6 @@
+# function unittest:api/config/enable/detailed_results
+
 data modify storage unittest:in name set value "Test from items"
-function unittest:api/config/enable/detailed_results
 function unittest:api/test_suite/setup
 
 
@@ -11,8 +12,7 @@ data modify storage call_stack: call.arg0 set value [{id:"minecraft:coal",Count:
 function dt.crafting:internal/model/ingredients/from_items
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
-
-data modify storage unittest:in expected set value [[0,684,0],[0,729,0],[0,0,0],[[0b,1b,0b],[0b,1b,0b],[0b,0b,0b] ]]
+data modify storage unittest:in expected set value {grid:[ [[0,684,0],[0,729,0],[0,0,0]],[[0b,1b,0b],[0b,1b,0b],[0b,0b,0b]] ],items:{crafting:[{Count:1b,Slot:2b,id:"minecraft:coal"},{Count:1b,Slot:11b,id:"minecraft:stick"}],extras:[{Count:1b,Slot:4b,id:"minecraft:feather"}]}}
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
 

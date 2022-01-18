@@ -50,12 +50,12 @@ data modify storage unittest:in name set value "Test Shapeless"
 function unittest:api/test_case/setup
 
 function call_stack:push
-data modify storage call_stack: call.arg0 set value [{Slot: 10b, id: "minecraft:white_bed", Count: 1b}, {Slot: 20b, id: "minecraft:red_dye", Count: 2b}]
+data modify storage call_stack: call.arg0 set value [{Slot: 10b, id: "minecraft:white_bed", Count: 1b}, {Slot: 20b, id: "minecraft:red_dye", Count: 1b}]
 function dt.crafting:api/craft/from_items
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 
-data modify storage unittest:in expected set value [[{Slot: 20b, id: "minecraft:red_dye", Count: 1b}],[{Count:1b,id:"minecraft:red_bed"}]]
+data modify storage unittest:in expected set value [[],[{Count:1b,id:"minecraft:red_bed"}]]
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
 

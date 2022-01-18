@@ -1,4 +1,3 @@
-
 scoreboard players set $max_distance dt.raycast 6
 function dt.raycast:api/cast
 execute if score @s dt.raycast matches 0.. as @e[predicate=dt.raycast:hit_markers] if score @s dt.raycast = $hit_id dt.raycast at @s run say hit!

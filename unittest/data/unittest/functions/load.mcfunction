@@ -10,6 +10,10 @@ scoreboard objectives add dt.enum dummy
 scoreboard players set #equal dt.enum 0
 scoreboard players set #not_equal dt.enum 1
 
+scoreboard objectives add unittest dummy
+scoreboard players reset * unittest
+
+
 function unittest:internal/reset_all_data
 
 kill @e[type=marker, tag=unittest]

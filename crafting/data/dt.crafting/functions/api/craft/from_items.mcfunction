@@ -8,7 +8,6 @@
 #       array such that the first element is the remaining items and the second element is the crafted result
 function call_stack:push
 data modify storage call_stack: this.items set from storage call_stack: this.arg0
-
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 function dt.crafting:internal/model/ingredients/from_items
 data modify storage call_stack: this.item_id_grid set from storage call_stack: call.return.grid[0]

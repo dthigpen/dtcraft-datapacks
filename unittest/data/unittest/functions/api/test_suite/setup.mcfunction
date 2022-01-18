@@ -8,3 +8,4 @@ data modify storage unittest:internal suite.name set from storage unittest:in na
 # tellraw @s ["Setup Test Suite: ",{"nbt":"suite.name","storage":"unittest:internal"}]
 
 function unittest:internal/storage/clear/in
+scoreboard players reset $passed unittest
