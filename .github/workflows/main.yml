@@ -27,7 +27,12 @@ jobs:
         with:
           java-version: 17
           java-package: jre # optional (jdk, jre, jdk+fx or jre+fx) - defaults to jdk
-            
+      
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      
       # Check out this repo
       - name: Checkout dtcraft-datapacks
         uses: actions/checkout@v2
