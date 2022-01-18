@@ -81,7 +81,7 @@ jobs:
           popd
           echo "Waiting for RCON server to start up"
           sleep 10
-          tail -f server/logs/latest.log | sed '/.*RCON running on .*/ q'
+          tail -f server/logs/latest.log | sed '/.*! For help.*/ q'
           echo "Copying datapacks"
           cp -r test-artifacts/* server/world/datapacks
           pip install pytest
