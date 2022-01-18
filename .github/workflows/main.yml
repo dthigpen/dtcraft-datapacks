@@ -28,11 +28,6 @@ jobs:
           java-version: 17
           java-package: jre # optional (jdk, jre, jdk+fx or jre+fx) - defaults to jdk
       
-      - name: Setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-      
       # Check out this repo
       - name: Checkout dtcraft-datapacks
         uses: actions/checkout@v2
@@ -79,16 +74,20 @@ jobs:
         run: |
           pushd server
           echo "eula=true" > eula.txt
-          echo "rcon.port=25575" > server.properties
-          echo "enable-rcon=true" > server.properties
-          echo "rcon.password=${{ secrets.RCON_PWD }}" > server.properties
+          echo "rcon.port=25575" >> server.properties
+          echo "enable-rcon=true" >> server.properties
+          echo "rcon.password=${RCON_PWD}" >> server.properties
 
           screen -dmS minecraft java -Xmx2048M -Xms2048M -jar server.jar nogui
           popd
-          echo "Waiting 180s for server to start up"
-          sleep 180
+          echo "Waiting 150s for server to start up"
+          sleep 150
+          echo "Copying datapacks"
+          cp -r test-artifacts/* server/world/datapacks
           pip install pytest
-          pytest ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
+          pip install mctools
+          tail -10 server/logs/latest.log
+          pytest -q --tb=no ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
       
       
 #       - name: Upload artifacts
