@@ -33,7 +33,7 @@ function unittest:api/test_case/teardown
 
 data modify storage unittest:in name set value "Test 3"
 function unittest:api/test_case/setup
-data modify storage unittest:in expected set value [{a:1,Count:1b},{b:2,Count:2b},{c:3}]
+data modify storage unittest:in expected set value [{a:1,Count:1b},{b:2,Count:2b}]
 
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{a:1},{b:2},{c:3}]

@@ -53,7 +53,6 @@ execute if data storage call_stack: this.items[{Slot:21b}] run data remove stora
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items
 function dt.inventory:api/items/id/get
 data modify storage call_stack: this.item_ids set from storage call_stack: call.return
-
 data modify storage call_stack: this.return.items.extras set from storage call_stack: this.items
 #[[[cog
 #   for i in range(0,9):

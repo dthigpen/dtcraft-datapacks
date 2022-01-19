@@ -1,3 +1,4 @@
+function unittest:api/config/enable/detailed_results
 data modify storage unittest:in name set value "Test Take"
 function unittest:api/test_suite/setup
 

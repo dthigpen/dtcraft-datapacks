@@ -23,12 +23,15 @@ function dt.crafting:internal/craft/compress_shaped
 data modify storage call_stack: this.compressed_item_ids_shaped set from storage call_stack: call.return[0]
 data modify storage call_stack: this.item_counts set from storage call_stack: call.return[1]
 
+tellraw @p ["from_items this.item_id_grid: ",{"nbt":"this.item_id_grid","storage":"call_stack:"}]
+tellraw @p ["from_items this.item_count_grid: ",{"nbt":"this.item_count_grid","storage":"call_stack:"}]
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_id_grid
 data modify storage call_stack: call.arg1 set from storage call_stack: this.item_count_grid
 function dt.crafting:internal/craft/compress_shapeless
 data modify storage call_stack: this.compressed_item_ids_shapeless set from storage call_stack: call.return[0]
+tellraw @p ["from_items this.compressed_item_ids_shapeless: ",{"nbt":"this.compressed_item_ids_shapeless","storage":"call_stack:"}]
 data modify storage call_stack: this.item_counts set from storage call_stack: call.return[1]
-
+tellraw @p ["from_items this.item_counts: ",{"nbt":"this.item_counts","storage":"call_stack:"}]
 # tellraw @p ["search this.compressed_item_ids_shaped: ",{"nbt":"this.compressed_item_ids_shaped","storage":"call_stack:"}]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.compressed_item_ids_shaped
