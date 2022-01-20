@@ -90,8 +90,7 @@ jobs:
           cp -r test-artifacts/* server/world/datapacks
           pip install pytest
           pip install mctools
-          # pytest -q --tb=no ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
-          pytest -rx ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
+          pytest -q --tb=no ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
       
       
 #       - name: Upload artifacts
