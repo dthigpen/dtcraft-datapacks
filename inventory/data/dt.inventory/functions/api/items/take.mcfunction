@@ -101,7 +101,7 @@ execute if data storage call_stack: this.return.items run data modify storage ca
 execute if data storage call_stack: this.return.items run data modify storage call_stack: this.slots append from storage call_stack: this.return.items[].Slot
 execute if data storage call_stack: this.return.items run data modify storage call_stack: call.arg0 set from storage call_stack: this.slots
 execute if data storage call_stack: this.return.items run data modify storage call_stack: call.arg1 set from storage call_stack: this.return.items
-execute if data storage call_stack: this.return.items run function dt.array:api/convert/to_key_values
+execute if data storage call_stack: this.return.items run function dt.array:api/map/key_value/from_keys_and_values
 # tellraw @p ["take.mcfunction: c",{"nbt":"call.return","storage":"call_stack:"}]
 # tellraw @p ["take.mcfunction: r",{"nbt":"this.return.items","storage":"call_stack:"}]
 data modify storage call_stack: call.arg0 set from storage call_stack: call.return

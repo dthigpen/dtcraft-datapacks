@@ -7,7 +7,7 @@ function unittest:api/test_case/setup
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [1,2,2,4,2]
 data modify storage call_stack: call.arg1 set value ["one","two","TWO","Four",Two]
-function dt.array:api/convert/to_key_values
+function dt.array:api/map/key_value/from_keys_and_values
 function call_stack:pipe
 data modify storage call_stack: call.arg1 set value 2
 function dt.array:api/split/equal
