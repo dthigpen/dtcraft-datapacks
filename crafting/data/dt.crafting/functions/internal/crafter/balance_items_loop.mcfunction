@@ -36,7 +36,7 @@ data modify storage call_stack: this.item_slots set from storage call_stack: cal
 # Max potential slots
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_slots
 data modify storage call_stack: call.arg1 set from storage call_stack: this.free_slots
-function dt.array:api/concat
+function dt.array:api/deprecated/concat
 data modify storage call_stack: this.new_slots set from storage call_stack: call.return
 
 # Get array of free slot zeros
@@ -63,7 +63,7 @@ data modify storage call_stack: this.item_counts set from storage call_stack: ca
 # Combine slot arrays
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item_counts
 data modify storage call_stack: call.arg1 set from storage call_stack: this.zeros
-function dt.array:api/concat
+function dt.array:api/deprecated/concat
 data modify storage call_stack: this.unbalanced_counts set from storage call_stack: call.return
 
 
@@ -102,7 +102,7 @@ execute if score #num_items dt.tmp <= #new_slots dt.tmp run data modify storage 
 # append the balanced items of this id to the balanced list
 data modify storage call_stack: call.arg0 set from storage call_stack: this.balanced
 data modify storage call_stack: call.arg1 set from storage call_stack: this.items_of_id_balanced
-function dt.array:api/concat
+function dt.array:api/deprecated/concat
 data modify storage call_stack: this.balanced set from storage call_stack: call.return
 
 execute unless data storage call_stack: this.temp_items[0] run data modify storage call_stack: this.return set from storage call_stack: this.balanced

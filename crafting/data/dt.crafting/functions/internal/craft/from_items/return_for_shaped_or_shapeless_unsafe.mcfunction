@@ -10,7 +10,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: call.retu
 data modify storage call_stack: call.arg1 set value 1
 function dt.array:api/math/subtract
 data modify storage call_stack: call.arg0 set from storage call_stack: call.return
-function dt.array:api/convert/to_bytes
+function dt.array:api/map/type/to_bytes
 tellraw @p ["return_for_shaped_or_shapeless_unsafe this.crafting_items: ",{"nbt":"this.crafting_items","storage":"call_stack:"}]
 tellraw @p ["return_for_shaped_or_shapeless_unsafe call.return: ",{"nbt":"call.return","storage":"call_stack:"}]
 data modify storage call_stack: call.arg0 set from storage call_stack: this.crafting_items

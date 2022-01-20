@@ -1,8 +1,8 @@
-#> dt.array:internal/funct/reducer/array/push
-# Push a new array returning reducer scope onto the stack
+#> dt.array:api/funct/reducer/to/array/push
+# Push a array producing reducer args and check for reducer basecase before setting this.continue or this.return
 # @params
 #   storage call_stack: call.arg0
 #       array
-function dt.array:internal/funct/reducer/push_and_get_args
+function dt.array:internal/funct/reducer/args/push
 execute unless data storage call_stack: this.accumulator run data modify storage call_stack: this.accumulator set value []
 function dt.array:internal/funct/reducer/base_case/on_empty

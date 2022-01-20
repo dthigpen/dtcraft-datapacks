@@ -52,7 +52,7 @@ execute if data storage call_stack: this.subtract_single run function dt.invento
 # Reform items
 # convert int -> byte
 data modify storage call_stack: call.arg0 set from storage call_stack: this.adjusted_counts
-function dt.array:api/convert/to_bytes
+function dt.array:api/map/type/to_bytes
 data modify storage call_stack: this.adjusted_counts set from storage call_stack: call.return
 # update Count keys
 data modify storage call_stack: call.arg0 set from storage call_stack: this.matching_items

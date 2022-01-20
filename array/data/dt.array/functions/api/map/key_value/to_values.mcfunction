@@ -1,4 +1,4 @@
-#> dt.array:api/key_value/to_values
+#> dt.array:api/map/key_value/to_values
 # Convert an array of key-values to values
 # @params
 #   storage call_stack: call.arg0

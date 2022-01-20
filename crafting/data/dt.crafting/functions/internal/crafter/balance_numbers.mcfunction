@@ -36,7 +36,7 @@ data modify storage call_stack: this.base_array set from storage call_stack: cal
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.partial_array
 data modify storage call_stack: call.arg1 set from storage call_stack: this.base_array
-function dt.array:api/concat
+function dt.array:api/deprecated/concat
 data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop

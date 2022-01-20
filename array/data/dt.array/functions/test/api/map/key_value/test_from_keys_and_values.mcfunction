@@ -8,7 +8,7 @@ data modify storage unittest:in expected set value []
 function call_stack:push
 data modify storage call_stack: call.arg0 set value []
 data modify storage call_stack: call.arg1 set value []
-function dt.array:api/key_value/from_keys_and_values
+function dt.array:api/map/key_value/from_keys_and_values
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -20,7 +20,7 @@ data modify storage unittest:in expected set value [{key:1,value:"foo"}]
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [1]
 data modify storage call_stack: call.arg1 set value ["foo"]
-function dt.array:api/key_value/from_keys_and_values
+function dt.array:api/map/key_value/from_keys_and_values
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -33,7 +33,7 @@ data modify storage unittest:in expected set value [{key:1,value:"foo"},{key:2,v
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [1,2,3]
 data modify storage call_stack: call.arg1 set value ["foo","bar","!!!"]
-function dt.array:api/key_value/from_keys_and_values
+function dt.array:api/map/key_value/from_keys_and_values
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -46,7 +46,7 @@ data modify storage unittest:in expected set value [{key:99,value:"foo"},{key:4,
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [99, 4, 77]
 data modify storage call_stack: call.arg1 set value ["foo","bar","!!!"]
-function dt.array:api/key_value/from_keys_and_values
+function dt.array:api/map/key_value/from_keys_and_values
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -58,7 +58,7 @@ data modify storage unittest:in expected set value [{key:99,value:"foo"},{key:4,
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [99, 4]
 data modify storage call_stack: call.arg1 set value ["foo","bar","!!!"]
-function dt.array:api/key_value/from_keys_and_values
+function dt.array:api/map/key_value/from_keys_and_values
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal

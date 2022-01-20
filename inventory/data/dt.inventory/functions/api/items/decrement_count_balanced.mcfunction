@@ -31,7 +31,7 @@ execute if data storage call_stack: {call:{return:true}} run data modify storage
 # Reform items
 # convert int -> byte
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.adjusted_counts
-execute if data storage call_stack: this.ok_counts run function dt.array:api/convert/to_bytes
+execute if data storage call_stack: this.ok_counts run function dt.array:api/map/type/to_bytes
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: this.adjusted_counts set from storage call_stack: call.return
 # update Count keys
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
@@ -48,7 +48,7 @@ execute if data storage call_stack: this.ok_counts run data modify storage call_
 execute if data storage call_stack: this.ok_counts run function dt.array:api/n_array_of
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: this.num_removed_array set from storage call_stack: call.return
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.num_removed_array
-execute if data storage call_stack: this.ok_counts run function dt.array:api/convert/to_bytes
+execute if data storage call_stack: this.ok_counts run function dt.array:api/map/type/to_bytes
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: this.removed_counts set from storage call_stack: call.return
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg1 set from storage call_stack: this.removed_counts

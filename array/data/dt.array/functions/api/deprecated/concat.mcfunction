@@ -1,4 +1,4 @@
-#> dt.array:api/concat
+#> dt.array:api/deprecated/concat
 # @deprecated
 # concatenate two arrays
 # @params

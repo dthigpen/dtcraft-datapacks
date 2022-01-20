@@ -1,4 +1,4 @@
-#> dt.array:api/key_value/from_keys_and_values
+#> dt.array:api/map/key_value/from_keys_and_values
 # convert the given array of keys and values into key value pair objects
 # @params
 #   storage call_stack: call.arg0
@@ -26,7 +26,7 @@ execute if data storage call_stack: this.continue run data remove storage call_s
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.keys
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.values
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.temp_return set from storage call_stack: this.temp_return
-execute if data storage call_stack: this.continue run function dt.array:api/key_value/from_keys_and_values
+execute if data storage call_stack: this.continue run function dt.array:api/map/key_value/from_keys_and_values
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop
