@@ -8,7 +8,8 @@
 # @output
 #   storage call_stack: this.return
 #       true
-function dt.array:api/funct/reducer/to/bool/true/push
+data modify storage call_stack: call.accumulator set value true
+function dt.array:api/funct/reducer/to/custom/push
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.head
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.arg1
 execute if data storage call_stack: this.continue run function dt.array:api/helper/is_greater_than

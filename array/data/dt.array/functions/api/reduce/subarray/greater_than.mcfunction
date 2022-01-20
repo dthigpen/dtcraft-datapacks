@@ -8,7 +8,8 @@
 # @output
 #   storage call_stack: this.return
 #       array of subarrays
-function dt.array:api/funct/reducer/to/array_pair/push
+data modify storage call_stack: call.accumulator set value [[],[]]
+function dt.array:api/funct/reducer/to/custom/push
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.head.key
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.arg1
 execute if data storage call_stack: this.continue run function dt.array:api/helper/is_greater_than
