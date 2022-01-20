@@ -22,11 +22,11 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.item
 data remove storage call_stack: call.arg0[].Count
 data remove storage call_stack: call.arg0[].Slot
 data modify storage call_stack: call.arg1 set from storage call_stack: this.items
-function dt.array:api/convert/to_key_values
+function dt.array:api/key_value/from_keys_and_values
 function call_stack:pipe
 function dt.array:api/group_by
 function call_stack:pipe
-function dt.array:api/convert/groups_to_values
+function dt.array:api/key_value/subarray/to_values
 function call_stack:pipe
 function dt.inventory:internal/items/combine_item_groups
 data modify storage call_stack: call.arg0 set value []
