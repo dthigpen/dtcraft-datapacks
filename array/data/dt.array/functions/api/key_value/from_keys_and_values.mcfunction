@@ -1,5 +1,5 @@
-#> dt.array:api/convert/to_key_values
-# convert the given array of values into key value pair objects with the keys defaulting to sequence numbers 1..n.
+#> dt.array:api/key_value/from_keys_and_values
+# convert the given array of keys and values into key value pair objects
 # @params
 #   storage call_stack: call.arg0
 #       array keys
@@ -8,7 +8,7 @@
 #       array values
 # @output
 #   storage call_stack: call.return
-#       array of objects [{key:1,value:a}..{key:n,value:z}]
+#       array of objects [{key:key1,value:a}..{key:keyN,value:z}]
 function call_stack:push
 data modify storage call_stack: this.keys set from storage call_stack: this.arg0
 data modify storage call_stack: this.values set from storage call_stack: this.arg1
@@ -26,7 +26,7 @@ execute if data storage call_stack: this.continue run data remove storage call_s
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.keys
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.values
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.temp_return set from storage call_stack: this.temp_return
-execute if data storage call_stack: this.continue run function dt.array:api/convert/to_key_values
+execute if data storage call_stack: this.continue run function dt.array:api/key_value/from_keys_and_values
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 function call_stack:pop
