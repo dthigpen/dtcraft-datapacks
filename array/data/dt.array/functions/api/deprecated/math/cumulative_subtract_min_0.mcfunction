@@ -1,4 +1,4 @@
-#> dt.array:api/math/cumulative_subtract_min_0
+#> dt.array:api/deprecated/math/cumulative_subtract_min_0
 # Given an array of integers, subtract the given total across all numbers.
 # Example: arg0 = [10,2,5], arg1 = 13, return = [0,0,4]
 # @params
@@ -44,7 +44,7 @@ execute unless data storage call_stack: this.continue run data modify storage ca
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.numbers
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.total
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg2 set from storage call_stack: this._values
-execute if data storage call_stack: this.continue run function dt.array:api/math/cumulative_subtract_min_0
+execute if data storage call_stack: this.continue run function dt.array:api/deprecated/math/cumulative_subtract_min_0
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: call.return
 
 

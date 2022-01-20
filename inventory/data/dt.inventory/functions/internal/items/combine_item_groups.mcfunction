@@ -21,7 +21,7 @@ execute if data storage call_stack: call.return run data modify storage call_sta
 
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set value []
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 append from storage call_stack: this.group[].Count
-execute if data storage call_stack: this.continue run function dt.array:api/math/sum
+execute if data storage call_stack: this.continue run function dt.array:api/reduce/math/sum
 execute if data storage call_stack: this.continue run scoreboard players set #total dt.tmp 0
 execute if data storage call_stack: this.continue store result score #total dt.tmp run data get storage call_stack: call.return
 execute if data storage call_stack: this.continue run scoreboard players set #stacksize dt.tmp 0

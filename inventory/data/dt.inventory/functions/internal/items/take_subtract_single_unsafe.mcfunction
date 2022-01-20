@@ -7,7 +7,7 @@ data modify storage call_stack: this.adjusted_counts set from storage call_stack
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.adjusted_counts
 data modify storage call_stack: call.arg1 set value 0
-function dt.array:api/math/all_greater_than
+function dt.array:api/reduce/math/are_all_greater_than
 execute if data storage call_stack: {call:{return:false}} run data modify storage call_stack: this.bad_count set value true
 
 # subtract the number of slots from the total requested count and check if the slots are a multiple of the count or negative

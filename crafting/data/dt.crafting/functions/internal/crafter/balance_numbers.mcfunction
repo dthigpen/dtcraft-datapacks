@@ -4,7 +4,7 @@ data modify storage call_stack: this.numbers set from storage call_stack: this.a
 
 execute store result score #length dt.tmp run data get storage call_stack: this.numbers
 data modify storage call_stack: call.arg0 set from storage call_stack: this.numbers
-function dt.array:api/math/sum
+function dt.array:api/reduce/math/sum
 data modify storage call_stack: this.total set from storage call_stack: call.return
 execute store result score #total dt.tmp run data get storage call_stack: this.total
 

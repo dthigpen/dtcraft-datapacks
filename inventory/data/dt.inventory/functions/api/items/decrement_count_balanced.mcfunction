@@ -25,7 +25,7 @@ data modify storage call_stack: this.adjusted_counts set from storage call_stack
 # make sure all counts are 0 or greater
 data modify storage call_stack: call.arg0 set from storage call_stack: this.adjusted_counts
 data modify storage call_stack: call.arg1 set value -1
-function dt.array:api/math/all_greater_than
+function dt.array:api/reduce/math/are_all_greater_than
 execute if data storage call_stack: {call:{return:true}} run data modify storage call_stack: this.ok_counts set value true
 
 # Reform items

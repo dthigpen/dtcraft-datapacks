@@ -6,7 +6,7 @@ scoreboard objectives add dt.enum dummy
 scoreboard players set #equal dt.enum 0
 scoreboard players set #not_equal dt.enum 1
 
-function dt.array:test/api/math/sum
+function dt.array:test/api/reduce/math/sum
 function dt.array:test/api/concat
 function dt.array:test/api/difference
 function dt.array:test/api/n_array_of
