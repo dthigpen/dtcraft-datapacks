@@ -10,7 +10,7 @@ data modify storage unittest:in expected set value [[{id:"minecraft:cobblestone"
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{id:"minecraft:cobblestone",Slot:0b,Count:1b},{id:"minecraft:cobblestone",Slot:1b,Count:1b},{id:"minecraft:cobblestone",Slot:2b,Count:1b},{id:"minecraft:slime_ball",Slot:3b,Count:1b}]
 data modify storage call_stack: call.arg1 set value {id:"minecraft:cobblestone"}
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -24,7 +24,7 @@ data modify storage unittest:in expected set value [[{id:"minecraft:slime_ball",
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{id:"minecraft:cobblestone",Slot:0b,Count:1b},{id:"minecraft:cobblestone",Slot:1b,Count:1b},{id:"minecraft:cobblestone",Slot:2b,Count:1b},{id:"minecraft:slime_ball",Slot:3b,Count:1b}]
 data modify storage call_stack: call.arg1 set value {id:"minecraft:slime_ball"}
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -38,7 +38,7 @@ data modify storage unittest:in expected set value [[],[{id:"minecraft:cobblesto
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{id:"minecraft:cobblestone",Slot:0b,Count:1b},{id:"minecraft:cobblestone",Slot:1b,Count:1b},{id:"minecraft:cobblestone",Slot:2b,Count:1b},{id:"minecraft:slime_ball",Slot:3b,Count:1b}]
 data modify storage call_stack: call.arg1 set value {id:"minecraft:aaaaa"}
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -51,7 +51,7 @@ data modify storage unittest:in expected set value [[],[]]
 function call_stack:push
 data modify storage call_stack: call.arg0 set value []
 data modify storage call_stack: call.arg1 set value {id:"minecraft:cobblestone"}
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -66,7 +66,7 @@ data modify storage unittest:in expected set value [[3],[1,2,4,5,6,7,8,9]]
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [1,2,3,4,5,6,7,8,9]
 data modify storage call_stack: call.arg1 set value 3
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -79,7 +79,7 @@ data modify storage unittest:in expected set value [["cccc"],["aa","bbb"]]
 function call_stack:push
 data modify storage call_stack: call.arg0 set value ["aa","bbb","cccc"]
 data modify storage call_stack: call.arg1 set value "cccc"
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -96,7 +96,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value ["aa","bbb","cccc"]
 data modify storage call_stack: call.arg1 set value "cccc"
 data modify storage call_stack: call.arg2 set value 0
-function dt.array:api/split_by_key_limit_n
+function dt.array:api/split/by_key_limit_n
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -110,7 +110,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value ["aa","bbb","cccc"]
 data modify storage call_stack: call.arg1 set value "cccc"
 data modify storage call_stack: call.arg2 set value -1
-function dt.array:api/split_by_key_limit_n
+function dt.array:api/split/by_key_limit_n
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -124,7 +124,7 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value ["aa","bbb","cccc"]
 data modify storage call_stack: call.arg1 set value "cccc"
 data modify storage call_stack: call.arg2 set value 100
-function dt.array:api/split_by_key_limit_n
+function dt.array:api/split/by_key_limit_n
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal
@@ -139,7 +139,7 @@ data modify storage unittest:in expected set value [[{id:"minecraft:cobblestone"
 function call_stack:push
 data modify storage call_stack: call.arg0 set value [{id:"minecraft:cobblestone",Slot:0b,Count:1b},{id:"minecraft:cobblestone",Slot:1b,Count:1b},{id:"minecraft:cobblestone",Slot:2b,Count:1b},{id:"minecraft:slime_ball",Slot:3b,Count:1b}]
 data modify storage call_stack: call.arg1 set value {id:"minecraft:cobblestone"}
-function dt.array:api/split_by_key_foreach
+function dt.array:api/split/by_key
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
 function unittest:api/assert/equal

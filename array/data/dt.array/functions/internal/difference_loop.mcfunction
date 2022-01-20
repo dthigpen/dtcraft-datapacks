@@ -6,7 +6,7 @@ data modify storage call_stack: this.difference set from storage call_stack: thi
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.list1
 data modify storage call_stack: call.arg1 set from storage call_stack: this.list2[0]
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage call_stack: this.list1 set from storage call_stack: call.return[1]
 
 data modify storage call_stack: this.return set from storage call_stack: this.list1

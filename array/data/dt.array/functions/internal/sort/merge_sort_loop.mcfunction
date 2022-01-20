@@ -2,7 +2,7 @@ function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0
 
 execute run data modify storage call_stack: call.arg0 set from storage call_stack: this.array
-execute run function dt.array:api/split_half
+execute run function dt.array:api/split/half
 execute run data modify storage call_stack: this.array1 set from storage call_stack: call.return[0]
 execute run data modify storage call_stack: this.array2 set from storage call_stack: call.return[1]
 

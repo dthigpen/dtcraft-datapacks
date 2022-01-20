@@ -5,7 +5,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.item
 data modify storage call_stack: call.arg0 append from storage call_stack: this.item_counts[1][]
 data modify storage call_stack: call.arg0 append from storage call_stack: this.item_counts[2][]
 data modify storage call_stack: call.arg1 set value 0b
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage call_stack: call.arg0 set from storage call_stack: call.return[1]
 data modify storage call_stack: call.arg1 set value 1
 function dt.array:api/math/subtract

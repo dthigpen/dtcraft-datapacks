@@ -31,7 +31,7 @@ execute if data storage call_stack: this.slots[0] run data modify storage call_s
 data modify storage call_stack: call.arg0 set from storage call_stack: this.matching_items
 data modify storage call_stack: call.arg1 set value {}
 data modify storage call_stack: call.arg1.id set from storage call_stack: this.requested_item_id
-function dt.array:api/split_by_key
+function dt.array:api/split/by_key
 data modify storage call_stack: this.matching_items set from storage call_stack: call.return[0]
 data modify storage call_stack: this.non_matching_items append from storage call_stack: call.return[1][]
 
