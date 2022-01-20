@@ -41,8 +41,7 @@ data modify storage call_stack: call.arg0 append from storage call_stack: this.i
 data modify storage call_stack: call.arg1 set value 27
 function dt.array:api/map/math/add
 function call_stack:pipe
-
-function dt.array:api/map/type/to_bytes
+function dt.array:api/map/type/to_byte
 data modify storage call_stack: call.arg0 set from storage call_stack: this.items_to_shift
 data modify storage call_stack: call.arg1 set from storage call_stack: call.return
 function dt.inventory:internal/apply/slot

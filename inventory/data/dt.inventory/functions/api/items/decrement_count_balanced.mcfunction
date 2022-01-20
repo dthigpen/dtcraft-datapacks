@@ -19,19 +19,19 @@ data modify storage call_stack: this.counts append from storage call_stack: this
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.counts
 data modify storage call_stack: call.arg1 set from storage call_stack: this.num_rounds
-function dt.array:api/math/subtract
+function dt.array:api/map/math/subtract
 data modify storage call_stack: this.adjusted_counts set from storage call_stack: call.return
 
 # make sure all counts are 0 or greater
 data modify storage call_stack: call.arg0 set from storage call_stack: this.adjusted_counts
 data modify storage call_stack: call.arg1 set value -1
 function dt.array:api/reduce/math/are_all_greater_than
-execute if data storage call_stack: {call:{return:true}} run data modify storage call_stack: this.ok_counts set value true
+execute if data storage call_stack: call.return run data modify storage call_stack: this.ok_counts set value true
 
 # Reform items
 # convert int -> byte
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.adjusted_counts
-execute if data storage call_stack: this.ok_counts run function dt.array:api/map/type/to_bytes
+execute if data storage call_stack: this.ok_counts run function dt.array:api/map/type/to_byte
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: this.adjusted_counts set from storage call_stack: call.return
 # update Count keys
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
@@ -48,7 +48,7 @@ execute if data storage call_stack: this.ok_counts run data modify storage call_
 execute if data storage call_stack: this.ok_counts run function dt.array:api/n_array_of
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: this.num_removed_array set from storage call_stack: call.return
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.num_removed_array
-execute if data storage call_stack: this.ok_counts run function dt.array:api/map/type/to_bytes
+execute if data storage call_stack: this.ok_counts run function dt.array:api/map/type/to_byte
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: this.removed_counts set from storage call_stack: call.return
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg0 set from storage call_stack: this.items
 execute if data storage call_stack: this.ok_counts run data modify storage call_stack: call.arg1 set from storage call_stack: this.removed_counts
