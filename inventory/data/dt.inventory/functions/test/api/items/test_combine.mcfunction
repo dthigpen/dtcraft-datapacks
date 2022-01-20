@@ -9,7 +9,9 @@ function dt.inventory:api/items/combine
 data modify storage call_stack: this.actual set from storage call_stack: call.return
 
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
+# temporary shim till unittest datapack is used
+scoreboard players reset $pased unittest
+execute if score result dt.tmp = #equal dt.enum run scoreboard players set $passed unittest 1
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 function call_stack:pop
@@ -24,7 +26,8 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.arra
 function dt.inventory:api/items/combine
 data modify storage call_stack: this.actual set from storage call_stack: call.return
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
-
+# temporary shim till unittest datapack is used
+execute if score $passed unittest matches 1 if score result dt.tmp = #not_equal dt.enum run scoreboard players reset $passed unittest
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 function call_stack:pop
@@ -39,6 +42,7 @@ function dt.inventory:api/items/combine
 data modify storage call_stack: this.actual set from storage call_stack: call.return
 execute store success score result dt.tmp run data modify storage call_stack: this.actual set from storage call_stack: this.expected
 
+execute if score $passed unittest matches 1 if score result dt.tmp = #not_equal dt.enum run scoreboard players reset $passed unittest
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 function call_stack:pop
