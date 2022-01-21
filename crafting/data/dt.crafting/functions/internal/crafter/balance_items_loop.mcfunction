@@ -22,9 +22,13 @@ execute store result score #num_free dt.tmp run data get storage call_stack: thi
 
 # Get all items that have the id of the first item
 data modify storage call_stack: call.arg0 set from storage call_stack: this.temp_items
+function dt.array:api/map/key_value/from_values
+function call_stack:pipe
 data modify storage call_stack: call.arg1 set value {id:""}
 data modify storage call_stack: call.arg1.id set from storage call_stack: this.temp_items[0].id
-function dt.array:api/split/by_key
+function dt.array:api/reduce/subarray/equal_to
+function call_stack:pipe
+function dt.array:api/map/key_value/subarray/to_values
 data modify storage call_stack: this.items_of_id set from storage call_stack: call.return[0]
 data modify storage call_stack: this.temp_items set from storage call_stack: call.return[1]
 

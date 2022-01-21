@@ -2,7 +2,7 @@
 # Push a reducer scope and args to the stack
 # @params
 # @output
-function call_stack:push
+function dt.array:internal/funct/base/args/push
 data modify storage call_stack: this.head set from storage call_stack: this.arg0[0]
 data modify storage call_stack: this.tail set from storage call_stack: this.arg0
 data remove storage call_stack: this.tail[0]

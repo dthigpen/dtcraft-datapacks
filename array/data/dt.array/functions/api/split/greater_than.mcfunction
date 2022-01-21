@@ -13,7 +13,7 @@ execute unless data storage call_stack: this.continue run data modify storage ca
 
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.values[0]
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.greater_than_value
-execute if data storage call_stack: this.continue run function dt.array:api/helper/is_greater_than
+execute if data storage call_stack: this.continue run function dt.array:api/helper/math/is_greater_than
 execute if data storage call_stack: this.continue if data storage call_stack: {call:{return:true}} run data modify storage call_stack: this._temp_return[0] append from storage call_stack: this.array[0]
 execute if data storage call_stack: this.continue unless data storage call_stack: {call:{return:true}} run data modify storage call_stack: this._temp_return[1] append from storage call_stack: this.array[0]
 

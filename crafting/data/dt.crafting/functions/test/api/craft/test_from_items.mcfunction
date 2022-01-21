@@ -91,7 +91,6 @@ function call_stack:push
 data modify storage call_stack: call.arg0 set value [{Slot:0b,id:"minecraft:apple",Count:1b},{Slot:24b,id:"minecraft:apple",Count:1b},{Slot: 1b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 2b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 10b, id: "minecraft:cobblestone", Count: 2b}, {Slot: 11b, id: "minecraft:stick", Count: 2b}, {Slot: 20b, id: "minecraft:stick", Count: 2b}]
 function dt.crafting:api/craft/from_items
 data modify storage unittest:in actual set from storage call_stack: call.return
-tellraw @p ["test_from_items call.return: ",{"nbt":"call.return","storage":"call_stack:"}]
 function call_stack:pop
 
 function unittest:api/assert/is_not_set

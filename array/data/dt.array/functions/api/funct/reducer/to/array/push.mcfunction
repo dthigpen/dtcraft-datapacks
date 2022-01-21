@@ -5,4 +5,4 @@
 #       array
 function dt.array:internal/funct/reducer/args/push
 execute unless data storage call_stack: this.accumulator run data modify storage call_stack: this.accumulator set value []
-function dt.array:internal/funct/reducer/base_case/on_empty
+function dt.array:api/funct/reducer/base_case/on_empty

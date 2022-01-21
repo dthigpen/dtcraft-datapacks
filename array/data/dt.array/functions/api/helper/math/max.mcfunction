@@ -19,8 +19,8 @@ execute store result score $int2 dt.tmp run data get storage call_stack: this.ar
 # scoreboard players operation $int1 dt.tmp > $int2 dt.tmp
 # execute store result storage call_stack: this.return int 1 run scoreboard players get $int1 dt.tmp
 
-execute if score $int1 dt.tmp >= $int2 dt.tmp run data modify storage call_stack: this.return set from storage call_stack: this.arg0
-execute if score $int2 dt.tmp > $int1 dt.tmp run data modify storage call_stack: this.return set from storage call_stack: this.arg1
+execute if data storage call_stack: this.arg0 if data storage call_stack: this.arg1 if score $int1 dt.tmp >= $int2 dt.tmp run data modify storage call_stack: this.return set from storage call_stack: this.arg0
+execute if data storage call_stack: this.arg0 if data storage call_stack: this.arg1 if score $int2 dt.tmp > $int1 dt.tmp run data modify storage call_stack: this.return set from storage call_stack: this.arg1
 
 
 function call_stack:pop
