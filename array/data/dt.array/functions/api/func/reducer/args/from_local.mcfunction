@@ -1,0 +1,2 @@
+data modify storage call_stack: this.func.reducer.accumulator set from storage call_stack: this.accumulator
+data modify storage call_stack: this.func.reducer.head set from storage call_stack: this.head
