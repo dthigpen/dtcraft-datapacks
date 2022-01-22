@@ -6,7 +6,8 @@
 # @output
 #   storage call_stack: this.return
 #       array of subarrays of values
-function dt.array:api/func/reducer/to/array/push
+data modify storage call_stack: call.accumulator set value []
+function dt.array:api/func/reducer/push
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.accumulator append value []
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.accumulator[-1] append from storage call_stack: this.head[].value
 execute if data storage call_stack: this.continue run function dt.array:api/func/reducer/args/set

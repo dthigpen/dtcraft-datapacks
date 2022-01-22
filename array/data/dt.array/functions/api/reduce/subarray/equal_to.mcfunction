@@ -17,7 +17,11 @@
 data modify storage call_stack: call.accumulator set value [[],[]]
 data modify storage call_stack: call.counter set from storage call_stack: call.arg2
 function dt.array:api/func/reducer/push
-execute if data storage call_stack: this.continue run function dt.array:api/func/reducer/base_case/counter_at_zero
+execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.counter
+execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set value 0
+execute if data storage call_stack: this.continue run function dt.array:api/helper/math/is_less_than_or_equal
+execute if data storage call_stack: this.continue if data storage call_stack: call.return run data modify storage call_stack: this.return set from storage call_stack: this.accumulator
+execute if data storage call_stack: this.continue if data storage call_stack: call.return run data remove storage call_stack: this.continue
 
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.head.key
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.arg1
