@@ -11,4 +11,4 @@ execute if data storage call_stack: this.continue run data modify storage call_s
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.anti_sum set from storage call_stack: this.anti_sum
 execute if data storage call_stack: this.continue run function dt.array:api/func/reducer/args/set
 execute if data storage call_stack: this.continue run function dt.array:api/experimental/sum
-function dt.array:api/funct/pop
+function dt.array:api/func/pop

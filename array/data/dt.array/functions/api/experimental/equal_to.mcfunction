@@ -17,7 +17,7 @@
 data modify storage call_stack: call.accumulator set value [[],[]]
 data modify storage call_stack: call.counter set from storage call_stack: call.arg2
 function dt.array:api/func/reducer/push
-execute if data storage call_stack: this.continue run function dt.array:api/funct/reducer/base_case/counter_at_zero
+execute if data storage call_stack: this.continue run function dt.array:api/func/reducer/base_case/counter_at_zero
 
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.head.key
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.arg1
@@ -31,6 +31,6 @@ execute if data storage call_stack: this.continue if data storage call_stack: th
 execute if data storage call_stack: this.continue if data storage call_stack: this.are_equal if data storage call_stack: this.counter run function dt.array:api/helper/math/sub_one
 execute if data storage call_stack: this.continue if data storage call_stack: this.are_equal if data storage call_stack: this.counter run data modify storage call_stack: this.arg2 set from storage call_stack: call.return
 
-execute if data storage call_stack: this.continue run function dt.array:api/funct/reducer/args/set
+execute if data storage call_stack: this.continue run function dt.array:api/func/reducer/args/set
 execute if data storage call_stack: this.continue run function dt.array:api/reduce/subarray/equal_to
-function dt.array:api/funct/pop
+function dt.array:api/func/pop

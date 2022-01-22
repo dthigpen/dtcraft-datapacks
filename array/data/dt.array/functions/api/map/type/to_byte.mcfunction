@@ -6,8 +6,8 @@
 # @output
 #   storage call_stack: this.return
 #       array of bytes
-function dt.array:api/funct/mapper/push
+function dt.array:api/func/mapper/push
 execute if data storage call_stack: this.continue store result storage call_stack: this.head byte 1 run data get storage call_stack: this.head
-execute if data storage call_stack: this.continue run function dt.array:api/funct/mapper/args/set
+execute if data storage call_stack: this.continue run function dt.array:api/func/mapper/args/set
 execute if data storage call_stack: this.continue run function dt.array:api/map/type/to_byte
-function dt.array:api/funct/pop
+function dt.array:api/func/pop
