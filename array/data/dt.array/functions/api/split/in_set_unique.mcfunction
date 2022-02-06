@@ -24,7 +24,7 @@ execute unless data storage call_stack: this.continue run data modify storage ca
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.set
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set value []
 execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 append from storage call_stack: this.values[0]
-execute if data storage call_stack: this.continue run function dt.array:api/difference
+execute if data storage call_stack: this.continue run function dt.array:api/reduce/set/value_difference
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.set_diff set from storage call_stack: call.return
 
 execute if data storage call_stack: this.continue run scoreboard players reset $size1 dt.tmp

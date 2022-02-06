@@ -16,7 +16,7 @@ data modify storage call_stack: this.slots_existing_balanced set from storage ca
 # the true free slots are the free_slots - balanced_slots
 data modify storage call_stack: call.arg0 set from storage call_stack: this.free_slots
 data modify storage call_stack: call.arg1 set from storage call_stack: this.slots_existing_balanced
-function dt.array:api/difference
+function dt.array:api/reduce/set/value_difference
 data modify storage call_stack: this.free_slots set from storage call_stack: call.return
 execute store result score #num_free dt.tmp run data get storage call_stack: this.free_slots
 

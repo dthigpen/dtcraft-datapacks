@@ -14,7 +14,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.item
 function dt.inventory:api/shulker/items/set2
 
 function dt.inventory:api/shulker/items/clear
-execute positioned 2999999 255 2999999 run function dt.inventory:api/shulker/loot/insert/block2
+execute in overworld positioned 2999999 255 2999999 run function dt.inventory:api/shulker/loot/insert/block2
 
 function dt.inventory:api/shulker/items/get
 data modify storage call_stack: this.return set from storage call_stack: call.return

@@ -11,7 +11,7 @@ function dt.inventory:api/shulker/items/clear
 function dt.inventory:api/shulker/items/clear2
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 function dt.inventory:api/shulker/items/set
-execute positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
+execute in overworld positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
 function dt.inventory:api/shulker/items/get2
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop
@@ -29,7 +29,7 @@ function dt.inventory:api/shulker/items/clear
 function dt.inventory:api/shulker/items/clear2
 data modify storage call_stack: call.arg0 set from storage call_stack: this.array
 function dt.inventory:api/shulker/items/set
-execute positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
+execute in overworld positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
 function dt.inventory:api/shulker/items/get2
 data modify storage unittest:in actual set from storage call_stack: call.return
 function call_stack:pop

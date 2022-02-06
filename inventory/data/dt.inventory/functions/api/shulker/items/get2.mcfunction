@@ -5,5 +5,5 @@
 #       list of items
 function call_stack:push
 data modify storage call_stack: this.return set value []
-data modify storage call_stack: this.return set from block 2999999 254 2999999 Items
+execute in overworld run data modify storage call_stack: this.return set from block 2999999 254 2999999 Items
 function call_stack:pop

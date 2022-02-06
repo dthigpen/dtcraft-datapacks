@@ -12,6 +12,6 @@ function dt.inventory:api/items/reset_slots
 data modify storage call_stack: this.items set from storage call_stack: call.return
 
 # set items
-data modify block 2999999 254 2999999 Items set from storage call_stack: this.items
+execute in overworld run data modify block 2999999 254 2999999 Items set from storage call_stack: this.items
 
 function call_stack:pop
