@@ -1,4 +1,4 @@
-# function unittest:api/config/enable/detailed_results
+function unittest:api/config/enable/detailed_results
 data modify storage unittest:in name set value "Test Cumulative Add"
 function unittest:api/test_suite/setup
 
@@ -42,5 +42,37 @@ data modify storage unittest:in expected set value [16,16,16,6]
 function call_stack:pop
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
+
+
+
+
+
+data modify storage unittest:in name set value "Test over bytes"
+function unittest:api/test_case/setup
+function call_stack:push
+data modify storage call_stack: call.arg0 set value [60b]
+data modify storage call_stack: call.arg1 set value 5b
+data modify storage call_stack: call.arg2 set value 64b
+function dt.array:api/reduce/math/cumulative_add
+data modify storage unittest:in actual set from storage call_stack: call.return
+data modify storage unittest:in expected set value [64, 1]
+function call_stack:pop
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
+
+
+
+# data modify storage unittest:in name set value "Test empty"
+# function unittest:api/test_case/setup
+# function call_stack:push
+# data modify storage call_stack: call.arg0 set value []
+# data modify storage call_stack: call.arg1 set value 5
+# data modify storage call_stack: call.arg2 set value 64
+# function dt.array:api/reduce/math/cumulative_add
+# data modify storage unittest:in actual set from storage call_stack: call.return
+# data modify storage unittest:in expected set value [5]
+# function call_stack:pop
+# function unittest:api/assert/equal
+# function unittest:api/test_case/teardown
 
 function unittest:api/test_suite/teardown

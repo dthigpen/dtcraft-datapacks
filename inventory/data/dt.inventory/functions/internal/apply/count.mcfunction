@@ -16,8 +16,10 @@ data modify storage call_stack: this.mutated set value []
 data modify storage call_stack: this.mutated set from storage call_stack: this.arg2
 
 execute store result score $count dt.tmp run data get storage call_stack: this.values[0]
-execute if score $count dt.tmp matches 1.. run data modify storage call_stack: this.objects[0].Count set from storage call_stack: this.values[0]
-execute if score $count dt.tmp matches 1.. run data modify storage call_stack: this.mutated append from storage call_stack: this.objects[0]
+# execute if score $count dt.tmp matches 1.. run data modify storage call_stack: this.objects[0].Count set from storage call_stack: this.values[0]
+data modify storage call_stack: this.mutated append from storage call_stack: this.objects[0]
+data modify storage call_stack: this.mutated[-1].Count set value 0b
+execute store result storage call_stack: this.mutated[-1].Count byte 1 run data get storage call_stack: this.values[0]
 data remove storage call_stack: this.objects[0]
 data remove storage call_stack: this.values[0]
 
