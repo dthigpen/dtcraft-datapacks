@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "callback",
+        "description": "Schedule callback functions",
+        "icon": {
+            "item": "minecraft:command_block"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:dtcraft",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}
