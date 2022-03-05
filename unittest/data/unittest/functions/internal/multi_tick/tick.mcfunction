@@ -29,4 +29,4 @@ execute if data entity @s data.suite.results[-1] run data modify storage unittes
 # Remove the result from running on an extra tick
 # If the suite has at least two test cases in which the last has only one result and that result is the sentinal, remove it
 execute unless data storage unittest:internal {temp:{return:{pass:true}}} if data entity @s data.suite.results[1] if data entity @s data.suite.results[-1].results[0] unless data entity @s data.suite.results[-1].results[1] if data entity @s data.suite.results[-1].results[{pass:false, msg:"force fail"}] run data remove entity @s data.suite.results[-1]
-execute unless data storage unittest:internal {temp:{return:{pass:true}}} run function unittest:api/multi_tick/teardown
+execute unless data storage unittest:internal {temp:{return:{pass:true}}} run function unittest:api/v1/multi_tick/teardown

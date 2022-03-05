@@ -1,7 +1,7 @@
 function call_stack:push
 
 data modify storage unittest:in name set value "unique_name"
-function unittest:api/multi_tick/setup
+function unittest:api/v1/multi_tick/setup
 
 
 # function unittest:api/v1/test_suite/setup
