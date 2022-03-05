@@ -1,0 +1,1 @@
+data modify storage call_stack: this.test_case.skip set value true

@@ -1,0 +1,3 @@
+function call_stack:push
+data modify storage call_stack: this.test_suite set value {name:"Test Suite",test_cases:[]}
+data modify storage call_stack: this.test_suite.name set from storage call_stack: this.arg0
