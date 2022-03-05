@@ -11,4 +11,4 @@ execute as @p run data modify storage call_stack: call.arg0 set value {id:"minec
 execute as @p run function dt.inventory:api/player/item/replace
 
 execute as @p run trigger dt.sort
-function unittest:api/assert/force/pass
+function unittest:api/v1/assert/force/pass

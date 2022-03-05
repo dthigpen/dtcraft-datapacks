@@ -13,4 +13,4 @@ data modify storage unittest:in expected append value {Slot: 16b, id:"minecraft:
 
 execute as @p run data modify storage unittest:in actual set from entity @s Inventory
 execute as @p run data remove storage unittest:in actual[].tag
-function unittest:api/assert/equal
+function unittest:api/v1/assert/equal

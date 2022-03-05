@@ -3,7 +3,7 @@ function unittest:internal/storage/clear/out
 
 function unittest:internal/assert/equal_unsafe
 
-function unittest:api/assert/negate_result
+function unittest:api/v1/assert/negate_result
 
 data modify storage unittest:internal temp.msg set value ["AssertNotEqual"]
 execute if data storage unittest:out msg run data modify storage unittest:internal temp.msg append value ": "

@@ -11,15 +11,15 @@ Create a named test suite for grouping test cases and cleanly outputing the resu
 
 ```mcfunction
 data modify storage unittest:in name set value "My Suite Name"
-function unittest:api/test_suite/setup
+function unittest:api/v1/test_suite/setup
 
 data modify storage unittest:in name set value "My Testcase Name"
-function unittest:api/test_case/setup
+function unittest:api/v1/test_case/setup
 
 data modify storage unittest:in expected set value -1
 data modify storage unittest:in actual set value 1
 function unittest:api/assert/equal
 
 function unittest:api/test_case/teardown
-function unittest:api/test_suite/teardown
+function unittest:api/v1/test_suite/teardown
 ```
