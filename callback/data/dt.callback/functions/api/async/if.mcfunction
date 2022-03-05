@@ -17,6 +17,6 @@ data modify storage call_stack: this.cond_queue append value "function call_stac
 
 data modify storage call_stack: call.arg0 set from storage call_stack: this.cond_queue
 data modify storage call_stack: call.arg1 set from storage call_stack: this.data
-function dt.callback:api/queue_all
+function dt.callback:api/queue
 
 function call_stack:pop
