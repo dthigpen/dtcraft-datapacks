@@ -93,10 +93,10 @@ jobs:
           pytest -q --tb=no ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
       
       
-#       - name: Upload artifacts
-#         uses: actions/upload-artifact@v2
-#         with:
-#           name: datapacks
-#           path: artifacts/*.zip
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: datapacks
+          path: artifacts/*.zip
       
       
