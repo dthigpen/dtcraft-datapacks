@@ -1,5 +1,5 @@
 scoreboard objectives add dt.callback.mem dummy
-forceload add 8999999 8999999
+execute in overworld run forceload add 8999999 8999999
 scoreboard players set $start_x dt.callback.mem 8999984
 scoreboard players set $start_y dt.callback.mem 319
 scoreboard players set $start_z dt.callback.mem 8999984
