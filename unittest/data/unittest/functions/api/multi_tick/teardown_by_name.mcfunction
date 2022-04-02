@@ -1,1 +1,0 @@
-execute as @e[type=marker,tag=unittest] run function unittest:internal/multi_tick/kill_if_name_matches

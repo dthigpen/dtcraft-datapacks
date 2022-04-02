@@ -1,0 +1,10 @@
+
+
+
+data modify storage call_stack: call.arg0 append value ['function unittest:api/test_suite/teardown']
+function dt.callback:internal/multi/wrap_commands_sets
+data modify storage call_stack: call.arg0 set from storage call_stack: call.return
+data modify storage call_stack: call.arg1.dt.callback.frame set from storage call_stack: this
+function dt.callback:api/multi_queue
+
+function call_stack:pop
