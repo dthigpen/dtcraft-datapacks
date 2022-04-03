@@ -2,4 +2,4 @@ data modify storage call_stack: this.test_suite.name set from storage call_stack
 data modify storage call_stack: this.return set from storage call_stack: this.test_suite
 function call_stack:pop
 function call_stack:pipe
-function unittest:internal/2/test_suite/report
+function unittest:internal/test_suite/report

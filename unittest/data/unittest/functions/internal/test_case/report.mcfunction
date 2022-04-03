@@ -23,6 +23,6 @@ execute unless data storage call_stack: this.pass run data modify storage call_s
 # print the test results and optional fail msg below
 tellraw @p ["",{"nbt":"this.ok_msg","storage":"call_stack:","interpret": true}," ",{"nbt":"this.test_case.id","storage":"call_stack:"}," ",{"nbt":"this.test_case.name","storage":"call_stack:"},{"nbt":"this.directive_prefix","storage":"call_stack:", "color": "gray"},{"nbt":"this.directive","storage":"call_stack:", "color": "gray"}]
 execute unless data storage call_stack: this.pass if data storage call_stack: this.last_assertion run data modify storage call_stack: call.arg0 set from storage call_stack: this.last_assertion
-execute unless data storage call_stack: this.pass if data storage call_stack: this.last_assertion unless data storage call_stack: this.skip unless data storage call_stack: this.todo run function unittest:internal/2/assert/report
+execute unless data storage call_stack: this.pass if data storage call_stack: this.last_assertion unless data storage call_stack: this.skip unless data storage call_stack: this.todo run function unittest:internal/assert/report
 
 function call_stack:pop

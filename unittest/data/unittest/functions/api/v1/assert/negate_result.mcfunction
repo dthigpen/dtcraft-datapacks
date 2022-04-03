@@ -1,4 +1,4 @@
-function unittest:internal/storage/clear/internal/temp
+function unittest:internal/v1/storage/clear/internal/temp
 
 execute if data storage unittest:out {pass:true} run data modify storage unittest:internal temp.pass set value true
 execute unless data storage unittest:out {pass:true} run data modify storage unittest:internal temp.pass set value false

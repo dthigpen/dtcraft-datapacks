@@ -1,6 +1,6 @@
 
-function unittest:internal/storage/clear/internal/temp
-function unittest:internal/storage/clear/in
+function unittest:internal/v1/storage/clear/internal/temp
+function unittest:internal/v1/storage/clear/in
 
 data modify storage unittest:in name set value "Temp Test Suite"
 function unittest:api/v1/test_suite/setup
@@ -8,12 +8,12 @@ function unittest:api/v1/test_suite/setup
 data modify storage unittest:in name set from entity @s data.tick
 function unittest:api/v1/test_case/setup
 function unittest:api/v1/assert/force/fail
-function #unittest:multi_tick
+function #unittest:v1/multi_tick
 function unittest:api/v1/test_case/teardown
 # tellraw @s ["tick.mcfunction: ",{"nbt":"suite.results[-1]","storage":"unittest:internal"}]
 execute if data storage unittest:internal suite.results[-1].results[1] run data remove storage unittest:internal suite.results[-1].results[0]
 data modify entity @s data.suite.results append from storage unittest:internal suite.results[-1]
-function unittest:internal/storage/clear/all
+function unittest:internal/v1/storage/clear/all
 
 # tellraw @s ["tick.mcfunction: ",{"nbt":"temp","storage":"unittest:internal"}]
 # increment tick

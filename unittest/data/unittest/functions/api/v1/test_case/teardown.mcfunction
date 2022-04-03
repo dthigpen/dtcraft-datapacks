@@ -1,5 +1,5 @@
-function unittest:internal/storage/clear/in
-function unittest:internal/storage/clear/out
+function unittest:internal/v1/storage/clear/in
+function unittest:internal/v1/storage/clear/out
 
 
 # tellraw @s ["Teardown Test Case: ",{"nbt":"case.name","storage":"unittest:internal"}]

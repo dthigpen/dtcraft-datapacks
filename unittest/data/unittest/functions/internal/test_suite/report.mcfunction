@@ -8,8 +8,8 @@ execute unless data storage call_stack: this.started run tellraw @p ["1..",{"sco
 data modify storage call_stack: this.test_case set from storage call_stack: this.test_suite.test_cases[0]
 execute if data storage call_stack: this.test_case run data remove storage call_stack: this.test_suite.test_cases[0]
 execute if data storage call_stack: this.test_case run data modify storage call_stack: call.arg0 set from storage call_stack: this.test_case
-execute if data storage call_stack: this.test_case run function unittest:internal/2/test_case/report
+execute if data storage call_stack: this.test_case run function unittest:internal/test_case/report
 execute if data storage call_stack: this.test_suite.test_cases[0] run data modify storage call_stack: call.arg0 set from storage call_stack: this.test_suite
 execute if data storage call_stack: this.test_suite.test_cases[0] run data modify storage call_stack: call.started set value true
-execute if data storage call_stack: this.test_suite.test_cases[0] run function unittest:internal/2/test_suite/report
+execute if data storage call_stack: this.test_suite.test_cases[0] run function unittest:internal/test_suite/report
 function call_stack:pop
