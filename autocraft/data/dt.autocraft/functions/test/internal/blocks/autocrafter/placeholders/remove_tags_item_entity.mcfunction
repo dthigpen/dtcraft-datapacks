@@ -1,4 +1,3 @@
-function call_stack:push
 data modify storage call_stack: this.test_name set value "remove_tags_item_entity"
 
 data modify storage call_stack: this.expected set value true

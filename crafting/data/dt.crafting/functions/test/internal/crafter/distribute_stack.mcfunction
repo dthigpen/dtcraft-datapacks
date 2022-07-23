@@ -1,4 +1,3 @@
-function call_stack:push
 data modify storage call_stack: this.test_name set value "distribute_stack_item_count_1"
 data modify storage call_stack: this.item set value {id:"minecraft:cobblestone",Slot:0b,Count:1b}
 data modify storage call_stack: call.arg0 set from storage call_stack: this.item
@@ -15,10 +14,8 @@ execute if score result dt.tmp = #equal dt.enum store success score result dt.tm
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 
-function call_stack:pop
 #-------------------------------------------------
 
-function call_stack:push
 data modify storage call_stack: this.test_name set value "distribute_stack_item_count_3_free_1"
 data modify storage call_stack: call.arg0 set value {id:"minecraft:cobblestone",Slot:0b,Count:3b}
 data modify storage call_stack: call.arg1 set value [1]
@@ -34,10 +31,8 @@ execute store success score result dt.tmp run data modify storage call_stack: th
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 
-function call_stack:pop
 #-------------------------------------------------
 
-function call_stack:push
 data modify storage call_stack: this.test_name set value "distribute_stack_item_count_3_free_4"
 data modify storage call_stack: call.arg0 set value {id:"minecraft:cobblestone",Slot:0b,Count:3b}
 data modify storage call_stack: call.arg1 set value [1,2,3,4]
@@ -53,10 +48,8 @@ execute if score result dt.tmp = #equal dt.enum store success score result dt.tm
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 
-function call_stack:pop
 #-------------------------------------------------
 
-function call_stack:push
 
 data modify storage call_stack: this.test_name set value "distribute_stack_no_free_slots"
 data modify storage call_stack: this.item set value {id:"minecraft:cobblestone",Slot:0b,Count:1b}
@@ -75,10 +68,8 @@ execute if score result dt.tmp = #equal dt.enum store success score result dt.tm
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
 
-function call_stack:pop
 #-------------------------------------------------
 
-function call_stack:push
 
 data modify storage call_stack: this.test_name set value "distribute_stack_empty"
 data modify storage call_stack: this.item set value {}

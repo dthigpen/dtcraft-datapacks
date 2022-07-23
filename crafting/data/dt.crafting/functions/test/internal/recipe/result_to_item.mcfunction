@@ -1,4 +1,3 @@
-function call_stack:push
 
 data modify storage call_stack: this.test_name set value "result_to_item"
 data modify storage call_stack: this.input set value {id:"minecraft:stone", count:3}
@@ -11,4 +10,3 @@ execute store success score result dt.tmp run data modify storage call_stack: th
 
 execute if score result dt.tmp = #not_equal dt.enum run tellraw @p ["",{"text":"Test Failed: ","color":"dark_red"},{"nbt":"this.test_name","storage":"call_stack:"}]
 execute if score result dt.tmp = #equal dt.enum run tellraw @p ["",{"text":"Test Passed: ","color":"dark_green"},{"nbt":"this.test_name","storage":"call_stack:"}]
-function call_stack:pop

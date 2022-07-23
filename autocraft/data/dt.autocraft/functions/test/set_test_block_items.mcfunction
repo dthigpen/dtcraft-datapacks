@@ -1,4 +1,3 @@
-function call_stack:push
 
 forceload add 777777 777777
 setblock 777777 255 777777 barrel

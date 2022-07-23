@@ -1,4 +1,3 @@
-function call_stack:push
 
 # Set some container block with items
 execute in overworld run setblock 2999999 250 2999999 hopper

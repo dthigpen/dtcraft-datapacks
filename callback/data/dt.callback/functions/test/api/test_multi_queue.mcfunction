@@ -1,4 +1,3 @@
-function call_stack:push
 
 scoreboard players set #counter dt.callback 0
 

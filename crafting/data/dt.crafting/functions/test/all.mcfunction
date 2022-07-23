@@ -1,4 +1,3 @@
-function call_stack:push
 
 scoreboard objectives add dt.tmp dummy
 scoreboard players reset * dt.tmp

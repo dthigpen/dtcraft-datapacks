@@ -1,4 +1,3 @@
-function call_stack:push
 data modify storage call_stack: this.test_name set value "remove_tags_player"
 clear @s
 data modify storage call_stack: this.input set value [{id:"minecraft:cobblestone",Slot:0b,Count:1b,tag:{dt_placeholder:{slot:0b,owner:[]}}},{id:"minecraft:cobblestone",Slot:1b,Count:1b,tag:{dt_placeholder:{slot:1b,owner:[]}}},{id:"minecraft:cobblestone",Slot:2b,Count:1b,tag:{dt_placeholder:{slot:2b,owner:[]}}}]

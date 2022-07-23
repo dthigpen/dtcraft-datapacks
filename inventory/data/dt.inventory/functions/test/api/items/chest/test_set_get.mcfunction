@@ -1,16 +1,15 @@
 # function unittest:api/config/enable/detailed_results
-data modify storage unittest:in name set value "Test items/chest/get"
-function unittest:api/v1/test_suite/setup
+function unittest:api/test_suite/setup
+data modify storage call_stack: this.name set value "Test items/chest/get"
 
 
 execute in overworld run setblock 2999999 250 2999999 chest[type=right, facing=north] replace
 execute in overworld run setblock 2999998 250 2999999 chest[type=left, facing=north] replace
 
-data modify storage unittest:in name set value "Test set and get, right side"
-function unittest:api/v1/test_case/setup
+function unittest:api/test_case/setup
+data modify storage call_stack: this.name set value "Test set and get, right side"
 execute in overworld run data modify block 2999999 250 2999999 Items set value []
 execute in overworld run data modify block 2999998 250 2999999 Items set value []
-function call_stack:push
 #[[[cog
 #   from datapack_utils import *
 #   double_chest_items = 'data modify storage call_stack: this.double_chest_items set value [{Slot: 0b, id: "minecraft:apple", Count: 1b}'
@@ -38,31 +37,29 @@ data modify storage call_stack: this.right_chest_items set value [{Slot: 0b, id:
 #[[[end]]]
 data modify storage call_stack: call.arg0 set from storage call_stack: this.double_chest_items
 execute in overworld positioned 2999999 250 2999999 run function dt.inventory:api/items/chest/set
-execute in overworld positioned 2999999 250 2999999 run data modify storage unittest:in actual set from block ~ ~ ~ Items
-data modify storage unittest:in expected set from storage call_stack: this.right_chest_items
-function unittest:api/v1/assert/equal
+execute in overworld positioned 2999999 250 2999999 run data modify storage call_stack: call.actual set from block ~ ~ ~ Items
+data modify storage call_stack: call.expected set from storage call_stack: this.right_chest_items
+function unittest:api/assert/equal
 # strip slots since those will be different
-execute in overworld run data modify storage unittest:in actual set from block 2999998 250 2999999 Items
+execute in overworld run data modify storage call_stack: call.actual set from block 2999998 250 2999999 Items
 data remove storage unittest:in actual[].Slot
-data modify storage unittest:in expected set from storage call_stack: this.left_chest_items
 data remove storage unittest:in expected[].Slot
-function unittest:api/v1/assert/equal
+data modify storage call_stack: call.expected set from storage call_stack: this.left_chest_items
+function unittest:api/assert/equal
 
 execute in overworld positioned 2999999 250 2999999 run function dt.inventory:api/items/chest/get
-data modify storage unittest:in actual set from storage call_stack: call.return
-data modify storage unittest:in expected set from storage call_stack: this.double_chest_items
-function unittest:api/v1/assert/equal
-function call_stack:pop
-function unittest:api/v1/test_case/teardown
+data modify storage call_stack: call.actual set from storage call_stack: call.return
+data modify storage call_stack: call.expected set from storage call_stack: this.double_chest_items
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
 
 
 
 
-data modify storage unittest:in name set value "Test set and get, left side"
-function unittest:api/v1/test_case/setup
+function unittest:api/test_case/setup
+data modify storage call_stack: this.name set value "Test set and get, left side"
 execute in overworld run data modify block 2999999 250 2999999 Items set value []
 execute in overworld run data modify block 2999998 250 2999999 Items set value []
-function call_stack:push
 #[[[cog
 #   from datapack_utils import *
 #   double_chest_items = 'data modify storage call_stack: this.double_chest_items set value [{Slot: 0b, id: "minecraft:apple", Count: 1b}'
@@ -90,26 +87,25 @@ data modify storage call_stack: this.right_chest_items set value [{Slot: 0b, id:
 #[[[end]]]
 data modify storage call_stack:zz call.arg0 set from storage call_stack: this.double_chest_items
 execute in overworld positioned 2999998 250 2999999 run function dt.inventory:api/items/chest/set
-execute in overworld positioned 2999999 250 2999999 run data modify storage unittest:in actual set from block ~ ~ ~ Items
-data modify storage unittest:in expected set from storage call_stack: this.right_chest_items
-function unittest:api/v1/assert/equal
+execute in overworld positioned 2999999 250 2999999 run data modify storage call_stack: call.actual set from block ~ ~ ~ Items
+data modify storage call_stack: call.expected set from storage call_stack: this.right_chest_items
+function unittest:api/assert/equal
 # strip slots since those will be different
-execute in overworld run data modify storage unittest:in actual set from block 2999998 250 2999999 Items
+execute in overworld run data modify storage call_stack: call.actual set from block 2999998 250 2999999 Items
 data remove storage unittest:in actual[].Slot
-data modify storage unittest:in expected set from storage call_stack: this.left_chest_items
 data remove storage unittest:in expected[].Slot
-function unittest:api/v1/assert/equal
+data modify storage call_stack: call.expected set from storage call_stack: this.left_chest_items
+function unittest:api/assert/equal
 
 execute in overworld positioned 2999998 250 2999999 run function dt.inventory:api/items/chest/get
-data modify storage unittest:in actual set from storage call_stack: call.return
-data modify storage unittest:in expected set from storage call_stack: this.double_chest_items
-function unittest:api/v1/assert/equal
-function call_stack:pop
-function unittest:api/v1/test_case/teardown
+data modify storage call_stack: call.actual set from storage call_stack: call.return
+data modify storage call_stack: call.expected set from storage call_stack: this.double_chest_items
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
 
 
 
-function unittest:api/v1/test_suite/teardown
+function unittest:api/test_suite/teardown
 
 
 execute in overworld run setblock 2999999 250 2999999 air replace

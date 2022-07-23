@@ -1,4 +1,3 @@
-function call_stack:push
 data modify storage call_stack: this.test_name set value "summon_item"
 data modify storage call_stack: this.expected set value {Fire:-1s, Item:{id:"minecraft:egg",Count:2b, tag:{foo:true}},Tags:["test_summon"]}
 

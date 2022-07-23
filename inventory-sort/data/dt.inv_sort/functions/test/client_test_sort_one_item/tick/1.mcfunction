@@ -1,6 +1,6 @@
 say tick 1: sorted
 
-# data modify storage unittest:in expected set value 10b
-data modify storage unittest:in expected set value {id:"minecraft:dirt",Count:10b, Slot:9b}
-execute as @p run data modify storage unittest:in actual set from entity @s Inventory[{Slot:9b}]
-function unittest:api/v1/assert/equal
+# data modify storage call_stack: call.expected set value {id:"minecraft:dirt",Count:10b, Slot:9b}
+execute as @p run data modify storage call_stack: call.actual set from entity @s Inventory[{Slot:9b}]
+data modify storage call_stack: call.expected set value 10b
+function unittest:api/assert/equal

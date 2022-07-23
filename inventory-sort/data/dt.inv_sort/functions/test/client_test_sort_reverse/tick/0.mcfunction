@@ -13,4 +13,4 @@ data modify storage call_stack: call.arg0 append value {id:"minecraft:coal", Cou
 execute as @p run function dt.inventory:api/player/items/inventory/replace
 
 execute as @p run trigger dt.sort
-function unittest:api/v1/assert/force/pass
+function unittest:api/assert/force/pass

@@ -1,5 +1,4 @@
 
-function call_stack:push
 
 clear @s minecraft:feather
 item replace entity @s inventory.17 with minecraft:feather 2

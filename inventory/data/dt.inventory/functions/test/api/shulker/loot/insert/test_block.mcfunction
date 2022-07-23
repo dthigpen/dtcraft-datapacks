@@ -1,11 +1,10 @@
 #function unittest:api/config/enable/detailed_results
-data modify storage unittest:in name set value "Shulker loot insert block"
-function unittest:api/v1/test_suite/setup
+function unittest:api/test_suite/setup
+data modify storage call_stack: this.name set value "Shulker loot insert block"
 
 
-data modify storage unittest:in name set value "empty list"
-function unittest:api/v1/test_case/setup
-function call_stack:push
+function unittest:api/test_case/setup
+data modify storage call_stack: this.name set value "empty list"
 data modify storage call_stack: this.array set value []
 function dt.inventory:api/shulker/items/clear
 function dt.inventory:api/shulker/items/clear2
@@ -13,17 +12,15 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.arra
 function dt.inventory:api/shulker/items/set
 execute in overworld positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
 function dt.inventory:api/shulker/items/get2
-data modify storage unittest:in actual set from storage call_stack: call.return
-function call_stack:pop
-data modify storage unittest:in expected set value []
-function unittest:api/v1/assert/equal
-function unittest:api/v1/test_case/teardown
+data modify storage call_stack: call.actual set from storage call_stack: call.return
+data modify storage call_stack: call.expected set value []
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
 
 
 
-data modify storage unittest:in name set value "non-empty list"
-function unittest:api/v1/test_case/setup
-function call_stack:push
+function unittest:api/test_case/setup
+data modify storage call_stack: this.name set value "non-empty list"
 data modify storage call_stack: this.array set value [{id:"minecraft:feather",Count:1b,Slot:-1b}]
 function dt.inventory:api/shulker/items/clear
 function dt.inventory:api/shulker/items/clear2
@@ -31,11 +28,10 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.arra
 function dt.inventory:api/shulker/items/set
 execute in overworld positioned 2999999 254 2999999 run function dt.inventory:api/shulker/loot/insert/block
 function dt.inventory:api/shulker/items/get2
-data modify storage unittest:in actual set from storage call_stack: call.return
-function call_stack:pop
-data modify storage unittest:in expected set value [{id:"minecraft:feather",Count:1b,Slot:0b}]
-function unittest:api/v1/assert/equal
-function unittest:api/v1/test_case/teardown
+data modify storage call_stack: call.actual set from storage call_stack: call.return
+data modify storage call_stack: call.expected set value [{id:"minecraft:feather",Count:1b,Slot:0b}]
+function unittest:api/assert/equal
+function unittest:api/test_case/teardown
 
 
 
@@ -43,4 +39,4 @@ function unittest:api/v1/test_case/teardown
 
 
 
-function unittest:api/v1/test_suite/teardown
+function unittest:api/test_suite/teardown

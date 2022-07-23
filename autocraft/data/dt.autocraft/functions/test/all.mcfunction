@@ -1,4 +1,3 @@
-function call_stack:push
 
 function dt.autocraft:test/internal/autocrafter/placeholders/add_tags_to_block
 function dt.autocraft:test/internal/autocrafter/placeholders/remove_tags_from_block

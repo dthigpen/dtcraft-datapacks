@@ -1,4 +1,3 @@
-function call_stack:push
 
 data modify storage call_stack: call.arg0 set value [[],[]]
 # data modify storage call_stack: call.arg0[0] append value ''
