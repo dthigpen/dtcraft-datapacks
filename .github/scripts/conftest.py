@@ -20,7 +20,7 @@ def pytest_generate_tests(metafunc):
     if "mcfunction" in metafunc.fixturenames:
         root = Path(metafunc.config.getoption("dir"))
         if root:
-            mcfunctions = [path_to_datapack_path(p) for p in root.glob('**/functions/test/**/test_*') if 'client' not in str(p) and 'unittest' not in p.parts]
+            mcfunctions = [path_to_datapack_path(p) for p in root.glob('**/functions/test/**/test_*') if 'client' not in str(p) and 'unittest' not in p.parts and not p.name.startswith('_')]
             metafunc.parametrize("mcfunction", mcfunctions)
         else:
             raise ValueError('Must supply a path to mcfunction files')
