@@ -21,6 +21,7 @@ execute as @e[predicate=dt.raycast:hit_markers] if score @s dt.raycast = $hit_id
 ```
 
 Optionally set the max distance that the raycast can travel.
+
 ```mcfunction
 # your_funct.mcfunction
 

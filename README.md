@@ -2,6 +2,9 @@
 
 A collection of vanilla enhancement datapacks and utilities. Click on the following datapacks for specific usage and installation information or see the general [Installation](#installation) section here.
 
+**Note**
+These datapacks are in development and may not be stable or up to date.
+
 ## [Autocraft](autocraft/README.md)
 
 Automate the crafting process with a redstone enabled crafting table.
@@ -50,10 +53,6 @@ Easily create container based GUIs.
 
 This datapack offers an api for testing functions. Additionally includes experimental multi-tick testing functionality.
 
-### [User](user-utils/README.md)
-
-This datapack provides basic functions for user specific storage based on player UUID. It provides basic CRUD (Create, Read, Update, Delete) operations. Note, it does not store user data for the calling datapack, it simply modifies and returns the data for the caller to store.
-
 ## Installation
 
 Navigate to the Releases tab and download the desired datapack's `.zip` file. Copy the zip file into your Minecraft world's `datapacks` folder. Open your Minecraft world and type `/reload`.
@@ -96,6 +95,8 @@ data modify storage call_stack: this.return value "bar"
 # pop the frame and replace with parent frame
 function call_stack:pop
 ```
+
+See the [call-stack](call-stack/README.md) for more details.
 
 ## Credits
 

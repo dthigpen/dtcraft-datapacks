@@ -11,6 +11,7 @@ This datapack provides some bare bones support for a call stack like data struct
 ## Usage
 
 ### Scoping function variables
+
 1. Wrap function content in the two functions `call_stack:push` and `call_stack:pop`.
 
     ```mcfunction
@@ -37,8 +38,11 @@ This datapack provides some bare bones support for a call stack like data struct
 
     function call_stack:pop
     ```
+
 ### Passing Arguments to Functions
+
 Data can be passed from caller to callee functions by setting storage at `call_stack: call.<var-name>`. The callee will then have correspondnig `this.<var-name>` to access. By convention `arg0`,`arg1`...`argN` variables are used to pass data from caller to callee functions. Note: `call.return` is restricted since this value is used for function returns.
+
 ```mcfunction
 # myfunct.mcfunction (caller)
 function call_stack:push
@@ -62,4 +66,5 @@ function call_stack:pop
 ```
 
 ### Function Return Values
+
 Return data from a function by setting the storage `call_stack: this.return`. This value will be copied into caller functions scope at `call_stack: call.return`.

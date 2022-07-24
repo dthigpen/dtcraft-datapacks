@@ -1,4 +1,5 @@
 # Autocraft
+
 Automate the crafting process with a redstone enabled crafting table.
 
 ## Installation

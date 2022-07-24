@@ -11,25 +11,33 @@ Easily create blocks with custom models and behaviors.
 ## Usage
 
 1. Build an NBT object with the properties of the custom block and item you want to create. See [Properties](#Properties) section for details. Note the storage destination `call_stack: call.arg0`.
-```mcfunction
-# your_file.mcfunction
-data modify storage call_stack: call.arg0 set value {block:{model:1},item:{model:3}}
-```
+
+    ```mcfunction
+    # your_file.mcfunction
+    data modify storage call_stack: call.arg0 set value {block:{model:1},item:{model:3}}
+    ```
+
 2. Call the `dt.custom_block:api/item/summon` function with the properties you created to summon a `minecraft:item` that can be used to spawn custom blocks.
-```mcfunction
-# your_file.mcfunction
-data modify storage call_stack: call.arg0 set value {block:{model:1},item:{model:3}}
-function dt.custom_block:api/item/summon
-```
+
+    ```mcfunction
+    # your_file.mcfunction
+    data modify storage call_stack: call.arg0 set value {block:{model:1},item:{model:3}}
+    function dt.custom_block:api/item/summon
+    ```
+
 3. If you included `destroy:false` in your properties, you must manually call the `dt.custom_block:api/block/destroy`. For example you could remove the database entry for the entity or remove block loot (if you changed the block) but then the destroy function must be called to kill the block entity.
-```mcfunction
-# your custom block tick function
-execute unless block ~ ~ ~ dropper run function rx.playerdb:admin/delete_player
-execute unless block ~ ~ ~ dropper run kill @e[type=item,nbt={Item:{id:"minecraft:dropper"}},distance=..0.5,limit=1]
-execute unless block ~ ~ ~ dropper run function dt.custom_block:api/block/destroy
-```
+
+    ```mcfunction
+    # your custom block tick function
+    execute unless block ~ ~ ~ dropper run function rx.playerdb:admin/delete_player
+    execute unless block ~ ~ ~ dropper run kill @e[type=item,nbt={Item:{id:"minecraft:dropper"}},distance=..0.5,limit=1]
+    execute unless block ~ ~ ~ dropper run function dt.custom_block:api/block/destroy
+    ```
+
 ## Properties
+
 Here is an example of all the properties that can be used to create a custom item/block. All are optional, but `item.name` is recommended at a minimum.
+
 ```jsonc
 {
     "block": {
