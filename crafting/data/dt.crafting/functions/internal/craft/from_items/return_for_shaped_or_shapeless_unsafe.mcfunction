@@ -19,6 +19,7 @@ data modify storage call_stack: call.arg0 set from storage call_stack: this.craf
 data modify storage call_stack: call.arg1 set from storage call_stack: call.return
 function dt.inventory:internal/apply/count
 data modify storage call_stack: this.return[0] set from storage call_stack: call.return
+data remove storage call_stack: this.return[0][{Count:0b}]
 data modify storage call_stack: this.return[0] append from storage call_stack: this.extras[]
 
 data modify storage call_stack: call.arg0 set from storage call_stack: global.dt.crafting.result.result[0]

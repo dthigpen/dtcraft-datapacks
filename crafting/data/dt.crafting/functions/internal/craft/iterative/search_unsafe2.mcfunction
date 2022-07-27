@@ -6,7 +6,7 @@ data remove storage call_stack: this.slots_match
 execute store result score #shapeless dt.crafting.tmp run data get storage call_stack: this.recipes[-1].shapeless
 execute if score #shapeless dt.crafting.tmp matches 1 run data modify storage call_stack: this.is_shapeless set value true
 execute if score #shapeless dt.crafting.tmp matches 0 run data modify storage call_stack: this.is_shaped set value true
-# tellraw @p ["search_unsafe2 this.recipes[-1]: ",{"nbt":"this.recipes[-1]","storage":"call_stack:"}]
+tellraw @p ["!!search_unsafe2 this.recipes[-1]: ",{"nbt":"this.recipes[-1].name","storage":"call_stack:"}]
 execute if data storage call_stack: this.is_shaped run data modify storage call_stack: call.arg0 set from storage call_stack: this.recipes[-1].items
 execute if data storage call_stack: this.is_shaped run function dt.crafting:internal/craft/iterative/slots/get_shaped_slots3
 execute if data storage call_stack: this.is_shaped run function dt.crafting:internal/craft/iterative/slots/compare_shaped

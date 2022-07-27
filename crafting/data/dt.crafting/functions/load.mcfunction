@@ -1,4 +1,4 @@
-#say dt.crafting loaded!
+say dt.crafting loaded!
 
 #[[[cog
 #   from datapack_utils import utils
