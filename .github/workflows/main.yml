@@ -90,8 +90,7 @@ jobs:
           cp -r test-artifacts/* server/world/datapacks
           pip install pytest
           pip install mctools
-          # TODO remove once unit tests are stable (old ones removed or fixed, and py script updated)
-          pytest ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks || true
+          pytest ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
       
       
       - name: Upload artifacts
