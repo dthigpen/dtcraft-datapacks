@@ -84,7 +84,7 @@ function unittest:api/test_case/teardown
 
 
 function unittest:api/test_case/setup
-data modify storage call_stack: this.name set value "Test asserts after false assert"
+data modify storage call_stack: this.name set value "Test true assert after false assert"
 # passes
 function unittest:api/assert/is_not_set
 # fails
