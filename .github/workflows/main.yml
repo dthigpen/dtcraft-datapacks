@@ -62,8 +62,8 @@ jobs:
 
       - name: Build datapacks to artifacts directory with dpbuild
         run: |
-          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest test-artifacts' \;
-          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest release-artifacts --release' \;
+          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'echo "Attepmting to build $1" && test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest test-artifacts' \;
+          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'echo "Attepmting to build $1" && test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest release-artifacts --release' \;
 
 
       - name: Download Minecraft server jar
