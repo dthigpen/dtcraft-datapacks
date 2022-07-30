@@ -1,10 +1,10 @@
 # say load gui
 
 #[[[cog
-#   from datapack_utils import utils
-#   from datapack_utils.utils import Pack
+#   from datapack_utils import writer, versioning
+#   from datapack_utils.versioning import Pack
 #   
-#   cog.outl(utils.setup_versioning(
+#   cog.outl(versioning.setup(
 #       Pack('dt.gui',Pack.Version(0,0,0),
 #           name='Gui',
 #           tick_function='dt.gui:tick',

@@ -1,10 +1,10 @@
 #say load dt_refill
 
 #[[[cog
-#   from datapack_utils import utils
-#   from datapack_utils.utils import Pack
+#   from datapack_utils import writer, versioning
+#   from datapack_utils.versioning import Pack
 #   
-#   cog.outl(utils.setup_versioning(
+#   cog.outl(versioning.setup(
 #       Pack('dt.refill',Pack.Version(2,0,0),name='Refill',tick_function='dt.refill:tick',
 #           dependencies = [
 #               Pack('call_stack',Pack.Version(1,0,0),name='call-stack'),

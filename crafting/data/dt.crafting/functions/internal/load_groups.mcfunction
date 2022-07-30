@@ -1,8 +1,6 @@
 #[[[cog
 #   import datapack_utils
-#   from datapack_utils import storage
-#   from datapack_utils import dt_minecraft_data
-#   from datapack_utils import writer
+#   from datapack_utils import writer, storage, dt_minecraft_data
 #   writer.out(storage.set_array('dt.crafting:', 'groups', dt_minecraft_data.get_tags()))
 #]]]
 data modify storage dt.crafting: groups set value []

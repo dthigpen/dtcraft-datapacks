@@ -1,10 +1,10 @@
 #say load inventory
 
 #[[[cog
-#   from datapack_utils import utils
-#   from datapack_utils.utils import Pack
+#   from datapack_utils import writer, versioning
+#   from datapack_utils.versioning import Pack
 #   
-#   cog.outl(utils.setup_versioning(
+#   cog.outl(versioning.setup(
 #       Pack('dt.inventory', Pack.Version(2,0,0),name='Inventory',
 #           dependencies = [
 #               Pack('call_stack',Pack.Version(1,0,0),name='call-stack'),

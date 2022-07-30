@@ -1,9 +1,7 @@
 
 
 #[[[cog
-#   from datapack_utils import storage
-#   from datapack_utils import custom_tags
-#   from datapack_utils import writer
+#   from datapack_utils import writer, storage, custom_tags
 #   writer.out(storage.set_array('dt.inv_sort:', 'groups', custom_tags.get_custom_tags()))
 #]]]
 data modify storage dt.inv_sort: groups set value []
