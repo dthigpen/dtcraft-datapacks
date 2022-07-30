@@ -1,5 +1,5 @@
 #[[[cog
-#   from datapack_utils import writer, file_utils
-#   file_utils.write_id_search_tree(file_utils.get_parent_dir() / 'id_search_tree', 'dt.inventory:internal/item/id_search_tree/')
+#   from datapack_utils import writer, file_utils, file_tree
+#   file_tree.write_id_search_tree(file_utils.get_current_dir() / 'id_search_tree', 'dt.inventory:internal/item/id_search_tree/')
 #]]]
 #[[[end]]]
