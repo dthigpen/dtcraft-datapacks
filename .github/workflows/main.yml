@@ -40,6 +40,11 @@ jobs:
           repository: dthigpen/dpbuild
           path: dpbuild
       
+      - name: Checkout minecraft-test-report
+        uses: actions/checkout@v2
+        with:
+          repository: dthigpen/minecraft-test-report
+          path: minecraft-test-report
       # This action creates permission issues when writing to the same folder so first put in downloads
       - name: Download PlayerDB
         uses: Legion2/download-release-action@v2.1.0
@@ -68,7 +73,7 @@ jobs:
           wget -q -P server https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar
         shell: bash
 
-      - name: Start server and run pytest
+      - name: Start server and run tests
         env:
           RCON_PWD: ${{ secrets.RCON_PWD }}
         run: |
@@ -88,13 +93,14 @@ jobs:
           timeout 180 bash -c wait_for_startup || cat server/logs/latest.log
           echo "Copying datapacks"
           cp -r test-artifacts/* server/world/datapacks
-          pip install pytest
-          pip install mctools
-          pytest ./dtcraft-datapacks/.github/scripts --dir=dtcraft-datapacks
+          pushd minecraft-test-report
+          python -m pip install -r requirements.txt
+          python mc_report/in_game_test_runner.py ../dtcraft-datapacks --host localhost | grep FAIL || echo 'Passed all tests'
+          popd
       
-      
+      # TODO watch upload-artifacts for feature to upload multiple from wildcard
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: datapacks
           path: release-artifacts/*.zip
