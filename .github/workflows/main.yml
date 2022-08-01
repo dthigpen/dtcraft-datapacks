@@ -62,8 +62,8 @@ jobs:
 
       - name: Build datapacks to artifacts directory with dpbuild
         run: |
-          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'echo "Attepmting to build $1" && test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest test-artifacts' \;
-          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'echo "Attepmting to build $1" && test -e {}/pack.mcmeta && python dpbuild/dpbuild {} libraries --dest release-artifacts --release' \;
+          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest test-artifacts' -- {} \;
+          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest release-artifacts --release' -- {} \;
 
 
       - name: Download Minecraft server jar
@@ -95,7 +95,8 @@ jobs:
           cp -r test-artifacts/* server/world/datapacks
           pushd minecraft-test-report
           python -m pip install -r requirements.txt
-          python mc_report/in_game_test_runner.py ../dtcraft-datapacks --host localhost | grep FAIL || echo 'Passed all tests'
+          PACKS=$(for d in ../test-artifacts/*/; do echo $d; done)
+          python test_runner.py ${PACKS} --output "$GITHUB_STEP_SUMMARY"
           popd
       
       # TODO watch upload-artifacts for feature to upload multiple from wildcard
