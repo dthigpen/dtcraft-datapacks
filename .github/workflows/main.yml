@@ -72,14 +72,12 @@ jobs:
           echo "Downloading Minecraft server jar"
           wget -q -P server https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar
         shell: bash
-
-      - name: Start server and run tests
-        env:
-          RCON_PWD: ${{ secrets.RCON_PWD }}
-      - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+      - name: Start server and run tests
+        env:
+          RCON_PWD: ${{ secrets.RCON_PWD }}
         run: |
           pushd server
           echo "eula=true" > eula.txt
