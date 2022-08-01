@@ -76,7 +76,8 @@ jobs:
       - name: Start server and run tests
         env:
           RCON_PWD: ${{ secrets.RCON_PWD }}
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.9' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         run: |
