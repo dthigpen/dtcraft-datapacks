@@ -62,7 +62,7 @@ jobs:
 
       - name: Build datapacks to artifacts directory with dpbuild
         run: |
-          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest test-artifacts' -- {} \;
+          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest test-artifacts --no-dep-tests' -- {} \;
           find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest release-artifacts --release' -- {} \;
 
 
