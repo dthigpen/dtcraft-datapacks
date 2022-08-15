@@ -19,7 +19,7 @@ execute if data storage call_stack: {this:{last_assertion:{pass:true}}} run data
 execute if data storage call_stack: this.pass run data modify storage call_stack: this.ok_msg set value '{"text":"ok","color":"green"}'
 execute unless data storage call_stack: this.pass run data modify storage call_stack: this.ok_msg set value '{"text":"not ok","color":"red"}'
 # Shim to communicate to server console that the testsuite passed or failed
-execute unless data storage call_stack: this.pass run scoreboard players set $passed unittest 0
+execute unless data storage call_stack: this.pass run scoreboard players operation $status unittest = #status.fail unittest
 
 # print the test results and optional fail msg below
 tellraw @p ["",{"nbt":"this.ok_msg","storage":"call_stack:","interpret": true}," ",{"nbt":"this.test_case.id","storage":"call_stack:"}," ",{"nbt":"this.test_case.name","storage":"call_stack:"},{"nbt":"this.directive_prefix","storage":"call_stack:", "color": "gray"},{"nbt":"this.directive","storage":"call_stack:", "color": "gray"}]

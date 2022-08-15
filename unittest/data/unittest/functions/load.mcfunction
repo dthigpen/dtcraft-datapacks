@@ -12,7 +12,10 @@ scoreboard players set #not_equal dt.enum 1
 
 scoreboard objectives add unittest dummy
 scoreboard players reset * unittest
-
+scoreboard players set #status.fail unittest 0
+scoreboard players set #status.pass unittest 1
+scoreboard players set #status.running unittest 2
+scoreboard players set #status.running_multi unittest 3
 
 function unittest:internal/reset_all_data
 
