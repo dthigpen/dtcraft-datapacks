@@ -2,7 +2,8 @@ function call_stack:push
 data modify storage call_stack: this.test_suite set from storage call_stack: this.arg0
 
 execute unless data storage call_stack: this.started run scoreboard players reset #num_tests unittest
-execute unless data storage call_stack: this.started run scoreboard players operation $status unittest = #status.running unittest
+# default to pass until one of the test cases fails, edge case can happen where max commands is reached during reporting
+execute unless data storage call_stack: this.started run scoreboard players operation $status unittest = #status.pass unittest
 execute unless data storage call_stack: this.started run execute store result score #num_test unittest run data get storage call_stack: this.test_suite.test_cases
 execute unless data storage call_stack: this.started run tellraw @p ["Running ",{"nbt":"this.test_suite.name","storage":"call_stack:"}]
 execute unless data storage call_stack: this.started run tellraw @p ["1..",{"score":{"name":"#num_test","objective":"unittest"}}]
