@@ -101,6 +101,7 @@ jobs:
           # Use non-bundled datapacks for tests
           PACKS=$(for d in ../dtcraft-datapacks/*/pack.mcmeta; do echo $(dirname $d); done)
           python test_runner.py ${PACKS} --output "$GITHUB_STEP_SUMMARY"
+          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           popd
       
       # TODO watch upload-artifacts for feature to upload multiple from wildcard
