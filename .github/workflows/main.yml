@@ -79,20 +79,7 @@ jobs:
         env:
           RCON_PWD: ${{ secrets.RCON_PWD }}
         run: |
-          pushd server
-          echo "eula=true" > eula.txt
-          echo "rcon.port=25575" >> server.properties
-          echo "enable-rcon=true" >> server.properties
-          echo "rcon.password=${RCON_PWD}" >> server.properties
-          screen -dmS minecraft java -Xmx2048M -Xms2048M -jar server.jar nogui
-          popd
-          echo "Waiting for RCON server to start up"
-          sleep 10
-          function wait_for_startup {
-            tail -f server/logs/latest.log | sed '/.*! For help.*/ q' && echo "Server Started!"
-          }
-          export -f wait_for_startup
-          timeout 180 bash -c wait_for_startup || cat server/logs/latest.log
+          ${GITHUB_WORKSPACE}/.github/scripts/start_minecraft_server.sh
           echo "Copying datapacks"
           cp -r test-artifacts/* server/world/datapacks
           pushd minecraft-test-report
@@ -101,7 +88,6 @@ jobs:
           # Use non-bundled datapacks for tests
           PACKS=$(for d in ../dtcraft-datapacks/*/pack.mcmeta; do echo $(dirname $d); done)
           python test_runner.py ${PACKS} --output "$GITHUB_STEP_SUMMARY"
-          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           popd
       
       # TODO watch upload-artifacts for feature to upload multiple from wildcard
