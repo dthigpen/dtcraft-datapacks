@@ -79,9 +79,7 @@ jobs:
         env:
           RCON_PWD: ${{ secrets.RCON_PWD }}
         run: |
-          ls -l
-          ls -l ${GITHUB_WORKSPACE}/dtcraft-datapacks/.github/scripts
-          ${GITHUB_WORKSPACE}/.github/scripts/start_minecraft_server.sh
+          ${GITHUB_WORKSPACE}/dtcraft-datapacks/.github/scripts/start_minecraft_server.sh
           echo "Copying datapacks"
           cp -r test-artifacts/* server/world/datapacks
           pushd minecraft-test-report
