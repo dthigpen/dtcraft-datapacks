@@ -1,5 +1,6 @@
 
 
+scoreboard players operation $status unittest = #status.running_multi unittest
 
 data modify storage call_stack: call.arg0 append value ['function unittest:api/test_suite/teardown']
 function dt.callback:internal/multi/wrap_commands_sets
