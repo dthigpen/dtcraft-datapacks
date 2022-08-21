@@ -90,6 +90,7 @@ jobs:
           PACKS=$(for d in ../dtcraft-datapacks/*/pack.mcmeta; do echo $(dirname $d); done)
           python test_runner.py ${PACKS} --output "$GITHUB_STEP_SUMMARY"
           popd
+          echo "ref: $GITHUB_REF_NAME"
       
       # TODO watch upload-artifacts for feature to upload multiple from wildcard
       - name: Upload artifacts
