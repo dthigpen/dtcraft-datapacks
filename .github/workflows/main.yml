@@ -73,6 +73,8 @@ jobs:
         shell: bash
         run: |
           ${GITHUB_WORKSPACE}/dtcraft-datapacks/.github/scripts/start_minecraft_server.sh
+        env:
+          RCON_PWD: ${{ secrets.RCON_PWD }}
       - name: Run tests
         env:
           RCON_PWD: ${{ secrets.RCON_PWD }}
