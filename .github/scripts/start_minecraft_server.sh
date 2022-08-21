@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+mkdir server
+echo "Downloading Minecraft server jar"
+wget -q -P server https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar
 
 pushd server
 echo "eula=true" > eula.txt

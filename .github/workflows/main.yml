@@ -27,7 +27,10 @@ jobs:
         with:
           java-version: 17
           java-package: jre # optional (jdk, jre, jdk+fx or jre+fx) - defaults to jdk
-      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       # Check out this repo
       - name: Checkout dtcraft-datapacks
         uses: actions/checkout@v2
@@ -46,6 +49,7 @@ jobs:
           repository: dthigpen/minecraft-test-report
           ref: "${{env.GITHUB_REF_NAME}}"
           path: minecraft-test-report
+      
       # This action creates permission issues when writing to the same folder so first put in downloads
       - name: Download PlayerDB
         uses: Legion2/download-release-action@v2.1.0
@@ -65,32 +69,22 @@ jobs:
         run: |
           find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest test-artifacts --no-dep-tests' -- {} \;
           find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest release-artifacts --release' -- {} \;
-
-
-      - name: Download Minecraft server jar
-        run: |
-          mkdir server
-          echo "Downloading Minecraft server jar"
-          wget -q -P server https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar
+      - name: Setup Minecraft Server
         shell: bash
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-      - name: Start server and run tests
+        run: |
+          ${GITHUB_WORKSPACE}/dtcraft-datapacks/.github/scripts/start_minecraft_server.sh
+      - name: Run tests
         env:
           RCON_PWD: ${{ secrets.RCON_PWD }}
         run: |
-          ${GITHUB_WORKSPACE}/dtcraft-datapacks/.github/scripts/start_minecraft_server.sh
           echo "Copying datapacks"
           cp -r test-artifacts/* server/world/datapacks
           pushd minecraft-test-report
           python -m pip install -r requirements.txt
-          # PACKS=$(for d in ../test-artifacts/*/; do echo $d; done)
           # Use non-bundled datapacks for tests
           PACKS=$(for d in ../dtcraft-datapacks/*/pack.mcmeta; do echo $(dirname $d); done)
           python test_runner.py ${PACKS} --output "$GITHUB_STEP_SUMMARY"
           popd
-          echo "ref: $GITHUB_REF_NAME"
       
       # TODO watch upload-artifacts for feature to upload multiple from wildcard
       - name: Upload artifacts
