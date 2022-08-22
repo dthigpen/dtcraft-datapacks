@@ -1,3 +1,4 @@
+#ignore
 function unittest:api/test_suite/setup
 data modify storage call_stack: this.name set value "My test suite"
 
