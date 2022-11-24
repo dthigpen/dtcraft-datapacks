@@ -17,6 +17,7 @@ echo "eula=true" > eula.txt
 echo "rcon.port=25575" >> server.properties
 echo "enable-rcon=true" >> server.properties
 echo "rcon.password=${RCON_PWD}" >> server.properties
+echo "enable-command-block=true" >> server.properties
 screen -dmS minecraft java -Xmx2048M -Xms2048M -jar server.jar nogui
 popd
 echo "Waiting for RCON server to start up"
