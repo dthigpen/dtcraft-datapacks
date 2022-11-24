@@ -10,7 +10,7 @@ curl -s https://meta.fabricmc.net/v2/versions/loader/1.19.2/0.14.10/0.11.1/serve
 mkdir mods
 pushd mods
 echo "Downloading Carpet mod"
-curl -sOJ https://github.com/gnembon/fabric-carpet/releases/download/1.4.84/fabric-carpet-1.19.2-1.4.84+v221018.jar
+wget -q https://github.com/gnembon/fabric-carpet/releases/download/1.4.84/fabric-carpet-1.19.2-1.4.84+v221018.jar
 popd
 
 echo "eula=true" > eula.txt
