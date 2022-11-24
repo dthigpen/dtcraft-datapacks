@@ -89,7 +89,8 @@ jobs:
           popd
       - name: Evaluate report
         run: |
-          grep -q 'Datapack\s*\|\s*Failed\s*\|\s*Skipped' ${GITHUB_STEP_SUMMARY} || exit 1
+          # Check that there are no unit test failures
+          cat "${GITHUB_STEP_SUMMARY}" | sed -n '/^### Unit Tests/,/###/p' | grep --color=auto -oP '^\s*\|\s*\w+\s*\|\s*\K\d+(?=\s*\|)' | grep -qv 0 && exit 1
       # TODO watch upload-artifacts for feature to upload multiple from wildcard
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
