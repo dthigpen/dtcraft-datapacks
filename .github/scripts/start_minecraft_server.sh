@@ -3,10 +3,16 @@ set -euo pipefail
 IFS=$'\n\t'
 
 mkdir server
-echo "Downloading Minecraft server jar"
-wget -q -P server https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar
-
 pushd server
+echo "Downloading Minecraft Fabric server jar"
+curl -s https://meta.fabricmc.net/v2/versions/loader/1.19.2/0.14.10/0.11.1/server/jar -o server.jar
+
+mkdir mods
+pushd mods
+echo "Downloading Carpet mod"
+curl -sOJ https://github.com/gnembon/fabric-carpet/releases/download/1.4.84/fabric-carpet-1.19.2-1.4.84+v221018.jar
+popd
+
 echo "eula=true" > eula.txt
 echo "rcon.port=25575" >> server.properties
 echo "enable-rcon=true" >> server.properties
