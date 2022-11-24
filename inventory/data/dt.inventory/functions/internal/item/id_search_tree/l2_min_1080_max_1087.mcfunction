@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1080 run data modify storage call_stack: global.dt.name set value "minecraft:loom"
+execute if score $id dt.tmp matches 1081 run data modify storage call_stack: global.dt.name set value "minecraft:flower_banner_pattern"
+execute if score $id dt.tmp matches 1082 run data modify storage call_stack: global.dt.name set value "minecraft:creeper_banner_pattern"
+execute if score $id dt.tmp matches 1083 run data modify storage call_stack: global.dt.name set value "minecraft:skull_banner_pattern"
+execute if score $id dt.tmp matches 1084 run data modify storage call_stack: global.dt.name set value "minecraft:mojang_banner_pattern"
+execute if score $id dt.tmp matches 1085 run data modify storage call_stack: global.dt.name set value "minecraft:globe_banner_pattern"
+execute if score $id dt.tmp matches 1086 run data modify storage call_stack: global.dt.name set value "minecraft:piglin_banner_pattern"
+execute if score $id dt.tmp matches 1087 run data modify storage call_stack: global.dt.name set value "minecraft:goat_horn"

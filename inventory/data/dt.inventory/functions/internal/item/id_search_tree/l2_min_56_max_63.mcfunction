@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 56 run data modify storage call_stack: global.dt.name set value "minecraft:deepslate_lapis_ore"
+execute if score $id dt.tmp matches 57 run data modify storage call_stack: global.dt.name set value "minecraft:diamond_ore"
+execute if score $id dt.tmp matches 58 run data modify storage call_stack: global.dt.name set value "minecraft:deepslate_diamond_ore"
+execute if score $id dt.tmp matches 59 run data modify storage call_stack: global.dt.name set value "minecraft:nether_gold_ore"
+execute if score $id dt.tmp matches 60 run data modify storage call_stack: global.dt.name set value "minecraft:nether_quartz_ore"
+execute if score $id dt.tmp matches 61 run data modify storage call_stack: global.dt.name set value "minecraft:ancient_debris"
+execute if score $id dt.tmp matches 62 run data modify storage call_stack: global.dt.name set value "minecraft:coal_block"
+execute if score $id dt.tmp matches 63 run data modify storage call_stack: global.dt.name set value "minecraft:raw_iron_block"

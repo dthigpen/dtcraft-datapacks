@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 776 run data modify storage call_stack: global.dt.name set value "minecraft:leather_leggings"
+execute if score $id dt.tmp matches 777 run data modify storage call_stack: global.dt.name set value "minecraft:leather_boots"
+execute if score $id dt.tmp matches 778 run data modify storage call_stack: global.dt.name set value "minecraft:chainmail_helmet"
+execute if score $id dt.tmp matches 779 run data modify storage call_stack: global.dt.name set value "minecraft:chainmail_chestplate"
+execute if score $id dt.tmp matches 780 run data modify storage call_stack: global.dt.name set value "minecraft:chainmail_leggings"
+execute if score $id dt.tmp matches 781 run data modify storage call_stack: global.dt.name set value "minecraft:chainmail_boots"
+execute if score $id dt.tmp matches 782 run data modify storage call_stack: global.dt.name set value "minecraft:iron_helmet"
+execute if score $id dt.tmp matches 783 run data modify storage call_stack: global.dt.name set value "minecraft:iron_chestplate"

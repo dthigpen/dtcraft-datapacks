@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 104 run data modify storage call_stack: global.dt.name set value "minecraft:oak_log"
+execute if score $id dt.tmp matches 105 run data modify storage call_stack: global.dt.name set value "minecraft:spruce_log"
+execute if score $id dt.tmp matches 106 run data modify storage call_stack: global.dt.name set value "minecraft:birch_log"
+execute if score $id dt.tmp matches 107 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_log"
+execute if score $id dt.tmp matches 108 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_log"
+execute if score $id dt.tmp matches 109 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_log"
+execute if score $id dt.tmp matches 110 run data modify storage call_stack: global.dt.name set value "minecraft:mangrove_log"
+execute if score $id dt.tmp matches 111 run data modify storage call_stack: global.dt.name set value "minecraft:mangrove_roots"

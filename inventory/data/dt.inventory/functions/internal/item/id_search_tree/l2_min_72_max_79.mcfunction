@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 72 run data modify storage call_stack: global.dt.name set value "minecraft:netherite_block"
+execute if score $id dt.tmp matches 73 run data modify storage call_stack: global.dt.name set value "minecraft:exposed_copper"
+execute if score $id dt.tmp matches 74 run data modify storage call_stack: global.dt.name set value "minecraft:weathered_copper"
+execute if score $id dt.tmp matches 75 run data modify storage call_stack: global.dt.name set value "minecraft:oxidized_copper"
+execute if score $id dt.tmp matches 76 run data modify storage call_stack: global.dt.name set value "minecraft:cut_copper"
+execute if score $id dt.tmp matches 77 run data modify storage call_stack: global.dt.name set value "minecraft:exposed_cut_copper"
+execute if score $id dt.tmp matches 78 run data modify storage call_stack: global.dt.name set value "minecraft:weathered_cut_copper"
+execute if score $id dt.tmp matches 79 run data modify storage call_stack: global.dt.name set value "minecraft:oxidized_cut_copper"

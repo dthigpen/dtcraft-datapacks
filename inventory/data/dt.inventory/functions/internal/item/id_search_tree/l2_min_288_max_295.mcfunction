@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 288 run data modify storage call_stack: global.dt.name set value "minecraft:infested_stone"
+execute if score $id dt.tmp matches 289 run data modify storage call_stack: global.dt.name set value "minecraft:infested_cobblestone"
+execute if score $id dt.tmp matches 290 run data modify storage call_stack: global.dt.name set value "minecraft:infested_stone_bricks"
+execute if score $id dt.tmp matches 291 run data modify storage call_stack: global.dt.name set value "minecraft:infested_mossy_stone_bricks"
+execute if score $id dt.tmp matches 292 run data modify storage call_stack: global.dt.name set value "minecraft:infested_cracked_stone_bricks"
+execute if score $id dt.tmp matches 293 run data modify storage call_stack: global.dt.name set value "minecraft:infested_chiseled_stone_bricks"
+execute if score $id dt.tmp matches 294 run data modify storage call_stack: global.dt.name set value "minecraft:infested_deepslate"
+execute if score $id dt.tmp matches 295 run data modify storage call_stack: global.dt.name set value "minecraft:stone_bricks"

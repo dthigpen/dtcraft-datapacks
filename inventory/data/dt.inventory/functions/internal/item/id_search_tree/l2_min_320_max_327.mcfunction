@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 320 run data modify storage call_stack: global.dt.name set value "minecraft:lily_pad"
+execute if score $id dt.tmp matches 321 run data modify storage call_stack: global.dt.name set value "minecraft:nether_bricks"
+execute if score $id dt.tmp matches 322 run data modify storage call_stack: global.dt.name set value "minecraft:cracked_nether_bricks"
+execute if score $id dt.tmp matches 323 run data modify storage call_stack: global.dt.name set value "minecraft:chiseled_nether_bricks"
+execute if score $id dt.tmp matches 324 run data modify storage call_stack: global.dt.name set value "minecraft:nether_brick_fence"
+execute if score $id dt.tmp matches 325 run data modify storage call_stack: global.dt.name set value "minecraft:nether_brick_stairs"
+execute if score $id dt.tmp matches 326 run data modify storage call_stack: global.dt.name set value "minecraft:sculk"
+execute if score $id dt.tmp matches 327 run data modify storage call_stack: global.dt.name set value "minecraft:sculk_vein"

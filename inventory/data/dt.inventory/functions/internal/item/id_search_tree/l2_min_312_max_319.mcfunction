@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 312 run data modify storage call_stack: global.dt.name set value "minecraft:glass_pane"
+execute if score $id dt.tmp matches 313 run data modify storage call_stack: global.dt.name set value "minecraft:melon"
+execute if score $id dt.tmp matches 314 run data modify storage call_stack: global.dt.name set value "minecraft:vine"
+execute if score $id dt.tmp matches 315 run data modify storage call_stack: global.dt.name set value "minecraft:glow_lichen"
+execute if score $id dt.tmp matches 316 run data modify storage call_stack: global.dt.name set value "minecraft:brick_stairs"
+execute if score $id dt.tmp matches 317 run data modify storage call_stack: global.dt.name set value "minecraft:stone_brick_stairs"
+execute if score $id dt.tmp matches 318 run data modify storage call_stack: global.dt.name set value "minecraft:mud_brick_stairs"
+execute if score $id dt.tmp matches 319 run data modify storage call_stack: global.dt.name set value "minecraft:mycelium"

@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 480 run data modify storage call_stack: global.dt.name set value "minecraft:lime_shulker_box"
+execute if score $id dt.tmp matches 481 run data modify storage call_stack: global.dt.name set value "minecraft:pink_shulker_box"
+execute if score $id dt.tmp matches 482 run data modify storage call_stack: global.dt.name set value "minecraft:gray_shulker_box"
+execute if score $id dt.tmp matches 483 run data modify storage call_stack: global.dt.name set value "minecraft:light_gray_shulker_box"
+execute if score $id dt.tmp matches 484 run data modify storage call_stack: global.dt.name set value "minecraft:cyan_shulker_box"
+execute if score $id dt.tmp matches 485 run data modify storage call_stack: global.dt.name set value "minecraft:purple_shulker_box"
+execute if score $id dt.tmp matches 486 run data modify storage call_stack: global.dt.name set value "minecraft:blue_shulker_box"
+execute if score $id dt.tmp matches 487 run data modify storage call_stack: global.dt.name set value "minecraft:brown_shulker_box"

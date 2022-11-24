@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 856 run data modify storage call_stack: global.dt.name set value "minecraft:gray_dye"
+execute if score $id dt.tmp matches 857 run data modify storage call_stack: global.dt.name set value "minecraft:light_gray_dye"
+execute if score $id dt.tmp matches 858 run data modify storage call_stack: global.dt.name set value "minecraft:cyan_dye"
+execute if score $id dt.tmp matches 859 run data modify storage call_stack: global.dt.name set value "minecraft:purple_dye"
+execute if score $id dt.tmp matches 860 run data modify storage call_stack: global.dt.name set value "minecraft:blue_dye"
+execute if score $id dt.tmp matches 861 run data modify storage call_stack: global.dt.name set value "minecraft:brown_dye"
+execute if score $id dt.tmp matches 862 run data modify storage call_stack: global.dt.name set value "minecraft:green_dye"
+execute if score $id dt.tmp matches 863 run data modify storage call_stack: global.dt.name set value "minecraft:red_dye"

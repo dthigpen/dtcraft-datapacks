@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 984 run data modify storage call_stack: global.dt.name set value "minecraft:fire_charge"
+execute if score $id dt.tmp matches 985 run data modify storage call_stack: global.dt.name set value "minecraft:writable_book"
+execute if score $id dt.tmp matches 986 run data modify storage call_stack: global.dt.name set value "minecraft:written_book"
+execute if score $id dt.tmp matches 987 run data modify storage call_stack: global.dt.name set value "minecraft:item_frame"
+execute if score $id dt.tmp matches 988 run data modify storage call_stack: global.dt.name set value "minecraft:glow_item_frame"
+execute if score $id dt.tmp matches 989 run data modify storage call_stack: global.dt.name set value "minecraft:flower_pot"
+execute if score $id dt.tmp matches 990 run data modify storage call_stack: global.dt.name set value "minecraft:carrot"
+execute if score $id dt.tmp matches 991 run data modify storage call_stack: global.dt.name set value "minecraft:potato"
