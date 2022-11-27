@@ -21,20 +21,6 @@
                             "functions": [
                                 {
                                     "function": "minecraft:set_nbt",
-                                    "tag": "{dt:{id:0, stackSize:64}}",
-                                    "conditions": [
-                                        {
-                                            "condition": "minecraft:match_tool",
-                                            "predicate": {
-                                                "items": [
-                                                    "minecraft:air"
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "function": "minecraft:set_nbt",
                                     "tag": "{dt:{id:1, stackSize:64}}",
                                     "conditions": [
                                         {
