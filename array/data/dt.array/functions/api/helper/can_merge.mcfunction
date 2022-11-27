@@ -9,6 +9,7 @@
 #   storage call_stack: this.return
 #       true or not set
 function call_stack:push
+# TODO Handle non-object cases?
 scoreboard players reset #changed dt.tmp
 execute if data storage call_stack: this.arg0 if data storage call_stack: this.arg1 store success score #changed dt.tmp run data modify storage call_stack: this.arg0 merge from storage call_stack: this.arg1
 execute if data storage call_stack: this.arg0 if data storage call_stack: this.arg1 if score #changed dt.tmp matches 1 run data modify storage call_stack: this.return set value true
