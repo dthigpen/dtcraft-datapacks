@@ -1,5 +1,5 @@
 function unittest:api/test_case/setup
-data modify storage call_stack: this.name set value "Pre item drop"
+data modify storage call_stack: this.name set value "Drop hotbar item"
 
 data modify storage call_stack: call.actual set from entity @p Inventory[{Slot:0b}]
 function unittest:api/assert/is_set
