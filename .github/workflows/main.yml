@@ -92,10 +92,16 @@ jobs:
           # Check that there are no unit test failures
           cat "${GITHUB_STEP_SUMMARY}" | sed -n '/^### Unit Tests/,/###/p' | grep --color=auto -oP '^\s*\|\s*\w+\s*\|\s*\K\d+(?=\s*\|)' | grep -qv 0 && false || true
       # TODO watch upload-artifacts for feature to upload multiple from wildcard
+      - name: Upload logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: logs
+          path: server/logs/latest.log
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: datapacks
           path: release-artifacts/*.zip
+      
       
       

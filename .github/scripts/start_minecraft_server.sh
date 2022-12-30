@@ -5,12 +5,12 @@ IFS=$'\n\t'
 mkdir server
 pushd server
 echo "Downloading Minecraft Fabric server jar"
-curl -s https://meta.fabricmc.net/v2/versions/loader/1.19.2/0.14.10/0.11.1/server/jar -o server.jar
+curl -s https://meta.fabricmc.net/v2/versions/loader/1.19.3/0.14.12/0.11.1/server/jar -o server.jar
 
 mkdir mods
 pushd mods
 echo "Downloading Carpet mod"
-wget -q https://github.com/gnembon/fabric-carpet/releases/download/1.4.84/fabric-carpet-1.19.2-1.4.84+v221018.jar
+wget -q https://github.com/gnembon/fabric-carpet/releases/download/1.4.93/fabric-carpet-1.19.3-1.4.93+v221230.jar
 popd
 
 echo "eula=true" > eula.txt
