@@ -12,7 +12,7 @@ data modify storage call_stack: call.arg0 set value [{id:"minecraft:slime_ball",
 function dt.inventory:api/items/id/tag/get
 data modify storage call_stack: call.actual set from storage call_stack: call.return
 
-data modify storage call_stack: call.expected set value [{id:"minecraft:slime_ball",Count:1b,Slot:9b,tag:{dt:{id:793}}},{id:"minecraft:redstone",Count:1b,Slot:10b,tag:{dt:{id:585}}}]
+data modify storage call_stack: call.expected set value [{id:"minecraft:slime_ball",Count:1b,Slot:9b,tag:{dt:{id:831}}},{id:"minecraft:redstone",Count:1b,Slot:10b,tag:{dt:{id:608}}}]
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
 

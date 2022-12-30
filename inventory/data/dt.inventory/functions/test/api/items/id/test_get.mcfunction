@@ -12,7 +12,7 @@ data modify storage call_stack: call.arg0 set value [{id:"minecraft:slime_ball",
 function dt.inventory:api/items/id/get
 data modify storage call_stack: call.actual set from storage call_stack: call.return
 
-data modify storage call_stack: call.expected set value [793,585]
+data modify storage call_stack: call.expected set value [831,608]
 function unittest:api/assert/equal
 function unittest:api/test_case/teardown
 
