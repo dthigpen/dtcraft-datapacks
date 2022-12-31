@@ -5,8 +5,8 @@ execute unless data storage call_stack: this.started run scoreboard players rese
 # default to pass until one of the test cases fails, edge case can happen where max commands is reached during reporting
 execute unless data storage call_stack: this.started run scoreboard players operation $status unittest = #status.pass unittest
 execute unless data storage call_stack: this.started run execute store result score #num_test unittest run data get storage call_stack: this.test_suite.test_cases
-execute unless data storage call_stack: this.started run tellraw @p ["Running ",{"nbt":"this.test_suite.name","storage":"call_stack:"}]
-execute unless data storage call_stack: this.started run tellraw @p ["1..",{"score":{"name":"#num_test","objective":"unittest"}}]
+execute unless data storage call_stack: this.started run tellraw @a[tag=dt.unittest.tester] ["Running ",{"nbt":"this.test_suite.name","storage":"call_stack:"}]
+execute unless data storage call_stack: this.started run tellraw @a[tag=dt.unittest.tester] ["1..",{"score":{"name":"#num_test","objective":"unittest"}}]
 data modify storage call_stack: this.test_case set from storage call_stack: this.test_suite.test_cases[0]
 execute if data storage call_stack: this.test_case run data remove storage call_stack: this.test_suite.test_cases[0]
 execute if data storage call_stack: this.test_case run data modify storage call_stack: call.arg0 set from storage call_stack: this.test_case
