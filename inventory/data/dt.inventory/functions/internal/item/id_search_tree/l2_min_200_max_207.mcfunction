@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 200 run data modify storage call_stack: global.dt.name set value "minecraft:warped_fungus"
+execute if score $id dt.tmp matches 201 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_roots"
+execute if score $id dt.tmp matches 202 run data modify storage call_stack: global.dt.name set value "minecraft:warped_roots"
+execute if score $id dt.tmp matches 203 run data modify storage call_stack: global.dt.name set value "minecraft:nether_sprouts"
+execute if score $id dt.tmp matches 204 run data modify storage call_stack: global.dt.name set value "minecraft:weeping_vines"
+execute if score $id dt.tmp matches 205 run data modify storage call_stack: global.dt.name set value "minecraft:twisting_vines"
+execute if score $id dt.tmp matches 206 run data modify storage call_stack: global.dt.name set value "minecraft:sugar_cane"
+execute if score $id dt.tmp matches 207 run data modify storage call_stack: global.dt.name set value "minecraft:kelp"

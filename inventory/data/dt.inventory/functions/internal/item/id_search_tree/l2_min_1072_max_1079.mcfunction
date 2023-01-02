@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1072 run data modify storage call_stack: global.dt.name set value "minecraft:music_disc_pigstep"
+execute if score $id dt.tmp matches 1073 run data modify storage call_stack: global.dt.name set value "minecraft:disc_fragment_5"
+execute if score $id dt.tmp matches 1074 run data modify storage call_stack: global.dt.name set value "minecraft:trident"
+execute if score $id dt.tmp matches 1075 run data modify storage call_stack: global.dt.name set value "minecraft:phantom_membrane"
+execute if score $id dt.tmp matches 1076 run data modify storage call_stack: global.dt.name set value "minecraft:nautilus_shell"
+execute if score $id dt.tmp matches 1077 run data modify storage call_stack: global.dt.name set value "minecraft:heart_of_the_sea"
+execute if score $id dt.tmp matches 1078 run data modify storage call_stack: global.dt.name set value "minecraft:crossbow"
+execute if score $id dt.tmp matches 1079 run data modify storage call_stack: global.dt.name set value "minecraft:suspicious_stew"

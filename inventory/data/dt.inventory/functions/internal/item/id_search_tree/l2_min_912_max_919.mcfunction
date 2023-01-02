@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 912 run data modify storage call_stack: global.dt.name set value "minecraft:allay_spawn_egg"
+execute if score $id dt.tmp matches 913 run data modify storage call_stack: global.dt.name set value "minecraft:axolotl_spawn_egg"
+execute if score $id dt.tmp matches 914 run data modify storage call_stack: global.dt.name set value "minecraft:bat_spawn_egg"
+execute if score $id dt.tmp matches 915 run data modify storage call_stack: global.dt.name set value "minecraft:bee_spawn_egg"
+execute if score $id dt.tmp matches 916 run data modify storage call_stack: global.dt.name set value "minecraft:blaze_spawn_egg"
+execute if score $id dt.tmp matches 917 run data modify storage call_stack: global.dt.name set value "minecraft:cat_spawn_egg"
+execute if score $id dt.tmp matches 918 run data modify storage call_stack: global.dt.name set value "minecraft:cave_spider_spawn_egg"
+execute if score $id dt.tmp matches 919 run data modify storage call_stack: global.dt.name set value "minecraft:chicken_spawn_egg"

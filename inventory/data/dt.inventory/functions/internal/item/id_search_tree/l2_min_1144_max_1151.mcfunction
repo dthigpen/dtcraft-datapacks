@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1144 run data modify storage call_stack: global.dt.name set value "minecraft:large_amethyst_bud"
+execute if score $id dt.tmp matches 1145 run data modify storage call_stack: global.dt.name set value "minecraft:amethyst_cluster"
+execute if score $id dt.tmp matches 1146 run data modify storage call_stack: global.dt.name set value "minecraft:pointed_dripstone"
+execute if score $id dt.tmp matches 1147 run data modify storage call_stack: global.dt.name set value "minecraft:ochre_froglight"
+execute if score $id dt.tmp matches 1148 run data modify storage call_stack: global.dt.name set value "minecraft:verdant_froglight"
+execute if score $id dt.tmp matches 1149 run data modify storage call_stack: global.dt.name set value "minecraft:pearlescent_froglight"
+execute if score $id dt.tmp matches 1150 run data modify storage call_stack: global.dt.name set value "minecraft:frogspawn"
+execute if score $id dt.tmp matches 1151 run data modify storage call_stack: global.dt.name set value "minecraft:echo_shard"

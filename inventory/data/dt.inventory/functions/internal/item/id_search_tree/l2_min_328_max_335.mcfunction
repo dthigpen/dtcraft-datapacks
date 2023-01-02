@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 328 run data modify storage call_stack: global.dt.name set value "minecraft:sculk_catalyst"
+execute if score $id dt.tmp matches 329 run data modify storage call_stack: global.dt.name set value "minecraft:sculk_shrieker"
+execute if score $id dt.tmp matches 330 run data modify storage call_stack: global.dt.name set value "minecraft:enchanting_table"
+execute if score $id dt.tmp matches 331 run data modify storage call_stack: global.dt.name set value "minecraft:end_portal_frame"
+execute if score $id dt.tmp matches 332 run data modify storage call_stack: global.dt.name set value "minecraft:end_stone"
+execute if score $id dt.tmp matches 333 run data modify storage call_stack: global.dt.name set value "minecraft:end_stone_bricks"
+execute if score $id dt.tmp matches 334 run data modify storage call_stack: global.dt.name set value "minecraft:dragon_egg"
+execute if score $id dt.tmp matches 335 run data modify storage call_stack: global.dt.name set value "minecraft:sandstone_stairs"

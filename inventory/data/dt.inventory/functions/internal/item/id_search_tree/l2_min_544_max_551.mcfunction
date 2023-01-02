@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 544 run data modify storage call_stack: global.dt.name set value "minecraft:dead_horn_coral_block"
+execute if score $id dt.tmp matches 545 run data modify storage call_stack: global.dt.name set value "minecraft:tube_coral_block"
+execute if score $id dt.tmp matches 546 run data modify storage call_stack: global.dt.name set value "minecraft:brain_coral_block"
+execute if score $id dt.tmp matches 547 run data modify storage call_stack: global.dt.name set value "minecraft:bubble_coral_block"
+execute if score $id dt.tmp matches 548 run data modify storage call_stack: global.dt.name set value "minecraft:fire_coral_block"
+execute if score $id dt.tmp matches 549 run data modify storage call_stack: global.dt.name set value "minecraft:horn_coral_block"
+execute if score $id dt.tmp matches 550 run data modify storage call_stack: global.dt.name set value "minecraft:tube_coral"
+execute if score $id dt.tmp matches 551 run data modify storage call_stack: global.dt.name set value "minecraft:brain_coral"

@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 384 run data modify storage call_stack: global.dt.name set value "minecraft:lime_terracotta"
+execute if score $id dt.tmp matches 385 run data modify storage call_stack: global.dt.name set value "minecraft:pink_terracotta"
+execute if score $id dt.tmp matches 386 run data modify storage call_stack: global.dt.name set value "minecraft:gray_terracotta"
+execute if score $id dt.tmp matches 387 run data modify storage call_stack: global.dt.name set value "minecraft:light_gray_terracotta"
+execute if score $id dt.tmp matches 388 run data modify storage call_stack: global.dt.name set value "minecraft:cyan_terracotta"
+execute if score $id dt.tmp matches 389 run data modify storage call_stack: global.dt.name set value "minecraft:purple_terracotta"
+execute if score $id dt.tmp matches 390 run data modify storage call_stack: global.dt.name set value "minecraft:blue_terracotta"
+execute if score $id dt.tmp matches 391 run data modify storage call_stack: global.dt.name set value "minecraft:brown_terracotta"

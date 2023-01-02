@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1112 run data modify storage call_stack: global.dt.name set value "minecraft:blackstone"
+execute if score $id dt.tmp matches 1113 run data modify storage call_stack: global.dt.name set value "minecraft:blackstone_slab"
+execute if score $id dt.tmp matches 1114 run data modify storage call_stack: global.dt.name set value "minecraft:blackstone_stairs"
+execute if score $id dt.tmp matches 1115 run data modify storage call_stack: global.dt.name set value "minecraft:gilded_blackstone"
+execute if score $id dt.tmp matches 1116 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone"
+execute if score $id dt.tmp matches 1117 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_slab"
+execute if score $id dt.tmp matches 1118 run data modify storage call_stack: global.dt.name set value "minecraft:polished_blackstone_stairs"
+execute if score $id dt.tmp matches 1119 run data modify storage call_stack: global.dt.name set value "minecraft:chiseled_polished_blackstone"

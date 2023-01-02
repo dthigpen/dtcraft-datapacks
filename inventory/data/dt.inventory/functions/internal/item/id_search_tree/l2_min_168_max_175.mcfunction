@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 168 run data modify storage call_stack: global.dt.name set value "minecraft:orange_wool"
+execute if score $id dt.tmp matches 169 run data modify storage call_stack: global.dt.name set value "minecraft:magenta_wool"
+execute if score $id dt.tmp matches 170 run data modify storage call_stack: global.dt.name set value "minecraft:light_blue_wool"
+execute if score $id dt.tmp matches 171 run data modify storage call_stack: global.dt.name set value "minecraft:yellow_wool"
+execute if score $id dt.tmp matches 172 run data modify storage call_stack: global.dt.name set value "minecraft:lime_wool"
+execute if score $id dt.tmp matches 173 run data modify storage call_stack: global.dt.name set value "minecraft:pink_wool"
+execute if score $id dt.tmp matches 174 run data modify storage call_stack: global.dt.name set value "minecraft:gray_wool"
+execute if score $id dt.tmp matches 175 run data modify storage call_stack: global.dt.name set value "minecraft:light_gray_wool"

@@ -33,7 +33,7 @@ function dt.array:api/map/key_value/from_values
 function call_stack:pipe
 data modify storage call_stack: call.arg1 set value {}
 data modify storage call_stack: call.arg1.id set from storage call_stack: this.requested_item_id
-function dt.array:api/reduce/subarray/equal_to
+function dt.array:api/reduce/subarray/merge_equal_to
 function call_stack:pipe
 function dt.array:api/map/key_value/subarray/to_values
 data modify storage call_stack: this.matching_items set from storage call_stack: call.return[0]

@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 568 run data modify storage call_stack: global.dt.name set value "minecraft:dead_fire_coral_fan"
+execute if score $id dt.tmp matches 569 run data modify storage call_stack: global.dt.name set value "minecraft:dead_horn_coral_fan"
+execute if score $id dt.tmp matches 570 run data modify storage call_stack: global.dt.name set value "minecraft:blue_ice"
+execute if score $id dt.tmp matches 571 run data modify storage call_stack: global.dt.name set value "minecraft:conduit"
+execute if score $id dt.tmp matches 572 run data modify storage call_stack: global.dt.name set value "minecraft:polished_granite_stairs"
+execute if score $id dt.tmp matches 573 run data modify storage call_stack: global.dt.name set value "minecraft:smooth_red_sandstone_stairs"
+execute if score $id dt.tmp matches 574 run data modify storage call_stack: global.dt.name set value "minecraft:mossy_stone_brick_stairs"
+execute if score $id dt.tmp matches 575 run data modify storage call_stack: global.dt.name set value "minecraft:polished_diorite_stairs"

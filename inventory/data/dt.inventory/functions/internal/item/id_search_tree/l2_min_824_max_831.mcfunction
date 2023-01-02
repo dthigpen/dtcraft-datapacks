@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 824 run data modify storage call_stack: global.dt.name set value "minecraft:axolotl_bucket"
+execute if score $id dt.tmp matches 825 run data modify storage call_stack: global.dt.name set value "minecraft:tadpole_bucket"
+execute if score $id dt.tmp matches 826 run data modify storage call_stack: global.dt.name set value "minecraft:brick"
+execute if score $id dt.tmp matches 827 run data modify storage call_stack: global.dt.name set value "minecraft:clay_ball"
+execute if score $id dt.tmp matches 828 run data modify storage call_stack: global.dt.name set value "minecraft:dried_kelp_block"
+execute if score $id dt.tmp matches 829 run data modify storage call_stack: global.dt.name set value "minecraft:paper"
+execute if score $id dt.tmp matches 830 run data modify storage call_stack: global.dt.name set value "minecraft:book"
+execute if score $id dt.tmp matches 831 run data modify storage call_stack: global.dt.name set value "minecraft:slime_ball"

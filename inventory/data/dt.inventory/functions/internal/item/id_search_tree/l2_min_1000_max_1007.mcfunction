@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1000 run data modify storage call_stack: global.dt.name set value "minecraft:creeper_head"
+execute if score $id dt.tmp matches 1001 run data modify storage call_stack: global.dt.name set value "minecraft:dragon_head"
+execute if score $id dt.tmp matches 1002 run data modify storage call_stack: global.dt.name set value "minecraft:nether_star"
+execute if score $id dt.tmp matches 1003 run data modify storage call_stack: global.dt.name set value "minecraft:pumpkin_pie"
+execute if score $id dt.tmp matches 1004 run data modify storage call_stack: global.dt.name set value "minecraft:firework_rocket"
+execute if score $id dt.tmp matches 1005 run data modify storage call_stack: global.dt.name set value "minecraft:firework_star"
+execute if score $id dt.tmp matches 1006 run data modify storage call_stack: global.dt.name set value "minecraft:enchanted_book"
+execute if score $id dt.tmp matches 1007 run data modify storage call_stack: global.dt.name set value "minecraft:nether_brick"

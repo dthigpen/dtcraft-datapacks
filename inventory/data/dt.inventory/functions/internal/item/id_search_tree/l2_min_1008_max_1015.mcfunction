@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1008 run data modify storage call_stack: global.dt.name set value "minecraft:prismarine_shard"
+execute if score $id dt.tmp matches 1009 run data modify storage call_stack: global.dt.name set value "minecraft:prismarine_crystals"
+execute if score $id dt.tmp matches 1010 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit"
+execute if score $id dt.tmp matches 1011 run data modify storage call_stack: global.dt.name set value "minecraft:cooked_rabbit"
+execute if score $id dt.tmp matches 1012 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit_stew"
+execute if score $id dt.tmp matches 1013 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit_foot"
+execute if score $id dt.tmp matches 1014 run data modify storage call_stack: global.dt.name set value "minecraft:rabbit_hide"
+execute if score $id dt.tmp matches 1015 run data modify storage call_stack: global.dt.name set value "minecraft:armor_stand"

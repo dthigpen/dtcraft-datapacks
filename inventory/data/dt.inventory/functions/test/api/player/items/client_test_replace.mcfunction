@@ -38,8 +38,9 @@ clear @s feather
 data modify storage call_stack: call.arg0 set value [{id:"minecraft:feather", Count:1b, Slot:8b}]
 function dt.inventory:api/player/items/replace
 data modify storage call_stack: call.actual set from entity @s Inventory[{id:"minecraft:feather",Slot:8b}]
+data modify storage call_stack: call.expected set value {id:"minecraft:feather",Slot:8b, Count: 1b}
 clear @s feather
-function unittest:api/assert/is_set
+function unittest:api/assert/equal
 function unittest:api/test_case/teardown
 
 function unittest:api/test_suite/teardown

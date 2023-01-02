@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 1016 run data modify storage call_stack: global.dt.name set value "minecraft:iron_horse_armor"
+execute if score $id dt.tmp matches 1017 run data modify storage call_stack: global.dt.name set value "minecraft:golden_horse_armor"
+execute if score $id dt.tmp matches 1018 run data modify storage call_stack: global.dt.name set value "minecraft:diamond_horse_armor"
+execute if score $id dt.tmp matches 1019 run data modify storage call_stack: global.dt.name set value "minecraft:leather_horse_armor"
+execute if score $id dt.tmp matches 1020 run data modify storage call_stack: global.dt.name set value "minecraft:lead"
+execute if score $id dt.tmp matches 1021 run data modify storage call_stack: global.dt.name set value "minecraft:name_tag"
+execute if score $id dt.tmp matches 1022 run data modify storage call_stack: global.dt.name set value "minecraft:command_block_minecart"
+execute if score $id dt.tmp matches 1023 run data modify storage call_stack: global.dt.name set value "minecraft:mutton"

@@ -10,10 +10,11 @@ data modify storage call_stack: call.arg0 set value "minecraft:feather"
 data modify storage call_stack: call.arg1 set value 2b
 function dt.inventory:api/player/item/take
 data remove storage unittest:in actual
-data modify storage call_stack: call.actual set from entity @s Inventory[{id:"minecraft:feather", Count:1b, Slot:0b}]
-clear @s feather
-function unittest:api/assert/is_set
+data modify storage call_stack: call.actual set from entity @s Inventory[{id:"minecraft:feather", Slot:0b}]
+data modify storage call_stack: call.expected set value {id:"minecraft:feather", Count:1b, Slot:0b}
+function unittest:api/assert/equal
 function unittest:api/test_case/teardown
+clear @s feather
 
 
 function unittest:api/test_case/setup
@@ -25,7 +26,9 @@ data modify storage call_stack: call.arg0 set value "minecraft:feather"
 data modify storage call_stack: call.arg1 set value 6b
 function dt.inventory:api/player/item/take
 data remove storage unittest:in actual
-data modify storage call_stack: call.actual set from entity @s Inventory[{id:"minecraft:feather", Count:6b, Slot:1b}]
+data modify storage call_stack: call.actual set from entity @s Inventory[{id:"minecraft:feather", Slot:1b}]
+data modify storage call_stack: call.expected set value {id:"minecraft:feather", Count:6b, Slot:1b}
+function unittest:api/assert/equal
 clear @s feather
 function unittest:api/test_case/teardown
 

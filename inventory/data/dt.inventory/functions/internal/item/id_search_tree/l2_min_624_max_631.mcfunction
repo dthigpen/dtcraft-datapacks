@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 624 run data modify storage call_stack: global.dt.name set value "minecraft:lightning_rod"
+execute if score $id dt.tmp matches 625 run data modify storage call_stack: global.dt.name set value "minecraft:daylight_detector"
+execute if score $id dt.tmp matches 626 run data modify storage call_stack: global.dt.name set value "minecraft:sculk_sensor"
+execute if score $id dt.tmp matches 627 run data modify storage call_stack: global.dt.name set value "minecraft:tripwire_hook"
+execute if score $id dt.tmp matches 628 run data modify storage call_stack: global.dt.name set value "minecraft:trapped_chest"
+execute if score $id dt.tmp matches 629 run data modify storage call_stack: global.dt.name set value "minecraft:tnt"
+execute if score $id dt.tmp matches 630 run data modify storage call_stack: global.dt.name set value "minecraft:redstone_lamp"
+execute if score $id dt.tmp matches 631 run data modify storage call_stack: global.dt.name set value "minecraft:note_block"

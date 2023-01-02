@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 880 run data modify storage call_stack: global.dt.name set value "minecraft:blue_bed"
+execute if score $id dt.tmp matches 881 run data modify storage call_stack: global.dt.name set value "minecraft:brown_bed"
+execute if score $id dt.tmp matches 882 run data modify storage call_stack: global.dt.name set value "minecraft:green_bed"
+execute if score $id dt.tmp matches 883 run data modify storage call_stack: global.dt.name set value "minecraft:red_bed"
+execute if score $id dt.tmp matches 884 run data modify storage call_stack: global.dt.name set value "minecraft:black_bed"
+execute if score $id dt.tmp matches 885 run data modify storage call_stack: global.dt.name set value "minecraft:cookie"
+execute if score $id dt.tmp matches 886 run data modify storage call_stack: global.dt.name set value "minecraft:filled_map"
+execute if score $id dt.tmp matches 887 run data modify storage call_stack: global.dt.name set value "minecraft:shears"

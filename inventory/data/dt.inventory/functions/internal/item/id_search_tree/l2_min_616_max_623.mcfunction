@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 616 run data modify storage call_stack: global.dt.name set value "minecraft:honey_block"
+execute if score $id dt.tmp matches 617 run data modify storage call_stack: global.dt.name set value "minecraft:observer"
+execute if score $id dt.tmp matches 618 run data modify storage call_stack: global.dt.name set value "minecraft:hopper"
+execute if score $id dt.tmp matches 619 run data modify storage call_stack: global.dt.name set value "minecraft:dispenser"
+execute if score $id dt.tmp matches 620 run data modify storage call_stack: global.dt.name set value "minecraft:dropper"
+execute if score $id dt.tmp matches 621 run data modify storage call_stack: global.dt.name set value "minecraft:lectern"
+execute if score $id dt.tmp matches 622 run data modify storage call_stack: global.dt.name set value "minecraft:target"
+execute if score $id dt.tmp matches 623 run data modify storage call_stack: global.dt.name set value "minecraft:lever"

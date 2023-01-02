@@ -69,6 +69,32 @@ For example:
 }
 ```
 
+## Building From Source
+
+1. Create a datapack development directory and change directories into it. For example,
+
+    ```sh
+    mkdir -p dev/datapacks; cd dev/datapacks
+   ```
+
+2. Clone this repository into your datapack development directory
+3. Clone [datapack-utils](https://github.com/dthigpen/datapack-utils) into your datapack development directory
+   1. Install the library with `python -m pip install -e datapack-utils`
+   2. Periodically `git pull` to keep up to date
+4. create a libraries directory, and put the latest compatible PlayerDB release zip into it.
+5. You should have something like
+
+   ```sh
+   ls
+   datapack-utils
+   dtcraft-datapacks
+   libraries
+   ```
+
+6. Lastly install `dpbuild` for building and bundling the datapacks using `python -m pip install git+https://github.com/dthigpen/dpbuild.git`
+7. Optionally install `entr` to run the `watch.sh` script that will automatically pre[rocess and build changes as they are saved. For Ubuntu based distros this can be done with `apt install entr`.
+8. In the `dtcraft-datapacks` directory, you can now run `./preprocess.sh <mcfunction-file>` to run the preprocessor, `./build.sh <output-dir> <datapack-dir>`, or `./watch <output-dir> <datapack-dir>` where `<datapack-dir>` is one of the subfolders in `dtcraft-datapacks` (e.g. `refill`).
+
 ## Datapack Conventions
 
 All of these datapacks utilize the `call-stack` utility when calling functions. Functions that implement this utility have function level variables, arguments, and return values without chance of side effects from other functions.

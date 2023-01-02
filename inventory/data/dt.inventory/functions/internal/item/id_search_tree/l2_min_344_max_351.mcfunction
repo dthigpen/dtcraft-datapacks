@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 344 run data modify storage call_stack: global.dt.name set value "minecraft:mangrove_stairs"
+execute if score $id dt.tmp matches 345 run data modify storage call_stack: global.dt.name set value "minecraft:crimson_stairs"
+execute if score $id dt.tmp matches 346 run data modify storage call_stack: global.dt.name set value "minecraft:warped_stairs"
+execute if score $id dt.tmp matches 347 run data modify storage call_stack: global.dt.name set value "minecraft:command_block"
+execute if score $id dt.tmp matches 348 run data modify storage call_stack: global.dt.name set value "minecraft:beacon"
+execute if score $id dt.tmp matches 349 run data modify storage call_stack: global.dt.name set value "minecraft:cobblestone_wall"
+execute if score $id dt.tmp matches 350 run data modify storage call_stack: global.dt.name set value "minecraft:mossy_cobblestone_wall"
+execute if score $id dt.tmp matches 351 run data modify storage call_stack: global.dt.name set value "minecraft:brick_wall"

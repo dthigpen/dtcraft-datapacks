@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 248 run data modify storage call_stack: global.dt.name set value "minecraft:torch"
+execute if score $id dt.tmp matches 249 run data modify storage call_stack: global.dt.name set value "minecraft:end_rod"
+execute if score $id dt.tmp matches 250 run data modify storage call_stack: global.dt.name set value "minecraft:chorus_plant"
+execute if score $id dt.tmp matches 251 run data modify storage call_stack: global.dt.name set value "minecraft:chorus_flower"
+execute if score $id dt.tmp matches 252 run data modify storage call_stack: global.dt.name set value "minecraft:purpur_block"
+execute if score $id dt.tmp matches 253 run data modify storage call_stack: global.dt.name set value "minecraft:purpur_pillar"
+execute if score $id dt.tmp matches 254 run data modify storage call_stack: global.dt.name set value "minecraft:purpur_stairs"
+execute if score $id dt.tmp matches 255 run data modify storage call_stack: global.dt.name set value "minecraft:spawner"

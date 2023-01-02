@@ -1,0 +1,8 @@
+execute if score $id dt.tmp matches 704 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_boat"
+execute if score $id dt.tmp matches 705 run data modify storage call_stack: global.dt.name set value "minecraft:jungle_chest_boat"
+execute if score $id dt.tmp matches 706 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_boat"
+execute if score $id dt.tmp matches 707 run data modify storage call_stack: global.dt.name set value "minecraft:acacia_chest_boat"
+execute if score $id dt.tmp matches 708 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_boat"
+execute if score $id dt.tmp matches 709 run data modify storage call_stack: global.dt.name set value "minecraft:dark_oak_chest_boat"
+execute if score $id dt.tmp matches 710 run data modify storage call_stack: global.dt.name set value "minecraft:mangrove_boat"
+execute if score $id dt.tmp matches 711 run data modify storage call_stack: global.dt.name set value "minecraft:mangrove_chest_boat"

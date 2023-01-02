@@ -1,4 +1,4 @@
-execute if score $id dt.tmp matches 1..512 run function dt.inventory:internal/item/id_search_tree/l0_min_1_max_512
-execute if score $id dt.tmp matches 513..1024 run function dt.inventory:internal/item/id_search_tree/l0_min_513_max_1024
-execute if score $id dt.tmp matches 1025..1100 run function dt.inventory:internal/item/id_search_tree/l0_min_1025_max_1100
+execute if score $id dt.tmp matches 0..511 run function dt.inventory:internal/item/id_search_tree/l0_min_0_max_511
+execute if score $id dt.tmp matches 512..1023 run function dt.inventory:internal/item/id_search_tree/l0_min_512_max_1023
+execute if score $id dt.tmp matches 1024..1151 run function dt.inventory:internal/item/id_search_tree/l0_min_1024_max_1151
 scoreboard players reset $id dt.tmp
