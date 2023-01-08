@@ -1,6 +1,6 @@
 #> dt.array:api/helper/math/sub_one
 # Subtract one from the given number
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       number
 # @output

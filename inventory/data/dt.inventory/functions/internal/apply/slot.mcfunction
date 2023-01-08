@@ -1,6 +1,6 @@
 #> dt.inventory:internal/apply/slot
 # Apply values to the Slot field of the given objects and return the result
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array[NBT] objects
 #   storage call_stack: call.arg1

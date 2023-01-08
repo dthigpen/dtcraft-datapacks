@@ -1,3 +1,5 @@
+#> unittest:api/v1/assert/negate_result
+# @deprecated
 function unittest:internal/v1/storage/clear/internal/temp
 
 execute if data storage unittest:out {pass:true} run data modify storage unittest:internal temp.pass set value true

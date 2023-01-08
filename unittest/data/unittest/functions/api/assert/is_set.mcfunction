@@ -1,3 +1,8 @@
+#> unittest:api/assert/is_set
+# Test whether the given value is set
+# @input
+#   storage call_stack: call.actual
+#       The value to test
 function unittest:internal/assert/setup
 data modify storage call_stack: this.name set value "Is Set"
 data modify storage call_stack: this.msg set value '[{"text":"actual is not set"}]'

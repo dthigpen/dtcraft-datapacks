@@ -1,6 +1,6 @@
 #> dt.array:api/helper/math/is_equal
 # Return true if the first given number is greater than or equal to the second given number
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       number
 #   storage call_stack: call.arg0

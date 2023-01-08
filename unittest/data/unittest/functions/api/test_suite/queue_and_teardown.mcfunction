@@ -1,4 +1,6 @@
-
+#> unittest:api/test_suite/queue_and_teardown
+# Queues the test suite to be executed in the future, then tears it down once its finished.
+# Should only be called as the last function in the test suite since it pop's the test case scope
 
 scoreboard players operation $status unittest = #status.running_multi unittest
 

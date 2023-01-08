@@ -1,6 +1,6 @@
 #> dt.array:api/reduce/flatten
 # Flatten subarrays into a single array
-# @params
+# @input
 # @output
 # TODO: Add depth param
 function call_stack:push

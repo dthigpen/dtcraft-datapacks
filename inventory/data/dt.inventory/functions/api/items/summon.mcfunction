@@ -1,6 +1,6 @@
 #> dt.inventory:api/items/summon
 # summon an arbitrary item and merge in the given nbt
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       item nbt that is merged into the data of the summoned item. Ex: {Item:{id:"minecraft:egg",Count:1b}}
 # @output

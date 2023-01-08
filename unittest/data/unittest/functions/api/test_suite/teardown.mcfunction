@@ -1,3 +1,7 @@
+#> unittest:api/test_suite/teardown
+# Tears down the test suite that this function is called in.
+# Should only be called as the last function in the test suite since it pop's the test suite scope
+
 data modify storage call_stack: this.test_suite.name set from storage call_stack: this.name
 data modify storage call_stack: this.test_suite.report_to_all set from storage call_stack: this.report_to_all
 

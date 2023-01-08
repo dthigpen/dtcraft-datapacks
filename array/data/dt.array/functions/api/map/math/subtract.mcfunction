@@ -1,6 +1,6 @@
 #> dt.array:api/map/math/subtract
 # subtract the given value to each value in the array
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of numbers
 #   storage call_stack: call.arg1

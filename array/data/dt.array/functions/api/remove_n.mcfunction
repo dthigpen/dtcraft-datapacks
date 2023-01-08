@@ -1,6 +1,6 @@
 #> dt.array:api/remove_n
 # remove n elements from the end of the given array
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 #   storage call_stack: call.arg2

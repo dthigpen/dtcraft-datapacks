@@ -1,3 +1,5 @@
+#> unittest:api/v1/assert/is_set
+# @deprecated
 function unittest:internal/v1/storage/clear/internal/temp
 function unittest:internal/v1/storage/clear/out
 

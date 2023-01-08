@@ -1,6 +1,6 @@
 #> dt.array:api/split/in_set_unique
 # Split the given array into two arrays based on whether they are contained in the given set
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of values to split into arrays
 #   storage call_stack: call.arg1

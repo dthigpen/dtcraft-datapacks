@@ -1,3 +1,10 @@
+#> unittest:api/assert/equal
+# test that the expected and actual values are equal
+# @input
+#   storage call_stack: call.expected
+#       The expected value
+#   storage call_stack: call.actual
+#       The actual value
 function unittest:internal/assert/setup
 data modify storage call_stack: this.name set value "Equal"
 scoreboard players reset #changed dt.tmp

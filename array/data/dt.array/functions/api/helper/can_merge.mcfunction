@@ -1,6 +1,6 @@
 #> dt.array:api/helper/can_merge
 # Return true if the second given value can be merged into the first given value
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       value
 #   storage call_stack: call.arg1

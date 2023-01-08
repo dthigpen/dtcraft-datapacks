@@ -1,6 +1,6 @@
 #> dt.gui:api/self/tick_hopper
 # Tick the current gui entity's hopper interactions
-# @params
+# @input
 # @output
 function call_stack:push
 function dt.gui:internal/database/fetch_or_init

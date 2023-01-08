@@ -1,6 +1,6 @@
 #> dt.inventory:api/player/items/hotbar/replace
 # replace the current player's hotbar with the given items
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       List of items
 # @output

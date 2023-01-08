@@ -1,6 +1,6 @@
 #> dt.inventory:api/item/id/tag/get
 # tag the given item with its corresponding numeric id at path tag.dt.id
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       object item
 # @output

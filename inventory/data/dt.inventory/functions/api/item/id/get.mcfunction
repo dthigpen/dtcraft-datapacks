@@ -1,6 +1,6 @@
 #> dt.inventory:api/item/id/get
 # Get the numeric id of the given item 
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       object item to get the numeric id for
 # @output

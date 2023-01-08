@@ -1,6 +1,6 @@
 #> dt.array:api/helper/math/subtract
 # subtract the second from the first number
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       number
 #   storage call_stack: call.arg1

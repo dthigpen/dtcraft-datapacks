@@ -1,7 +1,8 @@
+#> dt.callback:api/queue
 # Queue commands to be executed sometime in the future
-# @params
+# @input
 #   storage call_stack: call.arg0
-#       array of command that will all be executed on a single future tick
+#       string[] array of command that will all be executed on a single future tick
 #   storage call_stack: call.arg1
 #       nbt data available to the commands at "dt.callback:io data"
 # @output

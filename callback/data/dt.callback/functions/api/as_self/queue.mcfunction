@@ -1,6 +1,6 @@
 #> dt.callback:api/as_self/queue
 # Queue commands to be executed sometime in the future and tag the current executor
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of command that will all be executed on a single future tick
 #   storage call_stack: call.arg1

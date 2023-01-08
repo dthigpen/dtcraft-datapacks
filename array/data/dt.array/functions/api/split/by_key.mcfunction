@@ -1,6 +1,6 @@
 #> dt.array:api/split/by_key
 # splits the given list into two lists, first for elements containing the key, and the second its complement
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 #   storage call_stack: call.arg1

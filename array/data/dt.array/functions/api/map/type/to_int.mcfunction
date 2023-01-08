@@ -1,6 +1,6 @@
 #> dt.array:api/map/type/to_int
 # Convert the given array of numbers into an array of ints
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of numbers
 # @output

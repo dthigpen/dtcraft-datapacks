@@ -1,6 +1,6 @@
 #> dt.array:api/helper/math/is_less_than
 # Return true if the first given number is less than the second given number
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       number
 #   storage call_stack: call.arg0

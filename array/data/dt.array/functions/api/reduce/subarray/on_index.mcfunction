@@ -1,4 +1,5 @@
-
+#> dt.array:api/reduce/subarray/on_index
+# TODO learn more about this function
 
 data modify storage call_stack: call.accumulator set value [[],[]]
 function dt.array:api/func/reducer/push

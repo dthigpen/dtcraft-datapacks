@@ -1,7 +1,7 @@
 #> dt.inventory:api/items/combine2
 # Combine the given items array into as few stacks as possible.
 # This works with any number of items and does not use shulker/looting mechanics
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of items
 # @output

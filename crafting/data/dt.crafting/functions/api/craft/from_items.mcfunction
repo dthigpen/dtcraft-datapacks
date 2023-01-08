@@ -1,6 +1,6 @@
 #> dt.crafting:api/craft/from_items
 # Craft a result and remaining items from the given input items
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of items to try to craft with
 # @output

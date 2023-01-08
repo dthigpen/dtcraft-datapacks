@@ -1,6 +1,6 @@
 #> dt.inventory:api/items/take
 # Take the requested item id and count from the given set of all items
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of all items such an inventory
 #   storage call_stack: call.arg1

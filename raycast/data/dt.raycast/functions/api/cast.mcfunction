@@ -1,6 +1,6 @@
 #> dt.raycast:api/cast
 # cast a ray with max distance set by $max_distance dt.raycast or default 200 meters
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       description
 # @output

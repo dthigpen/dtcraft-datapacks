@@ -1,6 +1,6 @@
 #> dt.array:api/difference
 # the difference between two arrays. Elements common to both lists will not be included in the output. Elements only in the first will be included in the output.
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 #   storage call_stack: call.arg1

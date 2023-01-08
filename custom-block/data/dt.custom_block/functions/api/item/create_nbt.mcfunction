@@ -1,6 +1,6 @@
 #> dt.custom_block:api/item/create_nbt
 # Create a custom item NBT to be summoned with the api/item/summon command.
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       NBT item properties that determine the attributes of the custom item. See README.md for details.
 # @output

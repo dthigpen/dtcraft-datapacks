@@ -1,3 +1,16 @@
+#> dt.array:api/enumerate
+# Create an array of numbers from a (inclusive) start value, (exclusive) stop value, and an optional step (default 1) value
+# @input
+#   storage call_stack: call.arg0
+#       int start (inclusive)
+#   storage call_stack: call.arg1
+#       int stop (exclusive)
+#   storage call_stack: call.arg2
+#       optional int step
+# @output
+#   storage call_stack: this.return
+#       int[] range of values
+
 function call_stack:push
 data modify storage call_stack: this.start set from storage call_stack: this.arg0
 data modify storage call_stack: this.stop set from storage call_stack: this.arg1

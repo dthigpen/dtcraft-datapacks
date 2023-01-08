@@ -1,6 +1,6 @@
 #> dt.inventory:api/player/items/replace
 # Replace items in the player's inventory with the given items (each with Slot attributes)
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of items
 function call_stack:push
