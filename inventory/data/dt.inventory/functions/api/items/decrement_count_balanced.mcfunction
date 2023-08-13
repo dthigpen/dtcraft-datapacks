@@ -1,6 +1,6 @@
 #> dt.inventory:api/items/decrement_count_balanced
 # Remove the given amount from the given items Count fields 
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of items
 #   storage call_stack: call.arg1

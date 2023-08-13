@@ -1,6 +1,6 @@
 #> dt.array:api/split/can_map_values_to_sets
 # Returns true if the given values can be mapped to the given sets
-# @params
+# @input
 # @output
 function call_stack:push
 data modify storage call_stack: this.array set from storage call_stack: this.arg0

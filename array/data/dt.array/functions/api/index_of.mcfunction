@@ -1,6 +1,6 @@
 #> dt.array:api/index_of
 # get the index of a value in an array
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 #   storage call_stack: call.arg1

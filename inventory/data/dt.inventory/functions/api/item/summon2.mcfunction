@@ -1,6 +1,6 @@
 #> dt.inventory:api/item/summon2
 # Summon an item into the world with the given item data
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       object item data such as {id:"minecrat:stone",Count:10b}
 function call_stack:push

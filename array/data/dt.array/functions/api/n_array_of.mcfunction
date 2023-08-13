@@ -1,6 +1,6 @@
 #> dt.array:api/n_array_of
 # create an array of length n consisting of the given repeated value
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       length n
 #   storage call_stack: call.arg2

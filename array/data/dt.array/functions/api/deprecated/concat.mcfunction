@@ -1,7 +1,7 @@
 #> dt.array:api/deprecated/concat
 # @deprecated
 # concatenate two arrays
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array1
 #   storage call_stack: call.arg1

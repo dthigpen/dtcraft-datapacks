@@ -1,6 +1,6 @@
 #> dt.custom_block:api/item/summon
 # Summon an custom item entity for placing custom blocks.
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       NBT object with properties of the custom item and block
 function call_stack:push

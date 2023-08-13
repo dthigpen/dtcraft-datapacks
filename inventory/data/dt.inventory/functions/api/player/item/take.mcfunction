@@ -1,7 +1,7 @@
 #> dt.inventory:api/player/item/take
 # Take N items of a given id from a player's inventory and reduce the stacks accordingly.
 # The taken items, and remaining count is returned.
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       string item id such as "minecraft:feather"
 #   storage call_stack: call.arg1

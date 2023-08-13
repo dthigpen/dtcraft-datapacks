@@ -1,6 +1,6 @@
 #> dt.array:api/func/range/base_case/at_stop
 # Check if the index is at the stop value
-# @params
+# @input
 # @output
 data remove storage call_stack: this.continue
 data modify storage call_stack: call.arg0 set from storage call_stack: this.func.range.index

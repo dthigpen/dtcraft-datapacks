@@ -1,6 +1,6 @@
 #> dt.array:api/trim_to_size
 # trim an array to a set size
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 #   storage call_stack: call.arg1

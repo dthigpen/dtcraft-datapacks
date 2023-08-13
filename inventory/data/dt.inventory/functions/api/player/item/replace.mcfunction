@@ -1,6 +1,6 @@
 #> dt.inventory:api/player/item/replace
 # replace the item in the current player's inventory with the given item
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       Item with the Slot:X attribute defined
 # @output

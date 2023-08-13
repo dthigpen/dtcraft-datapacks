@@ -1,6 +1,6 @@
 #> dt.array:api/helper/is_in_set
 # Return true if the given array contains the given value
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 #   storage call_stack: call.arg1

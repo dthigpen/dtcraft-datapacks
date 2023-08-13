@@ -1,6 +1,6 @@
 #> dt.array:api/reduce/subarray/greater_than
 # Reduce numbers into two subarrays, with the first being those greater than the given number and the latter less than or equal to
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 #   storage call_stack: call.arg1

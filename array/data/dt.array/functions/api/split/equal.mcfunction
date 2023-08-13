@@ -1,6 +1,6 @@
 #> dt.array:api/split/equal
 # Split the given array of key-values into those equal to the key and those not
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of key-values
 #   storage call_stack: call.arg1

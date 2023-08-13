@@ -1,6 +1,6 @@
 #> dt.callback:api/multi_queue
 # Pass in a array of command queues that will be executed sequentially, at least one tick apart
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       arry of arrays of commands such as [["say tick 1 cmd 1","say tick 1 cmd 2"],["say tick 3 cmd 1","say tick 3 cmd 2"]]
 # @output

@@ -1,6 +1,6 @@
 #> dt.array:api/reduce/math/are_all_greater_than
 # given an array of numbers and a value, return true if all numbers are greater than the value
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of numbers
 #   storage call_stack: call.arg1

@@ -1,6 +1,6 @@
 #> dt.array:api/split/in_set2
 # TODO: clean up the split/set APIs
-# @params
+# @input
 # @output
 function call_stack:push
 data modify storage call_stack: this.values set from storage call_stack: this.arg0

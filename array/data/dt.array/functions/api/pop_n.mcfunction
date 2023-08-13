@@ -1,6 +1,6 @@
 #> dt.array:api/pop_n
 # pop n elements from the end of an array and return them
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 # @output

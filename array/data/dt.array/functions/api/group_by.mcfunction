@@ -1,6 +1,6 @@
 #> dt.array:api/group_by
 # Group an array of key-values by their keys
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of key value pairs
 # @output

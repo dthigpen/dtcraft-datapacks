@@ -1,6 +1,6 @@
 #> dt.inventory:api/items/take_balanced
 # @deprecated by dt.inventory:api/items/take
-# @params
+# @input
 # @output
 function call_stack:push
 data modify storage call_stack: this.all_items set from storage call_stack: this.arg0

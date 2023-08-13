@@ -1,3 +1,5 @@
+#> unittest:api/v1/test_case/setup
+# @deprecated
 function unittest:internal/storage/clear/internal/test_case
 function unittest:internal/v1/storage/clear/out
 

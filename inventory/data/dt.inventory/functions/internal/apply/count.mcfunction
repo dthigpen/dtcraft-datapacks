@@ -1,9 +1,9 @@
 #> dt.inventory:internal/apply/count
 # Apply values to the Count field of the given objects and return the result
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array[NBT] objects
-# @params
+# @input
 #   storage call_stack: call.arg1
 #       array[any] values
 # @output

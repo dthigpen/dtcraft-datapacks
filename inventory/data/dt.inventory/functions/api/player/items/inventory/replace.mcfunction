@@ -1,6 +1,6 @@
 #> dt.inventory:api/player/items/inventory/replace
 # replace the current player's inventory with the given items
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       list of items
 # @output

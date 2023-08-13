@@ -1,6 +1,6 @@
 #> dt.array:api/split/in_set
 # Split the given array (using the given values) based on whether they are contained in the given set
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of values (actual data)
 #   storage call_stack: call.arg1

@@ -1,6 +1,6 @@
 #> dt.inventory:api/item/from_id
 # Create an item (name and count) from an item integer id
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       int item id
 #   storage call_stack: call.arg1

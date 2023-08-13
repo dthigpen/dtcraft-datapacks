@@ -1,6 +1,6 @@
 #> dt.gui:api/self/init
 # Initialize the current entity as a gui entity with the given configuration
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       object config, see README for example
 function call_stack:push

@@ -1,6 +1,6 @@
 #> dt.inventory:api/items/id/tag/get
 # Add numeric ids to each of the given array of items
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of items
 # @output

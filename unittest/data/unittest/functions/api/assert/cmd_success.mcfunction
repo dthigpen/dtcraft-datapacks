@@ -1,4 +1,9 @@
+#> unittest:api/assert/cmd_success
+# Assert that the given value of call.actual is 1
 # TODO make this call equal or content of equal instead of repeating
+# @input
+#   storage call_stack: call.actual
+#       The run value of the command, set with "execute store success storage call_stack: call.actual run ..."
 data modify storage call_stack: call.expected set value 1
 function unittest:internal/assert/setup
 data modify storage call_stack: this.name set value "Cmd Success"

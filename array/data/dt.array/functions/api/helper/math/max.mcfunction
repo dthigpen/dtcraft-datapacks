@@ -1,9 +1,9 @@
 #> dt.array:api/helper/math/max
 # Get the maximum number between two numbers
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       int first number
-# @params
+# @input
 #   storage call_stack: call.arg1
 #       int second number
 # @output

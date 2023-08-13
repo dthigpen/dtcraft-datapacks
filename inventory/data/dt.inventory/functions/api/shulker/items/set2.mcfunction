@@ -1,6 +1,6 @@
 #> dt.inventory:api/shulker/items/set2
 # set the shulker2 items to be used for following commands
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       list of items
 function call_stack:push

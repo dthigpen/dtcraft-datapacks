@@ -1,6 +1,6 @@
 #> dt.crafting:api/crafter/balance_items
 # balance item counts across other stacks of the same item in the list
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of items
 # @output

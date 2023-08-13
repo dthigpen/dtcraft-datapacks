@@ -1,6 +1,6 @@
 #> dt.array:api/map/key_value/subarray/to_values
 # Maps each value subarray of key-value pairs to a subarray of values
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of subarrays of key-values
 # @output

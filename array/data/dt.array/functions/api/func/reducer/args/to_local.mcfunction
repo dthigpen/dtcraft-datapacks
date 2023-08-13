@@ -1,6 +1,6 @@
 #> dt.array:api/func/reducer/args/to_local
 # convert function space variables to locals
-# @params
+# @input
 # @output
 data remove storage call_stack: this.head
 data remove storage call_stack: this.tail

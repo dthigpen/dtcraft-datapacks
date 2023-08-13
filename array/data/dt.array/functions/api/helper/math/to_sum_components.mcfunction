@@ -1,3 +1,13 @@
+#> dt.array:api/helper/math/to_sum_components
+# Convert the given int into an array that when summed is the given int value. (e.g. repeated divisors and the remainder)
+# @input
+#   storage call_stack: call.arg0
+#       int total value
+#   storage call_stack: call.arg1
+#       int divisor
+# @output
+#   storage call_stack: this.return
+#       int[] number array
 function call_stack:push
 execute store result score #total dt.tmp run data get storage call_stack: this.arg0
 execute store result score #max dt.tmp run data get storage call_stack: this.arg1

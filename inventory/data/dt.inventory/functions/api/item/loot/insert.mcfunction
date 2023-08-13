@@ -1,3 +1,16 @@
+#> dt.inventory:api/item/loot/insert
+# Simulate loot insert between nbt storage items
+# TODO This function needs to be verified and tested before using
+# @input
+#   storage call_stack: call.arg0
+#       nbt source item, such as a chest Item copied into storage
+#   storage call_stack: call.arg1
+#       nbt[] destination items, such as another chest Items copied into storage
+#   storage call_stack: call.arg2
+#       optional byte max slot size defaults to 127b
+# @output
+#   storage call_stack: this.return
+#       [nbt[],nbt[]] updated source and destination items
 function call_stack:push
 data modify storage call_stack: this.source_item set from storage call_stack: this.arg0
 data modify storage call_stack: this.dest_items set from storage call_stack: this.arg1

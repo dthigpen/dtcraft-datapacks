@@ -1,6 +1,6 @@
 #> dt.array:api/sort/merge_sort
 # sort the given value objects using the merge sort algorithm
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of value objects
 # @output

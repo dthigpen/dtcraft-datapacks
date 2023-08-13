@@ -1,6 +1,6 @@
 #> dt.array:api/reduce/math/sum
 # sum array of numbers
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of integers
 # @output

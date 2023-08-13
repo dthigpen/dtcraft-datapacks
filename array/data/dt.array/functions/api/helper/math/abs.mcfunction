@@ -1,6 +1,6 @@
 #> dt.array:api/helper/math/abs
 # Get the absolute value of a number
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       int number
 # @output

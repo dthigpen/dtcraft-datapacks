@@ -1,6 +1,6 @@
 #> dt.array:api/unique
 # Get the unique elements of the given array
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 # @output

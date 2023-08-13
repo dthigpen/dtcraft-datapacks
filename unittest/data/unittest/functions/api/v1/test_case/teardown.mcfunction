@@ -1,3 +1,5 @@
+#> unittest:api/v1/test_case/teardown
+# @deprecated
 function unittest:internal/v1/storage/clear/in
 function unittest:internal/v1/storage/clear/out
 

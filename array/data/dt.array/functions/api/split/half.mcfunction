@@ -1,6 +1,6 @@
 #> dt.array:api/split/half
 # split an array in half
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array
 # @output

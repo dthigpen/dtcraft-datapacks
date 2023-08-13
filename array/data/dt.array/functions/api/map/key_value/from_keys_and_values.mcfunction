@@ -1,9 +1,9 @@
 #> dt.array:api/map/key_value/from_keys_and_values
 # convert the given array of keys and values into key value pair objects
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array keys
-# @params
+# @input
 #   storage call_stack: call.arg1
 #       array values
 # @output

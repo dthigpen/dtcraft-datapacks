@@ -1,6 +1,6 @@
 #> dt.array:api/helper/are_equal
 # Return true if the given values are equal
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       value
 #   storage call_stack: call.arg1

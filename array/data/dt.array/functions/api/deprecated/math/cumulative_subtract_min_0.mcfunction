@@ -1,7 +1,7 @@
 #> dt.array:api/deprecated/math/cumulative_subtract_min_0
 # Given an array of integers, subtract the given total across all numbers.
 # Example: arg0 = [10,2,5], arg1 = 13, return = [0,0,4]
-# @params
+# @input
 #   storage call_stack: call.arg0
 #       array of integers
 #   storage call_stack: call.arg1
