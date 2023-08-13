@@ -1,0 +1,13 @@
+[project]
+name = "dtcraft_datapacks"
+version = "0.1.0"
+dependencies = [
+    "invoke==2.2.0",
+    "cogapp==3.3.0",
+    "watchfiles==0.19.0",
+    "datapack_utils@git+https://github.com/dthigpen/datapack-utils",
+    "dpbuild@git+https://github.com/dthigpen/dpbuild"
+]
+# Since no packages are being provided we have to explicitely say so
+[tool.setuptools]
+packages = []

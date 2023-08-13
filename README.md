@@ -78,22 +78,43 @@ For example:
    ```
 
 2. Clone this repository into your datapack development directory
-3. Clone [datapack-utils](https://github.com/dthigpen/datapack-utils) into your datapack development directory
-   1. Install the library with `python -m pip install -e datapack-utils`
-   2. Periodically `git pull` to keep up to date
-4. create a libraries directory, and put the latest compatible PlayerDB release zip into it.
-5. You should have something like
+
+   ```sh
+   git clone git@github.com:dthigpen/dtcraft-datapacks.git
+   ```
+
+3. Create a libraries directory, and put the latest compatible PlayerDB release zip into it.
+4. You should have something like
 
    ```sh
    ls
-   datapack-utils
-   dtcraft-datapacks
-   libraries
+   dtcraft-datapacks/
+   libraries/
+       playerdb-v1.20.zip
    ```
 
-6. Lastly install `dpbuild` for building and bundling the datapacks using `python -m pip install git+https://github.com/dthigpen/dpbuild.git`
-7. Optionally install `entr` to run the `watch.sh` script that will automatically pre[rocess and build changes as they are saved. For Ubuntu based distros this can be done with `apt install entr`.
-8. In the `dtcraft-datapacks` directory, you can now run `./preprocess.sh <mcfunction-file>` to run the preprocessor, `./build.sh <output-dir> <datapack-dir>`, or `./watch <output-dir> <datapack-dir>` where `<datapack-dir>` is one of the subfolders in `dtcraft-datapacks` (e.g. `refill`).
+5. Navigate into the `dtcraft-datapacks` directory with `cd dtcraft-datapacks`.
+6. Create and source a Python virtual envirnment so that we can install project dependencies. Remember to run the `source` command in the future.
+
+   ```sh
+   python -m venv env
+   source env/bin/activate
+   ```
+
+7. Install dependencies with `pip`.
+
+    ```sh
+    pip install -e .
+    ```
+
+8. Run build tasks with `invoke`.
+
+    ```sh
+    # show commands
+    invoke --list
+    # bundle the datapack with dependencies
+    invoke bundle autocraft ~/.minecraft/saves/test-world/datapacks --watch
+    ```
 
 ## Datapack Conventions
 
@@ -123,6 +144,13 @@ function call_stack:pop
 ```
 
 See the [call-stack](call-stack/README.md) for more details.
+
+## To Do
+
+- Update libraries and dependencies to current Minecraft version
+- Update pre-macro mcfunction methods
+- Update recursive functions to use `return`
+- Update tree functions to use `return`
 
 ## Credits
 

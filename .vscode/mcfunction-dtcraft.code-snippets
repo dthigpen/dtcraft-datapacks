@@ -1,0 +1,157 @@
+{
+	"if data storage": {
+		"prefix": "ifds",
+		"body": "if data storage ${1:call_stack:} ${2:this.}",
+		"description": "if conditional checking for data storage"
+	},
+	"unless data storage": {
+		"prefix": "unds",
+		"body": "unless data storage ${1:call_stack:} ${2:this.}",
+		"description": "unless conditional checking for data storage"
+	},
+	"data modify from storage": {
+		"prefix": "dms",
+		"body": "data modify storage ${1:call_stack:} ${2:this.} ${3:set} from storage ${4:call_stack:} ${5:this.}",
+		"description": "data modify from data"
+	},
+	"data modify from value": {
+		"prefix": "dmv",
+		"body": "data modify storage ${1:call_stack:} ${2:this.} ${3:set} value ${4:literal}",
+		"description": "data modify from value"
+	},
+	"data remove storage": {
+		"prefix": "drs",
+		"body": "data remove storage ${1:call_stack:} ${2:this.}",
+		"description": "data remove storage"
+	},
+	"function set argument n from storage": {
+		"prefix": "fnsetarg",
+		"body": [
+			"data modify storage call_stack: call.arg${1:0} set from storage call_stack: this.${2:variable}",
+		],
+		"description": "Set the value of arg N before calling a function"
+	},
+	"function get argument n": {
+		"prefix": "fngetarg",
+		"body": [
+			"data modify storage call_stack: this.${1:variable} set from storage call_stack: this.arg${2:0}",
+		],
+		"description": "Get the value of arg N at the start of a function"
+	},
+	"function set return": {
+		"prefix": "fnsetret",
+		"body": [
+			"data modify storage call_stack: this.return set from storage call_stack: this.${2:variable}",
+		],
+		"description": "Set the return to be returned by this function"
+	},
+	"function get return": {
+		"prefix": "fngetret",
+		"body": [
+			"data modify storage ${1:call_stack:} this.${2:variable} set from storage call_stack: call.return",
+		],
+		"description": "Get the return of the last function call"
+	},
+	"function push pop":{
+		"prefix": "fnnew",
+		"body": [
+			"function call_stack:push",
+			"$0",
+			"function call_stack:pop"
+		],
+		"description": "Create a new push/pop block to wrap function contents"
+	},
+	"tellraw nbt storage": {
+		"prefix": "tellns",
+		"body": [
+			"tellraw @p [\"$TM_FILENAME_BASE ${1:this.variable}: \",{\"nbt\":\"${1:this.variable}\",\"storage\":\"${2:call_stack:}\"}]"],
+		"description": "Writes a debug tellraw with the filename, line number, and an nbt storage value"
+	},
+	"tellraw nbt entity": {
+		"prefix": "tellne",
+		"body": [
+			"tellraw @p [\"$TM_FILENAME_BASE ${1:}: \",{\"nbt\":\"${1:}\",\"entity\":\"${2:@s}\"}]"],
+		"description": "Writes a debug tellraw with the filename, line number, and an nbt storage value"
+	},
+	"tellraw nbt block": {
+		"prefix": "tellnb",
+		"body": [
+			"tellraw @p [\"$TM_FILENAME_BASE ${1:}:\",{\"nbt\":\"${1:}\",\"block\":\"${2:~ ~ ~}\"}]"],
+		"description": "Writes a debug tellraw with the filename, line number, and an nbt storage value"
+	},
+	"tellraw score": {
+		"prefix": "tells",
+		"body": [
+			"tellraw @p [\"$TM_FILENAME_BASE ${1:@s}:\",{\"score\":{\"name\":\"${1:@s}\",\"objective\":\"${2:dt.tmp}\"}}]"],
+		"description": "Writes a debug tellraw with the filename, line number, and a scoraboard value"
+	},
+	"cog": {
+		"prefix": "cog",
+		"body": [
+			"#[[[cog",
+			"#   from datapack_utils import ${1:writer}",
+			"#   ",
+			"#]]]",
+			"#[[[end]]]"
+		],
+		"description": "New cog python code block"
+	},
+	"testsuite": {
+		"prefix": "testsuite",
+		"body": [
+			"function unittest:api/test_suite/setup",
+			"data modify storage call_stack: this.name set value \"${1:Test Suite}\"",
+			"$0",
+			"function unittest:api/test_suite/teardown",
+		],
+		"description": "Create a skeleton for a unittest test suite"
+	},
+	"testcase": {
+		"prefix": "testcase",
+		"body": [
+			"function unittest:api/test_case/setup",
+			"data modify storage call_stack: this.name set value \"${1:Test}\"",
+			"$0",
+			"function unittest:api/assert/equal",
+			"function unittest:api/test_case/teardown",
+		],
+		"description": "Create a skeleton for a unittest test case"
+	},
+	"apply": {
+		"prefix": "apply",
+		"body": [
+			"#> ${RELATIVE_FILEPATH/.*\\/data\\/(.+)\\/functions\\/(.+)\\..+$/$1:$2/}",
+			"# Apply values to the ${1:Key} field of the given objects and return the return",
+			"# @input",
+			"#   storage call_stack: call.arg0",
+			"#       array[NBT] objects",
+			"# @input",
+			"#   storage call_stack: call.arg1",
+			"#       array[any] values",
+			"# @output",
+			"#   storage call_stack: call.return",
+			"#       array[NBT] objects",
+			"function call_stack:push",
+			"data modify storage call_stack: this.objects set from storage call_stack: this.arg0",
+			"data modify storage call_stack: this.values set from storage call_stack: this.arg1",
+			"data modify storage call_stack: this.mutated set value []",
+			"data modify storage call_stack: this.mutated set from storage call_stack: this.arg2",
+
+			"data modify storage call_stack: this.objects[0].${1:Key} set from storage call_stack: this.values[0]",
+			"data modify storage call_stack: this.mutated append from storage call_stack: this.objects[0]",
+			"data remove storage call_stack: this.objects[0]",
+			"data remove storage call_stack: this.values[0]",
+
+			"execute if data storage call_stack: this.objects[0] run data modify storage call_stack: this.continue set value true",
+
+			"execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: this.mutated",
+			"execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg0 set from storage call_stack: this.objects",
+			"execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg1 set from storage call_stack: this.values",
+			"execute if data storage call_stack: this.continue run data modify storage call_stack: call.arg2 set from storage call_stack: this.mutated",
+			"execute if data storage call_stack: this.continue run function ${RELATIVE_FILEPATH/.*\\/data\\/(.+)\\/functions\\/(.+)\\..+$/$1:$2/}",
+			"execute if data storage call_stack: this.continue run data modify storage call_stack: this.return set from storage call_stack: call.return",
+
+			"function call_stack:pop"
+		]
+	}
+}
