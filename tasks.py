@@ -59,11 +59,11 @@ def bundle(c: Context, datapack_dir: str, output_dir: str, watch=False):
     output_dir = Path(output_dir)
     print(f"Bundling {datapack_dir.name} to {output_dir}")
     cmd = c.config.build.cmd % (datapack_dir, output_dir)
+    c.run(cmd)
     if watch == True:
-        for changes in watch_changes(datapack_dir):
+        # TODO how handle watching dependency datapack dirs
+        for changes in watch_changes(*__get_files(c, datapack_dir.parent)):
             for _, file_path in filter(lambda c: c[0] != Change.deleted, changes):
                 print('Watching for changes, press Ctrl-C to quit')
                 preprocess(c, file_path, watch=False)
                 c.run(cmd)
-    else:
-        c.run(cmd)
