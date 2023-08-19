@@ -1,1 +1,6 @@
-{"values": ["call_stack:load"]}
+{
+    "values": [
+        "version:load",
+        "call_stack:load"
+    ]
+}

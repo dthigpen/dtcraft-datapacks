@@ -1,3 +1,9 @@
+function version:api/setup {args: { \
+    id: "$unittest", \
+    version: [1,0,0], \
+}}
+
+
 tellraw @a "Loaded unittest"
 
 scoreboard players set $unittest.version.major load.status 0

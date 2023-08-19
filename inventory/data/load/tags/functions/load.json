@@ -1,1 +1,8 @@
-{"values": ["call_stack:load","dt.array:load", "dt.inventory:load"]}
+{
+    "values": [
+        "version:load",
+        "call_stack:load",
+        "dt.array:load",
+        "dt.inventory:load"
+    ]
+}
