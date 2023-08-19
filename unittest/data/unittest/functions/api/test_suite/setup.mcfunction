@@ -9,7 +9,7 @@
 #       string name set after the function is called
 
 function call_stack:push
-data modify storage call_stack: this.test_suite set value {name:"Test Suite",test_suites:[]}
+data modify storage call_stack: this.test_suite set value {name:"Test Suite",test_cases:[]}
 data modify storage call_stack: this.test_suite.name set from storage call_stack: this.arg0
 scoreboard players operation $status unittest = #status.running unittest
 # tag the current player as the one to report (tellraw) the results to
