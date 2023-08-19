@@ -1,8 +1,7 @@
-#say load raycast
-
-scoreboard players set $dt.raycast.version.major load.status 0
-scoreboard players set $dt.raycast.version.minor load.status 0
-scoreboard players set $dt.raycast.version.patch load.status 0
+function version:api/setup {args: { \
+    id: "$dt.raycast", \
+    version: [0,0,0], \
+}}
 
 scoreboard objectives add dt.rc.tmp dummy
 scoreboard players set #two dt.rc.tmp 2

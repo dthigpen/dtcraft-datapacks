@@ -1,1 +1,6 @@
-{"values": ["dt.raycast:load"]}
+{
+    "values": [
+        "version:load",
+        "dt.raycast:load"
+    ]
+}

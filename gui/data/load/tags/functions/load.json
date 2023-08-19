@@ -1,5 +1,6 @@
 {
     "values": [
+        "version:load",
         "#rx.playerdb:load",
         "call_stack:load",
         "dt.inventory:load",
