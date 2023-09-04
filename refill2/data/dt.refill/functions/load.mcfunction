@@ -34,3 +34,4 @@ schedule clear dt.refill:tick
 execute if score $dt.refill load.status matches 1 run schedule function dt.refill:tick 1t replace
 scoreboard objectives add dt.refill.toggle trigger
 scoreboard objectives add mcpy.var dummy
+scoreboard objectives add dt.tmp dummy
