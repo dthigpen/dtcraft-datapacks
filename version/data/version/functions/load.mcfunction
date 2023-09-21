@@ -1,5 +1,5 @@
 
-scoreboard objectives add dt.tmp
+scoreboard objectives add dt.tmp dummy
 scoreboard players reset * dt.tmp
 
 function version:api/setup {args: {\
