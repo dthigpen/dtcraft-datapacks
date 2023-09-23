@@ -2,9 +2,6 @@
 preprocess:
   cmd: "cog --verbosity=1 -r %s"
 
-build:
-  cmd: "python -m dpbuild %s --discover . ../libraries --dest %s"
-
 filter:
   includeGlobs:
     - "**/*.mcfunction"
