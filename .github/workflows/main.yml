@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master, test]
+    branches: [ master, test, cicd]
   pull_request:
-    branches: [ master, test]
+    branches: [ master, test, cicd]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,58 +17,37 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    strategy:
+      matrix:
+        datapack: ["array", "autocraft", "callback", "call-stack", "crafting", "custom-block", "gui", "inventory", "inventory-sort", "raycast", "refill", "unittest", "version"]
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Set up JRE 17
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v2
         with:
-          java-version: 17
-          java-package: jre # optional (jdk, jre, jdk+fx or jre+fx) - defaults to jdk
+          distribution: 'zulu'
+          java-version: '17'
+          java-package: jre
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       # Check out this repo
       - name: Checkout dtcraft-datapacks
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: dtcraft-datapacks
-
-      - name: Checkout dpbuild
-        uses: actions/checkout@v2
-        with:
-          repository: dthigpen/dpbuild
-          path: dpbuild
-      
       - name: Checkout minecraft-test-report
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: dthigpen/minecraft-test-report
           ref: "${{env.GITHUB_REF_NAME}}"
           path: minecraft-test-report
-      
-      # This action creates permission issues when writing to the same folder so first put in downloads
-      - name: Download PlayerDB
-        uses: Legion2/download-release-action@v2.1.0
-        with:
-          repository: rx-modules/PlayerDB
-          tag: 'v2.0.1'
-          path: downloads
-          file: PlayerDB.v2.0.1.zip
-        
-      - name: Unzip library datapacks
-        run: |
-          mkdir libraries
-          find downloads -name '*.zip' -exec bash -c 'file=$(basename {}); unzip {} -d libraries/${file%.zip}' \;
-          echo Unzipped library datapacks
-
       - name: Build datapacks to artifacts directory with dpbuild
         run: |
-          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest test-artifacts --no-dep-tests' -- {} \;
-          find ./dtcraft-datapacks -maxdepth 1 -type d -exec bash -c 'test -e $1/pack.mcmeta && python dpbuild/dpbuild $1 libraries --dest release-artifacts --release' -- {} \;
+          ${GITHUB_WORKSPACE}/dtcraft-datapacks/.github/scripts/build_datapack.sh ${{ matrix.datapack }}
       - name: Setup Minecraft Server
         shell: bash
         run: |
@@ -79,14 +58,7 @@ jobs:
         env:
           RCON_PWD: ${{ secrets.RCON_PWD }}
         run: |
-          echo "Copying datapacks"
-          cp -r test-artifacts/* server/world/datapacks
-          pushd minecraft-test-report
-          python -m pip install -r requirements.txt
-          # Use non-bundled datapacks for tests
-          PACKS=$(for d in ../dtcraft-datapacks/*/pack.mcmeta; do echo $(dirname $d); done)
-          python test_runner.py ${PACKS} --output "$GITHUB_STEP_SUMMARY"
-          popd
+          ${GITHUB_WORKSPACE}/dtcraft-datapacks/.github/scripts/run_tests.sh ${{ matrix.datapack }}
       - name: Evaluate report
         run: |
           # Check that there are no unit test failures
