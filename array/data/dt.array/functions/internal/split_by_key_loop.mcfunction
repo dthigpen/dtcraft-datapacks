@@ -10,6 +10,7 @@ execute if data storage call_stack: this.all_items[0] if score $limit dt.tmp mat
 data modify storage call_stack: this.return set value [[],[]]
 execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return[0] set from storage call_stack: this.with_key
 execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return[1] set from storage call_stack: this.without_key
+execute unless data storage call_stack: this.continue run data modify storage call_stack: this.return[1] append from storage call_stack: this.all_items[]
 
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.temp1 set value {value:{}}
 execute if data storage call_stack: this.continue run data modify storage call_stack: this.temp2 set value {value:{}}
